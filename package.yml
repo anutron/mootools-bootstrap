@@ -1,0 +1,30 @@
+name: "Bootstrap"
+
+exports: "bootstrap.js"
+
+web: "[clientcide.com](http://clientcide.com)"
+
+description: "Clientcide's plugins for MooTools and Twitter's Bootstrap CSS framework"
+
+license: "[MIT License](http://mootools.net/license.txt)"
+
+copyright: "&copy; [Aaron Newton](http://clientcide.com)"
+
+authors: "[Aaron Newton](http://clientcide.com)"
+
+version: "1.0"
+
+sources:
+ - Source/Behavior.BS.Alert.js
+ - Source/Behavior.BS.Dropdown.js
+ - Source/Behavior.BS.Popover.js
+ - Source/Behavior.BS.Popup.js
+ - Source/Behavior.BS.Tabs.js
+ - Source/Behavior.BS.Twipsy.js
+ - Source/Bootstrap.js
+ - Source/Bootstrap.Dropdown.js
+ - Source/Bootstrap.Popover.js
+ - Source/Bootstrap.Popup.js
+ - Source/Bootstrap.Twipsy.js
+ - Source/CSSEvents.js
+ - Source/Delegator.BS.ShowPopup.js

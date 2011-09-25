@@ -1,0 +1,22 @@
+name: "Bootstrap-Specs"
+
+exports: "bootstrap-specs.js"
+
+web: "[clientcide.com](http://clientcide.com)"
+
+description: "Specs for Clientcide's plugins for MooTools and Twitter's Bootstrap CSS framework"
+
+license: "[MIT License](http://mootools.net/license.txt)"
+
+copyright: "&copy; [Aaron Newton](http://clientcide.com)"
+
+authors: "[Aaron Newton](http://clientcide.com)"
+
+version: "1.0"
+
+sources:
+ - Source/Behavior.BS.Dropdown.js
+ - Source/Behavior.BS.Popover.js
+ - Source/Behavior.BS.Popup.js
+ - Source/Behavior.BS.Tabs.js
+ - Source/Behavior.BS.Twipsy.js

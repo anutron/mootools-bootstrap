@@ -1,0 +1,69 @@
+#mt-test-buttons {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 100;
+}
+
+/* button basics from github */
+a.minibutton {
+	outline: none;
+	display:inline-block;
+	height:23px;
+	padding:0 0 0 3px;
+	font-size:11px;
+	font-weight:bold;
+	color:#333;
+	text-shadow:1px 1px 0 #fff; 
+	background:url(/static/art/minibutton_matrix.png) 0 0 no-repeat;
+	white-space:nowrap;
+	border:none;
+	overflow:visible;
+	cursor:pointer;
+	text-decoration:none;
+	vertical-align: middle;
+}
+
+a.minibutton>span {
+	display:block;
+	height:23px;
+	padding:0 10px 0 8px;
+	line-height:23px;
+	background:url(/static/art/minibutton_matrix.png) 100% 0 no-repeat;
+}
+a.btn-no-txt>span {
+	padding: 0 15px 0 8px;
+	text-indent: -9999px;
+}
+
+a.minibutton:hover, a.minibutton:focus, a.minibutton.selected {
+	color:#fff;
+	text-decoration:none;
+	text-shadow:-1px -1px 0 rgba(0,0,0,0.3);
+	background-position:0 -30px;
+}
+a.minibutton:hover>span, a.minibutton:focus>span, a.minibutton.selected>span {background-position:100% -30px;}
+
+a.minibutton.mousedown{background-position:0 -60px; }
+a.minibutton.mousedown>span{background-position:100% -60px; }
+
+/* icons */
+a.minibutton .icon {
+	float:left;
+	margin-left:-4px;
+	width:18px;
+	height:22px;
+	background:url(/static/art/minibutton_icons.png) 0 0 no-repeat;
+}
+
+a.btn-download .icon {background-position:-40px 0;}
+a.btn-download:hover .icon, a.btn-download:focus .icon {background-position:-40px -25px;}
+
+a.btn-left .icon {background-position:-161px 1px;}
+a.btn-left:hover .icon, a.btn-left:focus .icon {background-position:-161px -24px;}
+
+a.btn-right .icon {background-position:-178px 1px;}
+a.btn-right:hover .icon, a.btn-right:focus .icon {background-position:-178px -24px;}
+
+a.btn-source .icon {background-position:-211px 0px;}
+a.btn-source:hover .icon, a.btn-right:focus .icon {background-position:-211px -24px;}
