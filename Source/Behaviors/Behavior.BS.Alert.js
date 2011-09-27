@@ -8,7 +8,7 @@ description: This file just depends on the Fx.Reveal delegator in More-Behaviors
 license: MIT-style license.
 
 requires:
- - More-Behaviors/Delegator.FxReveal
+ - More-Behaviors/Delegator.Nix
 
 provides: [Behavior.BS.Alert]
 
