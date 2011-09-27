@@ -501,9 +501,9 @@
           <div class="well">
             <p class="muted">Tight pants next level keffiyeh
               <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-location="above" title='Some title text'>you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-location="below" title='Another twipsy'>have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-location="left" title='Another one here too'>really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-location="right" title='The last tip!'>twitter handle</a> freegan cred raw denim single-origin coffee viral.
+              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-options="'location': 'below', 'offset':8" title='Another twipsy'>have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A
+              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-options="'location': 'left', 'offset':-8" title='Another one here too'>really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin
+              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-options="'location': 'right', 'offset':8" title='The last tip!'>twitter handle</a> freegan cred raw denim single-origin coffee viral.
             </p>
           </div>
         </div>
