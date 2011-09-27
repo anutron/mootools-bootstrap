@@ -15,16 +15,16 @@ authors: "[Aaron Newton](http://clientcide.com)"
 version: "1.0"
 
 sources:
- - Source/Behavior.BS.Alert.js
- - Source/Behavior.BS.Dropdown.js
- - Source/Behavior.BS.Popover.js
- - Source/Behavior.BS.Popup.js
- - Source/Behavior.BS.Tabs.js
- - Source/Behavior.BS.Twipsy.js
- - Source/Bootstrap.js
- - Source/Bootstrap.Dropdown.js
- - Source/Bootstrap.Popover.js
- - Source/Bootstrap.Popup.js
- - Source/Bootstrap.Twipsy.js
- - Source/CSSEvents.js
- - Source/Delegator.BS.ShowPopup.js
+ - Source/Behaviors/Behavior.BS.Alert.js
+ - Source/Behaviors/Behavior.BS.Dropdown.js
+ - Source/Behaviors/Behavior.BS.Popover.js
+ - Source/Behaviors/Behavior.BS.Popup.js
+ - Source/Behaviors/Behavior.BS.Tabs.js
+ - Source/Behaviors/Behavior.BS.Twipsy.js
+ - Source/UI/Bootstrap.js
+ - Source/UI/Bootstrap.Dropdown.js
+ - Source/UI/Bootstrap.Popover.js
+ - Source/UI/Bootstrap.Popup.js
+ - Source/UI/Bootstrap.Twipsy.js
+ - Source/UI/CSSEvents.js
+ - Source/UI/Delegator.BS.ShowPopup.js
