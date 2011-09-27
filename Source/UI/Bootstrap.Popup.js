@@ -50,18 +50,22 @@ Bootstrap.Popup = new Class({
 	},
 
 	show: function(){
+		console.log('show', this.visible, this.animating);
+		if (this.visible || this.animating) return;
 		this.element.addEvent('click:relay(.close)', this.bound.hide);
-		this.mask();
-		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor)
+		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
+		this.makeMask();
 		if (this.options.animate){
 			this._slideIn();
 		} else {
 			this.element.show();
+			this._mask.show();
 			this.fireEvent('show', this.element);
 		}
+		this.visible = true;
 	},
 
-	mask: function(){
+	makeMask: function(){
 		if (this.options.mask){
 			if (!this._mask){
 				this._mask = new Element('div.modal-backdrop', {
@@ -69,15 +73,7 @@ Bootstrap.Popup = new Class({
 						click: this.bound.hide
 					}
 				}).inject(document.body);
-			}
-			if (this.options.animate){
-				var to = this._mask.getStyle('opacity');
-				this._mask.setStyle('opacity', 0);
-				this._mask.show();
-				console.log('tween to: ', to);
-				this._mask.tween('opacity', 0, to);
-			} else {
-				this._mask.show();
+				this.maskOpacity = this._mask.getStyle('opacity');
 			}
 		} else if (this.options.closeOnClickOut) {
 			document.body.addEvent('click', this.bound.hide);
@@ -93,6 +89,8 @@ Bootstrap.Popup = new Class({
 	},
 
 	hide: function(event){
+		if (!this.visible || this.animating) return;
+		this.animating = true;
 		if (event) event.preventDefault();
 		document.body.removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
@@ -100,12 +98,15 @@ Bootstrap.Popup = new Class({
 
 		if (this.options.animate) this._slideOut();
 		else this._afterHide();
-		return;
 	},
 
 	// PRIVATE
 
 	_slideIn: function(){
+		this._mask.setStyle('opacity', 0);
+		this._mask.show().set('tween');
+		this._mask.tween('opacity', 0, this.maskOpacity);
+		this.animating = true;
 		var top = this.element.show().getStyle('top').toFloat(),
 		    topMargin = this.element.getStyle('margin-top').toInt();
 		if (top < 0) top = 0;
@@ -116,16 +117,17 @@ Bootstrap.Popup = new Class({
 		this.fx.setOptions({
 			transition: 'back:out'
 		}).start('top', top).chain(function(){
+			this.animating = false;
 			this.fireEvent('show', this.element);
 		}.bind(this));
 	},
 
 	_slideOut: function(){
+		this.animating = true;
 		var demasked, slidOut;
 		if (this._mask) {
-			var o = this._mask.getStyle('opacity');
 			this._mask.fade('out').get('tween').chain(function(){
-				this._mask.setStyle('opacity', o);
+				this._mask.setStyle('opacity', this.maskOpacity);
 				demasked = true;
 				if (demasked && slidOut) this._afterHide();
 			}.bind(this));
@@ -137,10 +139,12 @@ Bootstrap.Popup = new Class({
 			this.element.setStyle('top', top);
 			slidOut = true;
 			if (demasked && slidOut) this._afterHide();
-		});
+		}.bind(this));
 	},
 
 	_afterHide: function(){
+		this.animating = false;
+		this.visible = false;
 		if (!this.options.persist){
 			this.destroy();
 		} else {

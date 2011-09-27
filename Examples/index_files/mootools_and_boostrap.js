@@ -1,5 +1,5 @@
 //This library: http://localhost:9876/depender/build?requireLibs=Bootstrap&require=Core/DomReady&version=MooTools%20Bootstrap
-//Contents: Core:Source/Core/Core.js, More:Source/More/More.js, Core:Source/Types/Array.js, Core:Source/Types/Function.js, Core:Source/Types/Number.js, Core:Source/Types/String.js, Core:Source/Browser/Browser.js, Core:Source/Slick/Slick.Parser.js, Core:Source/Slick/Slick.Finder.js, Core:Source/Element/Element.js, Core:Source/Types/Object.js, Core:Source/Types/Event.js, Core:Source/Element/Element.Event.js, Core:Source/Class/Class.js, Core:Source/Class/Class.Extras.js, More:Source/Class/Events.Pseudos.js, More:Source/Element/Element.Event.Pseudos.js, More:Source/Element/Element.Delegation.js, Behavior:Source/Event.Mock.js, More:Source/Utilities/Table.js, Core:Source/Utilities/JSON.js, Behavior:Source/Element.Data.js, Behavior:Source/BehaviorAPI.js, Behavior:Source/Behavior.js, Behavior:Source/Delegator.js, Core:Source/Fx/Fx.js, Core:Source/Element/Element.Style.js, Core:Source/Fx/Fx.CSS.js, Core:Source/Fx/Fx.Morph.js, More:Source/Element/Element.Shortcuts.js, Core:Source/Element/Element.Dimensions.js, More:Source/Element/Element.Measure.js, More:Source/Fx/Fx.Reveal.js, More-Behaviors:Source/Delegators/Delegator.FxReveal.js, Bootstrap:Source/Behavior.BS.Alert.js, Bootstrap:Source/Bootstrap.js, Core:Source/Utilities/DOMReady.js, Bootstrap:Source/CSSEvents.js, More:Source/Element/Element.Position.js, Bootstrap:Source/Bootstrap.Twipsy.js, Bootstrap:Source/Bootstrap.Dropdown.js, Bootstrap:Source/Behavior.BS.Dropdown.js, Bootstrap:Source/Delegator.BS.ShowPopup.js, Bootstrap:Source/Bootstrap.Popover.js, More:Source/Types/Object.Extras.js, Bootstrap:Source/Behavior.BS.Popover.js, More:Source/Class/Class.Binds.js, More:Source/Class/Class.Occlude.js, More:Source/Utilities/IframeShim.js, More:Source/Interface/Mask.js, More:Source/Element/Elements.From.js, Core:Source/Fx/Fx.Tween.js, Core:Source/Fx/Fx.Transitions.js, Bootstrap:Source/Bootstrap.Popup.js, Bootstrap:Source/Behavior.BS.Twipsy.js, Bootstrap:Source/Behavior.BS.Popup.js, Clientcide:Source/Layout/TabSwapper.js, More:Source/Types/String.QueryString.js, Clientcide:Source/Behaviors/Behavior.Tabs.js, Bootstrap:Source/Behavior.BS.Tabs.js
+//Contents: Core:Source/Core/Core.js, More:Source/More/More.js, Core:Source/Types/Array.js, Core:Source/Types/Function.js, Core:Source/Types/Number.js, Core:Source/Types/String.js, Core:Source/Browser/Browser.js, Core:Source/Slick/Slick.Parser.js, Core:Source/Slick/Slick.Finder.js, Core:Source/Element/Element.js, Core:Source/Types/Object.js, Core:Source/Types/Event.js, Core:Source/Element/Element.Event.js, Core:Source/Class/Class.js, Core:Source/Class/Class.Extras.js, More:Source/Class/Events.Pseudos.js, More:Source/Element/Element.Event.Pseudos.js, More:Source/Element/Element.Delegation.js, Behavior:Source/Event.Mock.js, More:Source/Utilities/Table.js, Core:Source/Utilities/JSON.js, Behavior:Source/Element.Data.js, Behavior:Source/BehaviorAPI.js, Behavior:Source/Behavior.js, Behavior:Source/Delegator.js, Core:Source/Fx/Fx.js, Core:Source/Element/Element.Style.js, Core:Source/Fx/Fx.CSS.js, Core:Source/Fx/Fx.Morph.js, More:Source/Element/Element.Shortcuts.js, Core:Source/Element/Element.Dimensions.js, More:Source/Element/Element.Measure.js, More:Source/Fx/Fx.Reveal.js, More-Behaviors:Source/Delegators/Delegator.FxReveal.js, Bootstrap:Source/Behaviors/Behavior.BS.Alert.js, Bootstrap:Source/UI/Bootstrap.js, Core:Source/Utilities/DOMReady.js, Bootstrap:Source/UI/CSSEvents.js, More:Source/Element/Element.Position.js, Bootstrap:Source/UI/Bootstrap.Twipsy.js, Bootstrap:Source/UI/Bootstrap.Dropdown.js, Bootstrap:Source/Behaviors/Behavior.BS.Dropdown.js, Bootstrap:Source/UI/Delegator.BS.ShowPopup.js, Bootstrap:Source/UI/Bootstrap.Popover.js, More:Source/Types/Object.Extras.js, Bootstrap:Source/Behaviors/Behavior.BS.Popover.js, More:Source/Class/Class.Binds.js, More:Source/Class/Class.Occlude.js, More:Source/Utilities/IframeShim.js, More:Source/Interface/Mask.js, More:Source/Element/Elements.From.js, Core:Source/Fx/Fx.Tween.js, Core:Source/Fx/Fx.Transitions.js, Bootstrap:Source/UI/Bootstrap.Popup.js, Bootstrap:Source/Behaviors/Behavior.BS.Twipsy.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.js, Clientcide:Source/Layout/TabSwapper.js, More:Source/Types/String.QueryString.js, Clientcide:Source/Behaviors/Behavior.Tabs.js, Bootstrap:Source/Behaviors/Behavior.BS.Tabs.js
 
 // Begin: Source/Core/Core.js
 /*
@@ -7025,7 +7025,7 @@ name: Delegator.FxReveal
 
 })();
 
-// Begin: Source/Behavior.BS.Alert.js
+// Begin: Source/Behaviors/Behavior.BS.Alert.js
 /*
 ---
 
@@ -7043,7 +7043,7 @@ provides: [Behavior.BS.Alert]
 ...
 */
 
-// Begin: Source/Bootstrap.js
+// Begin: Source/UI/Bootstrap.js
 /*
 ---
 
@@ -7167,7 +7167,7 @@ window.addEvent('load', function(){
 })(window, document);
 
 
-// Begin: Source/CSSEvents.js
+// Begin: Source/UI/CSSEvents.js
 /*
 ---
 description: CSSEvents
@@ -7441,7 +7441,7 @@ Element.implement({
 })(Element.prototype.position);
 
 
-// Begin: Source/Bootstrap.Twipsy.js
+// Begin: Source/UI/Bootstrap.Twipsy.js
 /*
 ---
 
@@ -7612,7 +7612,7 @@ Bootstrap.Twipsy = new Class({
 
 });
 
-// Begin: Source/Bootstrap.Dropdown.js
+// Begin: Source/UI/Bootstrap.Dropdown.js
 /*
 ---
 
@@ -7677,7 +7677,7 @@ Bootstrap.Dropdown = new Class({
 	}
 });
 
-// Begin: Source/Behavior.BS.Dropdown.js
+// Begin: Source/Behaviors/Behavior.BS.Dropdown.js
 /*
 ---
 
@@ -7704,7 +7704,7 @@ Behavior.addGlobalFilters({
 	}
 });
 
-// Begin: Source/Delegator.BS.ShowPopup.js
+// Begin: Source/UI/Delegator.BS.ShowPopup.js
 /*
 ---
 
@@ -7740,77 +7740,9 @@ provides: [Delegator.BS.ShowPopup]
 
 	});
 
-
-
-/*
-	Delegator.register('click', 'Popover', {
-		defaults: {
-			template: '<div class="popover {position}"><div class="arrow"></div><div class="inner"><h3 class="title">{title}</h3><div class="content"><p>{alt}</p> <a class="btn close primary right">Close</a></div></div></div>',
-			mask: true,
-			position: 'auto'
-		},
-		handler: function(event, link, api){
-			event.preventDefault();
-			var template,
-					templateElement = api.get('templateElement');
-			if (templateElement) template = element.getElement(templateElement).get('html');
-			if (!template) template = api.get('template');
-
-			var pos = api.get('position');
-			if (pos == 'auto'){
-					if (link.getParent('.column1')) {
-							pos = 'right';
-					} else {
-							pos = 'left'
-					}
-			};
-
-			var position, edge;
-			switch(pos){
-				case 'above':
-					position = 'centerTop';
-					edge = 'centerBottom'
-					break;
-				case 'below':
-					position = 'centerBottom';
-					edge = 'centerTop'
-					break;
-				case 'left':
-					position = 'centerLeft';
-					edge = 'centerRight'
-					break;
-				case 'right':
-					position = 'centerRight';
-					edge = 'centerLeft'
-					break;
-			}
-
-			var content = Elements.from(template.substitute({
-				title: link.get('title'),
-				alt: link.get('alt'),
-				position: pos
-			}))[0];
-
-			var coords = show(content, {
-				relativeTo: link,
-				position: position,
-				edge: edge,
-				returnPos: true
-			}, api.getAs(Boolean, 'mask'));
-			if (pos == 'right') {
-				delete coords.left;
-				coords.right = 75;
-			} else {
-				coords.left = 75;
-			}
-			content.setStyles(coords);
-		}
-	});*/
-
-
 })();
 
-// Begin: Source/Bootstrap.Popover.js
+// Begin: Source/UI/Bootstrap.Popover.js
 /*
 ---
 
@@ -7937,7 +7869,7 @@ Object.extend({
 })();
 
 
-// Begin: Source/Behavior.BS.Popover.js
+// Begin: Source/Behaviors/Behavior.BS.Popover.js
 /*
 ---
 
@@ -8686,7 +8618,7 @@ Fx.Transitions.extend({
 });
 
 
-// Begin: Source/Bootstrap.Popup.js
+// Begin: Source/UI/Bootstrap.Popup.js
 /*
 ---
 
@@ -8739,18 +8671,22 @@ Bootstrap.Popup = new Class({
 	},
 
 	show: function(){
+		console.log('show', this.visible, this.animating);
+		if (this.visible || this.animating) return;
 		this.element.addEvent('click:relay(.close)', this.bound.hide);
-		this.mask();
-		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor)
+		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
+		this.makeMask();
 		if (this.options.animate){
 			this._slideIn();
 		} else {
 			this.element.show();
+			this._mask.show();
 			this.fireEvent('show', this.element);
 		}
+		this.visible = true;
 	},
 
-	mask: function(){
+	makeMask: function(){
 		if (this.options.mask){
 			if (!this._mask){
 				this._mask = new Element('div.modal-backdrop', {
@@ -8758,15 +8694,7 @@ Bootstrap.Popup = new Class({
 						click: this.bound.hide
 					}
 				}).inject(document.body);
-			}
-			if (this.options.animate){
-				var to = this._mask.getStyle('opacity');
-				this._mask.setStyle('opacity', 0);
-				this._mask.show();
-				console.log('tween to: ', to);
-				this._mask.tween('opacity', 0, to);
-			} else {
-				this._mask.show();
+				this.maskOpacity = this._mask.getStyle('opacity');
 			}
 		} else if (this.options.closeOnClickOut) {
 			document.body.addEvent('click', this.bound.hide);
@@ -8782,6 +8710,8 @@ Bootstrap.Popup = new Class({
 	},
 
 	hide: function(event){
+		if (!this.visible || this.animating) return;
+		this.animating = true;
 		if (event) event.preventDefault();
 		document.body.removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
@@ -8789,12 +8719,15 @@ Bootstrap.Popup = new Class({
 
 		if (this.options.animate) this._slideOut();
 		else this._afterHide();
-		return;
 	},
 
 	// PRIVATE
 
 	_slideIn: function(){
+		this._mask.setStyle('opacity', 0);
+		this._mask.show().set('tween');
+		this._mask.tween('opacity', 0, this.maskOpacity);
+		this.animating = true;
 		var top = this.element.show().getStyle('top').toFloat(),
 		    topMargin = this.element.getStyle('margin-top').toInt();
 		if (top < 0) top = 0;
@@ -8805,16 +8738,17 @@ Bootstrap.Popup = new Class({
 		this.fx.setOptions({
 			transition: 'back:out'
 		}).start('top', top).chain(function(){
+			this.animating = false;
 			this.fireEvent('show', this.element);
 		}.bind(this));
 	},
 
 	_slideOut: function(){
+		this.animating = true;
 		var demasked, slidOut;
 		if (this._mask) {
-			var o = this._mask.getStyle('opacity');
 			this._mask.fade('out').get('tween').chain(function(){
-				this._mask.setStyle('opacity', o);
+				this._mask.setStyle('opacity', this.maskOpacity);
 				demasked = true;
 				if (demasked && slidOut) this._afterHide();
 			}.bind(this));
@@ -8826,10 +8760,12 @@ Bootstrap.Popup = new Class({
 			this.element.setStyle('top', top);
 			slidOut = true;
 			if (demasked && slidOut) this._afterHide();
-		});
+		}.bind(this));
 	},
 
 	_afterHide: function(){
+		this.animating = false;
+		this.visible = false;
 		if (!this.options.persist){
 			this.destroy();
 		} else {
@@ -8841,7 +8777,7 @@ Bootstrap.Popup = new Class({
 
 });
 
-// Begin: Source/Behavior.BS.Twipsy.js
+// Begin: Source/Behaviors/Behavior.BS.Twipsy.js
 /*
 ---
 
@@ -8897,7 +8833,7 @@ Behavior.addGlobalFilters({
 	}
 });
 
-// Begin: Source/Behavior.BS.Popup.js
+// Begin: Source/Behaviors/Behavior.BS.Popup.js
 /*
 ---
 
@@ -9294,7 +9230,7 @@ Behavior.addGlobalFilters({
 });
 
 
-// Begin: Source/Behavior.BS.Tabs.js
+// Begin: Source/Behaviors/Behavior.BS.Tabs.js
 /*
 ---
 
