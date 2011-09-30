@@ -96,36 +96,41 @@
         </div>
         <div class="span12 columns">
           <h3>Using Behavior.Popup and Delegator.ShowPopup</h3>
-<pre class="prettyprint linenums">
-  &lt;!-- this button will show the popup below it -->
-  &lt;button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup"
-      class="btn danger">Launch Modal&lt;/button>
+<pre class="prettyprint linenums">&lt;!-- this button will show the popup below it -->
+&lt;button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup"
+    class="btn danger">Launch Modal&lt;/button>
 
-  &lt;div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
-    &lt;div class="modal-header">
-      &lt;a href="#" class="close">&times;&lt;/a>
-      &lt;h3>Modal Heading&lt;/h3>
-    &lt;/div>
-    &lt;div class="modal-body">
-      &lt;p>One fine body...&lt;/p>
-    &lt;/div>
-    &lt;div class="modal-footer">
-      &lt;a href="#" class="btn primary">Primary&lt;/a>
-      &lt;a href="#" class="btn secondary">Secondary&lt;/a>
-    &lt;/div>
+&lt;div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
+  &lt;div class="modal-header">
+    &lt;a href="#" class="close">&times;&lt;/a>
+    &lt;h3>Modal Heading&lt;/h3>
   &lt;/div>
+  &lt;div class="modal-body">
+    &lt;p>One fine body...&lt;/p>
+  &lt;/div>
+  &lt;div class="modal-footer">
+    &lt;a href="#" class="btn primary">Primary&lt;/a>
+    &lt;a href="#" class="btn secondary">Secondary&lt;/a>
+  &lt;/div>
+&lt;/div>
 </pre>
-          <h3>Behavior.BS.Popup Options</h3>
-          <table class="zebra-striped">
-            <thead>
-             <tr>
-               <th style="width: 100px;">Name</th>
-               <th style="width: 50px;">type</th>
-               <th style="width: 50px;">default</th>
-               <th>description</th>
-             </tr>
-            </thead>
-            <tbody>
+        <h3>Behavior.BS.Popup Options</h3>
+        <table class="zebra-striped">
+          <thead>
+           <tr>
+             <th style="width: 100px;">Name</th>
+             <th style="width: 50px;">type</th>
+             <th style="width: 50px;">default</th>
+             <th>description</th>
+           </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>persist</td>
+              <td>boolean</td>
+              <td>true</td>
+              <td>If <code>false</code> the popup and its modal layer will be destroyed when it is closed. Useful when you are fetching the popup with Ajax.</td>
+            </tr>
             <tr>
               <td>hide</td>
               <td>boolean</td>
@@ -163,13 +168,11 @@
             <span class="label notice">Notice</span>
             Behavior options can be set inline (<code>data-filtername-option="value"</code>) or using JSON-like values like so:
           </p>
-<pre class="prettyprint linenums">
-  &lt;div data-behavior="FilterName" data-filtername-options="
-    'string': 'foo',
-    'number': 1,
-    'object': { 'array': [1,2]}
-  ">...&lt;/div>
-</pre>
+<pre class="prettyprint linenums">&lt;div data-behavior="FilterName" data-filtername-options="
+  'string': 'foo',
+  'number': 1,
+  'object': { 'array': [1,2]}
+">...&lt;/div></pre>
           <h3>Selectors</h3>
           <p>
             <span class="label notice">Notice</span>
@@ -217,8 +220,7 @@
         <div class="span12 columns">
           <h3>Using Behavior.BS.Dropdown</h3>
           <p>To quickly add dropdown functionality to any nav element, use the <code>Dropdown</code> behavior. Any valid bootstrap dropdown inside the container will automatically be activated.</p>
-<pre class="prettyprint linenums">
-&lt;-- a simple example -->
+<pre class="prettyprint linenums">&lt;-- a simple example -->
 &lt;ul data-behavior="BS.Dropdown">
   &lt;li class="menu">
     &lt;a href="#" class="menu">Menu2&lt;/a>
@@ -326,27 +328,26 @@
           <p>
             Activates tab functionality for a given container.
           </p>
-<pre class="prettyprint linenums">
-  &lt;ul class="tabs" data-behavior="BS.Tabs">
-    &lt;li class="active">&lt;a>Home&lt;/a>&lt;/li>
-    &lt;li>&lt;a>Profile&lt;/a>&lt;/li>
-    &lt;li>&lt;a>Messages&lt;/a>&lt;/li>
-    &lt;li>&lt;a>Settings&lt;/a>&lt;/li>
-  &lt;/ul>
-  &lt;div id="my-tab-content" class="tab-content">
-    &lt;div class="active" id="home">
-      ...
-    &lt;/div>
-    &lt;div id="profile">
-      ...
-    &lt;/div>
-    &lt;div id="messages">
-      ...
-    &lt;/div>
-    &lt;div id="settings">
-      ...
-    &lt;/div>
+<pre class="prettyprint linenums">&lt;ul class="tabs" data-behavior="BS.Tabs">
+  &lt;li class="active">&lt;a>Home&lt;/a>&lt;/li>
+  &lt;li>&lt;a>Profile&lt;/a>&lt;/li>
+  &lt;li>&lt;a>Messages&lt;/a>&lt;/li>
+  &lt;li>&lt;a>Settings&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;div id="my-tab-content" class="tab-content">
+  &lt;div class="active" id="home">
+    ...
   &lt;/div>
+  &lt;div id="profile">
+    ...
+  &lt;/div>
+  &lt;div id="messages">
+    ...
+  &lt;/div>
+  &lt;div id="settings">
+    ...
+  &lt;/div>
+&lt;/div>
 </pre>
           <h3>Behavior.BS.Tab Options</h3>
           <table class="zebra-striped">
@@ -602,7 +603,7 @@
           <h3>Closing Alerts</h3>
           <p>Closing errors uses the `nix` trigger from the `Fx.Reveal` delegator in <a href="https://github.com/anutron/more-behaviors">more-behaviors</a>. You can put this trigger on any element.</p>
           <h3>Markup</h3>
-<pre class="prettyprint linenums">&lt;div class="alert-message error">
+<preclass="prettyprint linenums">&lt;div class="alert-message error">
   &lt;!-- the data trigger references the parent div.alert-message -->
   &lt;a class="close" data-trigger="nix" data-nix-options="
     'target': '!div.alert-message'

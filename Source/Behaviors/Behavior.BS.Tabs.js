@@ -27,7 +27,7 @@ provides: [Behavior.BS.Tabs]
 
 	Behavior.setFilterDefaults('BS.Tabs', {
 		'tabs-selector': '>li',
-		'sections-selector': '+.tab-content > div',
+		'sections-selector': '+.tab-content >',
 		'selectedClass': 'active',
 		smooth: false,
 		smoothSize: false

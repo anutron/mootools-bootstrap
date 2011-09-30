@@ -34,7 +34,7 @@ Behavior.addGlobalFilters({
 			var popup = new Bootstrap.Popup(el,
 				Object.cleanValues(
 					api.getAs({
-						persist: Boolean,
+					persist: Boolean,
 						animate: Boolean,
 						closeOnEsc: Boolean,
 						closeOnClickOut: Boolean,
