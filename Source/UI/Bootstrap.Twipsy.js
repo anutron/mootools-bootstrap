@@ -28,6 +28,7 @@ Bootstrap.Twipsy = new Class({
 		delayIn: 200,
 		delayOut: 0,
 		fallback: '',
+		override: '',
 		offset: 0,
 		title: 'title', //element property
 		trigger: 'hover', //focus, manual
@@ -42,27 +43,9 @@ Bootstrap.Twipsy = new Class({
 		this._attach();
 	},
 
-	getTip: function(){
-		if (!this.tip){
-			this.tip = new Element('div.twipsy').addClass(this.options.location)
-				 .adopt(new Element('div.twipsy-arrow'))
-				 .adopt(
-				   new Element('div.twipsy-inner', {
-				     html: this.options.getContent.apply(this, [this.element]) || this.options.fallback
-				   })
-				 );
-			if (this.options.animate) this.tip.addClass('fade');
-			if (Browser.Features.cssTransition && this.tip.addEventListener){
-				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
-			}
-			this.element.set('alt', '').set('title', '');
-		}
-		return this.tip;
-	},
-
 	show: function(){
 		this._clear();
-		this.getTip();
+		this._makeTip();
 		var pos, edge, offset = {x: 0, y: 0};
 		switch(this.options.location){
 			case 'below':
@@ -94,22 +77,45 @@ Bootstrap.Twipsy = new Class({
 		}).removeClass('out').addClass('in');
 		this.visible = true;
 		if (!Browser.Features.cssTransition || !this.options.animate) this._complete();
+		this.fireEvent('show');
+		return this;
 	},
 
 	hide: function(){
-		this.getTip();
+		this._makeTip();
 		this.tip.removeClass('in').addClass('out');
 		this.visible = false;
 		if (!Browser.Features.cssTransition || !this.options.animate) this._complete();
+		this.fireEvent('hide');
+		return this;
 	},
 
 	destroy: function(){
 		this._detach();
 		if (this.tip) this.tip.destroy();
 		this.destroyed = true;
+		return this;
 	},
 
 	// PRIVATE METHODS
+
+	_makeTip: function(){
+		if (!this.tip){
+			this.tip = new Element('div.twipsy').addClass(this.options.location)
+				 .adopt(new Element('div.twipsy-arrow'))
+				 .adopt(
+				   new Element('div.twipsy-inner', {
+				     html: this.options.override || this.options.getContent.apply(this, [this.element]) || this.options.fallback
+				   })
+				 );
+			if (this.options.animate) this.tip.addClass('fade');
+			if (Browser.Features.cssTransition && this.tip.addEventListener){
+				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
+			}
+			this.element.set('alt', '').set('title', '');
+		}
+		return this.tip;
+	},
 
 	_attach: function(method){
 		method = method || 'addEvents';

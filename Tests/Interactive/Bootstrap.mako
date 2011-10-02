@@ -447,54 +447,48 @@
              </tr>
             </thead>
             <tbody>
-             <tr>
-               <td>animate</td>
-               <td>boolean</td>
-               <td>true</td>
-               <td>apply a css fade transition to the tooltip</td>
-             </tr>
-             <tr>
-               <td>delayIn</td>
-               <td>number</td>
-               <td>200</td>
-               <td>delay before showing tooltip (ms)</td>
-             </tr>
-             <tr>
-               <td>delayOut</td>
-               <td>number</td>
-               <td>0</td>
-               <td>delay before hiding tooltip (ms)</td>
-             </tr>
-             <tr>
-               <td>fallback</td>
-               <td>string</td>
-               <td>''</td>
-               <td>text to use when no tooltip title is present</td>
-             </tr>
-             <tr>
-               <td>placement</td>
-               <td>string</td>
-               <td>'above'</td>
-               <td>how to position the tooltip - above | below | left | right</td>
-             </tr>
-             <tr>
-               <td>offset</td>
-               <td>number</td>
-               <td>0</td>
-               <td>pixel offset of tooltip from target element</td>
-             </tr>
-             <tr>
-               <td>title</td>
-               <td>string, function</td>
-               <td>'title'</td>
-               <td>attribute or method for retrieving title text</td>
-             </tr>
-             <tr>
-               <td>trigger</td>
-               <td>string</td>
-               <td>'hover'</td>
-               <td>how tooltip is triggered - hover | focus | manual</td>
-             </tr>
+              <tr>
+                <td>content</td>
+                <td>string</td>
+                <td>'title'</td>
+                <td>the content of the tip, if not defined, will use the <code>title</code> property of the element</td>
+              </tr>
+              <tr>
+                <td>animate</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>apply a css fade transition to the tooltip</td>
+              </tr>
+              <tr>
+                <td>delayIn</td>
+                <td>number</td>
+                <td>200</td>
+                <td>delay before showing tooltip (ms)</td>
+              </tr>
+              <tr>
+                <td>delayOut</td>
+                <td>number</td>
+                <td>0</td>
+                <td>delay before hiding tooltip (ms)</td>
+              </tr>
+              <tr>
+                <td>placement</td>
+                <td>string</td>
+                <td>'above'</td>
+                <td>how to position the tooltip - above | below | left | right</td>
+              </tr>
+              <tr>
+                <td>offset</td>
+                <td>number</td>
+                <td>0</td>
+                <td>pixel offset of tooltip from target element</td>
+              </tr>
+              <tr>
+                <td>trigger</td>
+                <td>string</td>
+                <td>'hover'</td>
+                <td>how tooltip is triggered - hover | focus | manual</td>
+              </tr>
             </tbody>
           </table>
           <h3>Demo</h3>
@@ -523,7 +517,7 @@
         </div>
         <div class="span12 columns">
           <h3>Using Behavior.Popover.js</h3>
-          <pre class="prettyprint linenums">&lt;a data-behavior="BS.Popover" title="A Title" data-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover&lt;/a></pre>
+          <pre class="prettyprint linenums">&lt;a data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover&lt;/a></pre>
           <h3>Options</h3>
           <table class="zebra-striped">
             <thead>
@@ -535,64 +529,58 @@
              </tr>
             </thead>
             <tbody>
-             <tr>
-               <td>animate</td>
-               <td>boolean</td>
-               <td>true</td>
-               <td>apply a css fade transition to the tooltip</td>
-             </tr>
-             <tr>
-               <td>delayIn</td>
-               <td>number</td>
-               <td>200</td>
-               <td>delay before showing tooltip (ms)</td>
-             </tr>
-             <tr>
-               <td>delayOut</td>
-               <td>number</td>
-               <td>0</td>
-               <td>delay before hiding tooltip (ms)</td>
-             </tr>
-             <tr>
-               <td>fallback</td>
-               <td>string</td>
-               <td>''</td>
-               <td>text to use when no tooltip title is present</td>
-             </tr>
-             <tr>
-               <td>placement</td>
-               <td>string</td>
-               <td>'right'</td>
-               <td>how to position the tooltip - above | below | left | right</td>
-             </tr>
-             <tr>
-               <td>offset</td>
-               <td>number</td>
-               <td>10</td>
-               <td>pixel offset of tooltip from target element</td>
-             </tr>
-             <tr>
-               <td>title</td>
-               <td>string, function</td>
-               <td>'title'</td>
-               <td>attribute or method for retrieving title text</td>
-             </tr>
-             <tr>
-               <td>content</td>
-               <td>string, function</td>
-               <td>'data-content'</td>
-               <td>attribute or method for retrieving content text</td>
-             </tr>
-             <tr>
-               <td>trigger</td>
-               <td>string</td>
-               <td>'hover'</td>
-               <td>how tooltip is triggered - hover | focus | manual</td>
-             </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>--</td>
+                <td>the title of the popover, if not defined, will use the <code>title</code> property of the element</td>
+              </tr>
+              <tr>
+                <td>content</td>
+                <td>string</td>
+                <td>--</td>
+                <td>the content of the popover</td>
+              </tr>
+              <tr>
+                <td>animate</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>apply a css fade transition to the tooltip</td>
+              </tr>
+              <tr>
+                <td>delayIn</td>
+                <td>number</td>
+                <td>200</td>
+                <td>delay before showing tooltip (ms)</td>
+              </tr>
+              <tr>
+                <td>delayOut</td>
+                <td>number</td>
+                <td>0</td>
+                <td>delay before hiding tooltip (ms)</td>
+              </tr>
+              <tr>
+                <td>placement</td>
+                <td>string</td>
+                <td>'right'</td>
+                <td>how to position the tooltip - above | below | left | right</td>
+              </tr>
+              <tr>
+                <td>offset</td>
+                <td>number</td>
+                <td>10</td>
+                <td>pixel offset of tooltip from target element</td>
+              </tr>
+              <tr>
+                <td>trigger</td>
+                <td>string</td>
+                <td>'hover'</td>
+                <td>how tooltip is triggered - hover | focus | manual</td>
+              </tr>
             </tbody>
           </table>
           <h3>Demo</h3>
-          <a href="#" class="btn danger" data-behavior="BS.Popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+          <a href="#" class="btn danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
         </div>
       </div>
     </section>

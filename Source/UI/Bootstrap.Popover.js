@@ -31,7 +31,7 @@ Bootstrap.Popover = new Class({
 		}
 	},
 
-	getTip: function(){
+	_makeTip: function(){
 		if (!this.tip){
 			this.tip = new Element('div.popover').addClass(this.options.location)
 				 .adopt(new Element('div.arrow'))

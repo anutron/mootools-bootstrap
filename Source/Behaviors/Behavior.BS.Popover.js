@@ -23,9 +23,7 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
-			fallback: '',
 			offset: 10,
-			title: 'title', //element property
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
@@ -37,14 +35,13 @@ Behavior.addGlobalFilters({
 					animate: Boolean,
 					delayIn: Number,
 					delayOut: Number,
-					fallback: String,
 					html: Boolean,
 					offset: Number,
-					title: String,
 					trigger: String
 				})
 			);
-			if (api.get('content')) options.getContent = Function.from(api.get('content'));
+			options.getContent = Function.from(api.get('content'));
+			options.getTitle = Function.from(api.get('title') || el.get('title'));
 			var tip = new Bootstrap.Popover(el, options);
 			if (api.event) tip._enter();
 			api.onCleanup(tip.destroy.bind(tip));

@@ -23,29 +23,27 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
-			fallback: '',
 			offset: 0,
-			title: 'title', //element property
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
 		returns: Bootstrap.Twipsy,
 		setup: function(el, api){
-			var tip = new Bootstrap.Twipsy(el,
-				Object.cleanValues(
-					api.getAs({
-						location: String,
-						animate: Boolean,
-						delayIn: Number,
-						delayOut: Number,
-						fallback: String,
-						html: Boolean,
-						offset: Number,
-						title: String,
-						trigger: String
-					})
-				)
+			var options = Object.cleanValues(
+				api.getAs({
+					location: String,
+					animate: Boolean,
+					delayIn: Number,
+					delayOut: Number,
+					fallback: String,
+					override: String,
+					html: Boolean,
+					offset: Number,
+					trigger: String
+				})
 			);
+			options.getTitle = Function.from(api.get('content') || element.get('title'));
+			var tip = new Bootstrap.Twipsy(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
 			if (api.event) tip.show();
 			return tip;
