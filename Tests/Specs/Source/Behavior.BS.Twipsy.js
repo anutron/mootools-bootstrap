@@ -22,12 +22,12 @@ provides: [Behavior.BS.Twipsy.Specs]
 		content: str,
 		returns: Bootstrap.Twipsy,
 		expect: function(element, instance){
-			instance.getTip().setStyle('visibility', 'hidden'); //hide in test UI
+			instance._makeTip().setStyle('visibility', 'hidden'); //hide in test UI
 			element.fireEvent('mouseenter');
 			waits(instance.options.delayIn + 10);
 			runs(function(){
 				expect(instance.visible).toBe(true);
-				expect(instance.getTip().getParent()).toBeDefined();
+				expect(instance._makeTip().getParent()).toBeDefined();
 			});
 			waits(1000);
 			runs(function(){
@@ -37,7 +37,7 @@ provides: [Behavior.BS.Twipsy.Specs]
 			runs(function(){
 				instance.hide();
 				expect(instance.visible).toBe(false);
-				expect(instance.getTip().getParent()).toBeNull();
+				expect(instance._makeTip().getParent()).toBeNull();
 			});
 		}
 	});
