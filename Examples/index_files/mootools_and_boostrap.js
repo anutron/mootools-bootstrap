@@ -199,7 +199,7 @@ var implement = function(name, method){
 		if (typeOf(hook) == 'type') implement.call(hook, name, method);
 		else hook.call(this, name, method);
 	}
-	
+
 	var previous = this.prototype[name];
 	if (previous == null || !previous.$protected) this.prototype[name] = method;
 
@@ -768,7 +768,7 @@ Function.implement({
 		try {
 			return this.apply(bind, Array.from(args));
 		} catch (e){}
-		
+
 		return null;
 	},
 
@@ -776,7 +776,7 @@ Function.implement({
 	bind: function(bind){
 		var self = this,
 			args = (arguments.length > 1) ? Array.slice(arguments, 1) : null;
-		
+
 		return function(){
 			if (!args && !arguments.length) return self.call(bind);
 			if (args && arguments.length) return self.apply(bind, args.concat(Array.from(arguments)));
@@ -1570,7 +1570,7 @@ local.setDocument = function(document){
 
 	var selected, id = 'slick_uniqueid';
 	var testNode = document.createElement('div');
-	
+
 	var testRoot = document.body || document.getElementsByTagName('body')[0] || root;
 	testRoot.appendChild(testNode);
 
@@ -1621,7 +1621,7 @@ local.setDocument = function(document){
 
 			features.brokenGEBCN = cachedGetElementsByClassName || brokenSecondClassNameGEBCN;
 		}
-		
+
 		if (testNode.querySelectorAll){
 			// IE 8 returns closed nodes (EG:"</foo>") for querySelectorAll('*') for some documents
 			try {
@@ -1747,7 +1747,7 @@ var reSimpleSelector = /^([#.]?)((?:[\w-]+|\*))$/,
 local.search = function(context, expression, append, first){
 
 	var found = this.found = (first) ? null : (append || []);
-	
+
 	if (!context) return found;
 	else if (context.navigator) context = context.document; // Convert the node from a window to a document
 	else if (!context.nodeType) return found;
@@ -2053,7 +2053,7 @@ local.matchNode = function(node, selector){
 			return this.nativeMatchesSelector.call(node, selector.replace(/\[([^=]+)=\s*([^'"\]]+?)\s*\]/g, '[$1="$2"]'));
 		} catch(matchError) {}
 	}
-	
+
 	var parsed = this.Slick.parse(selector);
 	if (!parsed) return true;
 
@@ -2132,7 +2132,7 @@ var combinators = {
 							this.push(item, tag, null, classes, attributes, pseudos);
 							break;
 						}
-					} 
+					}
 					return;
 				}
 				if (!item){
@@ -2341,7 +2341,7 @@ var pseudos = {
 	'root': function(node){
 		return (node === this.root);
 	},
-	
+
 	'selected': function(node){
 		return node.selected;
 	}
@@ -2370,7 +2370,7 @@ local.attributeGetters = {
 	'style': function(){
 		return (this.style) ? this.style.cssText : this.getAttribute('style');
 	},
-	
+
 	'tabindex': function(){
 		var attributeNode = this.getAttributeNode('tabindex');
 		return (attributeNode && attributeNode.specified) ? attributeNode.nodeValue : null;
@@ -4054,7 +4054,7 @@ this.Events = new Class({
 		}, this);
 		return this;
 	},
-	
+
 	removeEvent: function(type, fn){
 		type = removeOn(type);
 		var events = this.$events[type];
@@ -4391,9 +4391,9 @@ var formObserver = function(eventName){
 				forms = this.retrieve($delegationKey + 'forms', []),
 				target = event.target,
 				form = (target.get('tag') == 'form') ? target : event.target.getParent('form');
-				
+
 			if (!form) return;
-				
+
 			var formEvents = form.retrieve($delegationKey + 'originalFn', []),
 				formListeners = form.retrieve($delegationKey + 'listeners', []),
 				self = this;
@@ -4536,7 +4536,7 @@ var Table = this.Table = function(){
 	this.length = 0;
 	var keys = [],
 	    values = [];
-	
+
 	this.set = function(key, value){
 		var index = keys.indexOf(key);
 		if (index == -1){
@@ -4568,7 +4568,7 @@ var Table = this.Table = function(){
 	this.each = this.forEach = function(fn, bind){
 		for (var i = 0, l = this.length; i < l; i++) fn.call(bind, keys[i], values[i], this);
 	};
-	
+
 };
 
 if (this.Type) new Type('Table', Table);
@@ -4701,7 +4701,7 @@ script: Element.Data.js
 			}
 		},
 
-		/* 
+		/*
 			arguments:
 				name - (string) the data name to store; will be automatically prefixed with 'data-'
 				value - (string, array, or object) if an object or array the object will be JSON encoded; otherwise stored as provided.
@@ -4712,7 +4712,7 @@ script: Element.Data.js
 
 		/*
 			retrieves a property from HTML5 data property you specify
-		
+
 			arguments:
 				name - (retrieve) the data name to store; will be automatically prefixed with 'data-'
 				strict - (boolean) if true, will set the JSON.decode's secure flag to true; otherwise the value is still tested but allows single quoted attributes.
@@ -5397,9 +5397,9 @@ provides: [Delegator]
 			}, this);
 			this.API = new Class({ Extends: BehaviorAPI });
 			this.passMethods({
-				addEvent: this.addEvent.bind(this), 
+				addEvent: this.addEvent.bind(this),
 				removeEvent: this.removeEvent.bind(this),
-				addEvents: this.addEvents.bind(this), 
+				addEvents: this.addEvents.bind(this),
 				removeEvents: this.removeEvents.bind(this),
 				fireEvent: this.fireEvent.bind(this),
 				attach: this.attach.bind(this),
@@ -5653,7 +5653,7 @@ var Fx = this.Fx = new Class({
 		} else {
 			this.frame++;
 		}
-		
+
 		if (this.frame < this.frames){
 			var delta = this.transition(this.frame / this.frames);
 			this.set(this.compute(this.from, this.to, delta));
@@ -5696,7 +5696,7 @@ var Fx = this.Fx = new Class({
 		pushInstance.call(this, fps);
 		return this;
 	},
-	
+
 	stop: function(){
 		if (this.isRunning()){
 			this.time = null;
@@ -5710,7 +5710,7 @@ var Fx = this.Fx = new Class({
 		}
 		return this;
 	},
-	
+
 	cancel: function(){
 		if (this.isRunning()){
 			this.time = null;
@@ -5720,7 +5720,7 @@ var Fx = this.Fx = new Class({
 		}
 		return this;
 	},
-	
+
 	pause: function(){
 		if (this.isRunning()){
 			this.time = null;
@@ -5728,12 +5728,12 @@ var Fx = this.Fx = new Class({
 		}
 		return this;
 	},
-	
+
 	resume: function(){
 		if ((this.frame < this.frames) && !this.isRunning()) pushInstance.call(this, this.options.fps);
 		return this;
 	},
-	
+
 	isRunning: function(){
 		var list = instances[this.options.fps];
 		return list && list.contains(this);
@@ -6424,7 +6424,7 @@ Element.implement({
 			x: offset.x - scroll.x,
 			y: offset.y - scroll.y
 		};
-		
+
 		if (relative && (relative = document.id(relative))){
 			var relativePosition = relative.getPosition();
 			return {x: position.x - relativePosition.x - leftBorder(relative), y: position.y - relativePosition.y - topBorder(relative)};
@@ -7036,7 +7036,7 @@ description: This file just depends on the Fx.Reveal delegator in More-Behaviors
 license: MIT-style license.
 
 requires:
- - More-Behaviors/Delegator.FxReveal
+ - More-Behaviors/Delegator.Nix
 
 provides: [Behavior.BS.Alert]
 
@@ -7090,7 +7090,7 @@ var domready = function(){
 	if (ready) return;
 	Browser.loaded = ready = true;
 	document.removeListener('DOMContentLoaded', domready).removeListener('readystatechange', check);
-	
+
 	document.fireEvent('domready');
 	window.fireEvent('domready');
 };
@@ -7472,6 +7472,7 @@ Bootstrap.Twipsy = new Class({
 		delayIn: 200,
 		delayOut: 0,
 		fallback: '',
+		override: '',
 		offset: 0,
 		title: 'title', //element property
 		trigger: 'hover', //focus, manual
@@ -7486,27 +7487,9 @@ Bootstrap.Twipsy = new Class({
 		this._attach();
 	},
 
-	getTip: function(){
-		if (!this.tip){
-			this.tip = new Element('div.twipsy').addClass(this.options.location)
-				 .adopt(new Element('div.twipsy-arrow'))
-				 .adopt(
-				   new Element('div.twipsy-inner', {
-				     html: this.options.getContent.apply(this, [this.element]) || this.options.fallback
-				   })
-				 );
-			if (this.options.animate) this.tip.addClass('fade');
-			if (Browser.Features.cssTransition && this.tip.addEventListener){
-				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
-			}
-			this.element.set('alt', '').set('title', '');
-		}
-		return this.tip;
-	},
-
 	show: function(){
 		this._clear();
-		this.getTip();
+		this._makeTip();
 		var pos, edge, offset = {x: 0, y: 0};
 		switch(this.options.location){
 			case 'below':
@@ -7538,22 +7521,45 @@ Bootstrap.Twipsy = new Class({
 		}).removeClass('out').addClass('in');
 		this.visible = true;
 		if (!Browser.Features.cssTransition || !this.options.animate) this._complete();
+		this.fireEvent('show');
+		return this;
 	},
 
 	hide: function(){
-		this.getTip();
+		this._makeTip();
 		this.tip.removeClass('in').addClass('out');
 		this.visible = false;
 		if (!Browser.Features.cssTransition || !this.options.animate) this._complete();
+		this.fireEvent('hide');
+		return this;
 	},
 
 	destroy: function(){
 		this._detach();
 		if (this.tip) this.tip.destroy();
 		this.destroyed = true;
+		return this;
 	},
 
 	// PRIVATE METHODS
+
+	_makeTip: function(){
+		if (!this.tip){
+			this.tip = new Element('div.twipsy').addClass(this.options.location)
+				 .adopt(new Element('div.twipsy-arrow'))
+				 .adopt(
+				   new Element('div.twipsy-inner', {
+				     html: this.options.override || this.options.getContent.apply(this, [this.element]) || this.options.fallback
+				   })
+				 );
+			if (this.options.animate) this.tip.addClass('fade');
+			if (Browser.Features.cssTransition && this.tip.addEventListener){
+				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
+			}
+			this.element.set('alt', '').set('title', '');
+		}
+		return this.tip;
+	},
 
 	_attach: function(method){
 		method = method || 'addEvents';
@@ -7642,8 +7648,9 @@ Bootstrap.Dropdown = new Class({
 		*/
 	},
 
-	initialize: function(container){
+	initialize: function(container, options){
 		this.element = document.id(container);
+		this.setOptions(options);
 		this.boundHandle = this._handle.bind(this);
 		document.id(document.body).addEvent('click', this.boundHandle);
 	},
@@ -7664,6 +7671,7 @@ Bootstrap.Dropdown = new Class({
 	destroy: function(){
 		this.hideAll();
 		document.body.removeEvent('click', this.boundHandle);
+		return this;
 	},
 
 	// PRIVATE
@@ -7776,7 +7784,7 @@ Bootstrap.Popover = new Class({
 		}
 	},
 
-	getTip: function(){
+	_makeTip: function(){
 		if (!this.tip){
 			this.tip = new Element('div.popover').addClass(this.options.location)
 				 .adopt(new Element('div.arrow'))
@@ -7895,9 +7903,7 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
-			fallback: '',
 			offset: 10,
-			title: 'title', //element property
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
@@ -7909,14 +7915,13 @@ Behavior.addGlobalFilters({
 					animate: Boolean,
 					delayIn: Number,
 					delayOut: Number,
-					fallback: String,
 					html: Boolean,
 					offset: Number,
-					title: String,
 					trigger: String
 				})
 			);
-			if (api.get('content')) options.getContent = Function.from(api.get('content'));
+			options.getContent = Function.from(api.get('content'));
+			options.getTitle = Function.from(api.get('title') || el.get('title'));
 			var tip = new Bootstrap.Popover(el, options);
 			if (api.event) tip._enter();
 			api.onCleanup(tip.destroy.bind(tip));
@@ -8647,6 +8652,12 @@ Bootstrap.Popup = new Class({
 	Implements: [Options, Events],
 
 	options: {
+		/*
+			onShow: function(){},
+			onHide: function(){},
+			animate: function(){},
+			destroy: function(){},
+		*/
 		persist: true,
 		closeOnClickOut: true,
 		closeOnEsc: true,
@@ -8671,11 +8682,10 @@ Bootstrap.Popup = new Class({
 	},
 
 	show: function(){
-		console.log('show', this.visible, this.animating);
 		if (this.visible || this.animating) return;
 		this.element.addEvent('click:relay(.close)', this.bound.hide);
 		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
-		this.makeMask();
+		this._makeMask();
 		if (this.options.animate){
 			this._slideIn();
 		} else {
@@ -8684,21 +8694,6 @@ Bootstrap.Popup = new Class({
 			this.fireEvent('show', this.element);
 		}
 		this.visible = true;
-	},
-
-	makeMask: function(){
-		if (this.options.mask){
-			if (!this._mask){
-				this._mask = new Element('div.modal-backdrop', {
-					events: {
-						click: this.bound.hide
-					}
-				}).inject(document.body);
-				this.maskOpacity = this._mask.getStyle('opacity');
-			}
-		} else if (this.options.closeOnClickOut) {
-			document.body.addEvent('click', this.bound.hide);
-		}
 	},
 
 	destroy: function(){
@@ -8723,6 +8718,21 @@ Bootstrap.Popup = new Class({
 
 	// PRIVATE
 
+	_makeMask: function(){
+		if (this.options.mask){
+			if (!this._mask){
+				this._mask = new Element('div.modal-backdrop', {
+					events: {
+						click: this.bound.hide
+					}
+				}).inject(document.body);
+				this.maskOpacity = this._mask.getStyle('opacity');
+			}
+		} else if (this.options.closeOnClickOut) {
+			document.body.addEvent('click', this.bound.hide);
+		}
+	},
+
 	_slideIn: function(){
 		this._mask.setStyle('opacity', 0);
 		this._mask.show().set('tween');
@@ -8733,7 +8743,7 @@ Bootstrap.Popup = new Class({
 		if (top < 0) top = 0;
 		if (top + topMargin < 0) top = -topMargin;
 		this.element.setStyle('top', - this.element.getSize().y);
-		this.fireEvent('animate', this.element);
+		this.fireEvent('animate', this.animating);
 		if (!this.fx) this.fx = new Fx.Tween(this.element);
 		this.fx.setOptions({
 			transition: 'back:out'
@@ -8753,6 +8763,7 @@ Bootstrap.Popup = new Class({
 				if (demasked && slidOut) this._afterHide();
 			}.bind(this));
 		}
+		this.fireEvent('animate', this.animating);
 		var top = this.element.getStyle('top').toFloat();
 		this.fx.setOptions({
 			transition: 'back:in'
@@ -8803,29 +8814,27 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
-			fallback: '',
 			offset: 0,
-			title: 'title', //element property
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
 		returns: Bootstrap.Twipsy,
 		setup: function(el, api){
-			var tip = new Bootstrap.Twipsy(el,
-				Object.cleanValues(
-					api.getAs({
-						location: String,
-						animate: Boolean,
-						delayIn: Number,
-						delayOut: Number,
-						fallback: String,
-						html: Boolean,
-						offset: Number,
-						title: String,
-						trigger: String
-					})
-				)
+			var options = Object.cleanValues(
+				api.getAs({
+					location: String,
+					animate: Boolean,
+					delayIn: Number,
+					delayOut: Number,
+					fallback: String,
+					override: String,
+					html: Boolean,
+					offset: Number,
+					trigger: String
+				})
 			);
+			options.getTitle = Function.from(api.get('content') || el.get('title'));
+			var tip = new Bootstrap.Twipsy(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
 			if (api.event) tip.show();
 			return tip;
@@ -8860,13 +8869,15 @@ Behavior.addGlobalFilters({
 			animate: true,
 			closeOnEsc: true,
 			closeOnClickOut: true,
-			mask: true
+			mask: true,
+			persist: true
 		},
 		returns: Bootstrap.Popup,
 		setup: function(el, api){
 			var popup = new Bootstrap.Popup(el,
 				Object.cleanValues(
 					api.getAs({
+						persist: Boolean,
 						animate: Boolean,
 						closeOnEsc: Boolean,
 						closeOnClickOut: Boolean,

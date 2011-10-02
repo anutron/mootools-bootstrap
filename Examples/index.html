@@ -96,7 +96,23 @@ functionality that we require here at twitter.</p>
         </div>
         <div class="span12 columns">
           <h3>Using Behavior.Popup and Delegator.ShowPopup</h3>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">  </span><span class="com">&lt;!-- this button will show the popup below it --&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">data-trigger</span><span class="pun">=</span><span class="atv">"BS.showPopup"</span><span class="pln"> </span><span class="atn">data-bs-showpopup-target</span><span class="pun">=</span><span class="atv">"!body #demoPopup"</span></li><li class="L2"><span class="pln">      </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn danger"</span><span class="tag">&gt;</span><span class="pln">Launch Modal</span><span class="tag">&lt;/button&gt;</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Popup"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal hide"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"demoPopup"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-header"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span><span class="tag">&gt;</span><span class="pln">×</span><span class="tag">&lt;/a&gt;</span></li><li class="L7"><span class="pln">      </span><span class="tag">&lt;h3&gt;</span><span class="pln">Modal Heading</span><span class="tag">&lt;/h3&gt;</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-body"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">      </span><span class="tag">&lt;p&gt;</span><span class="pln">One fine body...</span><span class="tag">&lt;/p&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-footer"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn primary"</span><span class="tag">&gt;</span><span class="pln">Primary</span><span class="tag">&lt;/a&gt;</span></li><li class="L4"><span class="pln">      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn secondary"</span><span class="tag">&gt;</span><span class="pln">Secondary</span><span class="tag">&lt;/a&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+<pre class="prettyprint linenums">&lt;!-- this button will show the popup below it -->
+&lt;button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup"
+    class="btn danger">Launch Modal&lt;/button>
+
+&lt;div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
+  &lt;div class="modal-header">
+    &lt;a href="#" class="close">&times;&lt;/a>
+    &lt;h3>Modal Heading&lt;/h3>
+  &lt;/div>
+  &lt;div class="modal-body">
+    &lt;p>One fine body...&lt;/p>
+  &lt;/div>
+  &lt;div class="modal-footer">
+    &lt;a href="#" class="btn primary">Primary&lt;/a>
+    &lt;a href="#" class="btn secondary">Secondary&lt;/a>
+  &lt;/div>
+&lt;/div></pre>
           <h3>Behavior.BS.Popup Options</h3>
           <table class="zebra-striped">
             <thead>
@@ -145,7 +161,11 @@ functionality that we require here at twitter.</p>
             <span class="label notice">Notice</span>
             Behavior options can be set inline (<code>data-filtername-option="value"</code>) or using JSON-like values like so:
           </p>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"FilterName"</span><span class="pln"> </span><span class="atn">data-filtername-options</span><span class="pun">=</span><span class="atv">"</span></li><li class="L1"><span class="atv">    'string': 'foo',</span></li><li class="L2"><span class="atv">    'number': 1,</span></li><li class="L3"><span class="atv">    'object': { 'array': [1,2]}</span></li><li class="L4"><span class="atv">  "</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+<pre class="prettyprint linenums">&lt;div data-behavior="FilterName" data-filtername-options="
+  'string': 'foo',
+  'number': 1,
+  'object': { 'array': [1,2]}
+">...&lt;/div></pre>
           <h3>Selectors</h3>
           <p>
             <span class="label notice">Notice</span>
@@ -193,7 +213,55 @@ functionality that we require here at twitter.</p>
         <div class="span12 columns">
           <h3>Using Behavior.BS.Dropdown</h3>
           <p>To quickly add dropdown functionality to any nav element, use the <code>Dropdown</code> behavior. Any valid bootstrap dropdown inside the container will automatically be activated.</p>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;-- a simple example --&gt;</span></li><li class="L1"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Dropdown"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu"</span><span class="tag">&gt;</span><span class="pln">Menu2</span><span class="tag">&lt;/a&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu-dropdown"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">      </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">item1</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L6"><span class="pln">      </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">item2</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L7"><span class="pln">      </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">item3</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;/ul&gt;</span></li><li class="L9"><span class="pln">  </span><span class="tag">&lt;/li&gt;</span></li><li class="L0"><span class="tag">&lt;/ul&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">&lt;-- an example with numerous menus --&gt;</span></li><li class="L3"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"topbar-wrapper"</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Dropdown"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"topbar-example"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"topbar"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"topbar-inner"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"container"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;h3&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Project Name</span><span class="tag">&lt;/a&gt;&lt;/h3&gt;</span></li><li class="L8"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L9"><span class="pln">          </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Link</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L0"><span class="pln">          </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Link</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">          </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"Search"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L4"><span class="pln">        </span><span class="tag">&lt;/form&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"nav secondary-nav"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">          </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu"</span><span class="tag">&gt;</span><span class="pln">Dropdown 1</span><span class="tag">&lt;/a&gt;</span></li><li class="L8"><span class="pln">            </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu-dropdown"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">              </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Secondary link</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L0"><span class="pln">              </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Something else here</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L1"><span class="pln">              </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"divider"</span><span class="tag">&gt;&lt;/li&gt;</span></li><li class="L2"><span class="pln">              </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Another link</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L3"><span class="pln">            </span><span class="tag">&lt;/ul&gt;</span></li><li class="L4"><span class="pln">          </span><span class="tag">&lt;/li&gt;</span></li><li class="L5"><span class="pln">          </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu"</span><span class="tag">&gt;</span><span class="pln">Dropdown 2</span><span class="tag">&lt;/a&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menu-dropdown"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">              </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Secondary link</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L9"><span class="pln">              </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Something else here</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L0"><span class="pln">              </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"divider"</span><span class="tag">&gt;&lt;/li&gt;</span></li><li class="L1"><span class="pln">              </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Another link</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;/ul&gt;</span></li><li class="L3"><span class="pln">          </span><span class="tag">&lt;/li&gt;</span></li><li class="L4"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L5"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+<pre class="prettyprint linenums">&lt;-- a simple example -->
+&lt;ul data-behavior="BS.Dropdown">
+  &lt;li class="menu">
+    &lt;a href="#" class="menu">Menu2&lt;/a>
+    &lt;ul class="menu-dropdown">
+      &lt;li>&lt;a>item1&lt;/a>&lt;/li>
+      &lt;li>&lt;a>item2&lt;/a>&lt;/li>
+      &lt;li>&lt;a>item3&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/li>
+&lt;/ul>
+
+&lt;-- an example with numerous menus -->
+&lt;div class="topbar-wrapper" data-behavior="BS.Dropdown">
+  &lt;div id="topbar-example" class="topbar">
+    &lt;div class="topbar-inner">
+      &lt;div class="container">
+        &lt;h3>&lt;a href="#">Project Name&lt;/a>&lt;/h3>
+        &lt;ul>
+          &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
+        &lt;/ul>
+        &lt;form action="">
+          &lt;input type="text" placeholder="Search" />
+        &lt;/form>
+        &lt;ul class="nav secondary-nav">
+          &lt;li class="menu">
+            &lt;a href="#" class="menu">Dropdown 1&lt;/a>
+            &lt;ul class="menu-dropdown">
+              &lt;li>&lt;a href="#">Secondary link&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Something else here&lt;/a>&lt;/li>
+              &lt;li class="divider">&lt;/li>
+              &lt;li>&lt;a href="#">Another link&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/li>
+          &lt;li class="menu">
+            &lt;a href="#" class="menu">Dropdown 2&lt;/a>
+            &lt;ul class="menu-dropdown">
+              &lt;li>&lt;a href="#">Secondary link&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Something else here&lt;/a>&lt;/li>
+              &lt;li class="divider">&lt;/li>
+              &lt;li>&lt;a href="#">Another link&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/li>
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></pre>
           <h3>Demo</h3>
           <div class="topbar-wrapper" data-behavior="BS.Dropdown">
             <div id="topbar-example" class="topbar">
@@ -249,11 +317,30 @@ functionality that we require here at twitter.</p>
         <div class="span12 columns">
           <h3>Markup</h3>
           <p>You can activate a tab or pill navigation without writing any javascript by simply giving them a <code>data-behavior="Tabs"</code>.</p>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln"> </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tabs"</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Tabs"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/ul&gt;</span></li></ol></pre>
+          <pre class="prettyprint linenums"> &lt;ul class="tabs" data-behavior="BS.Tabs" &gt;...&lt;/ul&gt;</pre>
           <p>
             Activates tab functionality for a given container.
           </p>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">  </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tabs"</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Tabs"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"active"</span><span class="tag">&gt;&lt;a&gt;</span><span class="pln">Home</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">Profile</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">Messages</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">Settings</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L5"><span class="pln">  </span><span class="tag">&lt;/ul&gt;</span></li><li class="L6"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"my-tab-content"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-content"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"active"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"home"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">      ...</span></li><li class="L9"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"profile"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">      ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"messages"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">      ...</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"settings"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">      ...</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+<pre class="prettyprint linenums">&lt;ul class="tabs" data-behavior="BS.Tabs">
+  &lt;li class="active">&lt;a>Home&lt;/a>&lt;/li>
+  &lt;li>&lt;a>Profile&lt;/a>&lt;/li>
+  &lt;li>&lt;a>Messages&lt;/a>&lt;/li>
+  &lt;li>&lt;a>Settings&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;div id="my-tab-content" class="tab-content">
+  &lt;div class="active" id="home">
+    ...
+  &lt;/div>
+  &lt;div id="profile">
+    ...
+  &lt;/div>
+  &lt;div id="messages">
+    ...
+  &lt;/div>
+  &lt;div id="settings">
+    ...
+  &lt;/div>
+&lt;/div></pre>
           <h3>Behavior.BS.Tab Options</h3>
           <table class="zebra-striped">
             <thead>
@@ -307,13 +394,13 @@ by default.</td>
           </table>
           <h3>Demo</h3>
           <ul data-bs-tabs-options="{}" class="tabs" data-behavior="BS.Tabs">
-            <li class="active"><a href="#home">Home</a></li>
+            <li><a>Home</a></li>
             <li><a>Profile</a></li>
             <li><a>Messages</a></li>
             <li><a>Settings</a></li>
           </ul>
           <div id="my-tab-content" class="tab-content">
-            <div style="display: block; overflow: visible;" class="active" id="home">
+            <div id="home">
               <p>Raw denim you probably haven't heard of them jean
 shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
 cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
@@ -377,7 +464,7 @@ fap.</p>
         </div>
         <div class="span12 columns">
           <h3>Using Behavior.Twipsy.js</h3>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Twipsy"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"I'm a twipsy"</span><span class="tag">&gt;</span><span class="pln">a tip!</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+          <pre class="prettyprint linenums">&lt;a data-behavior="BS.Twipsy" title="I'm a twipsy">a tip!&lt;/a></pre>
           <h3>Options</h3>
           <table class="zebra-striped">
             <thead>
@@ -459,7 +546,7 @@ fap.</p>
         </div>
         <div class="span12 columns">
           <h3>Using Behavior.Popover.js</h3>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">data-behavior</span><span class="pun">=</span><span class="atv">"BS.Popover"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"A Title"</span><span class="pln"> </span><span class="atn">data-popover-content</span><span class="pun">=</span><span class="atv">"And here's some amazing content. It's very engaging. right?"</span><span class="tag">&gt;</span><span class="pln">hover for popover</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+          <pre class="prettyprint linenums">&lt;a data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover&lt;/a></pre>
           <h3>Options</h3>
           <table class="zebra-striped">
             <thead>
@@ -522,7 +609,7 @@ fap.</p>
             </tbody>
           </table>
           <h3>Demo</h3>
-          <a href="#" class="btn danger" data-behavior="BS.Popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+          <a href="#" class="btn danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
         </div>
       </div>
     </section>
@@ -544,7 +631,14 @@ fap.</p>
           <h3>Closing Alerts</h3>
           <p>Closing errors uses the `nix` trigger from the `Fx.Reveal` delegator in <a href="https://github.com/anutron/more-behaviors">more-behaviors</a>. You can put this trigger on any element.</p>
           <h3>Markup</h3>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"alert-message error"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="com">&lt;!-- the data trigger references the parent div.alert-message --&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span><span class="pln"> </span><span class="atn">data-trigger</span><span class="pun">=</span><span class="atv">"nix"</span><span class="pln"> </span><span class="atn">data-nix-options</span><span class="pun">=</span><span class="atv">"</span></li><li class="L3"><span class="atv">    'target': '!div.alert-message'</span></li><li class="L4"><span class="atv">  "</span><span class="tag">&gt;</span><span class="pln">&amp;times;</span><span class="tag">&lt;/a&gt;</span></li><li class="L5"><span class="pln">  </span><span class="tag">&lt;p&gt;</span><span class="pln">Oh snap! You Got an error!</span><span class="tag">&lt;/p&gt;</span></li><li class="L6"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+<pre class="prettyprint linenums">&lt;div class="alert-message error">
+  &lt;!-- the data trigger references the parent div.alert-message -->
+  &lt;a class="close" data-trigger="nix" data-nix-options="
+    'target': '!div.alert-message'
+  ">&amp;times;&lt;/a>
+  &lt;p>Oh snap! You Got an error!&lt;/p>
+
+&lt;/div></pre>
           <h3>Demo</h3>
           <div class="alert-message warning fade in" data-alert="alert">
             <a class="close" href="#" data-trigger="nix" data-nix-options="
