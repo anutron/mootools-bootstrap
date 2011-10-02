@@ -24,13 +24,15 @@ Behavior.addGlobalFilters({
 			animate: true,
 			closeOnEsc: true,
 			closeOnClickOut: true,
-			mask: true
+			mask: true,
+			persist: true
 		},
 		returns: Bootstrap.Popup,
 		setup: function(el, api){
 			var popup = new Bootstrap.Popup(el,
 				Object.cleanValues(
 					api.getAs({
+						persist: Boolean,
 						animate: Boolean,
 						closeOnEsc: Boolean,
 						closeOnClickOut: Boolean,
