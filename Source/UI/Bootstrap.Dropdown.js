@@ -27,8 +27,9 @@ Bootstrap.Dropdown = new Class({
 		*/
 	},
 
-	initialize: function(container){
+	initialize: function(container, options){
 		this.element = document.id(container);
+		this.setOptions(options);
 		this.boundHandle = this._handle.bind(this);
 		document.id(document.body).addEvent('click', this.boundHandle);
 	},
@@ -49,6 +50,7 @@ Bootstrap.Dropdown = new Class({
 	destroy: function(){
 		this.hideAll();
 		document.body.removeEvent('click', this.boundHandle);
+		return this;
 	},
 
 	// PRIVATE
