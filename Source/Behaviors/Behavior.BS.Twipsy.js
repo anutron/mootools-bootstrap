@@ -42,7 +42,7 @@ Behavior.addGlobalFilters({
 					trigger: String
 				})
 			);
-			options.getTitle = Function.from(api.get('content') || element.get('title'));
+			options.getTitle = Function.from(api.get('content') || el.get('title'));
 			var tip = new Bootstrap.Twipsy(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
 			if (api.event) tip.show();
