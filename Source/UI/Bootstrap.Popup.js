@@ -26,6 +26,12 @@ Bootstrap.Popup = new Class({
 	Implements: [Options, Events],
 
 	options: {
+		/*
+			onShow: function(){},
+			onHide: function(){},
+			animate: function(){},
+			destroy: function(){},
+		*/
 		persist: true,
 		closeOnClickOut: true,
 		closeOnEsc: true,
@@ -50,11 +56,10 @@ Bootstrap.Popup = new Class({
 	},
 
 	show: function(){
-		console.log('show', this.visible, this.animating);
 		if (this.visible || this.animating) return;
 		this.element.addEvent('click:relay(.close)', this.bound.hide);
 		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
-		this.makeMask();
+		this._makeMask();
 		if (this.options.animate){
 			this._slideIn();
 		} else {
@@ -63,21 +68,6 @@ Bootstrap.Popup = new Class({
 			this.fireEvent('show', this.element);
 		}
 		this.visible = true;
-	},
-
-	makeMask: function(){
-		if (this.options.mask){
-			if (!this._mask){
-				this._mask = new Element('div.modal-backdrop', {
-					events: {
-						click: this.bound.hide
-					}
-				}).inject(document.body);
-				this.maskOpacity = this._mask.getStyle('opacity');
-			}
-		} else if (this.options.closeOnClickOut) {
-			document.body.addEvent('click', this.bound.hide);
-		}
 	},
 
 	destroy: function(){
@@ -102,6 +92,21 @@ Bootstrap.Popup = new Class({
 
 	// PRIVATE
 
+	_makeMask: function(){
+		if (this.options.mask){
+			if (!this._mask){
+				this._mask = new Element('div.modal-backdrop', {
+					events: {
+						click: this.bound.hide
+					}
+				}).inject(document.body);
+				this.maskOpacity = this._mask.getStyle('opacity');
+			}
+		} else if (this.options.closeOnClickOut) {
+			document.body.addEvent('click', this.bound.hide);
+		}
+	},
+
 	_slideIn: function(){
 		this._mask.setStyle('opacity', 0);
 		this._mask.show().set('tween');
@@ -112,7 +117,7 @@ Bootstrap.Popup = new Class({
 		if (top < 0) top = 0;
 		if (top + topMargin < 0) top = -topMargin;
 		this.element.setStyle('top', - this.element.getSize().y);
-		this.fireEvent('animate', this.element);
+		this.fireEvent('animate', this.animating);
 		if (!this.fx) this.fx = new Fx.Tween(this.element);
 		this.fx.setOptions({
 			transition: 'back:out'
@@ -132,6 +137,7 @@ Bootstrap.Popup = new Class({
 				if (demasked && slidOut) this._afterHide();
 			}.bind(this));
 		}
+		this.fireEvent('animate', this.animating);
 		var top = this.element.getStyle('top').toFloat();
 		this.fx.setOptions({
 			transition: 'back:in'
