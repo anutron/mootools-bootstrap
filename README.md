@@ -1,5 +1,7 @@
 # Bootstrap JS for MooTools
 
+![Screenshot](https://github.com/anutron/mootools-bootstrap/raw/master/screen.png)
+
 [Bootstrap, from Twitter](http://twitter.github.com/bootstrap/) is a heaping serving of awesomeness. In addition to it's easy to use grid system, layouts, good looking typography, and the fact that the whole thing is written in [Less](http://lesscss.org), it includes a handful of [JavaScript plugins](http://twitter.github.com/bootstrap/javascript.html) for [jQuery](http://jquery.com/) and [Ender](http://ender.no.de/) to bring a lot of the CSS components to life. We're talking tips, popups, drop down menus and more.
 
 ## Enter MooTools
