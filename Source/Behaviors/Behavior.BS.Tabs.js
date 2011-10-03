@@ -7,6 +7,8 @@ description: Instantiates Bootstrap.Tabs based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - Behavior/Behavior
  - Clientcide/Behavior.Tabs

@@ -5,6 +5,8 @@ name: Bootstrap.Twipsy
 
 description: A simple tooltip implementation (twipsy) that works with the Twitter Bootstrap css framework.
 
+authors: [Aaron Newton]
+
 license: MIT-style license.
 
 requires:

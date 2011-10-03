@@ -5,6 +5,8 @@ name: Bootstrap.Popover
 
 description: A simple tooltip (yet larger than twipsy) implementation that works with the Twitter Bootstrap css framework.
 
+authors: [Aaron Newton]
+
 license: MIT-style license.
 
 requires:

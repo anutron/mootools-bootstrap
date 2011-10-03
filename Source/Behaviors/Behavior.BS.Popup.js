@@ -7,6 +7,8 @@ description: Creates a bootstrap popup based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - Behavior/Behavior
  - More/Object.Extras

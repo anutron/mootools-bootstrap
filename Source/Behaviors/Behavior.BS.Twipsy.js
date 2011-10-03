@@ -7,6 +7,8 @@ description: Instantiates Bootstrap.Twipsy based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - /Bootstrap.Twipsy
  - Behavior/Behavior

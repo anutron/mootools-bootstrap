@@ -14,6 +14,14 @@ authors: "[Aaron Newton](http://clientcide.com)"
 
 version: "1.0"
 
+#mootools forge stuff:
+author: anutron
+category: Interface
+tags: [interface, menu, tips, popup, layout, UI]
+docs: http://dev.clientcide.com/?version=MooTools%20Bootstrap
+demo: http://anutron.github.com/mootools-bootstrap/
+current: 1.0
+
 sources:
  - Source/Behaviors/Behavior.BS.Alert.js
  - Source/Behaviors/Behavior.BS.Dropdown.js

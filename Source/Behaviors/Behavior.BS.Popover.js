@@ -7,6 +7,8 @@ description: Instantiates Bootstrap.Popover based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - /Bootstrap.Popover
  - Behavior/Behavior

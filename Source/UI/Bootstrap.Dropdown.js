@@ -7,6 +7,8 @@ description: A simple dropdown menu that works with the Twitter Bootstrap css fr
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - /Bootstrap
  - Core/Element.Event

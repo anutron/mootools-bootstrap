@@ -5,6 +5,8 @@ name: Delegator.BS.ShowPopup
 
 description: Shows a hidden popup.
 
+authors: [Aaron Newton]
+
 license: MIT-style license.
 
 requires:
