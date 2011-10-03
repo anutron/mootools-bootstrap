@@ -12,7 +12,7 @@ copyright: "&copy; [Aaron Newton](http://clientcide.com)"
 
 authors: "[Aaron Newton](http://clientcide.com)"
 
-version: "1.0"
+version: "1.0.1"
 
 #mootools forge stuff:
 author: anutron
@@ -20,7 +20,7 @@ category: Interface
 tags: [interface, menu, tips, popup, layout, UI]
 docs: http://dev.clientcide.com/?version=MooTools%20Bootstrap
 demo: http://anutron.github.com/mootools-bootstrap/
-current: 1.0
+current: 1.0.1
 
 sources:
  - Source/Behaviors/Behavior.BS.Alert.js
