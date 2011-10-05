@@ -100,7 +100,7 @@
 &lt;button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup"
     class="btn danger">Launch Modal&lt;/button>
 
-&lt;div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
+&lt;div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
   &lt;div class="modal-header">
     &lt;a href="#" class="close">&times;&lt;/a>
     &lt;h3>Modal Heading&lt;/h3>
@@ -163,6 +163,11 @@
              </tr>
             </tbody>
           </table>
+          <p>
+             <span class="label notice">Notice</span>
+             This implementation mirrors that found in Twitter's JS library. It uses CSS transitions when available (generally speaking, every browser but IE). Add the <code>.fade</code> class to your element to have it transition in. You can alternately specify the <code>animate</code> option in the behavior filter settings listed above. If you do not specify either of these, you should add the <code>.hide</code> class unless you want your element visible immediately.
+          </p>
+
           <h3>Behavior Options</h3>
           <p>
             <span class="label notice">Notice</span>

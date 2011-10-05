@@ -91,9 +91,7 @@
       </div>
       <div class="row">
         <div class="span4 columns">
-          <p>Our Modal plugin is a super slim take on the traditional
-modal js plugin, taking special care to include only the bare
-functionality that we require here at twitter.</p>
+          <p>Our Modal plugin is a super slim take on the traditional modal js plugin, taking special care to include only the bare functionality that we require here at twitter.</p>
         </div>
         <div class="span12 columns">
           <h3>Using Behavior.Popup and Delegator.ShowPopup</h3>
@@ -101,7 +99,7 @@ functionality that we require here at twitter.</p>
 &lt;button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup"
     class="btn danger">Launch Modal&lt;/button>
 
-&lt;div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
+&lt;div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
   &lt;div class="modal-header">
     &lt;a href="#" class="close">&times;&lt;/a>
     &lt;h3>Modal Heading&lt;/h3>
@@ -164,6 +162,11 @@ functionality that we require here at twitter.</p>
              </tr>
             </tbody>
           </table>
+          <p>
+             <span class="label notice">Notice</span>
+             This implementation mirrors that found in Twitter's JS library. It uses CSS transitions when available (generally speaking, every browser but IE). Add the <code>.fade</code> class to your element to have it transition in. You can alternately specify the <code>animate</code> option in the behavior filter settings listed above. If you do not specify either of these, you should add the <code>.hide</code> class unless you want your element visible immediately.
+          </p>
+
           <h3>Behavior Options</h3>
           <p>
             <span class="label notice">Notice</span>
@@ -174,8 +177,6 @@ functionality that we require here at twitter.</p>
   'number': 1,
   'object': { 'array': [1,2]}
 ">...&lt;/div></pre>
-
-
           <h3>Selectors</h3>
           <p>
             <span class="label notice">Notice</span>
@@ -187,9 +188,9 @@ functionality that we require here at twitter.</p>
 
           <h3>Demo</h3>
           <!-- sample modal content -->
-          <div data-bs-popup-options="{}" data-behavior="BS.Popup" class="modal hide" id="demoPopup">
+          <div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
             <div class="modal-header">
-              <a href="#" class="close">×</a>
+              <a href="#" class="close">&times;</a>
               <h3>Modal Heading</h3>
             </div>
             <div class="modal-body">

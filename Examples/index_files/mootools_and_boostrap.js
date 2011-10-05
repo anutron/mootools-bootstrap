@@ -7035,6 +7035,8 @@ description: This file just depends on the Fx.Reveal delegator in More-Behaviors
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - More-Behaviors/Delegator.Nix
 
@@ -7050,6 +7052,8 @@ provides: [Behavior.BS.Alert]
 name: Bootstrap
 
 description: The BootStrap namespace.
+
+authors: [Aaron Newton]
 
 license: MIT-style license.
 
@@ -7174,34 +7178,37 @@ description: CSSEvents
 
 license: MIT-style
 
+authors: [Aaron Newton]
+
 requires: [Core/DomReady]
 
 provides: [CSSEvents]
 ...
 */
 
-window.addEvent('domready', function(){
-
+Browser.Features.getCSSTransition = function(){
 	Browser.Features.cssTransition = (function () {
 		var thisBody = document.body || document.documentElement
 			, thisStyle = thisBody.style
-			, support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined
-		return support
-	})()
+			, support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined;
+		return support;
+	})();
 
 	// set CSS transition event type
 	if ( Browser.Features.cssTransition ) {
-		Browser.Features.transitionEnd = "TransitionEnd"
+		Browser.Features.transitionEnd = "TransitionEnd";
 		if ( Browser.Engine.webkit ) {
-			Browser.Features.transitionEnd = "webkitTransitionEnd"
+			Browser.Features.transitionEnd = "webkitTransitionEnd";
 		} else if ( Browser.Engine.gecko ) {
-			Browser.Features.transitionEnd = "transitionend"
+			Browser.Features.transitionEnd = "transitionend";
 		} else if ( Browser.Engine.presto ) {
-			Browser.Features.transitionEnd = "oTransitionEnd"
+			Browser.Features.transitionEnd = "oTransitionEnd";
 		}
 	}
+	Browser.Features.getCSSTransition = Function.from(Browser.Features.transitionEnd);
+};
 
-});
+window.addEvent("domready", Browser.Features.getCSSTransition);
 
 // Begin: Source/Element/Element.Position.js
 /*
@@ -7449,6 +7456,8 @@ name: Bootstrap.Twipsy
 
 description: A simple tooltip implementation (twipsy) that works with the Twitter Bootstrap css framework.
 
+authors: [Aaron Newton]
+
 license: MIT-style license.
 
 requires:
@@ -7628,6 +7637,8 @@ description: A simple dropdown menu that works with the Twitter Bootstrap css fr
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - /Bootstrap
  - Core/Element.Event
@@ -7695,6 +7706,8 @@ description: Instantiates Bootstrap.Dropdown based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - Behavior/Behavior
  - Bootstrap.Dropdown
@@ -7719,6 +7732,8 @@ Behavior.addGlobalFilters({
 name: Delegator.BS.ShowPopup
 
 description: Shows a hidden popup.
+
+authors: [Aaron Newton]
 
 license: MIT-style license.
 
@@ -7757,6 +7772,8 @@ provides: [Delegator.BS.ShowPopup]
 name: Bootstrap.Popover
 
 description: A simple tooltip (yet larger than twipsy) implementation that works with the Twitter Bootstrap css framework.
+
+authors: [Aaron Newton]
 
 license: MIT-style license.
 
@@ -7886,6 +7903,8 @@ name: Behavior.BS.Popover
 description: Instantiates Bootstrap.Popover based on HTML markup.
 
 license: MIT-style license.
+
+authors: [Aaron Newton]
 
 requires:
  - /Bootstrap.Popover
@@ -8631,6 +8650,8 @@ name: Popup
 
 description: A simple Popup class for the Twitter Bootstrap CSS framework.
 
+authors: [Aaron Newton]
+
 license: MIT-style license.
 
 requires:
@@ -8639,8 +8660,10 @@ requires:
  - More/Element.Position
  - More/Element.Delegation
  - More/Element.Shortcuts
+ - More/Events.Pseudos
  - Core/Fx.Tween
  - Core/Fx.Transitions
+ - /CSSEvents
 
 provides: [Bootstrap.Popup]
 
@@ -8677,8 +8700,18 @@ Bootstrap.Popup = new Class({
 			}.bind(this),
 			keyMonitor: function(e){
 				if (e.key == 'esc') this.hide();
-			}.bind(this)
+			}.bind(this),
+			animationEnd: this._animationEnd.bind(this)
 		};
+	},
+
+	_checkAnimate: function(){
+		var check = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
+		if (!check) {
+			this.element.removeClass('fade').addClass('hide');
+			this._mask.removeClass('fade').addClass('hide');
+		}
+		return check;
 	},
 
 	show: function(){
@@ -8686,14 +8719,37 @@ Bootstrap.Popup = new Class({
 		this.element.addEvent('click:relay(.close)', this.bound.hide);
 		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
 		this._makeMask();
-		if (this.options.animate){
-			this._slideIn();
+		this._mask.inject(document.body);
+		this.animating = true;
+		if (this._checkAnimate()){
+			this.element.offsetWidth; // force reflow
+			this.element.addClass('in');
+			this._mask.addClass('in');
 		} else {
 			this.element.show();
 			this._mask.show();
-			this.fireEvent('show', this.element);
 		}
 		this.visible = true;
+		this._watch();
+	},
+
+	_watch: function(){
+		if (this._checkAnimate()) this.element.addEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
+		else this._animationEnd();
+	},
+
+	_animationEnd: function(){
+		this.element.removeEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
+		this.animating = false;
+		if (this.visible){
+			this.fireEvent('show', this.element);
+		} else {
+			this.fireEvent('hide', this.element);
+			if (!this.options.persist){
+				this.destroy();
+			}
+			this._mask.dispose();
+		}
 	},
 
 	destroy: function(){
@@ -8712,8 +8768,15 @@ Bootstrap.Popup = new Class({
 		document.removeEvent('keyup', this.bound.keyMonitor);
 		this.element.removeEvent('click:relay(.close)', this.bound.hide);
 
-		if (this.options.animate) this._slideOut();
-		else this._afterHide();
+		if (this._checkAnimate()){
+			this.element.removeClass('in');
+			this._mask.removeClass('in');
+		} else {
+			this.element.hide();
+			this._mask.hide();
+		}
+		this.visible = false;
+		this._watch();
 	},
 
 	// PRIVATE
@@ -8725,65 +8788,14 @@ Bootstrap.Popup = new Class({
 					events: {
 						click: this.bound.hide
 					}
-				}).inject(document.body);
-				this.maskOpacity = this._mask.getStyle('opacity');
+				});
+				if (this.options.animate !== false || this.element.hasClass('fade')){
+					this._mask.addClass('fade');
+				}
 			}
-		} else if (this.options.closeOnClickOut) {
+		} else if (this.options.closeOnClickOut){
 			document.body.addEvent('click', this.bound.hide);
 		}
-	},
-
-	_slideIn: function(){
-		this._mask.setStyle('opacity', 0);
-		this._mask.show().set('tween');
-		this._mask.tween('opacity', 0, this.maskOpacity);
-		this.animating = true;
-		var top = this.element.show().getStyle('top').toFloat(),
-		    topMargin = this.element.getStyle('margin-top').toInt();
-		if (top < 0) top = 0;
-		if (top + topMargin < 0) top = -topMargin;
-		this.element.setStyle('top', - this.element.getSize().y);
-		this.fireEvent('animate', this.animating);
-		if (!this.fx) this.fx = new Fx.Tween(this.element);
-		this.fx.setOptions({
-			transition: 'back:out'
-		}).start('top', top).chain(function(){
-			this.animating = false;
-			this.fireEvent('show', this.element);
-		}.bind(this));
-	},
-
-	_slideOut: function(){
-		this.animating = true;
-		var demasked, slidOut;
-		if (this._mask) {
-			this._mask.fade('out').get('tween').chain(function(){
-				this._mask.setStyle('opacity', this.maskOpacity);
-				demasked = true;
-				if (demasked && slidOut) this._afterHide();
-			}.bind(this));
-		}
-		this.fireEvent('animate', this.animating);
-		var top = this.element.getStyle('top').toFloat();
-		this.fx.setOptions({
-			transition: 'back:in'
-		}).start('top', - this.element.getSize().y).chain(function(){
-			this.element.setStyle('top', top);
-			slidOut = true;
-			if (demasked && slidOut) this._afterHide();
-		}.bind(this));
-	},
-
-	_afterHide: function(){
-		this.animating = false;
-		this.visible = false;
-		if (!this.options.persist){
-			this.destroy();
-		} else {
-			if (this._mask) this._mask.hide();
-			this.element.hide();
-		}
-		this.fireEvent('hide', this.element);
 	}
 
 });
@@ -8797,6 +8809,8 @@ name: Behavior.BS.Twipsy
 description: Instantiates Bootstrap.Twipsy based on HTML markup.
 
 license: MIT-style license.
+
+authors: [Aaron Newton]
 
 requires:
  - /Bootstrap.Twipsy
@@ -8852,6 +8866,8 @@ description: Creates a bootstrap popup based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - Behavior/Behavior
  - More/Object.Extras
@@ -8864,7 +8880,7 @@ provides: [Behavior.BS.Popup]
 
 Behavior.addGlobalFilters({
 	'BS.Popup': {
-		options: {
+		defaults: {
 			hide: false,
 			animate: true,
 			closeOnEsc: true,
@@ -8888,7 +8904,7 @@ Behavior.addGlobalFilters({
 			popup.addEvent('destroy', function(){
 				api.cleanup(el);
 			});
-			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide')) {
+			if (!el.hasClass('hide') && !el.hasClass('fade') && !api.getAs(Boolean, 'hide')) {
 				popup.show();
 			}
 			return popup;
@@ -9118,7 +9134,7 @@ description: Methods for dealing with URI query strings.
 license: MIT-style license
 
 authors:
-  - Sebastian MarkbÃ¥ge
+  - Sebastian Markbåge
   - Aaron Newton
   - Lennart Pilon
   - Valerio Proietti
@@ -9251,6 +9267,8 @@ description: Instantiates Bootstrap.Tabs based on HTML markup.
 
 license: MIT-style license.
 
+authors: [Aaron Newton]
+
 requires:
  - Behavior/Behavior
  - Clientcide/Behavior.Tabs
@@ -9269,7 +9287,7 @@ provides: [Behavior.BS.Tabs]
 
 	Behavior.setFilterDefaults('BS.Tabs', {
 		'tabs-selector': '>li',
-		'sections-selector': '+.tab-content > div',
+		'sections-selector': '+.tab-content >',
 		'selectedClass': 'active',
 		smooth: false,
 		smoothSize: false
