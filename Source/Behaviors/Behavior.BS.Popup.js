@@ -45,7 +45,7 @@ Behavior.addGlobalFilters({
 			popup.addEvent('destroy', function(){
 				api.cleanup(el);
 			});
-			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide')) {
+			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
 				popup.show();
 			}
 			return popup;

@@ -184,7 +184,7 @@
 
           <h3>Demo</h3>
           <!-- sample modal content -->
-          <div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
+          <div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
             <div class="modal-header">
               <a href="#" class="close">&times;</a>
               <h3>Modal Heading</h3>

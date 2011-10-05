@@ -12,8 +12,7 @@ provides: [CSSEvents]
 ...
 */
 
-window.addEvent('domready', function(){
-
+Browser.Features.getCSSTransition = function(){
 	Browser.Features.cssTransition = (function () {
 		var thisBody = document.body || document.documentElement
 			, thisStyle = thisBody.style
@@ -32,5 +31,7 @@ window.addEvent('domready', function(){
 			Browser.Features.transitionEnd = "oTransitionEnd";
 		}
 	}
+	Browser.Features.getCSSTransition = Function.from(Browser.Features.transitionEnd);
+};
 
-});
+window.addEvent("domready", Browser.Features.getCSSTransition);
