@@ -25,6 +25,7 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
+			onOverflow: false,
 			offset: 0,
 			trigger: 'hover' //focus, manual
 		},
@@ -33,6 +34,7 @@ Behavior.addGlobalFilters({
 		setup: function(el, api){
 			var options = Object.cleanValues(
 				api.getAs({
+					onOverflow: Boolean,
 					location: String,
 					animate: Boolean,
 					delayIn: Number,

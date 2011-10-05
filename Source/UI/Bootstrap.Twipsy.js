@@ -31,6 +31,7 @@ Bootstrap.Twipsy = new Class({
 		delayOut: 0,
 		fallback: '',
 		override: '',
+		onOverflow: false,
 		offset: 0,
 		title: 'title', //element property
 		trigger: 'hover', //focus, manual
@@ -150,6 +151,11 @@ Bootstrap.Twipsy = new Class({
 	},
 
 	_enter: function(){
+		if (this.options.onOverflow){
+			var scroll = this.element.getScrollSize(),
+			    size = this.element.getSize();
+			if (scroll.x <= size.x && scroll.y <= size.y) return;
+		}
 		this._clear();
 		if (this.options.delayIn){
 			this._inDelay = this.show.delay(this.options.delayIn, this);

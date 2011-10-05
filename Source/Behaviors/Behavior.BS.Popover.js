@@ -21,6 +21,7 @@ provides: [Behavior.BS.Popover]
 Behavior.addGlobalFilters({
 	'BS.Popover': {
 		defaults: {
+		  onOverflow: false,
 			location: 'right', //below, left, right
 			animate: true,
 			delayIn: 200,
@@ -33,6 +34,7 @@ Behavior.addGlobalFilters({
 		setup: function(el, api){
 			var options = Object.cleanValues(
 				api.getAs({
+					onOverflow: Boolean,
 					location: String,
 					animate: Boolean,
 					delayIn: Number,

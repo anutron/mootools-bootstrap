@@ -495,6 +495,12 @@
                 <td>'hover'</td>
                 <td>how tooltip is triggered - hover | focus | manual</td>
               </tr>
+              <tr>
+                <td>onOverflow</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Only show the tip if the element's content is overflown (i.e. it's scroll-height or scroll-width is greater than the height or width of the element)</td>
+              </tr>
             </tbody>
           </table>
           <h3>Demo</h3>
@@ -582,6 +588,12 @@
                 <td>string</td>
                 <td>'hover'</td>
                 <td>how tooltip is triggered - hover | focus | manual</td>
+              </tr>
+              <tr>
+                <td>onOverflow</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Only show the tip if the element's content is overflown (i.e. it's scroll-height or scroll-width is greater than the height or width of the element)</td>
               </tr>
             </tbody>
           </table>
