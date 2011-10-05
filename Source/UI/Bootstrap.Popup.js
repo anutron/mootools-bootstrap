@@ -19,6 +19,7 @@ requires:
  - Core/Fx.Tween
  - Core/Fx.Transitions
  - /CSSEvents
+ - /Bootstrap
 
 provides: [Bootstrap.Popup]
 
