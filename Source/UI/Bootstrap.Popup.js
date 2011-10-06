@@ -61,10 +61,8 @@ Bootstrap.Popup = new Class({
 		};
 		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
 		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
-			var animate = this.options.animate;
-			this.options.animate = false; //it's already visible!
+			if (this.element.hasClass('fade')) this.element.removeClass('in');
 			this.show();
-			this.options.animate = animate;
 		}
 	},
 

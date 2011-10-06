@@ -5430,10 +5430,12 @@ provides: [Delegator]
 					destroyDom: function(elements){
 						Array.from(elements).each(function(element){
 							self._behavior.cleanup(element);
+							self._behavior.fireEvent('destroyDom', element);
 						});
 					},
 					ammendDom: function(container){
 						self._behavior.apply(container);
+						self._behavior.fireEvent('ammendDom', container);
 					}
 				};
 			}
@@ -7482,6 +7484,7 @@ Bootstrap.Twipsy = new Class({
 		delayOut: 0,
 		fallback: '',
 		override: '',
+		onOverflow: false,
 		offset: 0,
 		title: 'title', //element property
 		trigger: 'hover', //focus, manual
@@ -7601,6 +7604,11 @@ Bootstrap.Twipsy = new Class({
 	},
 
 	_enter: function(){
+		if (this.options.onOverflow){
+			var scroll = this.element.getScrollSize(),
+			    size = this.element.getSize();
+			if (scroll.x <= size.x && scroll.y <= size.y) return;
+		}
 		this._clear();
 		if (this.options.delayIn){
 			this._inDelay = this.show.delay(this.options.delayIn, this);
@@ -7918,6 +7926,7 @@ provides: [Behavior.BS.Popover]
 Behavior.addGlobalFilters({
 	'BS.Popover': {
 		defaults: {
+		  onOverflow: false,
 			location: 'right', //below, left, right
 			animate: true,
 			delayIn: 200,
@@ -7930,6 +7939,7 @@ Behavior.addGlobalFilters({
 		setup: function(el, api){
 			var options = Object.cleanValues(
 				api.getAs({
+					onOverflow: Boolean,
 					location: String,
 					animate: Boolean,
 					delayIn: Number,
@@ -8664,6 +8674,7 @@ requires:
  - Core/Fx.Tween
  - Core/Fx.Transitions
  - /CSSEvents
+ - /Bootstrap
 
 provides: [Bootstrap.Popup]
 
@@ -8703,6 +8714,13 @@ Bootstrap.Popup = new Class({
 			}.bind(this),
 			animationEnd: this._animationEnd.bind(this)
 		};
+		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
+		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
+			var animate = this.options.animate;
+			this.options.animate = false; //it's already visible!
+			this.show();
+			this.options.animate = animate;
+		}
 	},
 
 	_checkAnimate: function(){
@@ -8710,6 +8728,9 @@ Bootstrap.Popup = new Class({
 		if (!check) {
 			this.element.removeClass('fade').addClass('hide');
 			this._mask.removeClass('fade').addClass('hide');
+		} else if (check) {
+			this.element.addClass('fade').removeClass('hide');
+			this._mask.addClass('fade').removeClass('hide');
 		}
 		return check;
 	},
@@ -8747,8 +8768,9 @@ Bootstrap.Popup = new Class({
 			this.fireEvent('hide', this.element);
 			if (!this.options.persist){
 				this.destroy();
+			} else {
+				this._mask.dispose();
 			}
-			this._mask.dispose();
 		}
 	},
 
@@ -8789,7 +8811,7 @@ Bootstrap.Popup = new Class({
 						click: this.bound.hide
 					}
 				});
-				if (this.options.animate !== false || this.element.hasClass('fade')){
+				if (this._checkAnimate()){
 					this._mask.addClass('fade');
 				}
 			}
@@ -8828,6 +8850,7 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
+			onOverflow: false,
 			offset: 0,
 			trigger: 'hover' //focus, manual
 		},
@@ -8836,6 +8859,7 @@ Behavior.addGlobalFilters({
 		setup: function(el, api){
 			var options = Object.cleanValues(
 				api.getAs({
+					onOverflow: Boolean,
 					location: String,
 					animate: Boolean,
 					delayIn: Number,
@@ -8904,7 +8928,7 @@ Behavior.addGlobalFilters({
 			popup.addEvent('destroy', function(){
 				api.cleanup(el);
 			});
-			if (!el.hasClass('hide') && !el.hasClass('fade') && !api.getAs(Boolean, 'hide')) {
+			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
 				popup.show();
 			}
 			return popup;
