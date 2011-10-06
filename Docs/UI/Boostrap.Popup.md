@@ -34,6 +34,11 @@ Bootstrap.Popover Method: constructor
 * hide - (*function*) Fired when the popup is hidden.
 * animate - (*function*) Fired when the transition effect is started. Passed as its argument `true` if the popup is being displayed, `false` if being hidden.
 
+### Note
+
+Any element in your content with the class `.close` or `.dismiss` will close the popup. The reason for both is that Bootstrap provides styles for .close elements (the *x* in the upper right corner) that you may not want applied to your element.
+
+
 Bootstrap.Popup Method: show {#Bootstrap-Popup:show}
 ------------------------------------------------
 

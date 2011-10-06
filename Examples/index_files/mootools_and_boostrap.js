@@ -8716,10 +8716,8 @@ Bootstrap.Popup = new Class({
 		};
 		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
 		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
-			var animate = this.options.animate;
-			this.options.animate = false; //it's already visible!
+			if (this.element.hasClass('fade')) this.element.removeClass('in');
 			this.show();
-			this.options.animate = animate;
 		}
 	},
 
@@ -8737,7 +8735,7 @@ Bootstrap.Popup = new Class({
 
 	show: function(){
 		if (this.visible || this.animating) return;
-		this.element.addEvent('click:relay(.close)', this.bound.hide);
+		this.element.addEvent('click:relay(.close, .dismiss)', this.bound.hide);
 		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
 		this._makeMask();
 		this._mask.inject(document.body);
@@ -8788,7 +8786,7 @@ Bootstrap.Popup = new Class({
 		if (event) event.preventDefault();
 		document.body.removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
-		this.element.removeEvent('click:relay(.close)', this.bound.hide);
+		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
 
 		if (this._checkAnimate()){
 			this.element.removeClass('in');

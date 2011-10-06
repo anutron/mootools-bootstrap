@@ -108,8 +108,8 @@
     &lt;p>One fine body...&lt;/p>
   &lt;/div>
   &lt;div class="modal-footer">
-    &lt;a href="#" class="btn primary">Primary&lt;/a>
-    &lt;a href="#" class="btn secondary">Secondary&lt;/a>
+    &lt;a href="#" class="btn primary dismiss">Primary&lt;/a>
+    &lt;a href="#" class="btn secondary dismiss">Secondary&lt;/a>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -166,6 +166,11 @@
              <span class="label notice">Notice</span>
              This implementation mirrors that found in Twitter's JS library. It uses CSS transitions when available (generally speaking, every browser but IE). Add the <code>.fade</code> class to your element to have it transition in. You can alternately specify the <code>animate</code> option in the behavior filter settings listed above. If you do not specify either of these, you should add the <code>.hide</code> class unless you want your element visible immediately.
           </p>
+          <p>
+            <span class="label notice">Notice</span>
+            Any element in your content with the class <code>.close</code> or <code>.dismiss</code> will close the popup. The reason for both is that Bootstrap provides styles for .close elements (the *x* in the upper right corner) that you may not want applied to your element.
+          </p>
+
 
           <h3>Behavior Options</h3>
           <p>
@@ -197,8 +202,8 @@
               <p>One fine body...</p>
             </div>
             <div class="modal-footer">
-              <a href="#" class="btn primary">Primary</a>
-              <a href="#" class="btn secondary">Secondary</a>
+              <a href="#" class="btn primary dismiss">Primary</a>
+              <a href="#" class="btn secondary dismiss">Secondary</a>
             </div>
           </div>
 
@@ -659,7 +664,7 @@ fap.</p>
         </div>
         <div class="span12 columns">
           <h3>Closing Alerts</h3>
-          <p>Closing errors uses the `nix` trigger from the `Fx.Reveal` delegator in <a href="https://github.com/anutron/more-behaviors">more-behaviors</a>. You can put this trigger on any element.</p>
+          <p>Closing errors uses the <code>nix</code> trigger from the <code>Fx.Reveal</code> delegator in <a href="https://github.com/anutron/more-behaviors">more-behaviors</a>. You can put this trigger on any element.</p>
           <h3>Markup</h3>
 <pre class="prettyprint linenums">&lt;div class="alert-message error">
   &lt;!-- the data trigger references the parent div.alert-message -->
