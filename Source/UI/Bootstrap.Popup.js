@@ -10,14 +10,14 @@ authors: [Aaron Newton]
 license: MIT-style license.
 
 requires:
+ - Core/Element.Delegation
+ - Core/Fx.Tween
+ - Core/Fx.Transitions
  - More/Mask
  - More/Elements.From
  - More/Element.Position
- - More/Element.Delegation
  - More/Element.Shortcuts
  - More/Events.Pseudos
- - Core/Fx.Tween
- - Core/Fx.Transitions
  - /CSSEvents
  - /Bootstrap
 
