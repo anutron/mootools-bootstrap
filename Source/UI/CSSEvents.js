@@ -1,6 +1,7 @@
 /*
 ---
-description: CSSEvents
+
+name: CSSEvents
 
 license: MIT-style
 
@@ -8,7 +9,7 @@ authors: [Aaron Newton]
 
 requires: [Core/DomReady]
 
-provides: [CSSEvents]
+provides: CSSEvents
 ...
 */
 
