@@ -103,7 +103,7 @@ Bootstrap.Popup = new Class({
 	},
 
 	_animationEnd: function(){
-		this.element.removeEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
+		if (Browser.Features.getCSSTransition()) this.element.removeEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
 		this.animating = false;
 		if (this.visible){
 			this.fireEvent('show', this.element);
