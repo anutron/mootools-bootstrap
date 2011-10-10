@@ -299,7 +299,7 @@
                         <li><a href="#">Something else here</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Another link</a></li>
-                      </ul>
+                    </ul>
                     </li>
                     <li class="menu">
                       <a href="#" class="menu">Dropdown 2</a>

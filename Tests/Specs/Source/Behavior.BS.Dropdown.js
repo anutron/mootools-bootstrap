@@ -22,6 +22,18 @@ provides: [Behavior.BS.Dropdown.Specs]
           <li><a id="menu1-item1">item1</a></li>\
           <li><a>item2</a></li>\
           <li><a>item3</a></li>\
+          <li>\
+            <label style="color:#fff;">\
+              <input type="radio" name="foo" id="r1"/>\
+              Input clicks do not alter the menu state\
+            </label>\
+          </li>\
+          <li>\
+            <label style="color:#fff;">\
+              <input type="radio" id="r2" name="foo"/>\
+              Another Radio\
+            </label>\
+          </li>\
         </ul>\
       </li>\
       <li class="menu">\
@@ -45,6 +57,18 @@ provides: [Behavior.BS.Dropdown.Specs]
 				target: element.getElement('#menu1')
 			});
 			expect(menus[0].hasClass('open')).toBe(true);
+
+			instance._handle({
+				preventDefault: function(){},
+				target: element.getElement('#r1')
+			});
+			expect(menus[0].hasClass('open')).toBe(true);
+			instance._handle({
+				preventDefault: function(){},
+				target: element.getElement('#r2')
+			});
+			expect(menus[0].hasClass('open')).toBe(true);
+
 			instance._handle({
 				preventDefault: function(){},
 				target: element.getElement('#menu2')

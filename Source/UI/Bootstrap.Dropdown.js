@@ -25,8 +25,9 @@ Bootstrap.Dropdown = new Class({
 	options: {
 		/*
 			onShow: function(element){},
-			onHide: function(elements){}
+			onHide: function(elements){},
 		*/
+		ignore: 'input, select, label'
 	},
 
 	initialize: function(container, options){
@@ -58,10 +59,12 @@ Bootstrap.Dropdown = new Class({
 	// PRIVATE
 
 	_handle: function(e){
-		this.hideAll();
-		if (this.element.contains(e.target) && (e.target.match('a.menu') || e.target.getParent('a.menu'))) {
+		var el = e.target;
+		var open = el.getParent('li.open');
+		if (!el.match(this.options.ignore) || !open) this.hideAll();
+		if (this.element.contains(el) && (el.match('a.menu') || el.getParent('a.menu'))) {
 			e.preventDefault();
-			e.target.getParent('li').toggleClass('open');
+			if (!open) this.show(el.getParent('li'));
 		}
 	}
 });
