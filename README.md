@@ -14,4 +14,4 @@ Included in this repo are numerous MooTools plugins that depend on [MooTools Cor
 
 ## How to Use
 
-See: [http://anutron.github.com/mootools-bootstrap/]() for demos and code.
+See: [http://anutron.github.com/mootools-bootstrap/](http://anutron.github.com/mootools-bootstrap/) for demos and code.
