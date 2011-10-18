@@ -129,7 +129,7 @@ Bootstrap.Popup = new Class({
 		if (!this.visible || this.animating) return;
 		this.animating = true;
 		if (event) event.preventDefault();
-		document.body.removeEvent('click', this.bound.hide);
+		document.id(document.body).removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
 		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
 
@@ -159,7 +159,7 @@ Bootstrap.Popup = new Class({
 				}
 			}
 		} else if (this.options.closeOnClickOut){
-			document.body.addEvent('click', this.bound.hide);
+			document.id(document.body).addEvent('click', this.bound.hide);
 		}
 	}
 
