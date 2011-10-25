@@ -4457,7 +4457,7 @@ var Table = this.Table = function(){
 	this.length = 0;
 	var keys = [],
 	    values = [];
-
+	
 	this.set = function(key, value){
 		var index = keys.indexOf(key);
 		if (index == -1){
@@ -4489,7 +4489,7 @@ var Table = this.Table = function(){
 	this.each = this.forEach = function(fn, bind){
 		for (var i = 0, l = this.length; i < l; i++) fn.call(bind, keys[i], values[i], this);
 	};
-
+	
 };
 
 if (this.Type) new Type('Table', Table);
@@ -4622,7 +4622,7 @@ script: Element.Data.js
 			}
 		},
 
-		/*
+		/* 
 			arguments:
 				name - (string) the data name to store; will be automatically prefixed with 'data-'
 				value - (string, array, or object) if an object or array the object will be JSON encoded; otherwise stored as provided.
@@ -4633,7 +4633,7 @@ script: Element.Data.js
 
 		/*
 			retrieves a property from HTML5 data property you specify
-
+		
 			arguments:
 				name - (retrieve) the data name to store; will be automatically prefixed with 'data-'
 				strict - (boolean) if true, will set the JSON.decode's secure flag to true; otherwise the value is still tested but allows single quoted attributes.
@@ -7171,11 +7171,11 @@ Browser.Features.getCSSTransition = function(){
 	// set CSS transition event type
 	if ( Browser.Features.cssTransition ) {
 		Browser.Features.transitionEnd = "TransitionEnd";
-		if ( Browser.Engine.webkit ) {
+		if ( Browser.webkit || Browser.chrome ) {
 			Browser.Features.transitionEnd = "webkitTransitionEnd";
-		} else if ( Browser.Engine.gecko ) {
+		} else if ( Browser.firefox ) {
 			Browser.Features.transitionEnd = "transitionend";
-		} else if ( Browser.Engine.presto ) {
+		} else if ( Browser.opera ) {
 			Browser.Features.transitionEnd = "oTransitionEnd";
 		}
 	}
@@ -8921,10 +8921,12 @@ Bootstrap.Popup = new Class({
 		this.destroyed = true;
 	},
 
-	hide: function(event){
+	hide: function(event, clicked){
 		if (!this.visible || this.animating) return;
 		this.animating = true;
-		if (event) event.preventDefault();
+		if (event && clicked && clicked.hasClass('stopEvent')){
+			event.preventDefault();
+		}
 		document.id(document.body).removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
 		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
