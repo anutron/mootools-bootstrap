@@ -24,11 +24,11 @@ Browser.Features.getCSSTransition = function(){
 	// set CSS transition event type
 	if ( Browser.Features.cssTransition ) {
 		Browser.Features.transitionEnd = "TransitionEnd";
-		if ( Browser.Engine.webkit ) {
+		if ( Browser.webkit || Browser.chrome ) {
 			Browser.Features.transitionEnd = "webkitTransitionEnd";
-		} else if ( Browser.Engine.gecko ) {
+		} else if ( Browser.firefox ) {
 			Browser.Features.transitionEnd = "transitionend";
-		} else if ( Browser.Engine.presto ) {
+		} else if ( Browser.opera ) {
 			Browser.Features.transitionEnd = "oTransitionEnd";
 		}
 	}
