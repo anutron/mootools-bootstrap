@@ -38,6 +38,8 @@ Bootstrap.Popover Method: constructor
 
 Any element in your content with the class `.close` or `.dismiss` will close the popup. The reason for both is that Bootstrap provides styles for .close elements (the *x* in the upper right corner) that you may not want applied to your element.
 
+By default, the default behavior for the click event on these elements is NOT stopped (so if they are submit buttons or actual links with `href` properties, those actions will occur). Add the class `stopEvent` to have the class call `Event.preventDefault` for you.
+
 
 Bootstrap.Popup Method: show {#Bootstrap-Popup:show}
 ------------------------------------------------

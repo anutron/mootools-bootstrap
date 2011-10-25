@@ -125,10 +125,12 @@ Bootstrap.Popup = new Class({
 		this.destroyed = true;
 	},
 
-	hide: function(event){
+	hide: function(event, clicked){
 		if (!this.visible || this.animating) return;
 		this.animating = true;
-		if (event) event.preventDefault();
+		if (event && clicked && clicked.hasClass('stopEvent')){
+			event.preventDefault();
+		}
 		document.id(document.body).removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
 		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);

@@ -109,8 +109,8 @@
     &lt;p>One fine body...&lt;/p>
   &lt;/div>
   &lt;div class="modal-footer">
-    &lt;a href="#" class="btn primary dismiss">Primary&lt;/a>
-    &lt;a href="#" class="btn secondary dismiss">Secondary&lt;/a>
+    &lt;a href="#" class="btn primary dismiss stopEvent">Primary&lt;/a>
+    &lt;a href="#" class="btn secondary dismiss stopEvent">Secondary&lt;/a>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -169,7 +169,7 @@
           </p>
           <p>
             <span class="label notice">Notice</span>
-            Any element in your content with the class <code>.close</code> or <code>.dismiss</code> will close the popup. The reason for both is that Bootstrap provides styles for .close elements (the *x* in the upper right corner) that you may not want applied to your element.
+            Any element in your content with the class <code>.close</code> or <code>.dismiss</code> will close the popup. The reason for both is that Bootstrap provides styles for .close elements (the *x* in the upper right corner) that you may not want applied to your element. By default, the default behavior for the click event on these elements is NOT stopped (so if they are submit buttons or actual links with <code>href</code> properties, those actions will occur). Add the class <code>stopEvent</code> to have the class call <code>Event.preventDefault</code> for you.
           </p>
 
           <h3>Behavior Options</h3>
@@ -202,8 +202,8 @@
               <p>One fine body...</p>
             </div>
             <div class="modal-footer">
-              <a href="#" class="btn primary dismiss">Primary</a>
-              <a href="#" class="btn secondary dismiss">Secondary</a>
+              <a href="#" class="btn primary dismiss stopEvent">Primary</a>
+              <a href="#" class="btn secondary dismiss stopEvent">Secondary</a>
             </div>
           </div>
 
