@@ -27,6 +27,7 @@ sources:
  - Source/Behaviors/Behavior.BS.Dropdown.js
  - Source/Behaviors/Behavior.BS.Popover.js
  - Source/Behaviors/Behavior.BS.Popup.js
+ - Source/Behaviors/Behavior.BS.Popup.FormRequest.js
  - Source/Behaviors/Behavior.BS.Tabs.js
  - Source/Behaviors/Behavior.BS.Twipsy.js
  - Source/UI/Bootstrap.js
