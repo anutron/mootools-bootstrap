@@ -6,19 +6,19 @@ If you are using the [Behavior.FormRequest](http://mootools.net/docs/more/Forms/
 ### Example
 
 	<div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
-	  <form action="/some/url" data-behavior="Form.Request">
-  		<div class="modal-header">
-  			<a href="#" class="close">×</a>
-  			<h3>Modal Heading</h3>
-  		</div>
-  		<div class="modal-body">
-  			<p>One fine body...</p>
-  		</div>
-  		<div class="modal-footer">
-  			<input class="btn primary dismiss" name="submit" value="OK"/>
-  			<a href="#" class="btn secondary dismiss">Cancel</a>
-  		</div>
-  	</form>
+		<form action="/some/url" data-behavior="FormRequest">
+			<div class="modal-header">
+				<a href="#" class="close">×</a>
+				<h3>Modal Heading</h3>
+			</div>
+			<div class="modal-body">
+				<p>One fine body...</p>
+			</div>
+			<div class="modal-footer">
+				<input class="btn primary dismiss" name="submit" value="OK"/>
+				<a href="#" class="btn secondary dismiss">Cancel</a>
+			</div>
+		</form>
 	</div>
 
 ### Options

@@ -25,6 +25,7 @@ current: 1.0.6
 sources:
  - Source/Behaviors/Behavior.BS.Alert.js
  - Source/Behaviors/Behavior.BS.Dropdown.js
+ - Source/Behaviors/Behavior.BS.FormValidator.js
  - Source/Behaviors/Behavior.BS.Popover.js
  - Source/Behaviors/Behavior.BS.Popup.js
  - Source/Behaviors/Behavior.BS.Popup.FormRequest.js
