@@ -27,6 +27,8 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 			showError: function(){},
 			hideError: function(){}
 		});
+		instance.warningPrefix = '';
+		instance.errorPrefix = '';
 		instance.addEvents({
 			showAdvice: function(field, advice, className){
 				var inputParent = field.getParent('.input'),
@@ -42,6 +44,7 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 						}).inject(inputParent);
 					}
 					help.removeClass('hide');
+					help.set('title', advice.get('html'));
 					clearfixParent.addClass('error');
 				}
 			},
@@ -52,7 +55,7 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 					original.hideError(advice);
 				} else {
 					field.removeClass('error');
-					inputParent.getElement('div.show-advice').addClass('hide');
+					inputParent.getElement('div.help-inline').addClass('hide');
 					clearfixParent.removeClass('error');
 				}
 			}
