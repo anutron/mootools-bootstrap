@@ -39,6 +39,7 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 					field.addClass('error');
 					var help = inputParent.getElement('div.advice');
 					if (!help){
+						inputParent.getElements('span.help-inline').setStyle('display', 'none');
 						help = new Element('span.help-inline.advice.auto-created', {
 							html: advice.get('html')
 						}).inject(inputParent);
@@ -58,6 +59,7 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 					var help = inputParent.getElement('span.advice');
 					if (help.hasClass('auto-created')) help.destroy();
 					else help.set('html', '');
+					inputParent.getElements('span.help-inline').setStyle('display', '');
 					clearfixParent.removeClass('error');
 				}
 			}
