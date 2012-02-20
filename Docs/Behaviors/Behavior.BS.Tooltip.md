@@ -1,4 +1,4 @@
-Behavior Filter: Behavior.BS.Twipsy
+Behavior Filter: Behavior.BS.Tooltip
 ===================================
 
 A behavior filter to instantiate [Bootstrap](http://twitter.github.com/bootstrap/#popovers) simple tips.
@@ -7,10 +7,14 @@ A behavior filter to instantiate [Bootstrap](http://twitter.github.com/bootstrap
 
 [http://anutron.github.com/mootools-bootstrap/#popover](http://anutron.github.com/mootools-bootstrap/#popover)
 
+### Note
+
+Previously this filter was called "BS.Twipsy"; that name still works for backwards compatibility.
+
 ### Example
 
-	<a data-behavior="BS.Twipsy" title="A Title"
-		data-twipsy-options="
+	<a data-behavior="BS.Tooltip" title="A Title"
+		data-tooltip-options="
 			'location':'left',
 			'offset': -10
 		">hover for tip</a>

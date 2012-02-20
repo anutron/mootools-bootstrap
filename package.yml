@@ -30,11 +30,11 @@ sources:
  - Source/Behaviors/Behavior.BS.Popup.js
  - Source/Behaviors/Behavior.BS.Popup.FormRequest.js
  - Source/Behaviors/Behavior.BS.Tabs.js
- - Source/Behaviors/Behavior.BS.Twipsy.js
+ - Source/Behaviors/Behavior.BS.Tooltip.js
  - Source/UI/Bootstrap.js
  - Source/UI/Bootstrap.Dropdown.js
  - Source/UI/Bootstrap.Popover.js
  - Source/UI/Bootstrap.Popup.js
- - Source/UI/Bootstrap.Twipsy.js
+ - Source/UI/Bootstrap.Tooltip.js
  - Source/UI/CSSEvents.js
  - Source/UI/Delegator.BS.ShowPopup.js

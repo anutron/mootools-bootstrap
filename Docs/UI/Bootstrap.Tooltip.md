@@ -1,20 +1,23 @@
-Class: Bootstrap.Twipsy {#Bootstrap-Twipsy}
+Class: Bootstrap.Tooltip {#Bootstrap-Tooltip}
 =============================
 
-Creates a simple tool tip that works with [Bootstrap](http://anutron.github.com/mootools-bootstrap/#twipsy).
+Creates a simple tool tip that works with [Bootstrap](http://anutron.github.com/mootools-bootstrap/#tooltip).
 
 ### Implements
 
 - [Options][]
 - [Events][]
 
+### Note
 
-Bootstrap.Twipsy Method: constructor
+Previously this Class was called "Bootstrap.Twipsy"; that name still works for backwards compatibility.
+
+Bootstrap.Tooltip Method: constructor
 -----------------------------
 
 ### Syntax
 
-	new Bootstrap.Twipsy(element[, options]);
+	new Bootstrap.Tooltip(element[, options]);
 
 ### Arguments
 
@@ -41,7 +44,7 @@ Bootstrap.Twipsy Method: constructor
 * hide - (*function*) The function to apply when the tip element is hidden. Passed the element that is displayed. Note that if a CSS transition is used this is fired when that transition *starts*.
 * complete -  (*function*) The function to apply after the CSS transition. Passed `true` as its argument if the tip is visible, `false` if hidden.
 
-Bootstrap.Twipsy Method: show {#Bootstrap-Twipsy:show}
+Bootstrap.Tooltip Method: show {#Bootstrap-Tooltip:show}
 ------------------------------------------------
 
 Show the tip.
@@ -52,9 +55,9 @@ Show the tip.
 
 ### Returns
 
-* (*object*) This [Bootstrap.Twipsy][] instance.
+* (*object*) This [Bootstrap.Tooltip][] instance.
 
-Bootstrap.Twipsy Method: hide {#Bootstrap-Twipsy:hide}
+Bootstrap.Tooltip Method: hide {#Bootstrap-Tooltip:hide}
 ------------------------------------------------
 
 Hide the tip.
@@ -65,9 +68,9 @@ Hide the tip.
 
 ### Returns
 
-* (*object*) This [Bootstrap.Twipsy][] instance.
+* (*object*) This [Bootstrap.Tooltip][] instance.
 
-Bootstrap.Twipsy Method: destroy {#Bootstrap-Twipsy:destroy}
+Bootstrap.Tooltip Method: destroy {#Bootstrap-Tooltip:destroy}
 ------------------------------------------------
 
 Destroys the tip element and detaches the event listeners.
@@ -78,8 +81,8 @@ Destroys the tip element and detaches the event listeners.
 
 ### Returns
 
-* (*object*) This [Bootstrap.Twipsy][] instance.
+* (*object*) This [Bootstrap.Tooltip][] instance.
 
-[Bootstrap.Twipsy]: #Bootstrap-Twipsy
+[Bootstrap.Tooltip]: #Bootstrap-Tooltip
 [Options]: http;//mootools.net/core/Class/Class.Extras#Options
 [Events]: http;//mootools.net/core/Class/Class.Extras#Events

@@ -14,14 +14,14 @@
 
     <!-- Le javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="${get_asset_url('Bootstrap','prettify.js')}"></script>
+    <script src="${get_asset_url('Bootstrap','prettify.js', version)}"></script>
     <script src="/depender/build?requireLibs=Bootstrap&require=Core/DomReady&version=${version}"></script>
     <script>$(function () { prettyPrint() })</script>
 
     <!-- Le styles -->
-    <link href="${get_asset_url('Bootstrap','bootstrap.css')}" rel="stylesheet">
-    <link href="${get_asset_url('Bootstrap','docs.css')}" rel="stylesheet">
-    <link href="${get_asset_url('Bootstrap','prettify.css')}" rel="stylesheet">
+    <link href="${get_asset_url('Bootstrap','bootstrap.css', version)}" rel="stylesheet">
+    <link href="${get_asset_url('Bootstrap','docs.css', version)}" rel="stylesheet">
+    <link href="${get_asset_url('Bootstrap','prettify.css', version)}" rel="stylesheet">
 
   </head>
 
@@ -29,19 +29,29 @@
     <a href="http://github.com/anutron/mootools-bootstrap"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:999999;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
     <!-- Topbar
     ================================================== -->
-    <div class="topbar">
-      <div class="fill">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
-          <h3><a href="#">Bootstrap JS (for MooTools)</a></h3>
-          <ul>
+          <a href="#" class="brand">Bootstrap JS (for MooTools)</a>
+          <ul class="nav">
             <li><a href="#overview">Overview</a></li>
             <li><a href="#modal">Modals</a></li>
             <li><a href="#dropdown">Dropdown</a></li>
             <li><a href="#tabs">Tabs</a></li>
-            <li><a href="#twipsy">Twipsy</a></li>
+            <li><a href="#tooltip">Tooltip</a></li>
             <li><a href="#popover">Popover</a></li>
             <li><a href="#alerts">Alerts</a></li>
-            <li><a href="#scrollspy">ScrollSpy</a></li>
+          </ul>
+          <ul data-behavior="BS.Dropdown" class="nav secondary-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Other Plugins<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#collapse">Collapse</a></li>
+                <li><a href="#carousel">Carousel</a></li>
+                <li><a href="#typeahead">Typeahead</a></li>
+                <li><a href="#scrollspy">ScrollSpy</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -68,7 +78,7 @@
           <h1>MooTools for Bootstrap</h1>
         </div>
         <div class="row">
-          <div class="span16 columns">
+          <div class="span12 columns">
 
             <p><a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a> is a heaping serving of awesomeness. In addition to it's easy to use grid system, layouts, good looking typography, and the fact that the whole thing is written in <a href="http://lesscss.org">Less</a>, it includes a handful of <a href="http://twitter.github.com/bootstrap/javascript.html">JavaScript plugins</a> for <a href="http://jquery.com/">jQuery</a> and <a href="http://ender.no.de/">Ender</a> to bring a lot of the CSS components to life. We're talking tips, popups, drop down menus and more.</p>
 
@@ -94,11 +104,11 @@
         <div class="span4 columns">
           <p>Our Modal plugin is a super slim take on the traditional modal js plugin, taking special care to include only the bare functionality that we require here at twitter.</p>
         </div>
-        <div class="span12 columns">
+        <div class="span8 columns">
           <h3>Using Behavior.Popup and Delegator.ShowPopup</h3>
 <pre class="prettyprint linenums">&lt;!-- this button will show the popup below it -->
 &lt;button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup"
-    class="btn danger">Launch Modal&lt;/button>
+    class="btn btn-danger">Launch Modal&lt;/button>
 
 &lt;div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
   &lt;div class="modal-header">
@@ -109,13 +119,13 @@
     &lt;p>One fine body...&lt;/p>
   &lt;/div>
   &lt;div class="modal-footer">
-    &lt;a href="#" class="btn primary dismiss stopEvent">Primary&lt;/a>
-    &lt;a href="#" class="btn secondary dismiss stopEvent">Secondary&lt;/a>
+    &lt;a href="#" class="btn btn-primary dismiss stopEvent">Primary&lt;/a>
+    &lt;a href="#" class="btn btn-secondary dismiss stopEvent">Secondary&lt;/a>
   &lt;/div>
 &lt;/div>
 </pre>
         <h3>Behavior.BS.Popup Options</h3>
-        <table class="zebra-striped">
+        <table class="table table-striped table-bordered">
           <thead>
            <tr>
              <th style="width: 100px;">Name</th>
@@ -202,13 +212,13 @@
               <p>One fine body...</p>
             </div>
             <div class="modal-footer">
-              <a href="#" class="btn primary dismiss stopEvent">Primary</a>
-              <a href="#" class="btn secondary dismiss stopEvent">Secondary</a>
+              <a href="#" class="btn btn-primary dismiss stopEvent">Primary</a>
+              <a href="#" class="btn btn-secondary dismiss stopEvent">Secondary</a>
             </div>
           </div>
 
 
-          <button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup" class="btn danger">Launch Modal</button>
+          <button data-trigger="BS.showPopup" data-bs-showpopup-target="!body #demoPopup" class="btn btn-danger">Launch Modal</button>
 
         </div>
       </div>
@@ -226,14 +236,14 @@
         <div class="span4 columns">
           <p>This plugin is for adding dropdown interaction to the bootstrap topbar or tabbed navigations.</p>
         </div>
-        <div class="span12 columns">
+        <div class="span8 columns">
           <h3>Using Behavior.BS.Dropdown</h3>
           <p>To quickly add dropdown functionality to any nav element, use the <code>Dropdown</code> behavior. Any valid bootstrap dropdown inside the container will automatically be activated.</p>
 <pre class="prettyprint linenums">&lt;-- a simple example -->
-&lt;ul data-behavior="BS.Dropdown">
-  &lt;li class="menu">
-    &lt;a href="#" class="menu">Menu2&lt;/a>
-    &lt;ul class="menu-dropdown">
+&lt;ul data-behavior="BS.Dropdown" class="navbar">
+  &lt;li class="dropdown">
+    &lt;a href="#" class="dropdown-toggle">Menu2&lt;/a>
+    &lt;ul class="dropdown-menu">
       &lt;li>&lt;a>item1&lt;/a>&lt;/li>
       &lt;li>&lt;a>item2&lt;/a>&lt;/li>
       &lt;li>&lt;a>item3&lt;/a>&lt;/li>
@@ -242,35 +252,40 @@
 &lt;/ul>
 
 &lt;-- an example with numerous menus -->
-&lt;div class="topbar-wrapper" data-behavior="BS.Dropdown">
-  &lt;div id="topbar-example" class="topbar">
-    &lt;div class="topbar-inner">
+
+&lt;div class="navbar-wrapper" data-behavior="BS.Dropdown">
+  &lt;div id="navbar-example" class="navbar">
+    &lt;div class="navbar-inner">
       &lt;div class="container">
-        &lt;h3>&lt;a href="#">Project Name&lt;/a>&lt;/h3>
-        &lt;ul>
+        &lt;a href="#" class="brand">Project Name&lt;/a>
+        &lt;ul class="nav">
           &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
           &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
         &lt;/ul>
-        &lt;form action="">
-          &lt;input type="text" placeholder="Search" />
+        &lt;form action="" class="navbar-search">
+          &lt;input type="text" class="search-query" placeholder="Search" />
         &lt;/form>
         &lt;ul class="nav secondary-nav">
-          &lt;li class="menu">
-            &lt;a href="#" class="menu">Dropdown 1&lt;/a>
-            &lt;ul class="menu-dropdown">
-              &lt;li>&lt;a href="#">Secondary link&lt;/a>&lt;/li>
-              &lt;li>&lt;a href="#">Something else here&lt;/a>&lt;/li>
-              &lt;li class="divider">&lt;/li>
-              &lt;li>&lt;a href="#">Another link&lt;/a>&lt;/li>
-            &lt;/ul>
+          &lt;li class="dropdown">
+            &lt;a href="#" class="dropdown-toggle">Dropdown 1
+              &lt;b class="caret">&lt;/b>
+            &lt;/a>
+            &lt;ul class="dropdown-menu">
+              &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
+              &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
+              &lt;li class="divider-horizontal">&lt;/li>
+              &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
+          &lt;/ul>
           &lt;/li>
-          &lt;li class="menu">
-            &lt;a href="#" class="menu">Dropdown 2&lt;/a>
-            &lt;ul class="menu-dropdown">
-              &lt;li>&lt;a href="#">Secondary link&lt;/a>&lt;/li>
-              &lt;li>&lt;a href="#">Something else here&lt;/a>&lt;/li>
-              &lt;li class="divider">&lt;/li>
-              &lt;li>&lt;a href="#">Another link&lt;/a>&lt;/li>
+          &lt;li class="dropdown">
+            &lt;a class="dropdown-toggle">Dropdown 2
+              &lt;b class="caret">&lt;/b>
+            &lt;/a>
+            &lt;ul class="dropdown-menu">
+              &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
+              &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
+              &lt;li class="divider-horizontal">&lt;/li>
+              &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
             &lt;/ul>
           &lt;/li>
         &lt;/ul>
@@ -278,36 +293,38 @@
     &lt;/div>
   &lt;/div>
 &lt;/div></pre>
+          </div>
+        </div>
           <h3>Demo</h3>
-          <div class="topbar-wrapper" data-behavior="BS.Dropdown">
-            <div id="topbar-example" class="topbar">
-              <div class="topbar-inner">
+          <div class="navbar-wrapper" data-behavior="BS.Dropdown">
+            <div id="navbar-example" class="navbar">
+              <div class="navbar-inner">
                 <div class="container">
-                  <h3><a href="#">Project Name</a></h3>
-                  <ul>
+                  <a href="#" class="brand">Project Name</a>
+                  <ul class="nav">
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                   </ul>
-                  <form action="">
-                    <input type="text" placeholder="Search" />
+                  <form action="" class="navbar-search">
+                    <input type="text" class="search-query" placeholder="Search" />
                   </form>
                   <ul class="nav secondary-nav">
-                    <li class="menu">
-                      <a href="#" class="menu">Dropdown 1</a>
-                      <ul class="menu-dropdown">
-                        <li><a href="#">Secondary link</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Another link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a>Secondary link</a></li>
+                        <li><a>Something else here</a></li>
+                        <li class="divider-horizontal"></li>
+                        <li><a>Another link</a></li>
                     </ul>
                     </li>
-                    <li class="menu">
-                      <a href="#" class="menu">Dropdown 2</a>
-                      <ul class="menu-dropdown">
-                        <li><a href="#">Secondary link</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Another link</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a>Secondary link</a></li>
+                        <li><a>Something else here</a></li>
+                        <li class="divider-horizontal"></li>
+                        <li><a>Another link</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -315,8 +332,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+
     </section>
 
     <!-- Tabs
@@ -330,36 +346,47 @@
         <div class="span4 columns">
           <p>This plugin adds quick, dynamic tab and pill functionality.</p>
         </div>
-        <div class="span12 columns">
+        <div class="span8 columns">
           <h3>Markup</h3>
           <p>You can activate a tab or pill navigation without writing any javascript by simply giving them a <code>data-behavior="Tabs"</code>.</p>
           <pre class="prettyprint linenums"> &lt;ul class="tabs" data-behavior="BS.Tabs" &gt;...&lt;/ul&gt;</pre>
           <p>
             Activates tab functionality for a given container.
           </p>
-<pre class="prettyprint linenums">&lt;ul class="tabs" data-behavior="BS.Tabs">
-  &lt;li class="active">&lt;a>Home&lt;/a>&lt;/li>
+<pre class="prettyprint linenums">&lt;ul class="nav nav-tabs" data-behavior="BS.Tabs BS.Dropdown" data-bs-tabs-options="
+  'smooth': true
+">
+  &lt;li class="active">&lt;a href="#home">Home&lt;/a>&lt;/li>
   &lt;li>&lt;a>Profile&lt;/a>&lt;/li>
   &lt;li>&lt;a>Messages&lt;/a>&lt;/li>
-  &lt;li>&lt;a>Settings&lt;/a>&lt;/li>
+  &lt;li class="dropdown">
+    &lt;a class="dropdown-toggle">Settings&lt;b class="caret">&lt;/b>&lt;/a>
+    &lt;ul class="dropdown-menu">
+      &lt;li>&lt;a>Email address&lt;/a>&lt;/li>
+      &lt;li>&lt;a>Password&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/li>
 &lt;/ul>
 &lt;div id="my-tab-content" class="tab-content">
-  &lt;div class="active" id="home">
-    ...
+  &lt;div class="tab-pane active" id="home">
+    &lt;p>...&lt;/p>
   &lt;/div>
-  &lt;div id="profile">
-    ...
+  &lt;div id="profile" class="tab-pane">
+    &lt;p>...&lt;/p>
   &lt;/div>
-  &lt;div id="messages">
-    ...
+  &lt;div id="messages" class="tab-pane">
+    &lt;p>...&lt;/p>
   &lt;/div>
-  &lt;div id="settings">
-    ...
+  &lt;div id="email" class="tab-pane">
+    &lt;p>...&lt;/p>
+  &lt;/div>
+  &lt;div id="password" class="tab-pane">
+    &lt;p>...&lt;/p>
   &lt;/div>
 &lt;/div>
 </pre>
           <h3>Behavior.BS.Tab Options</h3>
-          <table class="zebra-striped">
+          <table class="table table-striped table-bordered">
             <thead>
              <tr>
                <th style="width: 100px;">Name</th>
@@ -408,24 +435,35 @@
             </tbody>
           </table>
           <h3>Demo</h3>
-          <ul class="tabs" data-behavior="BS.Tabs">
+          <ul class="nav nav-tabs" data-behavior="BS.Tabs BS.Dropdown" data-bs-tabs-options="
+            'smooth': true
+          ">
             <li class="active"><a href="#home">Home</a></li>
             <li><a>Profile</a></li>
             <li><a>Messages</a></li>
-            <li><a>Settings</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle">Settings<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a>Email address</a></li>
+                <li><a>Password</a></li>
+              </ul>
+            </li>
           </ul>
           <div id="my-tab-content" class="tab-content">
-            <div class="active" id="home">
+            <div class="tab-pane active" id="home">
               <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
             </div>
-            <div id="profile">
+            <div id="profile" class="tab-pane">
               <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
             </div>
-            <div id="messages">
+            <div id="messages" class="tab-pane">
               <p>Banksy do proident, brooklyn photo booth delectus sunt artisan sed organic exercitation eiusmod four loko. Quis tattooed iphone esse aliqua. Master cleanse vero fixie mcsweeney's. Ethical portland aute, irony food truck pitchfork lomo eu anim. Aesthetic blog DIY, ethical beard leggings tofu consequat whatever cardigan nostrud. Helvetica you probably haven't heard of them carles, marfa veniam occaecat lomo before they sold out in shoreditch scenester sustainable thundercats. Consectetur tofu craft beer, mollit brunch fap echo park pitchfork mustache dolor.</p>
             </div>
-            <div id="settings">
-              <p>Sunt qui biodiesel mollit officia, fanny pack put a bird on it thundercats seitan squid ad wolf bicycle rights blog. Et aute readymade farm-to-table carles 8-bit, nesciunt nulla etsy adipisicing organic ea. Master cleanse mollit high life, next level Austin nesciunt american apparel twee mustache adipisicing reprehenderit hoodie portland irony. Aliqua tofu quinoa +1 commodo eiusmod. High life williamsburg cupidatat twee homo leggings. Four loko vinyl DIY consectetur nisi, marfa retro keffiyeh vegan. Fanny pack viral retro consectetur gentrify fap.</p>
+            <div id="email" class="tab-pane">
+              <p>Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+            </div>
+            <div id="password" class="tab-pane">
+              <p>Aliqua tofu quinoa +1 commodo eiusmod. High life williamsburg cupidatat twee homo leggings. Four loko vinyl DIY consectetur nisi, marfa retro keffiyeh vegan. Fanny pack viral retro consectetur gentrify fap.</p>
             </div>
           </div>
         </div>
@@ -435,19 +473,19 @@
     <!-- Tips
     ================================================== -->
 
-    <section id="twipsy">
+    <section id="tooltip">
       <div class="page-header">
-        <h1>Twipsy <small>Bootstrap.Twipsy.js and Behavior.Twipsy.js</small></h1>
+        <h1>Tooltip <small>Bootstrap.Tooltip.js and Behavior.Tooltip.js</small></h1>
       </div>
       <div class="row">
         <div class="span4 columns">
-          <p>Based on the excellent jQuery.tipsy plugin written by Jason Frame; twipsy is an updated version, which doesn't rely on images, uses css3 for animations, and is based on MooTools.</p>
+          <p>Based on the excellent jQuery.tipsy plugin written by Jason Frame; Bootstrap.Tooltip is an updated version, which doesn't rely on images, uses css3 for animations, and is based on MooTools.</p>
         </div>
-        <div class="span12 columns">
-          <h3>Using Behavior.Twipsy.js</h3>
-          <pre class="prettyprint linenums">&lt;a data-behavior="BS.Twipsy" title="I'm a twipsy">a tip!&lt;/a></pre>
+        <div class="span8 columns">
+          <h3>Using Behavior.Tooltip.js</h3>
+          <pre class="prettyprint linenums">&lt;a data-behavior="BS.Tooltip" title="I'm a tooltip">a tip!&lt;/a></pre>
           <h3>Options</h3>
-          <table class="zebra-striped">
+          <table class="table table-striped table-bordered">
             <thead>
              <tr>
                <th style="width: 100px;">Name</th>
@@ -510,10 +548,10 @@
           <h3>Demo</h3>
           <div class="well">
             <p class="muted">Tight pants next level keffiyeh
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-location="above" title='Some title text'>you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-options="'location': 'below', 'offset':8" title='Another twipsy'>have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-options="'location': 'left', 'offset':-8" title='Another one here too'>really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin
-              <a href="#" data-behavior='BS.Twipsy' data-bs-twipsy-options="'location': 'right', 'offset':8" title='The last tip!'>twitter handle</a> freegan cred raw denim single-origin coffee viral.
+              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-location="above" title='Some title text'>you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
+              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'below', 'offset':8" title='Another tooltip'>have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A
+              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'left', 'offset':-8" title='Another one here too'>really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin
+              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'right', 'offset':8" title='The last tip!'>twitter handle</a> freegan cred raw denim single-origin coffee viral.
             </p>
           </div>
         </div>
@@ -531,11 +569,11 @@
         <div class="span4 columns">
           <p>The popover plugin provides a simple interface for adding popovers to your application.</p>
         </div>
-        <div class="span12 columns">
+        <div class="span8 columns">
           <h3>Using Behavior.Popover.js</h3>
           <pre class="prettyprint linenums">&lt;a data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover&lt;/a></pre>
           <h3>Options</h3>
-          <table class="zebra-striped">
+          <table class="table table-striped table-bordered">
             <thead>
              <tr>
                <th style="width: 100px;">Name</th>
@@ -602,7 +640,7 @@
             </tbody>
           </table>
           <h3>Demo</h3>
-          <a href="#" class="btn danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+          <a href="#" class="btn btn-danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
         </div>
       </div>
     </section>
@@ -620,48 +658,94 @@
         <div class="span4 columns">
           <p>Adding close functionality to alerts with MooTools' Behavior is super easy.</p>
         </div>
-        <div class="span12 columns">
+        <div class="span8 columns">
           <h3>Closing Alerts</h3>
           <p>Closing errors uses the <code>nix</code> trigger from the <code>Fx.Reveal</code> delegator in <a href="https://github.com/anutron/more-behaviors">more-behaviors</a>. You can put this trigger on any element.</p>
           <h3>Markup</h3>
-<preclass="prettyprint linenums">&lt;div class="alert-message error">
-  &lt;!-- the data trigger references the parent div.alert-message -->
+<pre class="prettyprint linenums">&lt;div class="alert alert-error">
+  &lt;!-- the data trigger references the parent div.alert -->
   &lt;a class="close" data-trigger="nix" data-nix-options="
-    'target': '!div.alert-message'
+    'target': '!div.alert'
   ">&amp;times;&lt;/a>
   &lt;p>Oh snap! You Got an error!&lt;/p>
 &lt;/div></pre>
           <h3>Demo</h3>
-          <div class="alert-message warning fade in" data-alert="alert" >
+          <div class="alert alert-warning fade in" data-alert="alert" >
             <a class="close" href="#" data-trigger="nix" data-nix-options="
-              'target': '!div.alert-message'
+              'target': '!div.alert'
             ">&times;</a>
             <p><strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.</p>
           </div>
-          <div class="alert-message block-message error fade in" data-alert="alert" >
+          <div class="alert block-message alert-error fade in" data-alert="alert" >
             <a class="close" href="#" data-trigger="nix" data-nix-options="
-              'target': '!div.alert-message'
+              'target': '!div.alert'
             ">&times;</a>
             <p><strong>Oh snap! You got an error!</strong> Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
             <div class="alert-actions">
-              <a class="btn small" href="#" data-trigger="nix" data-nix-options="
-                'target': '!div.alert-actions'
-              ">Take this action</a> <a class="btn small" href="#">Or do this</a>
+              <a class="btn btn-small" href="#" data-trigger="nix" data-nix-options="
+                'target': '!div.alert'
+              ">Take this action</a> <a class="btn btn-small" href="#"
+                data-trigger="nix" data-nix-options="
+                  'target': '!div.alert'
+                ">Or do this</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section>
+      <div class="page-header" id="collapse">
+        <h1>Other Plugins</h1>
+      </div>
+      <div class="row">
+        <div class="span12 columns">
+          <p>This implementation supports only the plugins that <a href="http://github.com/anutron">the author</a> has had personal need of. I hope to add support for <a href="http://twitter.github.com/bootstrap/javascript.html">all the interactive features available in Bootstrap</a> at some point. Pull requests are welcome!</p>
+        </div>
+      </div>
+    <!-- Collapse
+     ================================================== -->
+       <div class="page-header" id="collapse">
+         <h2>Collapse</h2>
+       </div>
+       <div class="row">
+         <div class="span12 columns">
+           <p>For accordion support, use the Behavior.Accordion plugin in <a href="https://github.com/anutron/more-behaviors/blob/master/Docs/Fx/Behavior.FxAccordion.md">More Behaviors</a>.</p>
+         </div>
+       </div>
+
+    <!-- Carousel
+     ================================================== -->
+
+       <div class="page-header" id="carousel">
+         <h2>Carousel</h2>
+       </div>
+       <div class="row">
+         <div class="span12 columns">
+           <p>There is currently no support for the Carousel functionality found in Bootstrap.</p>
+         </div>
+       </div>
+
+    <!-- Typeahead
+     ================================================== -->
+
+       <div class="page-header" id="typeahead">
+         <h2>Typeahead</h2>
+       </div>
+       <div class="row">
+         <div class="span12 columns">
+           <p>There is currently no support for the Typeahead functionality found in Bootstrap.</p>
+         </div>
+       </div>
+
     <!-- ScrollSpy
      ================================================== -->
 
-     <section id="scrollspy">
-       <div class="page-header">
-         <h1>ScrollSpy <small></small></h1>
+       <div class="page-header" id="scrollspy">
+         <h2>ScrollSpy</h2>
        </div>
        <div class="row">
-         <div class="span16 columns">
+         <div class="span12 columns">
            <p>There is currently no support for the Scrollspy functionality found in Bootstrap.</p>
          </div>
        </div>

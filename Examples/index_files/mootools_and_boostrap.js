@@ -1,5 +1,5 @@
 //This library: http://localhost:9876/depender/build?requireLibs=Bootstrap&require=Core/DomReady&version=MooTools%20Bootstrap
-//Contents: Core:Source/Core/Core.js, Core:Source/Types/Array.js, Core:Source/Types/Function.js, Core:Source/Types/Number.js, Core:Source/Types/String.js, Core:Source/Browser/Browser.js, Core:Source/Types/Object.js, Core:Source/Slick/Slick.Parser.js, Core:Source/Slick/Slick.Finder.js, Core:Source/Element/Element.js, Core:Source/Types/DOMEvent.js, Core:Source/Element/Element.Event.js, Core:Source/Element/Element.Delegation.js, Core:Source/Class/Class.js, Core:Source/Class/Class.Extras.js, Behavior:Source/Event.Mock.js, More:Source/Utilities/Table.js, Core:Source/Utilities/JSON.js, Behavior:Source/Element.Data.js, Behavior:Source/BehaviorAPI.js, Behavior:Source/Behavior.js, Behavior:Source/Delegator.js, Core:Source/Fx/Fx.js, Core:Source/Element/Element.Style.js, Core:Source/Fx/Fx.CSS.js, Core:Source/Fx/Fx.Morph.js, More:Source/More/More.js, More:Source/Element/Element.Shortcuts.js, Core:Source/Element/Element.Dimensions.js, More:Source/Element/Element.Measure.js, More:Source/Fx/Fx.Reveal.js, More-Behaviors:Source/Delegators/Delegator.FxReveal.js, Bootstrap:Source/Behaviors/Behavior.BS.Alert.js, Bootstrap:Source/UI/Bootstrap.js, Core:Source/Utilities/DOMReady.js, Bootstrap:Source/UI/CSSEvents.js, More:Source/Element/Element.Position.js, Bootstrap:Source/UI/Bootstrap.Twipsy.js, Bootstrap:Source/UI/Bootstrap.Dropdown.js, Bootstrap:Source/Behaviors/Behavior.BS.Dropdown.js, Bootstrap:Source/UI/Delegator.BS.ShowPopup.js, Bootstrap:Source/UI/Bootstrap.Popover.js, More:Source/Types/Object.Extras.js, Bootstrap:Source/Behaviors/Behavior.BS.Popover.js, Core:Source/Fx/Fx.Tween.js, Core:Source/Fx/Fx.Transitions.js, More:Source/Class/Class.Binds.js, More:Source/Class/Class.Occlude.js, More:Source/Utilities/IframeShim.js, More:Source/Interface/Mask.js, More:Source/Element/Elements.From.js, More:Source/Class/Events.Pseudos.js, Bootstrap:Source/UI/Bootstrap.Popup.js, Bootstrap:Source/Behaviors/Behavior.BS.Twipsy.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.js, Clientcide:Source/Layout/TabSwapper.js, More:Source/Types/String.QueryString.js, Clientcide:Source/Behaviors/Behavior.Tabs.js, Bootstrap:Source/Behaviors/Behavior.BS.Tabs.js
+//Contents: Core:Source/Core/Core.js, Core:Source/Types/Array.js, Core:Source/Types/Function.js, Core:Source/Types/Number.js, Core:Source/Types/String.js, Core:Source/Browser/Browser.js, Core:Source/Types/Object.js, Core:Source/Slick/Slick.Parser.js, Core:Source/Slick/Slick.Finder.js, Core:Source/Element/Element.js, Core:Source/Types/DOMEvent.js, Core:Source/Element/Element.Event.js, Core:Source/Element/Element.Delegation.js, Core:Source/Class/Class.js, Core:Source/Class/Class.Extras.js, Behavior:Source/Event.Mock.js, More:Source/Utilities/Table.js, Core:Source/Utilities/JSON.js, Behavior:Source/Element.Data.js, Behavior:Source/BehaviorAPI.js, Behavior:Source/Behavior.js, Behavior:Source/Delegator.js, Core:Source/Fx/Fx.js, Core:Source/Element/Element.Style.js, Core:Source/Fx/Fx.CSS.js, Core:Source/Fx/Fx.Morph.js, More:Source/More/More.js, More:Source/Element/Element.Shortcuts.js, Core:Source/Element/Element.Dimensions.js, More:Source/Element/Element.Measure.js, More:Source/Fx/Fx.Reveal.js, More-Behaviors:Source/Delegators/Delegator.FxReveal.js, Bootstrap:Source/Behaviors/Behavior.BS.Alert.js, Bootstrap:Source/UI/Bootstrap.js, Core:Source/Utilities/DOMReady.js, Bootstrap:Source/UI/CSSEvents.js, More:Source/Element/Element.Position.js, Bootstrap:Source/UI/Bootstrap.Twipsy.js, Bootstrap:Source/UI/Bootstrap.Dropdown.js, Bootstrap:Source/Behaviors/Behavior.BS.Dropdown.js, Bootstrap:Source/UI/Delegator.BS.ShowPopup.js, More:Source/Types/Object.Extras.js, Core:Source/Fx/Fx.Tween.js, Core:Source/Fx/Fx.Transitions.js, More:Source/Class/Class.Binds.js, More:Source/Class/Class.Occlude.js, More:Source/Utilities/IframeShim.js, More:Source/Interface/Mask.js, More:Source/Element/Elements.From.js, More:Source/Class/Events.Pseudos.js, Bootstrap:Source/UI/Bootstrap.Popup.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.js, Core:Source/Request/Request.js, Core:Source/Request/Request.HTML.js, More:Source/Class/Class.Refactor.js, More:Source/Interface/Spinner.js, More:Source/Types/String.QueryString.js, More:Source/Element/Element.Event.Pseudos.js, More:Source/Forms/Form.Request.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.FormRequest.js, Bootstrap:Source/UI/Bootstrap.Popover.js, Bootstrap:Source/Behaviors/Behavior.BS.Popover.js, More:Source/Locale/Locale.js, More:Source/Locale/Locale.en-US.Date.js, More:Source/Types/Date.js, More:Source/Types/String.Extras.js, More:Source/Element/Element.Forms.js, More:Source/Locale/Locale.en-US.Form.Validator.js, More:Source/Forms/Form.Validator.js, More:Source/Forms/Form.Validator.Inline.js, More-Behaviors:Source/Forms/Behavior.FormValidator.js, Bootstrap:Source/Behaviors/Behavior.BS.FormValidator.js, Bootstrap:Source/Behaviors/Behavior.BS.Twipsy.js, Clientcide:Source/Layout/TabSwapper.js, Clientcide:Source/Behaviors/Behavior.Tabs.js, Bootstrap:Source/Behaviors/Behavior.BS.Tabs.js
 
 // Begin: Source/Core/Core.js
 /*
@@ -4457,7 +4457,7 @@ var Table = this.Table = function(){
 	this.length = 0;
 	var keys = [],
 	    values = [];
-	
+
 	this.set = function(key, value){
 		var index = keys.indexOf(key);
 		if (index == -1){
@@ -4489,7 +4489,7 @@ var Table = this.Table = function(){
 	this.each = this.forEach = function(fn, bind){
 		for (var i = 0, l = this.length; i < l; i++) fn.call(bind, keys[i], values[i], this);
 	};
-	
+
 };
 
 if (this.Type) new Type('Table', Table);
@@ -4622,7 +4622,7 @@ script: Element.Data.js
 			}
 		},
 
-		/* 
+		/*
 			arguments:
 				name - (string) the data name to store; will be automatically prefixed with 'data-'
 				value - (string, array, or object) if an object or array the object will be JSON encoded; otherwise stored as provided.
@@ -4633,7 +4633,7 @@ script: Element.Data.js
 
 		/*
 			retrieves a property from HTML5 data property you specify
-		
+
 			arguments:
 				name - (retrieve) the data name to store; will be automatically prefixed with 'data-'
 				strict - (boolean) if true, will set the JSON.decode's secure flag to true; otherwise the value is still tested but allows single quoted attributes.
@@ -4755,15 +4755,19 @@ provides: [BehaviorAPI]
 		},
 		//gets the data-behaviorname-options object and parses it as JSON
 		_getOptions: function(){
-			if (!this.options){
-				var options = this.element.getData(this.prefix + '-options', '{}');
-				if (options && options.substring(0,1) != '{') options = '{' + options + '}';
-				var isSecure = JSON.isSecure(options);
-				if (!isSecure) throw new Error('warning, options value for element is not parsable, check your JSON format for quotes, etc.');
-				this.options = isSecure ? JSON.decode(options) : {};
-				for (option in this.options) {
-					this.options[option.camelCase()] = this.options[option];
+			try {
+				if (!this.options){
+					var options = this.element.getData(this.prefix + '-options', '{}');
+					if (options && options.substring(0,1) != '{') options = '{' + options + '}';
+					var isSecure = JSON.isSecure(options);
+					if (!isSecure) throw new Error('warning, options value for element is not parsable, check your JSON format for quotes, etc.');
+					this.options = isSecure ? JSON.decode(options) : {};
+					for (option in this.options) {
+						this.options[option.camelCase()] = this.options[option];
+					}
 				}
+			} catch (e){
+				throw new Error('Could not get options from element; check your syntax. ' + this.prefix + '-options: "' + this.element.getData(this.prefix + '-options', '{}') + '"');
 			}
 			return this.options;
 		},
@@ -4885,6 +4889,7 @@ provides: [Behavior]
 			this.setOptions(options);
 			this.API = new Class({ Extends: BehaviorAPI });
 			this.passMethods({
+				getDelegator: this.getDelegator.bind(this),
 				addEvent: this.addEvent.bind(this),
 				removeEvent: this.removeEvent.bind(this),
 				addEvents: this.addEvents.bind(this),
@@ -4908,6 +4913,16 @@ provides: [Behavior]
 					this.fireEvent('warn', arguments);
 				}.bind(this)
 			});
+		},
+
+		getDelegator: function(){
+			return this.delegator;
+		},
+
+		setDelegator: function(delegator){
+			if (!instanceOf(delegator, Delegator)) throw new Error('Behavior.setDelegator only accepts instances of Delegator.');
+			this.delegator = delegator;
+			return this;
 		},
 
 		getContentElement: function(){
@@ -5389,38 +5404,43 @@ provides: [Delegator]
 		detach: function(target){
 			if (target){
 				this.attach(target, 'removeEvent');
-				return this;
 			} else {
 				this._attachedTo.each(this.detach, this);
 			}
+			return this;
 		},
 
 		trigger: function(name, element, event){
-			if (!event || typeOf(event) == "string") event = new Event.Mock(element, event);
-			var trigger = this._getTrigger(name);
-			if (trigger && trigger.types.contains(event.type)) {
+			var e = event;
+			if (!e || typeOf(e) == "string") e = new Event.Mock(element, e);
+
+			var trigger = this.getTrigger(name);
+			if (trigger && (!event || (event && trigger.types.contains(e.type)))) {
 				if (this.options.breakOnErrors){
-					this._trigger(trigger, element, event);
+					this._trigger(trigger, element, e);
 				} else {
 					try {
-						this._trigger(trigger, element, event);
-					} catch(e) {
-						this.fireEvent('error', ['Could not apply the trigger', name, e]);
+						this._trigger(trigger, element, e);
+					} catch(error) {
+						this.fireEvent('error', ['Could not apply the trigger', name, error]);
 					}
 				}
-			} else {
-				this.fireEvent('error', 'Could not find a trigger with the name ' + name + ' for event: ' + event.type);
 			}
+			return this;
+		},
+
+		getTrigger: function(name){
+			return this._triggers[name] || Delegator._triggers[name];
+		},
+
+		addEventTypes: function(triggerName, types){
+			this.getTrigger(triggerName).types.combine(Array.from(types));
 			return this;
 		},
 
 		/******************
 		 * PRIVATE METHODS
 		 ******************/
-
-		_getTrigger: function(name){
-			return this._triggers[name] || Delegator._triggers[name];
-		},
 
 		_trigger: function(trigger, element, event){
 			var api = new this.API(element, trigger.name);
@@ -5493,6 +5513,16 @@ provides: [Delegator]
 		}
 		return this;
 	};
+
+	Delegator.getTrigger = function(name){
+		return this._triggers[name];
+	};
+
+	Delegator.addEventTypes = function(triggerName, types){
+		this.getTrigger(triggerName).types.combine(Array.from(types));
+		return this;
+	};
+
 
 	Delegator.implement('register', Delegator.register);
 
@@ -6977,18 +7007,23 @@ name: Delegator.FxReveal
 
 		triggers[action] = {
 			handler: function(event, link, api){
-				var target = link;
-				if (api.get('target')) {
-					target = link.getElement(api.get('target'));
-					if (!target) api.fail('could not locate target element to ' + action, link);
+				var targets;
+				if (api.get('target')){
+					targets = new Elements([link.getElement(api.get('target'))]);
+					if (!targets) api.fail('could not locate target element to ' + action, link);
+				} else if (api.get('targets')){
+					targets = link.getElements(api.get('targets'));
+					if (!targets.length) api.fail('could not locate target elements to ' + action, link);
+				} else {
+					targets = new Elements([link]);
 				}
 
 				var fxOptions = api.get('fxOptions');
-				if (fxOptions) target.set('reveal', fxOptions);
-				target.get('reveal');
-				if (action == 'toggleReveal') target.get('reveal').toggle();
-				else target[action]();
-				event.preventDefault();
+				if (fxOptions) targets.set('reveal', fxOptions);
+				targets.get('reveal');
+				if (action == 'toggleReveal') targets.get('reveal').invoke('toggle');
+				else targets[action]();
+				if (!api.getAs(Boolean, 'allowEvent')) event.preventDefault();
 			}
 		};
 
@@ -7426,9 +7461,9 @@ Element.implement({
 /*
 ---
 
-name: Bootstrap.Twipsy
+name: Bootstrap.Tooltip
 
-description: A simple tooltip implementation (twipsy) that works with the Twitter Bootstrap css framework.
+description: A simple tooltip implementation that works with the Twitter Bootstrap css framework.
 
 authors: [Aaron Newton]
 
@@ -7440,17 +7475,17 @@ requires:
  - More/Element.Position
  - Behavior/Behavior
 
-provides: Bootstrap.Twipsy
+provides: [Bootstrap.Twipsy, Bootstrap.Tooltip]
 
 ...
 */
 
-Bootstrap.Twipsy = new Class({
+Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 
 	Implements: [Options, Events],
 
 	options: {
-		location: 'above', //below, left, right
+		location: 'above', //below, left, right, bottom, top
 		animate: true,
 		delayIn: 200,
 		delayOut: 0,
@@ -7476,7 +7511,7 @@ Bootstrap.Twipsy = new Class({
 		this._makeTip();
 		var pos, edge, offset = {x: 0, y: 0};
 		switch(this.options.location){
-			case 'below':
+			case 'below': case 'bottom':
 				pos = 'centerBottom';
 				edge = 'centerTop';
 				offset.y = this.options.offset;
@@ -7529,10 +7564,13 @@ Bootstrap.Twipsy = new Class({
 
 	_makeTip: function(){
 		if (!this.tip){
-			this.tip = new Element('div.twipsy').addClass(this.options.location)
-				 .adopt(new Element('div.twipsy-arrow'))
+			var location = this.options.location;
+			if (location == 'above') location = 'top';    //bootstrap 2.0
+			if (location == 'below') location = 'bottom'; //bootstrap 2.0
+			this.tip = new Element('div.tooltip').addClass(location)
+				 .adopt(new Element('div.tooltip-arrow'))
 				 .adopt(
-				   new Element('div.twipsy-inner', {
+				   new Element('div.tooltip-inner', {
 				     html: this.options.override || this.options.getContent.apply(this, [this.element]) || this.options.fallback
 				   })
 				 );
@@ -7672,7 +7710,7 @@ Bootstrap.Dropdown = new Class({
 		var el = e.target;
 		var open = el.getParent('li.open');
 		if (!el.match(this.options.ignore) || !open) this.hideAll();
-		if (this.element.contains(el) && (el.match('a.menu') || el.getParent('a.menu'))) {
+		if (this.element.contains(el) && (el.match('.dropdown-toggle') || el.getParent('.dropdown-toggle'))) {
 			e.preventDefault();
 			if (!open) this.show(el.getParent('li'));
 		}
@@ -7748,66 +7786,6 @@ provides: [Delegator.BS.ShowPopup]
 
 })();
 
-// Begin: Source/UI/Bootstrap.Popover.js
-/*
----
-
-name: Bootstrap.Popover
-
-description: A simple tooltip (yet larger than twipsy) implementation that works with the Twitter Bootstrap css framework.
-
-authors: [Aaron Newton]
-
-license: MIT-style license.
-
-requires:
- - /Bootstrap.Twipsy
-
-provides: Bootstrap.Popover
-
-...
-*/
-
-Bootstrap.Popover = new Class({
-
-	Extends: Bootstrap.Twipsy,
-
-	options: {
-		location: 'right',
-		offset: 10,
-		getTitle: function(el){
-			return el.get(this.options.title);
-		},
-		content: 'data-content',
-		getContent: function(el){
-			return el.get(this.options.content);
-		}
-	},
-
-	_makeTip: function(){
-		if (!this.tip){
-			this.tip = new Element('div.popover').addClass(this.options.location)
-				 .adopt(new Element('div.arrow'))
-				 .adopt(
-				   new Element('div.inner').adopt(
-				     new Element('h3.title', { html: this.options.getTitle.apply(this, [this.element]) || this.options.fallback })
-				   ).adopt(
-				     new Element('div.content').adopt(
-				       new Element('p', { html: this.options.getContent.apply(this, [this.element])})
-				     )
-				   )
-				 );
-			if (this.options.animate) this.tip.addClass('fade');
-			if (Browser.Features.cssTransition && this.tip.addEventListener){
-				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
-			}
-			this.element.set('alt', '').set('title', '');
-		}
-		return this.tip;
-	}
-
-});
-
 // Begin: Source/Types/Object.Extras.js
 /*
 ---
@@ -7876,63 +7854,6 @@ Object.extend({
 
 })();
 
-
-// Begin: Source/Behaviors/Behavior.BS.Popover.js
-/*
----
-
-name: Behavior.BS.Popover
-
-description: Instantiates Bootstrap.Popover based on HTML markup.
-
-license: MIT-style license.
-
-authors: [Aaron Newton]
-
-requires:
- - /Bootstrap.Popover
- - Behavior/Behavior
- - More/Object.Extras
-
-provides: [Behavior.BS.Popover]
-
-...
-*/
-Behavior.addGlobalFilters({
-	'BS.Popover': {
-		defaults: {
-		  onOverflow: false,
-			location: 'right', //below, left, right
-			animate: true,
-			delayIn: 200,
-			delayOut: 0,
-			offset: 10,
-			trigger: 'hover' //focus, manual
-		},
-		delayUntil: 'mouseover,focus',
-		returns: Bootstrap.Popover,
-		setup: function(el, api){
-			var options = Object.cleanValues(
-				api.getAs({
-					onOverflow: Boolean,
-					location: String,
-					animate: Boolean,
-					delayIn: Number,
-					delayOut: Number,
-					html: Boolean,
-					offset: Number,
-					trigger: String
-				})
-			);
-			options.getContent = Function.from(api.get('content'));
-			options.getTitle = Function.from(api.get('title') || el.get('title'));
-			var tip = new Bootstrap.Popover(el, options);
-			if (api.event) tip._enter();
-			api.onCleanup(tip.destroy.bind(tip));
-			return tip;
-		}
-	}
-});
 
 // Begin: Source/Fx/Fx.Tween.js
 /*
@@ -8963,64 +8884,6 @@ Bootstrap.Popup = new Class({
 
 });
 
-// Begin: Source/Behaviors/Behavior.BS.Twipsy.js
-/*
----
-
-name: Behavior.BS.Twipsy
-
-description: Instantiates Bootstrap.Twipsy based on HTML markup.
-
-license: MIT-style license.
-
-authors: [Aaron Newton]
-
-requires:
- - /Bootstrap.Twipsy
- - Behavior/Behavior
- - More/Object.Extras
-
-provides: [Behavior.BS.Twipsy]
-
-...
-*/
-Behavior.addGlobalFilters({
-	'BS.Twipsy': {
-		defaults: {
-			location: 'above', //below, left, right
-			animate: true,
-			delayIn: 200,
-			delayOut: 0,
-			onOverflow: false,
-			offset: 0,
-			trigger: 'hover' //focus, manual
-		},
-		delayUntil: 'mouseover,focus',
-		returns: Bootstrap.Twipsy,
-		setup: function(el, api){
-			var options = Object.cleanValues(
-				api.getAs({
-					onOverflow: Boolean,
-					location: String,
-					animate: Boolean,
-					delayIn: Number,
-					delayOut: Number,
-					fallback: String,
-					override: String,
-					html: Boolean,
-					offset: Number,
-					trigger: String
-				})
-			);
-			options.getTitle = Function.from(api.get('content') || el.get('title'));
-			var tip = new Bootstrap.Twipsy(el, options);
-			api.onCleanup(tip.destroy.bind(tip));
-			if (api.event) tip.show();
-			return tip;
-		}
-	}
-});
-
 // Begin: Source/Behaviors/Behavior.BS.Popup.js
 /*
 ---
@@ -9077,6 +8940,3228 @@ Behavior.addGlobalFilters({
 	}
 });
 
+// Begin: Source/Request/Request.js
+/*
+---
+
+name: Request
+
+description: Powerful all purpose Request Class. Uses XMLHTTPRequest.
+
+license: MIT-style license.
+
+requires: [Object, Element, Chain, Events, Options, Browser]
+
+provides: Request
+
+...
+*/
+
+(function(){
+
+var empty = function(){},
+	progressSupport = ('onprogress' in new Browser.Request);
+
+var Request = this.Request = new Class({
+
+	Implements: [Chain, Events, Options],
+
+	options: {/*
+		onRequest: function(){},
+		onLoadstart: function(event, xhr){},
+		onProgress: function(event, xhr){},
+		onComplete: function(){},
+		onCancel: function(){},
+		onSuccess: function(responseText, responseXML){},
+		onFailure: function(xhr){},
+		onException: function(headerName, value){},
+		onTimeout: function(){},
+		user: '',
+		password: '',*/
+		url: '',
+		data: '',
+		headers: {
+			'X-Requested-With': 'XMLHttpRequest',
+			'Accept': 'text/javascript, text/html, application/xml, text/xml, */*'
+		},
+		async: true,
+		format: false,
+		method: 'post',
+		link: 'ignore',
+		isSuccess: null,
+		emulation: true,
+		urlEncoded: true,
+		encoding: 'utf-8',
+		evalScripts: false,
+		evalResponse: false,
+		timeout: 0,
+		noCache: false
+	},
+
+	initialize: function(options){
+		this.xhr = new Browser.Request();
+		this.setOptions(options);
+		this.headers = this.options.headers;
+	},
+
+	onStateChange: function(){
+		var xhr = this.xhr;
+		if (xhr.readyState != 4 || !this.running) return;
+		this.running = false;
+		this.status = 0;
+		Function.attempt(function(){
+			var status = xhr.status;
+			this.status = (status == 1223) ? 204 : status;
+		}.bind(this));
+		xhr.onreadystatechange = empty;
+		if (progressSupport) xhr.onprogress = xhr.onloadstart = empty;
+		clearTimeout(this.timer);
+
+		this.response = {text: this.xhr.responseText || '', xml: this.xhr.responseXML};
+		if (this.options.isSuccess.call(this, this.status))
+			this.success(this.response.text, this.response.xml);
+		else
+			this.failure();
+	},
+
+	isSuccess: function(){
+		var status = this.status;
+		return (status >= 200 && status < 300);
+	},
+
+	isRunning: function(){
+		return !!this.running;
+	},
+
+	processScripts: function(text){
+		if (this.options.evalResponse || (/(ecma|java)script/).test(this.getHeader('Content-type'))) return Browser.exec(text);
+		return text.stripScripts(this.options.evalScripts);
+	},
+
+	success: function(text, xml){
+		this.onSuccess(this.processScripts(text), xml);
+	},
+
+	onSuccess: function(){
+		this.fireEvent('complete', arguments).fireEvent('success', arguments).callChain();
+	},
+
+	failure: function(){
+		this.onFailure();
+	},
+
+	onFailure: function(){
+		this.fireEvent('complete').fireEvent('failure', this.xhr);
+	},
+
+	loadstart: function(event){
+		this.fireEvent('loadstart', [event, this.xhr]);
+	},
+
+	progress: function(event){
+		this.fireEvent('progress', [event, this.xhr]);
+	},
+
+	timeout: function(){
+		this.fireEvent('timeout', this.xhr);
+	},
+
+	setHeader: function(name, value){
+		this.headers[name] = value;
+		return this;
+	},
+
+	getHeader: function(name){
+		return Function.attempt(function(){
+			return this.xhr.getResponseHeader(name);
+		}.bind(this));
+	},
+
+	check: function(){
+		if (!this.running) return true;
+		switch (this.options.link){
+			case 'cancel': this.cancel(); return true;
+			case 'chain': this.chain(this.caller.pass(arguments, this)); return false;
+		}
+		return false;
+	},
+
+	send: function(options){
+		if (!this.check(options)) return this;
+
+		this.options.isSuccess = this.options.isSuccess || this.isSuccess;
+		this.running = true;
+
+		var type = typeOf(options);
+		if (type == 'string' || type == 'element') options = {data: options};
+
+		var old = this.options;
+		options = Object.append({data: old.data, url: old.url, method: old.method}, options);
+		var data = options.data, url = String(options.url), method = options.method.toLowerCase();
+
+		switch (typeOf(data)){
+			case 'element': data = document.id(data).toQueryString(); break;
+			case 'object': case 'hash': data = Object.toQueryString(data);
+		}
+
+		if (this.options.format){
+			var format = 'format=' + this.options.format;
+			data = (data) ? format + '&' + data : format;
+		}
+
+		if (this.options.emulation && !['get', 'post'].contains(method)){
+			var _method = '_method=' + method;
+			data = (data) ? _method + '&' + data : _method;
+			method = 'post';
+		}
+
+		if (this.options.urlEncoded && ['post', 'put'].contains(method)){
+			var encoding = (this.options.encoding) ? '; charset=' + this.options.encoding : '';
+			this.headers['Content-type'] = 'application/x-www-form-urlencoded' + encoding;
+		}
+
+		if (!url) url = document.location.pathname;
+
+		var trimPosition = url.lastIndexOf('/');
+		if (trimPosition > -1 && (trimPosition = url.indexOf('#')) > -1) url = url.substr(0, trimPosition);
+
+		if (this.options.noCache)
+			url += (url.contains('?') ? '&' : '?') + String.uniqueID();
+
+		if (data && method == 'get'){
+			url += (url.contains('?') ? '&' : '?') + data;
+			data = null;
+		}
+
+		var xhr = this.xhr;
+		if (progressSupport){
+			xhr.onloadstart = this.loadstart.bind(this);
+			xhr.onprogress = this.progress.bind(this);
+		}
+
+		xhr.open(method.toUpperCase(), url, this.options.async, this.options.user, this.options.password);
+		if (this.options.user && 'withCredentials' in xhr) xhr.withCredentials = true;
+
+		xhr.onreadystatechange = this.onStateChange.bind(this);
+
+		Object.each(this.headers, function(value, key){
+			try {
+				xhr.setRequestHeader(key, value);
+			} catch (e){
+				this.fireEvent('exception', [key, value]);
+			}
+		}, this);
+
+		this.fireEvent('request');
+		xhr.send(data);
+		if (!this.options.async) this.onStateChange();
+		if (this.options.timeout) this.timer = this.timeout.delay(this.options.timeout, this);
+		return this;
+	},
+
+	cancel: function(){
+		if (!this.running) return this;
+		this.running = false;
+		var xhr = this.xhr;
+		xhr.abort();
+		clearTimeout(this.timer);
+		xhr.onreadystatechange = empty;
+		if (progressSupport) xhr.onprogress = xhr.onloadstart = empty;
+		this.xhr = new Browser.Request();
+		this.fireEvent('cancel');
+		return this;
+	}
+
+});
+
+var methods = {};
+['get', 'post', 'put', 'delete', 'GET', 'POST', 'PUT', 'DELETE'].each(function(method){
+	methods[method] = function(data){
+		var object = {
+			method: method
+		};
+		if (data != null) object.data = data;
+		return this.send(object);
+	};
+});
+
+Request.implement(methods);
+
+Element.Properties.send = {
+
+	set: function(options){
+		var send = this.get('send').cancel();
+		send.setOptions(options);
+		return this;
+	},
+
+	get: function(){
+		var send = this.retrieve('send');
+		if (!send){
+			send = new Request({
+				data: this, link: 'cancel', method: this.get('method') || 'post', url: this.get('action')
+			});
+			this.store('send', send);
+		}
+		return send;
+	}
+
+};
+
+Element.implement({
+
+	send: function(url){
+		var sender = this.get('send');
+		sender.send({data: this, url: url || sender.options.url});
+		return this;
+	}
+
+});
+
+})();
+
+// Begin: Source/Request/Request.HTML.js
+/*
+---
+
+name: Request.HTML
+
+description: Extends the basic Request Class with additional methods for interacting with HTML responses.
+
+license: MIT-style license.
+
+requires: [Element, Request]
+
+provides: Request.HTML
+
+...
+*/
+
+Request.HTML = new Class({
+
+	Extends: Request,
+
+	options: {
+		update: false,
+		append: false,
+		evalScripts: true,
+		filter: false,
+		headers: {
+			Accept: 'text/html, application/xml, text/xml, */*'
+		}
+	},
+
+	success: function(text){
+		var options = this.options, response = this.response;
+
+		response.html = text.stripScripts(function(script){
+			response.javascript = script;
+		});
+
+		var match = response.html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+		if (match) response.html = match[1];
+		var temp = new Element('div').set('html', response.html);
+
+		response.tree = temp.childNodes;
+		response.elements = temp.getElements(options.filter || '*');
+
+		if (options.filter) response.tree = response.elements;
+		if (options.update){
+			var update = document.id(options.update).empty();
+			if (options.filter) update.adopt(response.elements);
+			else update.set('html', response.html);
+		} else if (options.append){
+			var append = document.id(options.append);
+			if (options.filter) response.elements.reverse().inject(append);
+			else append.adopt(temp.getChildren());
+		}
+		if (options.evalScripts) Browser.exec(response.javascript);
+
+		this.onSuccess(response.tree, response.elements, response.html, response.javascript);
+	}
+
+});
+
+Element.Properties.load = {
+
+	set: function(options){
+		var load = this.get('load').cancel();
+		load.setOptions(options);
+		return this;
+	},
+
+	get: function(){
+		var load = this.retrieve('load');
+		if (!load){
+			load = new Request.HTML({data: this, link: 'cancel', update: this, method: 'get'});
+			this.store('load', load);
+		}
+		return load;
+	}
+
+};
+
+Element.implement({
+
+	load: function(){
+		this.get('load').send(Array.link(arguments, {data: Type.isObject, url: Type.isString}));
+		return this;
+	}
+
+});
+
+
+// Begin: Source/Class/Class.Refactor.js
+/*
+---
+
+script: Class.Refactor.js
+
+name: Class.Refactor
+
+description: Extends a class onto itself with new property, preserving any items attached to the class's namespace.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Class
+  - /MooTools.More
+
+# Some modules declare themselves dependent on Class.Refactor
+provides: [Class.refactor, Class.Refactor]
+
+...
+*/
+
+Class.refactor = function(original, refactors){
+
+	Object.each(refactors, function(item, name){
+		var origin = original.prototype[name];
+		origin = (origin && origin.$origin) || origin || function(){};
+		original.implement(name, (typeof item == 'function') ? function(){
+			var old = this.previous;
+			this.previous = origin;
+			var value = item.apply(this, arguments);
+			this.previous = old;
+			return value;
+		} : item);
+	});
+
+	return original;
+
+};
+
+
+// Begin: Source/Interface/Spinner.js
+/*
+---
+
+script: Spinner.js
+
+name: Spinner
+
+description: Adds a semi-transparent overlay over a dom element with a spinnin ajax icon.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Fx.Tween
+  - Core/Request
+  - /Class.refactor
+  - /Mask
+
+provides: [Spinner]
+
+...
+*/
+
+var Spinner = new Class({
+
+	Extends: Mask,
+
+	Implements: Chain,
+
+	options: {/*
+		message: false,*/
+		'class': 'spinner',
+		containerPosition: {},
+		content: {
+			'class': 'spinner-content'
+		},
+		messageContainer: {
+			'class': 'spinner-msg'
+		},
+		img: {
+			'class': 'spinner-img'
+		},
+		fxOptions: {
+			link: 'chain'
+		}
+	},
+
+	initialize: function(target, options){
+		this.target = document.id(target) || document.id(document.body);
+		this.target.store('spinner', this);
+		this.setOptions(options);
+		this.render();
+		this.inject();
+
+		// Add this to events for when noFx is true; parent methods handle hide/show.
+		var deactivate = function(){ this.active = false; }.bind(this);
+		this.addEvents({
+			hide: deactivate,
+			show: deactivate
+		});
+	},
+
+	render: function(){
+		this.parent();
+
+		this.element.set('id', this.options.id || 'spinner-' + String.uniqueID());
+
+		this.content = document.id(this.options.content) || new Element('div', this.options.content);
+		this.content.inject(this.element);
+
+		if (this.options.message){
+			this.msg = document.id(this.options.message) || new Element('p', this.options.messageContainer).appendText(this.options.message);
+			this.msg.inject(this.content);
+		}
+
+		if (this.options.img){
+			this.img = document.id(this.options.img) || new Element('div', this.options.img);
+			this.img.inject(this.content);
+		}
+
+		this.element.set('tween', this.options.fxOptions);
+	},
+
+	show: function(noFx){
+		if (this.active) return this.chain(this.show.bind(this));
+		if (!this.hidden){
+			this.callChain.delay(20, this);
+			return this;
+		}
+
+		this.active = true;
+
+		return this.parent(noFx);
+	},
+
+	showMask: function(noFx){
+		var pos = function(){
+			this.content.position(Object.merge({
+				relativeTo: this.element
+			}, this.options.containerPosition));
+		}.bind(this);
+
+		if (noFx){
+			this.parent();
+			pos();
+		} else {
+			if (!this.options.style.opacity) this.options.style.opacity = this.element.getStyle('opacity').toFloat();
+			this.element.setStyles({
+				display: 'block',
+				opacity: 0
+			}).tween('opacity', this.options.style.opacity);
+			pos();
+			this.hidden = false;
+			this.fireEvent('show');
+			this.callChain();
+		}
+	},
+
+	hide: function(noFx){
+		if (this.active) return this.chain(this.hide.bind(this));
+		if (this.hidden){
+			this.callChain.delay(20, this);
+			return this;
+		}
+		this.active = true;
+		return this.parent(noFx);
+	},
+
+	hideMask: function(noFx){
+		if (noFx) return this.parent();
+		this.element.tween('opacity', 0).get('tween').chain(function(){
+			this.element.setStyle('display', 'none');
+			this.hidden = true;
+			this.fireEvent('hide');
+			this.callChain();
+		}.bind(this));
+	},
+
+	destroy: function(){
+		this.content.destroy();
+		this.parent();
+		this.target.eliminate('spinner');
+	}
+
+});
+
+Request = Class.refactor(Request, {
+
+	options: {
+		useSpinner: false,
+		spinnerOptions: {},
+		spinnerTarget: false
+	},
+
+	initialize: function(options){
+		this._send = this.send;
+		this.send = function(options){
+			var spinner = this.getSpinner();
+			if (spinner) spinner.chain(this._send.pass(options, this)).show();
+			else this._send(options);
+			return this;
+		};
+		this.previous(options);
+	},
+
+	getSpinner: function(){
+		if (!this.spinner){
+			var update = document.id(this.options.spinnerTarget) || document.id(this.options.update);
+			if (this.options.useSpinner && update){
+				update.set('spinner', this.options.spinnerOptions);
+				var spinner = this.spinner = update.get('spinner');
+				['complete', 'exception', 'cancel'].each(function(event){
+					this.addEvent(event, spinner.hide.bind(spinner));
+				}, this);
+			}
+		}
+		return this.spinner;
+	}
+
+});
+
+Element.Properties.spinner = {
+
+	set: function(options){
+		var spinner = this.retrieve('spinner');
+		if (spinner) spinner.destroy();
+		return this.eliminate('spinner').store('spinner:options', options);
+	},
+
+	get: function(){
+		var spinner = this.retrieve('spinner');
+		if (!spinner){
+			spinner = new Spinner(this, this.retrieve('spinner:options'));
+			this.store('spinner', spinner);
+		}
+		return spinner;
+	}
+
+};
+
+Element.implement({
+
+	spin: function(options){
+		if (options) this.set('spinner', options);
+		this.get('spinner').show();
+		return this;
+	},
+
+	unspin: function(){
+		this.get('spinner').hide();
+		return this;
+	}
+
+});
+
+
+// Begin: Source/Types/String.QueryString.js
+/*
+---
+
+script: String.QueryString.js
+
+name: String.QueryString
+
+description: Methods for dealing with URI query strings.
+
+license: MIT-style license
+
+authors:
+  - Sebastian Markbåge
+  - Aaron Newton
+  - Lennart Pilon
+  - Valerio Proietti
+
+requires:
+  - Core/Array
+  - Core/String
+  - /MooTools.More
+
+provides: [String.QueryString]
+
+...
+*/
+
+String.implement({
+
+	parseQueryString: function(decodeKeys, decodeValues){
+		if (decodeKeys == null) decodeKeys = true;
+		if (decodeValues == null) decodeValues = true;
+
+		var vars = this.split(/[&;]/),
+			object = {};
+		if (!vars.length) return object;
+
+		vars.each(function(val){
+			var index = val.indexOf('=') + 1,
+				value = index ? val.substr(index) : '',
+				keys = index ? val.substr(0, index - 1).match(/([^\]\[]+|(\B)(?=\]))/g) : [val],
+				obj = object;
+			if (!keys) return;
+			if (decodeValues) value = decodeURIComponent(value);
+			keys.each(function(key, i){
+				if (decodeKeys) key = decodeURIComponent(key);
+				var current = obj[key];
+
+				if (i < keys.length - 1) obj = obj[key] = current || {};
+				else if (typeOf(current) == 'array') current.push(value);
+				else obj[key] = current != null ? [current, value] : value;
+			});
+		});
+
+		return object;
+	},
+
+	cleanQueryString: function(method){
+		return this.split('&').filter(function(val){
+			var index = val.indexOf('='),
+				key = index < 0 ? '' : val.substr(0, index),
+				value = val.substr(index + 1);
+
+			return method ? method.call(null, key, value) : (value || value === 0);
+		}).join('&');
+	}
+
+});
+
+
+// Begin: Source/Element/Element.Event.Pseudos.js
+/*
+---
+
+name: Element.Event.Pseudos
+
+description: Adds the functionality to add pseudo events for Elements
+
+license: MIT-style license
+
+authors:
+  - Arian Stolwijk
+
+requires: [Core/Element.Event, Core/Element.Delegation, Events.Pseudos]
+
+provides: [Element.Event.Pseudos, Element.Delegation]
+
+...
+*/
+
+(function(){
+
+var pseudos = {relay: false},
+	copyFromEvents = ['once', 'throttle', 'pause'],
+	count = copyFromEvents.length;
+
+while (count--) pseudos[copyFromEvents[count]] = Events.lookupPseudo(copyFromEvents[count]);
+
+DOMEvent.definePseudo = function(key, listener){
+	pseudos[key] = listener;
+	return this;
+};
+
+var proto = Element.prototype;
+[Element, Window, Document].invoke('implement', Events.Pseudos(pseudos, proto.addEvent, proto.removeEvent));
+
+})();
+
+
+// Begin: Source/Forms/Form.Request.js
+/*
+---
+
+script: Form.Request.js
+
+name: Form.Request
+
+description: Handles the basic functionality of submitting a form and updating a dom element with the result.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Request.HTML
+  - /Class.Binds
+  - /Class.Occlude
+  - /Spinner
+  - /String.QueryString
+  - /Element.Delegation
+
+provides: [Form.Request]
+
+...
+*/
+
+if (!window.Form) window.Form = {};
+
+(function(){
+
+	Form.Request = new Class({
+
+		Binds: ['onSubmit', 'onFormValidate'],
+
+		Implements: [Options, Events, Class.Occlude],
+
+		options: {/*
+			onFailure: function(){},
+			onSuccess: function(){}, // aliased to onComplete,
+			onSend: function(){}*/
+			requestOptions: {
+				evalScripts: true,
+				useSpinner: true,
+				emulation: false,
+				link: 'ignore'
+			},
+			sendButtonClicked: true,
+			extraData: {},
+			resetForm: true
+		},
+
+		property: 'form.request',
+
+		initialize: function(form, target, options){
+			this.element = document.id(form);
+			if (this.occlude()) return this.occluded;
+			this.setOptions(options)
+				.setTarget(target)
+				.attach();
+		},
+
+		setTarget: function(target){
+			this.target = document.id(target);
+			if (!this.request){
+				this.makeRequest();
+			} else {
+				this.request.setOptions({
+					update: this.target
+				});
+			}
+			return this;
+		},
+
+		toElement: function(){
+			return this.element;
+		},
+
+		makeRequest: function(){
+			var self = this;
+			this.request = new Request.HTML(Object.merge({
+					update: this.target,
+					emulation: false,
+					spinnerTarget: this.element,
+					method: this.element.get('method') || 'post'
+			}, this.options.requestOptions)).addEvents({
+				success: function(tree, elements, html, javascript){
+					['complete', 'success'].each(function(evt){
+						self.fireEvent(evt, [self.target, tree, elements, html, javascript]);
+					});
+				},
+				failure: function(){
+					self.fireEvent('complete', arguments).fireEvent('failure', arguments);
+				},
+				exception: function(){
+					self.fireEvent('failure', arguments);
+				}
+			});
+			return this.attachReset();
+		},
+
+		attachReset: function(){
+			if (!this.options.resetForm) return this;
+			this.request.addEvent('success', function(){
+				Function.attempt(function(){
+					this.element.reset();
+				}.bind(this));
+				if (window.OverText) OverText.update();
+			}.bind(this));
+			return this;
+		},
+
+		attach: function(attach){
+			var method = (attach != false) ? 'addEvent' : 'removeEvent';
+			this.element[method]('click:relay(button, input[type=submit])', this.saveClickedButton.bind(this));
+
+			var fv = this.element.retrieve('validator');
+			if (fv) fv[method]('onFormValidate', this.onFormValidate);
+			else this.element[method]('submit', this.onSubmit);
+
+			return this;
+		},
+
+		detach: function(){
+			return this.attach(false);
+		},
+
+		//public method
+		enable: function(){
+			return this.attach();
+		},
+
+		//public method
+		disable: function(){
+			return this.detach();
+		},
+
+		onFormValidate: function(valid, form, event){
+			//if there's no event, then this wasn't a submit event
+			if (!event) return;
+			var fv = this.element.retrieve('validator');
+			if (valid || (fv && !fv.options.stopOnFailure)){
+				event.stop();
+				this.send();
+			}
+		},
+
+		onSubmit: function(event){
+			var fv = this.element.retrieve('validator');
+			if (fv){
+				//form validator was created after Form.Request
+				this.element.removeEvent('submit', this.onSubmit);
+				fv.addEvent('onFormValidate', this.onFormValidate);
+				this.element.validate();
+				return;
+			}
+			if (event) event.stop();
+			this.send();
+		},
+
+		saveClickedButton: function(event, target){
+			var targetName = target.get('name');
+			if (!targetName || !this.options.sendButtonClicked) return;
+			this.options.extraData[targetName] = target.get('value') || true;
+			this.clickedCleaner = function(){
+				delete this.options.extraData[targetName];
+				this.clickedCleaner = function(){};
+			}.bind(this);
+		},
+
+		clickedCleaner: function(){},
+
+		send: function(){
+			var str = this.element.toQueryString().trim(),
+				data = Object.toQueryString(this.options.extraData);
+
+			if (str) str += "&" + data;
+			else str = data;
+
+			this.fireEvent('send', [this.element, str.parseQueryString()]);
+			this.request.send({
+				data: str,
+				url: this.options.requestOptions.url || this.element.get('action')
+			});
+			this.clickedCleaner();
+			return this;
+		}
+
+	});
+
+	Element.implement('formUpdate', function(update, options){
+		var fq = this.retrieve('form.request');
+		if (!fq){
+			fq = new Form.Request(this, update, options);
+		} else {
+			if (update) fq.setTarget(update);
+			if (options) fq.setOptions(options).makeRequest();
+		}
+		fq.send();
+		return this;
+	});
+
+})();
+
+
+// Begin: Source/Behaviors/Behavior.BS.Popup.FormRequest.js
+/*
+---
+
+name: Behavior.BS.Popup.FormRequest
+
+description: Integrates FormRequest behavior into Popups.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - /Behavior.BS.Popup
+ - More/Form.Request
+
+provides: [Behavior.BS.Popup.FormRequest]
+
+...
+*/
+
+Behavior.addGlobalPlugin("FormRequest", "Popup.FormRequest", {
+	defaults: {
+		closeOnSuccess: true
+	},
+	setup: function(element, api, instance){
+		if (element.getParent('.modal')){
+			var dismissed;
+			var dismissals = element.getElements('input.dismiss, input.close').map(function(el){
+				return el.addEvent('click', function(){
+					dismissed = true;
+				}).removeClass('dismiss').removeClass('close');
+			});
+			instance.addEvents({
+				success: function(){
+					var formRequestAPI = new BehaviorAPI(element, 'formrequest');
+					if (formRequestAPI.getAs(Boolean, 'closeOnSuccess') !== false || api.get(Boolean, 'closeOnSuccess') !== false || dismissed){
+						element.getParent('.modal').getBehaviorResult('BS.Popup').hide();
+					}
+				}
+			});
+		}
+	}
+});
+
+// Begin: Source/UI/Bootstrap.Popover.js
+/*
+---
+
+name: Bootstrap.Popover
+
+description: A simple tooltip (yet larger than Bootstrap.Tooltip) implementation that works with the Twitter Bootstrap css framework.
+
+authors: [Aaron Newton]
+
+license: MIT-style license.
+
+requires:
+ - /Bootstrap.Tooltip
+
+provides: Bootstrap.Popover
+
+...
+*/
+
+Bootstrap.Popover = new Class({
+
+	Extends: Bootstrap.Tooltip,
+
+	options: {
+		location: 'right',
+		offset: 10,
+		getTitle: function(el){
+			return el.get(this.options.title);
+		},
+		content: 'data-content',
+		getContent: function(el){
+			return el.get(this.options.content);
+		}
+	},
+
+	_makeTip: function(){
+		if (!this.tip){
+			this.tip = new Element('div.popover').addClass(this.options.location)
+				 .adopt(new Element('div.arrow'))
+				 .adopt(
+				   new Element('div.popover-inner').adopt(
+				     new Element('h3.popover-title', { html: this.options.getTitle.apply(this, [this.element]) || this.options.fallback })
+				   ).adopt(
+				     new Element('div.popover-content').adopt(
+				       new Element('p', { html: this.options.getContent.apply(this, [this.element])})
+				     )
+				   )
+				 );
+			if (this.options.animate) this.tip.addClass('fade');
+			if (Browser.Features.cssTransition && this.tip.addEventListener){
+				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
+			}
+			this.element.set('alt', '').set('title', '');
+		}
+		return this.tip;
+	}
+
+});
+
+// Begin: Source/Behaviors/Behavior.BS.Popover.js
+/*
+---
+
+name: Behavior.BS.Popover
+
+description: Instantiates Bootstrap.Popover based on HTML markup.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - /Bootstrap.Popover
+ - Behavior/Behavior
+ - More/Object.Extras
+
+provides: [Behavior.BS.Popover]
+
+...
+*/
+Behavior.addGlobalFilters({
+	'BS.Popover': {
+		defaults: {
+		  onOverflow: false,
+			location: 'right', //below, left, right
+			animate: true,
+			delayIn: 200,
+			delayOut: 0,
+			offset: 10,
+			trigger: 'hover' //focus, manual
+		},
+		delayUntil: 'mouseover,focus',
+		returns: Bootstrap.Popover,
+		setup: function(el, api){
+			var options = Object.cleanValues(
+				api.getAs({
+					onOverflow: Boolean,
+					location: String,
+					animate: Boolean,
+					delayIn: Number,
+					delayOut: Number,
+					html: Boolean,
+					offset: Number,
+					trigger: String
+				})
+			);
+			options.getContent = Function.from(api.get('content'));
+			options.getTitle = Function.from(api.get('title') || el.get('title'));
+			var tip = new Bootstrap.Popover(el, options);
+			if (api.event) tip._enter();
+			api.onCleanup(tip.destroy.bind(tip));
+			return tip;
+		}
+	}
+});
+
+// Begin: Source/Locale/Locale.js
+/*
+---
+
+script: Locale.js
+
+name: Locale
+
+description: Provides methods for localization.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+  - Arian Stolwijk
+
+requires:
+  - Core/Events
+  - /Object.Extras
+  - /MooTools.More
+
+provides: [Locale, Lang]
+
+...
+*/
+
+(function(){
+
+var current = null,
+	locales = {},
+	inherits = {};
+
+var getSet = function(set){
+	if (instanceOf(set, Locale.Set)) return set;
+	else return locales[set];
+};
+
+var Locale = this.Locale = {
+
+	define: function(locale, set, key, value){
+		var name;
+		if (instanceOf(locale, Locale.Set)){
+			name = locale.name;
+			if (name) locales[name] = locale;
+		} else {
+			name = locale;
+			if (!locales[name]) locales[name] = new Locale.Set(name);
+			locale = locales[name];
+		}
+
+		if (set) locale.define(set, key, value);
+
+		/*<1.2compat>*/
+		if (set == 'cascade') return Locale.inherit(name, key);
+		/*</1.2compat>*/
+
+		if (!current) current = locale;
+
+		return locale;
+	},
+
+	use: function(locale){
+		locale = getSet(locale);
+
+		if (locale){
+			current = locale;
+
+			this.fireEvent('change', locale);
+
+			/*<1.2compat>*/
+			this.fireEvent('langChange', locale.name);
+			/*</1.2compat>*/
+		}
+
+		return this;
+	},
+
+	getCurrent: function(){
+		return current;
+	},
+
+	get: function(key, args){
+		return (current) ? current.get(key, args) : '';
+	},
+
+	inherit: function(locale, inherits, set){
+		locale = getSet(locale);
+
+		if (locale) locale.inherit(inherits, set);
+		return this;
+	},
+
+	list: function(){
+		return Object.keys(locales);
+	}
+
+};
+
+Object.append(Locale, new Events);
+
+Locale.Set = new Class({
+
+	sets: {},
+
+	inherits: {
+		locales: [],
+		sets: {}
+	},
+
+	initialize: function(name){
+		this.name = name || '';
+	},
+
+	define: function(set, key, value){
+		var defineData = this.sets[set];
+		if (!defineData) defineData = {};
+
+		if (key){
+			if (typeOf(key) == 'object') defineData = Object.merge(defineData, key);
+			else defineData[key] = value;
+		}
+		this.sets[set] = defineData;
+
+		return this;
+	},
+
+	get: function(key, args, _base){
+		var value = Object.getFromPath(this.sets, key);
+		if (value != null){
+			var type = typeOf(value);
+			if (type == 'function') value = value.apply(null, Array.from(args));
+			else if (type == 'object') value = Object.clone(value);
+			return value;
+		}
+
+		// get value of inherited locales
+		var index = key.indexOf('.'),
+			set = index < 0 ? key : key.substr(0, index),
+			names = (this.inherits.sets[set] || []).combine(this.inherits.locales).include('en-US');
+		if (!_base) _base = [];
+
+		for (var i = 0, l = names.length; i < l; i++){
+			if (_base.contains(names[i])) continue;
+			_base.include(names[i]);
+
+			var locale = locales[names[i]];
+			if (!locale) continue;
+
+			value = locale.get(key, args, _base);
+			if (value != null) return value;
+		}
+
+		return '';
+	},
+
+	inherit: function(names, set){
+		names = Array.from(names);
+
+		if (set && !this.inherits.sets[set]) this.inherits.sets[set] = [];
+
+		var l = names.length;
+		while (l--) (set ? this.inherits.sets[set] : this.inherits.locales).unshift(names[l]);
+
+		return this;
+	}
+
+});
+
+/*<1.2compat>*/
+var lang = MooTools.lang = {};
+
+Object.append(lang, Locale, {
+	setLanguage: Locale.use,
+	getCurrentLanguage: function(){
+		var current = Locale.getCurrent();
+		return (current) ? current.name : null;
+	},
+	set: function(){
+		Locale.define.apply(this, arguments);
+		return this;
+	},
+	get: function(set, key, args){
+		if (key) set += '.' + key;
+		return Locale.get(set, args);
+	}
+});
+/*</1.2compat>*/
+
+})();
+
+
+// Begin: Source/Locale/Locale.en-US.Date.js
+/*
+---
+
+name: Locale.en-US.Date
+
+description: Date messages for US English.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - /Locale
+
+provides: [Locale.en-US.Date]
+
+...
+*/
+
+Locale.define('en-US', 'Date', {
+
+	months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+	months_abbr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+	days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	days_abbr: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+
+	// Culture's date order: MM/DD/YYYY
+	dateOrder: ['month', 'date', 'year'],
+	shortDate: '%m/%d/%Y',
+	shortTime: '%I:%M%p',
+	AM: 'AM',
+	PM: 'PM',
+	firstDayOfWeek: 0,
+
+	// Date.Extras
+	ordinal: function(dayOfMonth){
+		// 1st, 2nd, 3rd, etc.
+		return (dayOfMonth > 3 && dayOfMonth < 21) ? 'th' : ['th', 'st', 'nd', 'rd', 'th'][Math.min(dayOfMonth % 10, 4)];
+	},
+
+	lessThanMinuteAgo: 'less than a minute ago',
+	minuteAgo: 'about a minute ago',
+	minutesAgo: '{delta} minutes ago',
+	hourAgo: 'about an hour ago',
+	hoursAgo: 'about {delta} hours ago',
+	dayAgo: '1 day ago',
+	daysAgo: '{delta} days ago',
+	weekAgo: '1 week ago',
+	weeksAgo: '{delta} weeks ago',
+	monthAgo: '1 month ago',
+	monthsAgo: '{delta} months ago',
+	yearAgo: '1 year ago',
+	yearsAgo: '{delta} years ago',
+
+	lessThanMinuteUntil: 'less than a minute from now',
+	minuteUntil: 'about a minute from now',
+	minutesUntil: '{delta} minutes from now',
+	hourUntil: 'about an hour from now',
+	hoursUntil: 'about {delta} hours from now',
+	dayUntil: '1 day from now',
+	daysUntil: '{delta} days from now',
+	weekUntil: '1 week from now',
+	weeksUntil: '{delta} weeks from now',
+	monthUntil: '1 month from now',
+	monthsUntil: '{delta} months from now',
+	yearUntil: '1 year from now',
+	yearsUntil: '{delta} years from now'
+
+});
+
+
+// Begin: Source/Types/Date.js
+/*
+---
+
+script: Date.js
+
+name: Date
+
+description: Extends the Date native object to include methods useful in managing dates.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+  - Nicholas Barthelemy - https://svn.nbarthelemy.com/date-js/
+  - Harald Kirshner - mail [at] digitarald.de; http://digitarald.de
+  - Scott Kyle - scott [at] appden.com; http://appden.com
+
+requires:
+  - Core/Array
+  - Core/String
+  - Core/Number
+  - MooTools.More
+  - Locale
+  - Locale.en-US.Date
+
+provides: [Date]
+
+...
+*/
+
+(function(){
+
+var Date = this.Date;
+
+var DateMethods = Date.Methods = {
+	ms: 'Milliseconds',
+	year: 'FullYear',
+	min: 'Minutes',
+	mo: 'Month',
+	sec: 'Seconds',
+	hr: 'Hours'
+};
+
+['Date', 'Day', 'FullYear', 'Hours', 'Milliseconds', 'Minutes', 'Month', 'Seconds', 'Time', 'TimezoneOffset',
+	'Week', 'Timezone', 'GMTOffset', 'DayOfYear', 'LastMonth', 'LastDayOfMonth', 'UTCDate', 'UTCDay', 'UTCFullYear',
+	'AMPM', 'Ordinal', 'UTCHours', 'UTCMilliseconds', 'UTCMinutes', 'UTCMonth', 'UTCSeconds', 'UTCMilliseconds'].each(function(method){
+	Date.Methods[method.toLowerCase()] = method;
+});
+
+var pad = function(n, digits, string){
+	if (digits == 1) return n;
+	return n < Math.pow(10, digits - 1) ? (string || '0') + pad(n, digits - 1, string) : n;
+};
+
+Date.implement({
+
+	set: function(prop, value){
+		prop = prop.toLowerCase();
+		var method = DateMethods[prop] && 'set' + DateMethods[prop];
+		if (method && this[method]) this[method](value);
+		return this;
+	}.overloadSetter(),
+
+	get: function(prop){
+		prop = prop.toLowerCase();
+		var method = DateMethods[prop] && 'get' + DateMethods[prop];
+		if (method && this[method]) return this[method]();
+		return null;
+	}.overloadGetter(),
+
+	clone: function(){
+		return new Date(this.get('time'));
+	},
+
+	increment: function(interval, times){
+		interval = interval || 'day';
+		times = times != null ? times : 1;
+
+		switch (interval){
+			case 'year':
+				return this.increment('month', times * 12);
+			case 'month':
+				var d = this.get('date');
+				this.set('date', 1).set('mo', this.get('mo') + times);
+				return this.set('date', d.min(this.get('lastdayofmonth')));
+			case 'week':
+				return this.increment('day', times * 7);
+			case 'day':
+				return this.set('date', this.get('date') + times);
+		}
+
+		if (!Date.units[interval]) throw new Error(interval + ' is not a supported interval');
+
+		return this.set('time', this.get('time') + times * Date.units[interval]());
+	},
+
+	decrement: function(interval, times){
+		return this.increment(interval, -1 * (times != null ? times : 1));
+	},
+
+	isLeapYear: function(){
+		return Date.isLeapYear(this.get('year'));
+	},
+
+	clearTime: function(){
+		return this.set({hr: 0, min: 0, sec: 0, ms: 0});
+	},
+
+	diff: function(date, resolution){
+		if (typeOf(date) == 'string') date = Date.parse(date);
+
+		return ((date - this) / Date.units[resolution || 'day'](3, 3)).round(); // non-leap year, 30-day month
+	},
+
+	getLastDayOfMonth: function(){
+		return Date.daysInMonth(this.get('mo'), this.get('year'));
+	},
+
+	getDayOfYear: function(){
+		return (Date.UTC(this.get('year'), this.get('mo'), this.get('date') + 1)
+			- Date.UTC(this.get('year'), 0, 1)) / Date.units.day();
+	},
+
+	setDay: function(day, firstDayOfWeek){
+		if (firstDayOfWeek == null){
+			firstDayOfWeek = Date.getMsg('firstDayOfWeek');
+			if (firstDayOfWeek === '') firstDayOfWeek = 1;
+		}
+
+		day = (7 + Date.parseDay(day, true) - firstDayOfWeek) % 7;
+		var currentDay = (7 + this.get('day') - firstDayOfWeek) % 7;
+
+		return this.increment('day', day - currentDay);
+	},
+
+	getWeek: function(firstDayOfWeek){
+		if (firstDayOfWeek == null){
+			firstDayOfWeek = Date.getMsg('firstDayOfWeek');
+			if (firstDayOfWeek === '') firstDayOfWeek = 1;
+		}
+
+		var date = this,
+			dayOfWeek = (7 + date.get('day') - firstDayOfWeek) % 7,
+			dividend = 0,
+			firstDayOfYear;
+
+		if (firstDayOfWeek == 1){
+			// ISO-8601, week belongs to year that has the most days of the week (i.e. has the thursday of the week)
+			var month = date.get('month'),
+				startOfWeek = date.get('date') - dayOfWeek;
+
+			if (month == 11 && startOfWeek > 28) return 1; // Week 1 of next year
+
+			if (month == 0 && startOfWeek < -2){
+				// Use a date from last year to determine the week
+				date = new Date(date).decrement('day', dayOfWeek);
+				dayOfWeek = 0;
+			}
+
+			firstDayOfYear = new Date(date.get('year'), 0, 1).get('day') || 7;
+			if (firstDayOfYear > 4) dividend = -7; // First week of the year is not week 1
+		} else {
+			// In other cultures the first week of the year is always week 1 and the last week always 53 or 54.
+			// Days in the same week can have a different weeknumber if the week spreads across two years.
+			firstDayOfYear = new Date(date.get('year'), 0, 1).get('day');
+		}
+
+		dividend += date.get('dayofyear');
+		dividend += 6 - dayOfWeek; // Add days so we calculate the current date's week as a full week
+		dividend += (7 + firstDayOfYear - firstDayOfWeek) % 7; // Make up for first week of the year not being a full week
+
+		return (dividend / 7);
+	},
+
+	getOrdinal: function(day){
+		return Date.getMsg('ordinal', day || this.get('date'));
+	},
+
+	getTimezone: function(){
+		return this.toString()
+			.replace(/^.*? ([A-Z]{3}).[0-9]{4}.*$/, '$1')
+			.replace(/^.*?\(([A-Z])[a-z]+ ([A-Z])[a-z]+ ([A-Z])[a-z]+\)$/, '$1$2$3');
+	},
+
+	getGMTOffset: function(){
+		var off = this.get('timezoneOffset');
+		return ((off > 0) ? '-' : '+') + pad((off.abs() / 60).floor(), 2) + pad(off % 60, 2);
+	},
+
+	setAMPM: function(ampm){
+		ampm = ampm.toUpperCase();
+		var hr = this.get('hr');
+		if (hr > 11 && ampm == 'AM') return this.decrement('hour', 12);
+		else if (hr < 12 && ampm == 'PM') return this.increment('hour', 12);
+		return this;
+	},
+
+	getAMPM: function(){
+		return (this.get('hr') < 12) ? 'AM' : 'PM';
+	},
+
+	parse: function(str){
+		this.set('time', Date.parse(str));
+		return this;
+	},
+
+	isValid: function(date){
+		if (!date) date = this;
+		return typeOf(date) == 'date' && !isNaN(date.valueOf());
+	},
+
+	format: function(format){
+		if (!this.isValid()) return 'invalid date';
+
+		if (!format) format = '%x %X';
+		if (typeof format == 'string') format = formats[format.toLowerCase()] || format;
+		if (typeof format == 'function') return format(this);
+
+		var d = this;
+		return format.replace(/%([a-z%])/gi,
+			function($0, $1){
+				switch ($1){
+					case 'a': return Date.getMsg('days_abbr')[d.get('day')];
+					case 'A': return Date.getMsg('days')[d.get('day')];
+					case 'b': return Date.getMsg('months_abbr')[d.get('month')];
+					case 'B': return Date.getMsg('months')[d.get('month')];
+					case 'c': return d.format('%a %b %d %H:%M:%S %Y');
+					case 'd': return pad(d.get('date'), 2);
+					case 'e': return pad(d.get('date'), 2, ' ');
+					case 'H': return pad(d.get('hr'), 2);
+					case 'I': return pad((d.get('hr') % 12) || 12, 2);
+					case 'j': return pad(d.get('dayofyear'), 3);
+					case 'k': return pad(d.get('hr'), 2, ' ');
+					case 'l': return pad((d.get('hr') % 12) || 12, 2, ' ');
+					case 'L': return pad(d.get('ms'), 3);
+					case 'm': return pad((d.get('mo') + 1), 2);
+					case 'M': return pad(d.get('min'), 2);
+					case 'o': return d.get('ordinal');
+					case 'p': return Date.getMsg(d.get('ampm'));
+					case 's': return Math.round(d / 1000);
+					case 'S': return pad(d.get('seconds'), 2);
+					case 'T': return d.format('%H:%M:%S');
+					case 'U': return pad(d.get('week'), 2);
+					case 'w': return d.get('day');
+					case 'x': return d.format(Date.getMsg('shortDate'));
+					case 'X': return d.format(Date.getMsg('shortTime'));
+					case 'y': return d.get('year').toString().substr(2);
+					case 'Y': return d.get('year');
+					case 'z': return d.get('GMTOffset');
+					case 'Z': return d.get('Timezone');
+				}
+				return $1;
+			}
+		);
+	},
+
+	toISOString: function(){
+		return this.format('iso8601');
+	}
+
+}).alias({
+	toJSON: 'toISOString',
+	compare: 'diff',
+	strftime: 'format'
+});
+
+// The day and month abbreviations are standardized, so we cannot use simply %a and %b because they will get localized
+var rfcDayAbbr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+	rfcMonthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+var formats = {
+	db: '%Y-%m-%d %H:%M:%S',
+	compact: '%Y%m%dT%H%M%S',
+	'short': '%d %b %H:%M',
+	'long': '%B %d, %Y %H:%M',
+	rfc822: function(date){
+		return rfcDayAbbr[date.get('day')] + date.format(', %d ') + rfcMonthAbbr[date.get('month')] + date.format(' %Y %H:%M:%S %Z');
+	},
+	rfc2822: function(date){
+		return rfcDayAbbr[date.get('day')] + date.format(', %d ') + rfcMonthAbbr[date.get('month')] + date.format(' %Y %H:%M:%S %z');
+	},
+	iso8601: function(date){
+		return (
+			date.getUTCFullYear() + '-' +
+			pad(date.getUTCMonth() + 1, 2) + '-' +
+			pad(date.getUTCDate(), 2) + 'T' +
+			pad(date.getUTCHours(), 2) + ':' +
+			pad(date.getUTCMinutes(), 2) + ':' +
+			pad(date.getUTCSeconds(), 2) + '.' +
+			pad(date.getUTCMilliseconds(), 3) + 'Z'
+		);
+	}
+};
+
+var parsePatterns = [],
+	nativeParse = Date.parse;
+
+var parseWord = function(type, word, num){
+	var ret = -1,
+		translated = Date.getMsg(type + 's');
+	switch (typeOf(word)){
+		case 'object':
+			ret = translated[word.get(type)];
+			break;
+		case 'number':
+			ret = translated[word];
+			if (!ret) throw new Error('Invalid ' + type + ' index: ' + word);
+			break;
+		case 'string':
+			var match = translated.filter(function(name){
+				return this.test(name);
+			}, new RegExp('^' + word, 'i'));
+			if (!match.length) throw new Error('Invalid ' + type + ' string');
+			if (match.length > 1) throw new Error('Ambiguous ' + type);
+			ret = match[0];
+	}
+
+	return (num) ? translated.indexOf(ret) : ret;
+};
+
+var startCentury = 1900,
+	startYear = 70;
+
+Date.extend({
+
+	getMsg: function(key, args){
+		return Locale.get('Date.' + key, args);
+	},
+
+	units: {
+		ms: Function.from(1),
+		second: Function.from(1000),
+		minute: Function.from(60000),
+		hour: Function.from(3600000),
+		day: Function.from(86400000),
+		week: Function.from(608400000),
+		month: function(month, year){
+			var d = new Date;
+			return Date.daysInMonth(month != null ? month : d.get('mo'), year != null ? year : d.get('year')) * 86400000;
+		},
+		year: function(year){
+			year = year || new Date().get('year');
+			return Date.isLeapYear(year) ? 31622400000 : 31536000000;
+		}
+	},
+
+	daysInMonth: function(month, year){
+		return [31, Date.isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+	},
+
+	isLeapYear: function(year){
+		return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+	},
+
+	parse: function(from){
+		var t = typeOf(from);
+		if (t == 'number') return new Date(from);
+		if (t != 'string') return from;
+		from = from.clean();
+		if (!from.length) return null;
+
+		var parsed;
+		parsePatterns.some(function(pattern){
+			var bits = pattern.re.exec(from);
+			return (bits) ? (parsed = pattern.handler(bits)) : false;
+		});
+
+		if (!(parsed && parsed.isValid())){
+			parsed = new Date(nativeParse(from));
+			if (!(parsed && parsed.isValid())) parsed = new Date(from.toInt());
+		}
+		return parsed;
+	},
+
+	parseDay: function(day, num){
+		return parseWord('day', day, num);
+	},
+
+	parseMonth: function(month, num){
+		return parseWord('month', month, num);
+	},
+
+	parseUTC: function(value){
+		var localDate = new Date(value);
+		var utcSeconds = Date.UTC(
+			localDate.get('year'),
+			localDate.get('mo'),
+			localDate.get('date'),
+			localDate.get('hr'),
+			localDate.get('min'),
+			localDate.get('sec'),
+			localDate.get('ms')
+		);
+		return new Date(utcSeconds);
+	},
+
+	orderIndex: function(unit){
+		return Date.getMsg('dateOrder').indexOf(unit) + 1;
+	},
+
+	defineFormat: function(name, format){
+		formats[name] = format;
+		return this;
+	},
+
+	//<1.2compat>
+	parsePatterns: parsePatterns,
+	//</1.2compat>
+
+	defineParser: function(pattern){
+		parsePatterns.push((pattern.re && pattern.handler) ? pattern : build(pattern));
+		return this;
+	},
+
+	defineParsers: function(){
+		Array.flatten(arguments).each(Date.defineParser);
+		return this;
+	},
+
+	define2DigitYearStart: function(year){
+		startYear = year % 100;
+		startCentury = year - startYear;
+		return this;
+	}
+
+}).extend({
+	defineFormats: Date.defineFormat.overloadSetter()
+});
+
+var regexOf = function(type){
+	return new RegExp('(?:' + Date.getMsg(type).map(function(name){
+		return name.substr(0, 3);
+	}).join('|') + ')[a-z]*');
+};
+
+var replacers = function(key){
+	switch (key){
+		case 'T':
+			return '%H:%M:%S';
+		case 'x': // iso8601 covers yyyy-mm-dd, so just check if month is first
+			return ((Date.orderIndex('month') == 1) ? '%m[-./]%d' : '%d[-./]%m') + '([-./]%y)?';
+		case 'X':
+			return '%H([.:]%M)?([.:]%S([.:]%s)?)? ?%p? ?%z?';
+	}
+	return null;
+};
+
+var keys = {
+	d: /[0-2]?[0-9]|3[01]/,
+	H: /[01]?[0-9]|2[0-3]/,
+	I: /0?[1-9]|1[0-2]/,
+	M: /[0-5]?\d/,
+	s: /\d+/,
+	o: /[a-z]*/,
+	p: /[ap]\.?m\.?/,
+	y: /\d{2}|\d{4}/,
+	Y: /\d{4}/,
+	z: /Z|[+-]\d{2}(?::?\d{2})?/
+};
+
+keys.m = keys.I;
+keys.S = keys.M;
+
+var currentLanguage;
+
+var recompile = function(language){
+	currentLanguage = language;
+
+	keys.a = keys.A = regexOf('days');
+	keys.b = keys.B = regexOf('months');
+
+	parsePatterns.each(function(pattern, i){
+		if (pattern.format) parsePatterns[i] = build(pattern.format);
+	});
+};
+
+var build = function(format){
+	if (!currentLanguage) return {format: format};
+
+	var parsed = [];
+	var re = (format.source || format) // allow format to be regex
+	 .replace(/%([a-z])/gi,
+		function($0, $1){
+			return replacers($1) || $0;
+		}
+	).replace(/\((?!\?)/g, '(?:') // make all groups non-capturing
+	 .replace(/ (?!\?|\*)/g, ',? ') // be forgiving with spaces and commas
+	 .replace(/%([a-z%])/gi,
+		function($0, $1){
+			var p = keys[$1];
+			if (!p) return $1;
+			parsed.push($1);
+			return '(' + p.source + ')';
+		}
+	).replace(/\[a-z\]/gi, '[a-z\\u00c0-\\uffff;\&]'); // handle unicode words
+
+	return {
+		format: format,
+		re: new RegExp('^' + re + '$', 'i'),
+		handler: function(bits){
+			bits = bits.slice(1).associate(parsed);
+			var date = new Date().clearTime(),
+				year = bits.y || bits.Y;
+
+			if (year != null) handle.call(date, 'y', year); // need to start in the right year
+			if ('d' in bits) handle.call(date, 'd', 1);
+			if ('m' in bits || bits.b || bits.B) handle.call(date, 'm', 1);
+
+			for (var key in bits) handle.call(date, key, bits[key]);
+			return date;
+		}
+	};
+};
+
+var handle = function(key, value){
+	if (!value) return this;
+
+	switch (key){
+		case 'a': case 'A': return this.set('day', Date.parseDay(value, true));
+		case 'b': case 'B': return this.set('mo', Date.parseMonth(value, true));
+		case 'd': return this.set('date', value);
+		case 'H': case 'I': return this.set('hr', value);
+		case 'm': return this.set('mo', value - 1);
+		case 'M': return this.set('min', value);
+		case 'p': return this.set('ampm', value.replace(/\./g, ''));
+		case 'S': return this.set('sec', value);
+		case 's': return this.set('ms', ('0.' + value) * 1000);
+		case 'w': return this.set('day', value);
+		case 'Y': return this.set('year', value);
+		case 'y':
+			value = +value;
+			if (value < 100) value += startCentury + (value < startYear ? 100 : 0);
+			return this.set('year', value);
+		case 'z':
+			if (value == 'Z') value = '+00';
+			var offset = value.match(/([+-])(\d{2}):?(\d{2})?/);
+			offset = (offset[1] + '1') * (offset[2] * 60 + (+offset[3] || 0)) + this.getTimezoneOffset();
+			return this.set('time', this - offset * 60000);
+	}
+
+	return this;
+};
+
+Date.defineParsers(
+	'%Y([-./]%m([-./]%d((T| )%X)?)?)?', // "1999-12-31", "1999-12-31 11:59pm", "1999-12-31 23:59:59", ISO8601
+	'%Y%m%d(T%H(%M%S?)?)?', // "19991231", "19991231T1159", compact
+	'%x( %X)?', // "12/31", "12.31.99", "12-31-1999", "12/31/2008 11:59 PM"
+	'%d%o( %b( %Y)?)?( %X)?', // "31st", "31st December", "31 Dec 1999", "31 Dec 1999 11:59pm"
+	'%b( %d%o)?( %Y)?( %X)?', // Same as above with month and day switched
+	'%Y %b( %d%o( %X)?)?', // Same as above with year coming first
+	'%o %b %d %X %z %Y', // "Thu Oct 22 08:11:23 +0000 2009"
+	'%T', // %H:%M:%S
+	'%H:%M( ?%p)?' // "11:05pm", "11:05 am" and "11:05"
+);
+
+Locale.addEvent('change', function(language){
+	if (Locale.get('Date')) recompile(language);
+}).fireEvent('change', Locale.getCurrent());
+
+})();
+
+
+// Begin: Source/Types/String.Extras.js
+/*
+---
+
+script: String.Extras.js
+
+name: String.Extras
+
+description: Extends the String native object to include methods useful in managing various kinds of strings (query strings, urls, html, etc).
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+  - Guillermo Rauch
+  - Christopher Pitt
+
+requires:
+  - Core/String
+  - Core/Array
+  - MooTools.More
+
+provides: [String.Extras]
+
+...
+*/
+
+(function(){
+
+var special = {
+	'a': /[àáâãäåăą]/g,
+	'A': /[ÀÁÂÃÄÅĂĄ]/g,
+	'c': /[ćčç]/g,
+	'C': /[ĆČÇ]/g,
+	'd': /[ďđ]/g,
+	'D': /[ĎÐ]/g,
+	'e': /[èéêëěę]/g,
+	'E': /[ÈÉÊËĚĘ]/g,
+	'g': /[ğ]/g,
+	'G': /[Ğ]/g,
+	'i': /[ìíîï]/g,
+	'I': /[ÌÍÎÏ]/g,
+	'l': /[ĺľł]/g,
+	'L': /[ĹĽŁ]/g,
+	'n': /[ñňń]/g,
+	'N': /[ÑŇŃ]/g,
+	'o': /[òóôõöøő]/g,
+	'O': /[ÒÓÔÕÖØ]/g,
+	'r': /[řŕ]/g,
+	'R': /[ŘŔ]/g,
+	's': /[ššş]/g,
+	'S': /[ŠŞŚ]/g,
+	't': /[ťţ]/g,
+	'T': /[ŤŢ]/g,
+	'ue': /[ü]/g,
+	'UE': /[Ü]/g,
+	'u': /[ùúûůµ]/g,
+	'U': /[ÙÚÛŮ]/g,
+	'y': /[ÿý]/g,
+	'Y': /[ŸÝ]/g,
+	'z': /[žźż]/g,
+	'Z': /[ŽŹŻ]/g,
+	'th': /[þ]/g,
+	'TH': /[Þ]/g,
+	'dh': /[ð]/g,
+	'DH': /[Ð]/g,
+	'ss': /[ß]/g,
+	'oe': /[œ]/g,
+	'OE': /[Œ]/g,
+	'ae': /[æ]/g,
+	'AE': /[Æ]/g
+},
+
+tidy = {
+	' ': /[\xa0\u2002\u2003\u2009]/g,
+	'*': /[\xb7]/g,
+	'\'': /[\u2018\u2019]/g,
+	'"': /[\u201c\u201d]/g,
+	'...': /[\u2026]/g,
+	'-': /[\u2013]/g,
+//	'--': /[\u2014]/g,
+	'&raquo;': /[\uFFFD]/g
+};
+
+var walk = function(string, replacements){
+	var result = string, key;
+	for (key in replacements) result = result.replace(replacements[key], key);
+	return result;
+};
+
+var getRegexForTag = function(tag, contents){
+	tag = tag || '';
+	var regstr = contents ? "<" + tag + "(?!\\w)[^>]*>([\\s\\S]*?)<\/" + tag + "(?!\\w)>" : "<\/?" + tag + "([^>]+)?>",
+		reg = new RegExp(regstr, "gi");
+	return reg;
+};
+
+String.implement({
+
+	standardize: function(){
+		return walk(this, special);
+	},
+
+	repeat: function(times){
+		return new Array(times + 1).join(this);
+	},
+
+	pad: function(length, str, direction){
+		if (this.length >= length) return this;
+
+		var pad = (str == null ? ' ' : '' + str)
+			.repeat(length - this.length)
+			.substr(0, length - this.length);
+
+		if (!direction || direction == 'right') return this + pad;
+		if (direction == 'left') return pad + this;
+
+		return pad.substr(0, (pad.length / 2).floor()) + this + pad.substr(0, (pad.length / 2).ceil());
+	},
+
+	getTags: function(tag, contents){
+		return this.match(getRegexForTag(tag, contents)) || [];
+	},
+
+	stripTags: function(tag, contents){
+		return this.replace(getRegexForTag(tag, contents), '');
+	},
+
+	tidy: function(){
+		return walk(this, tidy);
+	},
+
+	truncate: function(max, trail, atChar){
+		var string = this;
+		if (trail == null && arguments.length == 1) trail = '…';
+		if (string.length > max){
+			string = string.substring(0, max);
+			if (atChar){
+				var index = string.lastIndexOf(atChar);
+				if (index != -1) string = string.substr(0, index);
+			}
+			if (trail) string += trail;
+		}
+		return string;
+	}
+
+});
+
+})();
+
+
+// Begin: Source/Element/Element.Forms.js
+/*
+---
+
+script: Element.Forms.js
+
+name: Element.Forms
+
+description: Extends the Element native object to include methods useful in managing inputs.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Element
+  - /String.Extras
+  - /MooTools.More
+
+provides: [Element.Forms]
+
+...
+*/
+
+Element.implement({
+
+	tidy: function(){
+		this.set('value', this.get('value').tidy());
+	},
+
+	getTextInRange: function(start, end){
+		return this.get('value').substring(start, end);
+	},
+
+	getSelectedText: function(){
+		if (this.setSelectionRange) return this.getTextInRange(this.getSelectionStart(), this.getSelectionEnd());
+		return document.selection.createRange().text;
+	},
+
+	getSelectedRange: function(){
+		if (this.selectionStart != null){
+			return {
+				start: this.selectionStart,
+				end: this.selectionEnd
+			};
+		}
+
+		var pos = {
+			start: 0,
+			end: 0
+		};
+		var range = this.getDocument().selection.createRange();
+		if (!range || range.parentElement() != this) return pos;
+		var duplicate = range.duplicate();
+
+		if (this.type == 'text'){
+			pos.start = 0 - duplicate.moveStart('character', -100000);
+			pos.end = pos.start + range.text.length;
+		} else {
+			var value = this.get('value');
+			var offset = value.length;
+			duplicate.moveToElementText(this);
+			duplicate.setEndPoint('StartToEnd', range);
+			if (duplicate.text.length) offset -= value.match(/[\n\r]*$/)[0].length;
+			pos.end = offset - duplicate.text.length;
+			duplicate.setEndPoint('StartToStart', range);
+			pos.start = offset - duplicate.text.length;
+		}
+		return pos;
+	},
+
+	getSelectionStart: function(){
+		return this.getSelectedRange().start;
+	},
+
+	getSelectionEnd: function(){
+		return this.getSelectedRange().end;
+	},
+
+	setCaretPosition: function(pos){
+		if (pos == 'end') pos = this.get('value').length;
+		this.selectRange(pos, pos);
+		return this;
+	},
+
+	getCaretPosition: function(){
+		return this.getSelectedRange().start;
+	},
+
+	selectRange: function(start, end){
+		if (this.setSelectionRange){
+			this.focus();
+			this.setSelectionRange(start, end);
+		} else {
+			var value = this.get('value');
+			var diff = value.substr(start, end - start).replace(/\r/g, '').length;
+			start = value.substr(0, start).replace(/\r/g, '').length;
+			var range = this.createTextRange();
+			range.collapse(true);
+			range.moveEnd('character', start + diff);
+			range.moveStart('character', start);
+			range.select();
+		}
+		return this;
+	},
+
+	insertAtCursor: function(value, select){
+		var pos = this.getSelectedRange();
+		var text = this.get('value');
+		this.set('value', text.substring(0, pos.start) + value + text.substring(pos.end, text.length));
+		if (select !== false) this.selectRange(pos.start, pos.start + value.length);
+		else this.setCaretPosition(pos.start + value.length);
+		return this;
+	},
+
+	insertAroundCursor: function(options, select){
+		options = Object.append({
+			before: '',
+			defaultMiddle: '',
+			after: ''
+		}, options);
+
+		var value = this.getSelectedText() || options.defaultMiddle;
+		var pos = this.getSelectedRange();
+		var text = this.get('value');
+
+		if (pos.start == pos.end){
+			this.set('value', text.substring(0, pos.start) + options.before + value + options.after + text.substring(pos.end, text.length));
+			this.selectRange(pos.start + options.before.length, pos.end + options.before.length + value.length);
+		} else {
+			var current = text.substring(pos.start, pos.end);
+			this.set('value', text.substring(0, pos.start) + options.before + current + options.after + text.substring(pos.end, text.length));
+			var selStart = pos.start + options.before.length;
+			if (select !== false) this.selectRange(selStart, selStart + current.length);
+			else this.setCaretPosition(selStart + text.length);
+		}
+		return this;
+	}
+
+});
+
+
+// Begin: Source/Locale/Locale.en-US.Form.Validator.js
+/*
+---
+
+name: Locale.en-US.Form.Validator
+
+description: Form Validator messages for English.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - /Locale
+
+provides: [Locale.en-US.Form.Validator]
+
+...
+*/
+
+Locale.define('en-US', 'FormValidator', {
+
+	required: 'This field is required.',
+	length: 'Please enter {length} characters (you entered {elLength} characters)',
+	minLength: 'Please enter at least {minLength} characters (you entered {length} characters).',
+	maxLength: 'Please enter no more than {maxLength} characters (you entered {length} characters).',
+	integer: 'Please enter an integer in this field. Numbers with decimals (e.g. 1.25) are not permitted.',
+	numeric: 'Please enter only numeric values in this field (i.e. "1" or "1.1" or "-1" or "-1.1").',
+	digits: 'Please use numbers and punctuation only in this field (for example, a phone number with dashes or dots is permitted).',
+	alpha: 'Please use only letters (a-z) within this field. No spaces or other characters are allowed.',
+	alphanum: 'Please use only letters (a-z) or numbers (0-9) in this field. No spaces or other characters are allowed.',
+	dateSuchAs: 'Please enter a valid date such as {date}',
+	dateInFormatMDY: 'Please enter a valid date such as MM/DD/YYYY (i.e. "12/31/1999")',
+	email: 'Please enter a valid email address. For example "fred@domain.com".',
+	url: 'Please enter a valid URL such as http://www.example.com.',
+	currencyDollar: 'Please enter a valid $ amount. For example $100.00 .',
+	oneRequired: 'Please enter something for at least one of these inputs.',
+	errorPrefix: 'Error: ',
+	warningPrefix: 'Warning: ',
+
+	// Form.Validator.Extras
+	noSpace: 'There can be no spaces in this input.',
+	reqChkByNode: 'No items are selected.',
+	requiredChk: 'This field is required.',
+	reqChkByName: 'Please select a {label}.',
+	match: 'This field needs to match the {matchName} field',
+	startDate: 'the start date',
+	endDate: 'the end date',
+	currendDate: 'the current date',
+	afterDate: 'The date should be the same or after {label}.',
+	beforeDate: 'The date should be the same or before {label}.',
+	startMonth: 'Please select a start month',
+	sameMonth: 'These two dates must be in the same month - you must change one or the other.',
+	creditcard: 'The credit card number entered is invalid. Please check the number and try again. {length} digits entered.'
+
+});
+
+
+// Begin: Source/Forms/Form.Validator.js
+/*
+---
+
+script: Form.Validator.js
+
+name: Form.Validator
+
+description: A css-class based form validation system.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Options
+  - Core/Events
+  - Core/Slick.Finder
+  - Core/Element.Event
+  - Core/Element.Style
+  - Core/JSON
+  - /Locale
+  - /Class.Binds
+  - /Date
+  - /Element.Forms
+  - /Locale.en-US.Form.Validator
+  - /Element.Shortcuts
+
+provides: [Form.Validator, InputValidator, FormValidator.BaseValidators]
+
+...
+*/
+if (!window.Form) window.Form = {};
+
+var InputValidator = this.InputValidator = new Class({
+
+	Implements: [Options],
+
+	options: {
+		errorMsg: 'Validation failed.',
+		test: Function.from(true)
+	},
+
+	initialize: function(className, options){
+		this.setOptions(options);
+		this.className = className;
+	},
+
+	test: function(field, props){
+		field = document.id(field);
+		return (field) ? this.options.test(field, props || this.getProps(field)) : false;
+	},
+
+	getError: function(field, props){
+		field = document.id(field);
+		var err = this.options.errorMsg;
+		if (typeOf(err) == 'function') err = err(field, props || this.getProps(field));
+		return err;
+	},
+
+	getProps: function(field){
+		field = document.id(field);
+		return (field) ? field.get('validatorProps') : {};
+	}
+
+});
+
+Element.Properties.validators = {
+
+	get: function(){
+		return (this.get('data-validators') || this.className).clean().split(' ');
+	}
+
+};
+
+Element.Properties.validatorProps = {
+
+	set: function(props){
+		return this.eliminate('$moo:validatorProps').store('$moo:validatorProps', props);
+	},
+
+	get: function(props){
+		if (props) this.set(props);
+		if (this.retrieve('$moo:validatorProps')) return this.retrieve('$moo:validatorProps');
+		if (this.getProperty('data-validator-properties') || this.getProperty('validatorProps')){
+			try {
+				this.store('$moo:validatorProps', JSON.decode(this.getProperty('validatorProps') || this.getProperty('data-validator-properties')));
+			}catch(e){
+				return {};
+			}
+		} else {
+			var vals = this.get('validators').filter(function(cls){
+				return cls.test(':');
+			});
+			if (!vals.length){
+				this.store('$moo:validatorProps', {});
+			} else {
+				props = {};
+				vals.each(function(cls){
+					var split = cls.split(':');
+					if (split[1]){
+						try {
+							props[split[0]] = JSON.decode(split[1]);
+						} catch(e){}
+					}
+				});
+				this.store('$moo:validatorProps', props);
+			}
+		}
+		return this.retrieve('$moo:validatorProps');
+	}
+
+};
+
+Form.Validator = new Class({
+
+	Implements: [Options, Events],
+
+	Binds: ['onSubmit'],
+
+	options: {/*
+		onFormValidate: function(isValid, form, event){},
+		onElementValidate: function(isValid, field, className, warn){},
+		onElementPass: function(field){},
+		onElementFail: function(field, validatorsFailed){}, */
+		fieldSelectors: 'input, select, textarea',
+		ignoreHidden: true,
+		ignoreDisabled: true,
+		useTitles: false,
+		evaluateOnSubmit: true,
+		evaluateFieldsOnBlur: true,
+		evaluateFieldsOnChange: true,
+		serial: true,
+		stopOnFailure: true,
+		warningPrefix: function(){
+			return Form.Validator.getMsg('warningPrefix') || 'Warning: ';
+		},
+		errorPrefix: function(){
+			return Form.Validator.getMsg('errorPrefix') || 'Error: ';
+		}
+	},
+
+	initialize: function(form, options){
+		this.setOptions(options);
+		this.element = document.id(form);
+		this.element.store('validator', this);
+		this.warningPrefix = Function.from(this.options.warningPrefix)();
+		this.errorPrefix = Function.from(this.options.errorPrefix)();
+		if (this.options.evaluateOnSubmit) this.element.addEvent('submit', this.onSubmit);
+		if (this.options.evaluateFieldsOnBlur || this.options.evaluateFieldsOnChange) this.watchFields(this.getFields());
+	},
+
+	toElement: function(){
+		return this.element;
+	},
+
+	getFields: function(){
+		return (this.fields = this.element.getElements(this.options.fieldSelectors));
+	},
+
+	watchFields: function(fields){
+		fields.each(function(el){
+			if (this.options.evaluateFieldsOnBlur)
+				el.addEvent('blur', this.validationMonitor.pass([el, false], this));
+			if (this.options.evaluateFieldsOnChange)
+				el.addEvent('change', this.validationMonitor.pass([el, true], this));
+		}, this);
+	},
+
+	validationMonitor: function(){
+		clearTimeout(this.timer);
+		this.timer = this.validateField.delay(50, this, arguments);
+	},
+
+	onSubmit: function(event){
+		if (this.validate(event)) this.reset();
+	},
+
+	reset: function(){
+		this.getFields().each(this.resetField, this);
+		return this;
+	},
+
+	validate: function(event){
+		var result = this.getFields().map(function(field){
+			return this.validateField(field, true);
+		}, this).every(function(v){
+			return v;
+		});
+		this.fireEvent('formValidate', [result, this.element, event]);
+		if (this.options.stopOnFailure && !result && event) event.preventDefault();
+		return result;
+	},
+
+	validateField: function(field, force){
+		if (this.paused) return true;
+		field = document.id(field);
+		var passed = !field.hasClass('validation-failed');
+		var failed, warned;
+		if (this.options.serial && !force){
+			failed = this.element.getElement('.validation-failed');
+			warned = this.element.getElement('.warning');
+		}
+		if (field && (!failed || force || field.hasClass('validation-failed') || (failed && !this.options.serial))){
+			var validationTypes = field.get('validators');
+			var validators = validationTypes.some(function(cn){
+				return this.getValidator(cn);
+			}, this);
+			var validatorsFailed = [];
+			validationTypes.each(function(className){
+				if (className && !this.test(className, field)) validatorsFailed.include(className);
+			}, this);
+			passed = validatorsFailed.length === 0;
+			if (validators && !this.hasValidator(field, 'warnOnly')){
+				if (passed){
+					field.addClass('validation-passed').removeClass('validation-failed');
+					this.fireEvent('elementPass', [field]);
+				} else {
+					field.addClass('validation-failed').removeClass('validation-passed');
+					this.fireEvent('elementFail', [field, validatorsFailed]);
+				}
+			}
+			if (!warned){
+				var warnings = validationTypes.some(function(cn){
+					if (cn.test('^warn'))
+						return this.getValidator(cn.replace(/^warn-/,''));
+					else return null;
+				}, this);
+				field.removeClass('warning');
+				var warnResult = validationTypes.map(function(cn){
+					if (cn.test('^warn'))
+						return this.test(cn.replace(/^warn-/,''), field, true);
+					else return null;
+				}, this);
+			}
+		}
+		return passed;
+	},
+
+	test: function(className, field, warn){
+		field = document.id(field);
+		if ((this.options.ignoreHidden && !field.isVisible()) || (this.options.ignoreDisabled && field.get('disabled'))) return true;
+		var validator = this.getValidator(className);
+		if (warn != null) warn = false;
+		if (this.hasValidator(field, 'warnOnly')) warn = true;
+		var isValid = this.hasValidator(field, 'ignoreValidation') || (validator ? validator.test(field) : true);
+		if (validator && field.isVisible()) this.fireEvent('elementValidate', [isValid, field, className, warn]);
+		if (warn) return true;
+		return isValid;
+	},
+
+	hasValidator: function(field, value){
+		return field.get('validators').contains(value);
+	},
+
+	resetField: function(field){
+		field = document.id(field);
+		if (field){
+			field.get('validators').each(function(className){
+				if (className.test('^warn-')) className = className.replace(/^warn-/, '');
+				field.removeClass('validation-failed');
+				field.removeClass('warning');
+				field.removeClass('validation-passed');
+			}, this);
+		}
+		return this;
+	},
+
+	stop: function(){
+		this.paused = true;
+		return this;
+	},
+
+	start: function(){
+		this.paused = false;
+		return this;
+	},
+
+	ignoreField: function(field, warn){
+		field = document.id(field);
+		if (field){
+			this.enforceField(field);
+			if (warn) field.addClass('warnOnly');
+			else field.addClass('ignoreValidation');
+		}
+		return this;
+	},
+
+	enforceField: function(field){
+		field = document.id(field);
+		if (field) field.removeClass('warnOnly').removeClass('ignoreValidation');
+		return this;
+	}
+
+});
+
+Form.Validator.getMsg = function(key){
+	return Locale.get('FormValidator.' + key);
+};
+
+Form.Validator.adders = {
+
+	validators:{},
+
+	add : function(className, options){
+		this.validators[className] = new InputValidator(className, options);
+		//if this is a class (this method is used by instances of Form.Validator and the Form.Validator namespace)
+		//extend these validators into it
+		//this allows validators to be global and/or per instance
+		if (!this.initialize){
+			this.implement({
+				validators: this.validators
+			});
+		}
+	},
+
+	addAllThese : function(validators){
+		Array.from(validators).each(function(validator){
+			this.add(validator[0], validator[1]);
+		}, this);
+	},
+
+	getValidator: function(className){
+		return this.validators[className.split(':')[0]];
+	}
+
+};
+
+Object.append(Form.Validator, Form.Validator.adders);
+
+Form.Validator.implement(Form.Validator.adders);
+
+Form.Validator.add('IsEmpty', {
+
+	errorMsg: false,
+	test: function(element){
+		if (element.type == 'select-one' || element.type == 'select')
+			return !(element.selectedIndex >= 0 && element.options[element.selectedIndex].value != '');
+		else
+			return ((element.get('value') == null) || (element.get('value').length == 0));
+	}
+
+});
+
+Form.Validator.addAllThese([
+
+	['required', {
+		errorMsg: function(){
+			return Form.Validator.getMsg('required');
+		},
+		test: function(element){
+			return !Form.Validator.getValidator('IsEmpty').test(element);
+		}
+	}],
+
+	['length', {
+		errorMsg: function(element, props){
+			if (typeOf(props.length) != 'null')
+				return Form.Validator.getMsg('length').substitute({length: props.length, elLength: element.get('value').length});
+			else return '';
+		},
+		test: function(element, props){
+			if (typeOf(props.length) != 'null') return (element.get('value').length == props.length || element.get('value').length == 0);
+			else return true;
+		}
+	}],
+
+	['minLength', {
+		errorMsg: function(element, props){
+			if (typeOf(props.minLength) != 'null')
+				return Form.Validator.getMsg('minLength').substitute({minLength: props.minLength, length: element.get('value').length});
+			else return '';
+		},
+		test: function(element, props){
+			if (typeOf(props.minLength) != 'null') return (element.get('value').length >= (props.minLength || 0));
+			else return true;
+		}
+	}],
+
+	['maxLength', {
+		errorMsg: function(element, props){
+			//props is {maxLength:10}
+			if (typeOf(props.maxLength) != 'null')
+				return Form.Validator.getMsg('maxLength').substitute({maxLength: props.maxLength, length: element.get('value').length});
+			else return '';
+		},
+		test: function(element, props){
+			return element.get('value').length <= (props.maxLength || 10000);
+		}
+	}],
+
+	['validate-integer', {
+		errorMsg: Form.Validator.getMsg.pass('integer'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) || (/^(-?[1-9]\d*|0)$/).test(element.get('value'));
+		}
+	}],
+
+	['validate-numeric', {
+		errorMsg: Form.Validator.getMsg.pass('numeric'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) ||
+				(/^-?(?:0$0(?=\d*\.)|[1-9]|0)\d*(\.\d+)?$/).test(element.get('value'));
+		}
+	}],
+
+	['validate-digits', {
+		errorMsg: Form.Validator.getMsg.pass('digits'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) || (/^[\d() .:\-\+#]+$/.test(element.get('value')));
+		}
+	}],
+
+	['validate-alpha', {
+		errorMsg: Form.Validator.getMsg.pass('alpha'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) || (/^[a-zA-Z]+$/).test(element.get('value'));
+		}
+	}],
+
+	['validate-alphanum', {
+		errorMsg: Form.Validator.getMsg.pass('alphanum'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) || !(/\W/).test(element.get('value'));
+		}
+	}],
+
+	['validate-date', {
+		errorMsg: function(element, props){
+			if (Date.parse){
+				var format = props.dateFormat || '%x';
+				return Form.Validator.getMsg('dateSuchAs').substitute({date: new Date().format(format)});
+			} else {
+				return Form.Validator.getMsg('dateInFormatMDY');
+			}
+		},
+		test: function(element, props){
+			if (Form.Validator.getValidator('IsEmpty').test(element)) return true;
+			var dateLocale = Locale.getCurrent().sets.Date,
+				dateNouns = new RegExp([dateLocale.days, dateLocale.days_abbr, dateLocale.months, dateLocale.months_abbr].flatten().join('|'), 'i'),
+				value = element.get('value'),
+				wordsInValue = value.match(/[a-z]+/gi);
+
+				if (wordsInValue && !wordsInValue.every(dateNouns.exec, dateNouns)) return false;
+
+				var date = Date.parse(value),
+					format = props.dateFormat || '%x',
+					formatted = date.format(format);
+
+				if (formatted != 'invalid date') element.set('value', formatted);
+				return date.isValid();
+		}
+	}],
+
+	['validate-email', {
+		errorMsg: Form.Validator.getMsg.pass('email'),
+		test: function(element){
+			/*
+			var chars = "[a-z0-9!#$%&'*+/=?^_`{|}~-]",
+				local = '(?:' + chars + '\\.?){0,63}' + chars,
+
+				label = '[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?',
+				hostname = '(?:' + label + '\\.)*' + label;
+
+				octet = '(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)',
+				ipv4 = '\\[(?:' + octet + '\\.){3}' + octet + '\\]',
+
+				domain = '(?:' + hostname + '|' + ipv4 + ')';
+
+			var regex = new RegExp('^' + local + '@' + domain + '$', 'i');
+			*/
+			return Form.Validator.getValidator('IsEmpty').test(element) || (/^(?:[a-z0-9!#$%&'*+\/=?^_`{|}~-]\.?){0,63}[a-z0-9!#$%&'*+\/=?^_`{|}~-]@(?:(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\])$/i).test(element.get('value'));
+		}
+	}],
+
+	['validate-url', {
+		errorMsg: Form.Validator.getMsg.pass('url'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) || (/^(https?|ftp|rmtp|mms):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i).test(element.get('value'));
+		}
+	}],
+
+	['validate-currency-dollar', {
+		errorMsg: Form.Validator.getMsg.pass('currencyDollar'),
+		test: function(element){
+			return Form.Validator.getValidator('IsEmpty').test(element) || (/^\$?\-?([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}\d*(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)$/).test(element.get('value'));
+		}
+	}],
+
+	['validate-one-required', {
+		errorMsg: Form.Validator.getMsg.pass('oneRequired'),
+		test: function(element, props){
+			var p = document.id(props['validate-one-required']) || element.getParent(props['validate-one-required']);
+			return p.getElements('input').some(function(el){
+				if (['checkbox', 'radio'].contains(el.get('type'))) return el.get('checked');
+				return el.get('value');
+			});
+		}
+	}]
+
+]);
+
+Element.Properties.validator = {
+
+	set: function(options){
+		this.get('validator').setOptions(options);
+	},
+
+	get: function(){
+		var validator = this.retrieve('validator');
+		if (!validator){
+			validator = new Form.Validator(this);
+			this.store('validator', validator);
+		}
+		return validator;
+	}
+
+};
+
+Element.implement({
+
+	validate: function(options){
+		if (options) this.set('validator', options);
+		return this.get('validator').validate();
+	}
+
+});
+
+
+//<1.2compat>
+//legacy
+var FormValidator = Form.Validator;
+//</1.2compat>
+
+
+
+
+// Begin: Source/Forms/Form.Validator.Inline.js
+/*
+---
+
+script: Form.Validator.Inline.js
+
+name: Form.Validator.Inline
+
+description: Extends Form.Validator to add inline messages.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - /Form.Validator
+
+provides: [Form.Validator.Inline]
+
+...
+*/
+
+Form.Validator.Inline = new Class({
+
+	Extends: Form.Validator,
+
+	options: {
+		showError: function(errorElement){
+			if (errorElement.reveal) errorElement.reveal();
+			else errorElement.setStyle('display', 'block');
+		},
+		hideError: function(errorElement){
+			if (errorElement.dissolve) errorElement.dissolve();
+			else errorElement.setStyle('display', 'none');
+		},
+		scrollToErrorsOnSubmit: true,
+		scrollToErrorsOnBlur: false,
+		scrollToErrorsOnChange: false,
+		scrollFxOptions: {
+			transition: 'quad:out',
+			offset: {
+				y: -20
+			}
+		}
+	},
+
+	initialize: function(form, options){
+		this.parent(form, options);
+		this.addEvent('onElementValidate', function(isValid, field, className, warn){
+			var validator = this.getValidator(className);
+			if (!isValid && validator.getError(field)){
+				if (warn) field.addClass('warning');
+				var advice = this.makeAdvice(className, field, validator.getError(field), warn);
+				this.insertAdvice(advice, field);
+				this.showAdvice(className, field);
+			} else {
+				this.hideAdvice(className, field);
+			}
+		});
+	},
+
+	makeAdvice: function(className, field, error, warn){
+		var errorMsg = (warn) ? this.warningPrefix : this.errorPrefix;
+			errorMsg += (this.options.useTitles) ? field.title || error:error;
+		var cssClass = (warn) ? 'warning-advice' : 'validation-advice';
+		var advice = this.getAdvice(className, field);
+		if (advice){
+			advice = advice.set('html', errorMsg);
+		} else {
+			advice = new Element('div', {
+				html: errorMsg,
+				styles: { display: 'none' },
+				id: 'advice-' + className.split(':')[0] + '-' + this.getFieldId(field)
+			}).addClass(cssClass);
+		}
+		field.store('$moo:advice-' + className, advice);
+		return advice;
+	},
+
+	getFieldId : function(field){
+		return field.id ? field.id : field.id = 'input_' + field.name;
+	},
+
+	showAdvice: function(className, field){
+		var advice = this.getAdvice(className, field);
+		if (
+			advice &&
+			!field.retrieve('$moo:' + this.getPropName(className)) &&
+			(
+				advice.getStyle('display') == 'none' ||
+				advice.getStyle('visiblity') == 'hidden' ||
+				advice.getStyle('opacity') == 0
+			)
+		){
+			field.store('$moo:' + this.getPropName(className), true);
+			this.options.showError(advice);
+			this.fireEvent('showAdvice', [field, advice, className]);
+		}
+	},
+
+	hideAdvice: function(className, field){
+		var advice = this.getAdvice(className, field);
+		if (advice && field.retrieve('$moo:' + this.getPropName(className))){
+			field.store('$moo:' + this.getPropName(className), false);
+			this.options.hideError(advice);
+			this.fireEvent('hideAdvice', [field, advice, className]);
+		}
+	},
+
+	getPropName: function(className){
+		return 'advice' + className;
+	},
+
+	resetField: function(field){
+		field = document.id(field);
+		if (!field) return this;
+		this.parent(field);
+		field.get('validators').each(function(className){
+			this.hideAdvice(className, field);
+		}, this);
+		return this;
+	},
+
+	getAllAdviceMessages: function(field, force){
+		var advice = [];
+		if (field.hasClass('ignoreValidation') && !force) return advice;
+		var validators = field.get('validators').some(function(cn){
+			var warner = cn.test('^warn-') || field.hasClass('warnOnly');
+			if (warner) cn = cn.replace(/^warn-/, '');
+			var validator = this.getValidator(cn);
+			if (!validator) return;
+			advice.push({
+				message: validator.getError(field),
+				warnOnly: warner,
+				passed: validator.test(),
+				validator: validator
+			});
+		}, this);
+		return advice;
+	},
+
+	getAdvice: function(className, field){
+		return field.retrieve('$moo:advice-' + className);
+	},
+
+	insertAdvice: function(advice, field){
+		//Check for error position prop
+		var props = field.get('validatorProps');
+		//Build advice
+		if (!props.msgPos || !document.id(props.msgPos)){
+			if (field.type && field.type.toLowerCase() == 'radio') field.getParent().adopt(advice);
+			else advice.inject(document.id(field), 'after');
+		} else {
+			document.id(props.msgPos).grab(advice);
+		}
+	},
+
+	validateField: function(field, force, scroll){
+		var result = this.parent(field, force);
+		if (((this.options.scrollToErrorsOnSubmit && scroll == null) || scroll) && !result){
+			var failed = document.id(this).getElement('.validation-failed');
+			var par = document.id(this).getParent();
+			while (par != document.body && par.getScrollSize().y == par.getSize().y){
+				par = par.getParent();
+			}
+			var fx = par.retrieve('$moo:fvScroller');
+			if (!fx && window.Fx && Fx.Scroll){
+				fx = new Fx.Scroll(par, this.options.scrollFxOptions);
+				par.store('$moo:fvScroller', fx);
+			}
+			if (failed){
+				if (fx) fx.toElement(failed);
+				else par.scrollTo(par.getScroll().x, failed.getPosition(par).y - 20);
+			}
+		}
+		return result;
+	},
+
+	watchFields: function(fields){
+		fields.each(function(el){
+		if (this.options.evaluateFieldsOnBlur){
+			el.addEvent('blur', this.validationMonitor.pass([el, false, this.options.scrollToErrorsOnBlur], this));
+		}
+		if (this.options.evaluateFieldsOnChange){
+				el.addEvent('change', this.validationMonitor.pass([el, true, this.options.scrollToErrorsOnChange], this));
+			}
+		}, this);
+	}
+
+});
+
+
+// Begin: Source/Forms/Behavior.FormValidator.js
+/*
+---
+description: Adds an instance of Form.Validator.Inline to any form with the class .form-validator.
+provides: [Behavior.FormValidator]
+requires: [Behavior/Behavior, More/Form.Validator.Inline, More/Object.Extras]
+script: Behavior.FormValidator.js
+name: Behavior.FormValidator
+...
+*/
+
+Behavior.addGlobalFilter('FormValidator', {
+	defaults: {
+		useTitles: true,
+		scrollToErrorsOnSubmit: true,
+		scrollToErrorsOnBlur: false,
+		scrollToErrorsOnChange: false,
+		ignoreHidden: true,
+		ignoreDisabled: true,
+		useTitles: false,
+		evaluateOnSubmit: true,
+		evaluateFieldsOnBlur: true,
+		evaluateFieldsOnChange: true,
+		serial: true,
+		stopOnFailure: true
+	},
+	setup: function(element, api) {
+		//instantiate the form validator
+		var validator = element.retrieve('validator');
+		if (!validator) {
+			validator = new Form.Validator.Inline(element,
+				Object.cleanValues(
+					api.getAs({
+						useTitles: Boolean,
+						scrollToErrorsOnSubmit: Boolean,
+						scrollToErrorsOnBlur: Boolean,
+						scrollToErrorsOnChange: Boolean,
+						ignoreHidden: Boolean,
+						ignoreDisabled: Boolean,
+						useTitles: Boolean,
+						evaluateOnSubmit: Boolean,
+						evaluateFieldsOnBlur: Boolean,
+						evaluateFieldsOnChange: Boolean,
+						serial: Boolean,
+						stopOnFailure: Boolean
+					})
+				)
+			);
+		}
+		//if the api provides a getScroller method, which should return an instance of
+		//Fx.Scroll, use it instead
+		if (api.getScroller) {
+			validator.setOptions({
+				onShow: function(input, advice, className) {
+					api.getScroller().toElement(input);
+				},
+				scrollToErrorsOnSubmit: false
+			});
+		}
+		api.onCleanup(function(){
+			validator.disable();
+		});
+		return validator;
+	}
+
+});
+
+// Begin: Source/Behaviors/Behavior.BS.FormValidator.js
+/*
+---
+
+name: Behavior.BS.FormValidator
+
+description: Integrates FormValidator behavior into Bootstrap.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - More-Behaviors/Behavior.FormValidator
+
+provides: [Behavior.BS.FormValidator]
+
+...
+*/
+
+Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
+	setup: function(element, api, instance){
+		var original = {
+			showError: instance.showError,
+			hideError: instance.hideError
+		};
+		instance.setOptions({
+			showError: function(){},
+			hideError: function(){}
+		});
+		instance.warningPrefix = '';
+		instance.errorPrefix = '';
+		instance.addEvents({
+			showAdvice: function(field, advice, className){
+				var inputParent = field.getParent('.input'),
+				    clearfixParent = inputParent.getParent('.clearfix');
+				if (!inputParent || !clearfixParent){
+					original.showError(advice);
+				} else {
+					field.addClass('error');
+					var help = inputParent.getElement('div.advice');
+					if (!help){
+						inputParent.getElements('span.help-inline').setStyle('display', 'none');
+						help = new Element('span.help-inline.advice.auto-created', {
+							html: advice.get('html')
+						}).inject(inputParent);
+					}
+					help.removeClass('hide');
+					help.set('title', advice.get('html'));
+					clearfixParent.addClass('error');
+				}
+			},
+			hideAdvice: function(field, advice, className){
+				var inputParent = field.getParent('.input'),
+				    clearfixParent = inputParent.getParent('.clearfix');
+				if (!inputParent || !clearfixParent){
+					original.hideError(advice);
+				} else {
+					field.removeClass('error');
+					var help = inputParent.getElement('span.advice');
+					if (help.hasClass('auto-created')) help.destroy();
+					else help.set('html', '');
+					inputParent.getElements('span.help-inline').setStyle('display', '');
+					clearfixParent.removeClass('error');
+				}
+			}
+		});
+	}
+});
+
+// Begin: Source/Behaviors/Behavior.BS.Twipsy.js
+/*
+---
+
+name: Behavior.BS.Tooltip
+
+description: Instantiates Bootstrap.Tooltip based on HTML markup.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - /Bootstrap.Tooltip
+ - Behavior/Behavior
+ - More/Object.Extras
+
+provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
+
+...
+*/
+(function(){
+	var filter = {
+		defaults: {
+			location: 'above', //below, left, right
+			animate: true,
+			delayIn: 200,
+			delayOut: 0,
+			onOverflow: false,
+			offset: 0,
+			trigger: 'hover' //focus, manual
+		},
+		delayUntil: 'mouseover,focus',
+		returns: Bootstrap.Tooltip,
+		setup: function(el, api){
+			var options = Object.cleanValues(
+				api.getAs({
+					onOverflow: Boolean,
+					location: String,
+					animate: Boolean,
+					delayIn: Number,
+					delayOut: Number,
+					fallback: String,
+					override: String,
+					html: Boolean,
+					offset: Number,
+					trigger: String
+				})
+			);
+			options.getTitle = Function.from(api.get('content') || el.get('title'));
+			var tip = new Bootstrap.Tooltip(el, options);
+			api.onCleanup(tip.destroy.bind(tip));
+			if (api.event) tip.show();
+			return tip;
+		}
+	};
+	Behavior.addGlobalFilters({
+		'BS.Tooltip': filter,
+		'BS.Twipsy': filter
+	});
+})();
+
 // Begin: Source/Layout/TabSwapper.js
 /*
 ---
@@ -9104,6 +12189,7 @@ var TabSwapper = new Class({
 		// onActiveAfterFx: function(){},
 		// onBackground: function(){}
 		// cookieName: null,
+		preventDefault: true,
 		selectedClass: 'tabSelected',
 		mouseoverClass: 'tabOver',
 		deselectedClass: '',
@@ -9166,7 +12252,7 @@ var TabSwapper = new Class({
 		});
 
 		clicker.addEvent('click', function(e){
-			e.preventDefault();
+			if (this.options.preventDefault) e.preventDefault();
 			this.show(index);
 		}.bind(this));
 
@@ -9286,84 +12372,13 @@ var TabSwapper = new Class({
 });
 
 
-// Begin: Source/Types/String.QueryString.js
-/*
----
-
-script: String.QueryString.js
-
-name: String.QueryString
-
-description: Methods for dealing with URI query strings.
-
-license: MIT-style license
-
-authors:
-  - Sebastian Markbåge
-  - Aaron Newton
-  - Lennart Pilon
-  - Valerio Proietti
-
-requires:
-  - Core/Array
-  - Core/String
-  - /MooTools.More
-
-provides: [String.QueryString]
-
-...
-*/
-
-String.implement({
-
-	parseQueryString: function(decodeKeys, decodeValues){
-		if (decodeKeys == null) decodeKeys = true;
-		if (decodeValues == null) decodeValues = true;
-
-		var vars = this.split(/[&;]/),
-			object = {};
-		if (!vars.length) return object;
-
-		vars.each(function(val){
-			var index = val.indexOf('=') + 1,
-				value = index ? val.substr(index) : '',
-				keys = index ? val.substr(0, index - 1).match(/([^\]\[]+|(\B)(?=\]))/g) : [val],
-				obj = object;
-			if (!keys) return;
-			if (decodeValues) value = decodeURIComponent(value);
-			keys.each(function(key, i){
-				if (decodeKeys) key = decodeURIComponent(key);
-				var current = obj[key];
-
-				if (i < keys.length - 1) obj = obj[key] = current || {};
-				else if (typeOf(current) == 'array') current.push(value);
-				else obj[key] = current != null ? [current, value] : value;
-			});
-		});
-
-		return object;
-	},
-
-	cleanQueryString: function(method){
-		return this.split('&').filter(function(val){
-			var index = val.indexOf('='),
-				key = index < 0 ? '' : val.substr(0, index),
-				value = val.substr(index + 1);
-
-			return method ? method.call(null, key, value) : (value || value === 0);
-		}).join('&');
-	}
-
-});
-
-
 // Begin: Source/Behaviors/Behavior.Tabs.js
 /*
 ---
 name: Behavior.Tabs
 description: Adds a tab interface (TabSwapper instance) for elements with .css-tab_ui. Matched with tab elements that are .tabs and sections that are .tab_sections.
 provides: [Behavior.Tabs]
-requires: [Behavior/Behavior, /TabSwapper, More/String.QueryString]
+requires: [Behavior/Behavior, /TabSwapper, More/String.QueryString, More/Object.Extras]
 script: Behavior.Tabs.js
 
 ...
@@ -9377,13 +12392,14 @@ Behavior.addGlobalFilters({
 			'sections-selector': '.tab_sections>li',
 			smooth: true,
 			smoothSize: true,
-			rearrangeDOM: false
+			rearrangeDOM: false,
+			preventDefault: true
 		},
 		setup: function(element, api) {
 			var tabs = element.getElements(api.get('tabs-selector'));
 			var sections = element.getElements(api.get('sections-selector'));
 			if (tabs.length != sections.length || tabs.length == 0) {
-				api.fail('warning; sections and sections are not of equal number. tabs: %o, sections: %o', tabs, sections);
+				api.fail('warning; sections and sections are not of equal number. tabs: ' + tabs.length + ', sections: ' + sections.length);
 			}
 			var getHash = function(){
 				return window.location.hash.substring(1, window.location.hash.length).parseQueryString();
@@ -9402,7 +12418,8 @@ Behavior.addGlobalFilters({
 							smoothSize: Boolean,
 							rearrangeDOM: Boolean,
 							selectedClass: String,
-							initPanel: Number
+							initPanel: Number,
+							preventDefault: Boolean
 						})
 					)
 				)
@@ -9451,7 +12468,7 @@ provides: [Behavior.BS.Tabs]
 	});
 
 	Behavior.setFilterDefaults('BS.Tabs', {
-		'tabs-selector': '>li',
+		'tabs-selector': 'a:not(.dropdown-toggle)',
 		'sections-selector': '+.tab-content >',
 		'selectedClass': 'active',
 		smooth: false,

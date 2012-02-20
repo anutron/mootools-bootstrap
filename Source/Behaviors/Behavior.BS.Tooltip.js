@@ -1,25 +1,25 @@
 /*
 ---
 
-name: Behavior.BS.Twipsy
+name: Behavior.BS.Tooltip
 
-description: Instantiates Bootstrap.Twipsy based on HTML markup.
+description: Instantiates Bootstrap.Tooltip based on HTML markup.
 
 license: MIT-style license.
 
 authors: [Aaron Newton]
 
 requires:
- - /Bootstrap.Twipsy
+ - /Bootstrap.Tooltip
  - Behavior/Behavior
  - More/Object.Extras
 
-provides: [Behavior.BS.Twipsy]
+provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 
 ...
 */
-Behavior.addGlobalFilters({
-	'BS.Twipsy': {
+(function(){
+	var filter = {
 		defaults: {
 			location: 'above', //below, left, right
 			animate: true,
@@ -30,7 +30,7 @@ Behavior.addGlobalFilters({
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
-		returns: Bootstrap.Twipsy,
+		returns: Bootstrap.Tooltip,
 		setup: function(el, api){
 			var options = Object.cleanValues(
 				api.getAs({
@@ -47,10 +47,14 @@ Behavior.addGlobalFilters({
 				})
 			);
 			options.getTitle = Function.from(api.get('content') || el.get('title'));
-			var tip = new Bootstrap.Twipsy(el, options);
+			var tip = new Bootstrap.Tooltip(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
 			if (api.event) tip.show();
 			return tip;
 		}
-	}
-});
+	};
+	Behavior.addGlobalFilters({
+		'BS.Tooltip': filter,
+		'BS.Twipsy': filter
+	});
+})();

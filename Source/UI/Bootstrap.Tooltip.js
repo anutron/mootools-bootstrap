@@ -1,9 +1,9 @@
 /*
 ---
 
-name: Bootstrap.Twipsy
+name: Bootstrap.Tooltip
 
-description: A simple tooltip implementation (twipsy) that works with the Twitter Bootstrap css framework.
+description: A simple tooltip implementation that works with the Twitter Bootstrap css framework.
 
 authors: [Aaron Newton]
 
@@ -15,17 +15,17 @@ requires:
  - More/Element.Position
  - Behavior/Behavior
 
-provides: Bootstrap.Twipsy
+provides: [Bootstrap.Twipsy, Bootstrap.Tooltip]
 
 ...
 */
 
-Bootstrap.Twipsy = new Class({
+Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 
 	Implements: [Options, Events],
 
 	options: {
-		location: 'above', //below, left, right
+		location: 'above', //below, left, right, bottom, top
 		animate: true,
 		delayIn: 200,
 		delayOut: 0,
@@ -51,7 +51,7 @@ Bootstrap.Twipsy = new Class({
 		this._makeTip();
 		var pos, edge, offset = {x: 0, y: 0};
 		switch(this.options.location){
-			case 'below':
+			case 'below': case 'bottom':
 				pos = 'centerBottom';
 				edge = 'centerTop';
 				offset.y = this.options.offset;
@@ -104,10 +104,13 @@ Bootstrap.Twipsy = new Class({
 
 	_makeTip: function(){
 		if (!this.tip){
-			this.tip = new Element('div.twipsy').addClass(this.options.location)
-				 .adopt(new Element('div.twipsy-arrow'))
+			var location = this.options.location;
+			if (location == 'above') location = 'top';    //bootstrap 2.0
+			if (location == 'below') location = 'bottom'; //bootstrap 2.0
+			this.tip = new Element('div.tooltip').addClass(location)
+				 .adopt(new Element('div.tooltip-arrow'))
 				 .adopt(
-				   new Element('div.twipsy-inner', {
+				   new Element('div.tooltip-inner', {
 				     html: this.options.override || this.options.getContent.apply(this, [this.element]) || this.options.fallback
 				   })
 				 );

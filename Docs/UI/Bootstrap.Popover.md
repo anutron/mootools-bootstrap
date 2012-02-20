@@ -5,7 +5,7 @@ Creates a large tool tip that works with [Bootstrap](http://twitter.github.com/b
 
 ### Extends
 
-- [Bootstrap.Twipsy][]
+- [Bootstrap.Tooltip][]
 
 Bootstrap.Popover Method: constructor
 -----------------------------
@@ -21,19 +21,19 @@ Bootstrap.Popover Method: constructor
 
 ### Options
 
-* all the options available for [Bootstrap.Twipsy][] plus:
-* location - (*string*) same as for [Bootstrap.Twipsy][] except defaults to `right`.
-* offset - (*object* or *number*) same as for [Bootstrap.Twipsy][] except defaults to `10`.
+* all the options available for [Bootstrap.Tooltip][] plus:
+* location - (*string*) same as for [Bootstrap.Tooltip][] except defaults to `right`.
+* offset - (*object* or *number*) same as for [Bootstrap.Tooltip][] except defaults to `10`.
 * getContent - (*function*) A function that returns the tip *content*. By default, it retrieves the value of the `content` option from the target element.
 * getTitle - (*function*) A function that returns the tip *title*. By default, it retrieves the value of the `title` option from the target element.
 * content - (*string*) The element property to use for the tip value. Defaults to `data-content`.
 
 ### Events
 
-* see [Bootstrap.Twipsy][]
+* see [Bootstrap.Tooltip][]
 
 ### Methods
 
-* see [Bootstrap.Twipsy][]
+* see [Bootstrap.Tooltip][]
 
-[Bootstrap.Twipsy]: Bootstrap-Twipsy.md
+[Bootstrap.Tooltip]: Bootstrap.Tooltip.md

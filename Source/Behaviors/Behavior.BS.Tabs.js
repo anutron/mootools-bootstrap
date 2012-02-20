@@ -26,7 +26,7 @@ provides: [Behavior.BS.Tabs]
 	});
 
 	Behavior.setFilterDefaults('BS.Tabs', {
-		'tabs-selector': '>li',
+		'tabs-selector': 'a:not(.dropdown-toggle)',
 		'sections-selector': '+.tab-content >',
 		'selectedClass': 'active',
 		smooth: false,

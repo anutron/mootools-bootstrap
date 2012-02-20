@@ -62,7 +62,7 @@ Bootstrap.Dropdown = new Class({
 		var el = e.target;
 		var open = el.getParent('li.open');
 		if (!el.match(this.options.ignore) || !open) this.hideAll();
-		if (this.element.contains(el) && (el.match('a.menu') || el.getParent('a.menu'))) {
+		if (this.element.contains(el) && (el.match('.dropdown-toggle') || el.getParent('.dropdown-toggle'))) {
 			e.preventDefault();
 			if (!open) this.show(el.getParent('li'));
 		}
