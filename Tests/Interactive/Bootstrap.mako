@@ -22,6 +22,11 @@
     <link href="${get_asset_url('Bootstrap','bootstrap.css', version)}" rel="stylesheet">
     <link href="${get_asset_url('Bootstrap','docs.css', version)}" rel="stylesheet">
     <link href="${get_asset_url('Bootstrap','prettify.css', version)}" rel="stylesheet">
+    <style>
+      a {
+        cursor: pointer;
+      }
+    </style>
 
   </head>
 
@@ -32,7 +37,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a href="#" class="brand">Bootstrap JS (for MooTools)</a>
+          <a class="brand">Bootstrap JS (for MooTools)</a>
           <ul class="nav">
             <li><a href="#overview">Overview</a></li>
             <li><a href="#modal">Modals</a></li>
@@ -44,7 +49,7 @@
           </ul>
           <ul data-behavior="BS.Dropdown" class="nav secondary-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle">Other Plugins<b class="caret"></b></a>
+              <a class="dropdown-toggle">Other Plugins<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#collapse">Collapse</a></li>
                 <li><a href="#carousel">Carousel</a></li>
@@ -112,15 +117,15 @@
 
 &lt;div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
   &lt;div class="modal-header">
-    &lt;a href="#" class="close">&times;&lt;/a>
+    &lt;a class="close">&times;&lt;/a>
     &lt;h3>Modal Heading&lt;/h3>
   &lt;/div>
   &lt;div class="modal-body">
     &lt;p>One fine body...&lt;/p>
   &lt;/div>
   &lt;div class="modal-footer">
-    &lt;a href="#" class="btn btn-primary dismiss stopEvent">Primary&lt;/a>
-    &lt;a href="#" class="btn btn-secondary dismiss stopEvent">Secondary&lt;/a>
+    &lt;a class="btn btn-primary dismiss stopEvent">Primary&lt;/a>
+    &lt;a class="btn btn-secondary dismiss stopEvent">Secondary&lt;/a>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -205,15 +210,15 @@
           <!-- sample modal content -->
           <div data-behavior="BS.Popup" class="modal fade" id="demoPopup">
             <div class="modal-header">
-              <a href="#" class="close">&times;</a>
+              <a class="close">&times;</a>
               <h3>Modal Heading</h3>
             </div>
             <div class="modal-body">
               <p>One fine body...</p>
             </div>
             <div class="modal-footer">
-              <a href="#" class="btn btn-primary dismiss stopEvent">Primary</a>
-              <a href="#" class="btn btn-secondary dismiss stopEvent">Secondary</a>
+              <a class="btn btn-primary dismiss stopEvent">Primary</a>
+              <a class="btn btn-secondary dismiss stopEvent">Secondary</a>
             </div>
           </div>
 
@@ -237,12 +242,12 @@
           <p>This plugin is for adding dropdown interaction to the bootstrap topbar or tabbed navigations.</p>
         </div>
         <div class="span8 columns">
-          <h3>Using Behavior.BS.Dropdown</h3>
+          <h2>Using Behavior.BS.Dropdown</h2>
           <p>To quickly add dropdown functionality to any nav element, use the <code>Dropdown</code> behavior. Any valid bootstrap dropdown inside the container will automatically be activated.</p>
 <pre class="prettyprint linenums">&lt;-- a simple example -->
 &lt;ul data-behavior="BS.Dropdown" class="navbar">
   &lt;li class="dropdown">
-    &lt;a href="#" class="dropdown-toggle">Menu2&lt;/a>
+    &lt;a class="dropdown-toggle">Menu2&lt;/a>
     &lt;ul class="dropdown-menu">
       &lt;li>&lt;a>item1&lt;/a>&lt;/li>
       &lt;li>&lt;a>item2&lt;/a>&lt;/li>
@@ -253,85 +258,132 @@
 
 &lt;-- an example with numerous menus -->
 
-&lt;div class="navbar-wrapper" data-behavior="BS.Dropdown">
-  &lt;div id="navbar-example" class="navbar">
-    &lt;div class="navbar-inner">
-      &lt;div class="container">
-        &lt;a href="#" class="brand">Project Name&lt;/a>
-        &lt;ul class="nav">
-          &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
-          &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
-        &lt;/ul>
-        &lt;form action="" class="navbar-search">
-          &lt;input type="text" class="search-query" placeholder="Search" />
-        &lt;/form>
-        &lt;ul class="nav secondary-nav">
-          &lt;li class="dropdown">
-            &lt;a href="#" class="dropdown-toggle">Dropdown 1
-              &lt;b class="caret">&lt;/b>
-            &lt;/a>
-            &lt;ul class="dropdown-menu">
-              &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
-              &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
-              &lt;li class="divider-horizontal">&lt;/li>
-              &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
+&lt;div id="navbar-example" class="navbar navbar-static" data-behavior="BS.Dropdown">
+  &lt;div class="navbar-inner">
+    &lt;div class="container" style="width:auto">
+
+      &lt;a class="brand">Project Name&lt;/a>
+      &lt;ul class="nav">
+        &lt;li>&lt;a>Link&lt;/a>&lt;/li>
+        &lt;li class="dropdown">
+          &lt;a class="dropdown-toggle">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;ul class="dropdown-menu">
+            &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
+            &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
+
+            &lt;li class="divider">&lt;/li>
+            &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
           &lt;/ul>
-          &lt;/li>
-          &lt;li class="dropdown">
-            &lt;a class="dropdown-toggle">Dropdown 2
-              &lt;b class="caret">&lt;/b>
-            &lt;/a>
-            &lt;ul class="dropdown-menu">
-              &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
-              &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
-              &lt;li class="divider-horizontal">&lt;/li>
-              &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
-            &lt;/ul>
-          &lt;/li>
-        &lt;/ul>
-      &lt;/div>
+        &lt;/li>
+      &lt;/ul>
+
+      &lt;ul class="nav pull-right">
+        &lt;li class="dropdown">
+          &lt;a class="dropdown-toggle">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;ul class="dropdown-menu">
+            &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
+
+            &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
+            &lt;li class="divider">&lt;/li>
+            &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/li>
+      &lt;/ul>
     &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
+  &lt;/div>&lt;!-- /navbar-inner -->
+&lt;/div>&lt;!-- /navbar-example --></pre>
           </div>
         </div>
-          <h3>Demo</h3>
-          <div class="navbar-wrapper" data-behavior="BS.Dropdown">
-            <div id="navbar-example" class="navbar">
-              <div class="navbar-inner">
-                <div class="container">
-                  <a href="#" class="brand">Project Name</a>
-                  <ul class="nav">
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+        <h2>Demo</h2>
+
+        <h3>Navbar</h3>
+
+        <div id="navbar-example" class="navbar navbar-static" data-behavior="BS.Dropdown">
+          <div class="navbar-inner">
+            <div class="container" style="width:auto">
+
+              <a class="brand">Project Name</a>
+              <ul class="nav">
+                <li><a>Link</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a>Secondary link</a></li>
+                    <li><a>Something else here</a></li>
+
+                    <li class="divider"></li>
+                    <li><a>Another link</a></li>
                   </ul>
-                  <form action="" class="navbar-search">
-                    <input type="text" class="search-query" placeholder="Search" />
-                  </form>
-                  <ul class="nav secondary-nav">
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a>Secondary link</a></li>
-                        <li><a>Something else here</a></li>
-                        <li class="divider-horizontal"></li>
-                        <li><a>Another link</a></li>
-                    </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a>Secondary link</a></li>
-                        <li><a>Something else here</a></li>
-                        <li class="divider-horizontal"></li>
-                        <li><a>Another link</a></li>
-                      </ul>
-                    </li>
+                </li>
+              </ul>
+
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a>Secondary link</a></li>
+
+                    <li><a>Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a>Another link</a></li>
                   </ul>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
-          </div>
+          </div><!-- /navbar-inner -->
+        </div><!-- /navbar-example -->
+
+        <h3>Buttons with dropdown</h3>
+
+        <div class="btn-toolbar" style="margin-top: 18px;" data-behavior="BS.Dropdown">
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <a class="btn dropdown-toggle">Action <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <a class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+              <li class="divider"></li>
+              <li><a>Separated link</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <a class="btn btn-danger dropdown-toggle">Danger <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+
+          <!-- Split buttons -->
+          <div class="btn-group">
+            <a class="btn btn-success">Action</a>
+            <a class="btn btn-success dropdown-toggle"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <a class="btn btn-info">Action</a>
+            <a class="btn btn-info dropdown-toggle"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+              <li><a>Something else here</a></li>
+              <li class="divider"></li>
+              <li><a>Separated link</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+
+        </div><!-- /btn-toolbar -->
 
     </section>
 
@@ -548,10 +600,10 @@
           <h3>Demo</h3>
           <div class="well">
             <p class="muted">Tight pants next level keffiyeh
-              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-location="above" title='Some title text'>you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
-              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'below', 'offset':8" title='Another tooltip'>have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A
-              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'left', 'offset':-8" title='Another one here too'>really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin
-              <a href="#" data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'right', 'offset':8" title='The last tip!'>twitter handle</a> freegan cred raw denim single-origin coffee viral.
+              <a data-behavior='BS.Tooltip' data-bs-tooltip-location="above" title='Some title text'>you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
+              <a data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'below', 'offset':8" title='Another tooltip'>have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A
+              <a data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'left', 'offset':-8" title='Another one here too'>really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin
+              <a data-behavior='BS.Tooltip' data-bs-tooltip-options="'location': 'right', 'offset':8" title='The last tip!'>twitter handle</a> freegan cred raw denim single-origin coffee viral.
             </p>
           </div>
         </div>
@@ -640,7 +692,7 @@
             </tbody>
           </table>
           <h3>Demo</h3>
-          <a href="#" class="btn btn-danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+          <a class="btn btn-danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
         </div>
       </div>
     </section>
@@ -671,20 +723,20 @@
 &lt;/div></pre>
           <h3>Demo</h3>
           <div class="alert alert-warning fade in" data-alert="alert" >
-            <a class="close" href="#" data-trigger="nix" data-nix-options="
+            <a class="close" data-trigger="nix" data-nix-options="
               'target': '!div.alert'
             ">&times;</a>
             <p><strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.</p>
           </div>
           <div class="alert block-message alert-error fade in" data-alert="alert" >
-            <a class="close" href="#" data-trigger="nix" data-nix-options="
+            <a class="close" data-trigger="nix" data-nix-options="
               'target': '!div.alert'
             ">&times;</a>
             <p><strong>Oh snap! You got an error!</strong> Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
             <div class="alert-actions">
-              <a class="btn btn-small" href="#" data-trigger="nix" data-nix-options="
+              <a class="btn btn-small" data-trigger="nix" data-nix-options="
                 'target': '!div.alert'
-              ">Take this action</a> <a class="btn btn-small" href="#"
+              ">Take this action</a> <a class="btn btn-small"
                 data-trigger="nix" data-nix-options="
                   'target': '!div.alert'
                 ">Or do this</a>
@@ -755,7 +807,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a>Back to top</a></p>
         <p>
           Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
           Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.

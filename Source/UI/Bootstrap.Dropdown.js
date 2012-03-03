@@ -62,9 +62,12 @@ Bootstrap.Dropdown = new Class({
 		var el = e.target;
 		var open = el.getParent('.open');
 		if (!el.match(this.options.ignore) || !open) this.hideAll();
-		if (this.element.contains(el) && (el.match('.dropdown-toggle') || el.getParent('.dropdown-toggle'))) {
-			e.preventDefault();
-			if (!open) this.show(el.getParent());
+		if (this.element.contains(el)) {
+			var parent = el.match('.dropdown-toggle') ? el.getParent() : el.getParent('.dropdown-toggle');
+			if (parent) {
+				e.preventDefault();
+				if (!open) this.show(parent);
+			}
 		}
 	}
 });
