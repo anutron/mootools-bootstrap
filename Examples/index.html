@@ -275,86 +275,78 @@
 
 &lt;-- an example with numerous menus -->
 
-&lt;div class="navbar-wrapper" data-behavior="BS.Dropdown">
-  &lt;div id="navbar-example" class="navbar">
-    &lt;div class="navbar-inner">
-      &lt;div class="container">
-        &lt;a href="#" class="brand">Project Name&lt;/a>
-        &lt;ul class="nav">
-          &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
-          &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
-        &lt;/ul>
-        &lt;form action="" class="navbar-search">
-          &lt;input type="text" class="search-query" placeholder="Search" />
-        &lt;/form>
-        &lt;ul class="nav secondary-nav">
-          &lt;li class="dropdown">
-            &lt;a href="#" class="dropdown-toggle">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
-            &lt;ul class="dropdown-menu">
-              &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
-              &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
-              &lt;li class="divider-horizontal">&lt;/li>
-              &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
-          &lt;/ul>
-          &lt;/li>
-          &lt;li class="dropdown">
-            &lt;a href="#" class="dropdown-toggle">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
-            &lt;ul class="dropdown-menu">
-              &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
-              &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
-              &lt;li class="divider-horizontal">&lt;/li>
-              &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
-            &lt;/ul>
-          &lt;/li>
-        &lt;/ul>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
+&lt;div id="navbar-example" class="navbar navbar-static" data-behavior="BS.Dropdown">
+  &lt;div class="navbar-inner">
+    &lt;div class="container" style="width:auto">
 
-&lt;/div></pre>
+      &lt;a href="#" class="brand">Project Name&lt;/a>
+      &lt;ul class="nav">
+        &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
+        &lt;li class="dropdown">
+          &lt;a href="#" class="dropdown-toggle">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;ul class="dropdown-menu">
+            &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
+            &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
+
+            &lt;li class="divider">&lt;/li>
+            &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/li>
+      &lt;/ul>
+
+      &lt;ul class="nav pull-right">
+        &lt;li class="dropdown">
+          &lt;a href="#" class="dropdown-toggle">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;ul class="dropdown-menu">
+            &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
+
+            &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
+            &lt;li class="divider">&lt;/li>
+            &lt;li>&lt;a>Another link&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>&lt;!-- /navbar-inner -->
+&lt;/div>&lt;!-- /navbar-example --></pre>
           </div>
         </div>
-          <h3>Demo</h3>
-          <div class="navbar-wrapper" data-behavior="BS.Dropdown">
-            <div id="navbar-example" class="navbar">
-              <div class="navbar-inner">
-                <div class="container">
 
-                  <a href="#" class="brand">Project Name</a>
-                  <ul class="nav">
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+        <h3>Demo</h3>
+        <div id="navbar-example" class="navbar navbar-static" data-behavior="BS.Dropdown">
+          <div class="navbar-inner">
+            <div class="container" style="width:auto">
+
+              <a href="#" class="brand">Project Name</a>
+              <ul class="nav">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a>Secondary link</a></li>
+                    <li><a>Something else here</a></li>
+
+                    <li class="divider"></li>
+                    <li><a>Another link</a></li>
                   </ul>
-                  <form action="" class="navbar-search">
-                    <input type="text" class="search-query" placeholder="Search" />
-                  </form>
-                  <ul class="nav secondary-nav">
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a>Secondary link</a></li>
-                        <li><a>Something else here</a></li>
+                </li>
+              </ul>
 
-                        <li class="divider-horizontal"></li>
-                        <li><a>Another link</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a>Secondary link</a></li>
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a>Secondary link</a></li>
 
-                        <li><a>Something else here</a></li>
-                        <li class="divider-horizontal"></li>
-                        <li><a>Another link</a></li>
-                      </ul>
-                    </li>
+                    <li><a>Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a>Another link</a></li>
                   </ul>
-                </div>
-              </div>
-
+                </li>
+              </ul>
             </div>
-          </div>
+          </div><!-- /navbar-inner -->
+        </div><!-- /navbar-example -->
 
     </section>
 
