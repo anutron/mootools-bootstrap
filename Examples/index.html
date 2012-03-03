@@ -258,7 +258,7 @@
 
         </div>
         <div class="span8 columns">
-          <h3>Using Behavior.BS.Dropdown</h3>
+          <h2>Using Behavior.BS.Dropdown</h2>
           <p>To quickly add dropdown functionality to any nav element, use the <code>Dropdown</code> behavior. Any valid bootstrap dropdown inside the container will automatically be activated.</p>
 <pre class="prettyprint linenums">&lt;-- a simple example -->
 &lt;ul data-behavior="BS.Dropdown" class="nav">
@@ -312,7 +312,10 @@
           </div>
         </div>
 
-        <h3>Demo</h3>
+        <h2>Demo</h2>
+
+        <h3>Navbar</h3>
+
         <div id="navbar-example" class="navbar navbar-static" data-behavior="BS.Dropdown">
           <div class="navbar-inner">
             <div class="container" style="width:auto">
@@ -347,6 +350,59 @@
             </div>
           </div><!-- /navbar-inner -->
         </div><!-- /navbar-example -->
+
+
+        <h3>Boutons with dropdown</h3>
+
+        <div class="btn-toolbar" style="margin-top: 18px;" data-behavior="BS.Dropdown">
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <a class="btn dropdown-toggle" href="#">Action <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <a class="btn btn-primary dropdown-toggle" href="#">Action <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <a class="btn btn-danger dropdown-toggle" href="#">Danger <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+
+          <!-- Split buttons -->
+          <div class="btn-group">
+            <a class="btn btn-success" href="#">Action</a>
+            <a class="btn btn-success dropdown-toggle" href="#"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <a class="btn btn-info" href="#">Action</a>
+            <a class="btn btn-info dropdown-toggle" href="#"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+
+        </div><!-- /btn-toolbar -->
 
     </section>
 
