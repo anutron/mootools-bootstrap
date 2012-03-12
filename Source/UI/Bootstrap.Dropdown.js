@@ -38,7 +38,7 @@ Bootstrap.Dropdown = new Class({
 	},
 
 	hideAll: function(){
-		var els = this.element.getElements('li.open').removeClass('open');
+		var els = this.element.getElements('.open').removeClass('open');
 		this.fireEvent('hide', els);
 		return this;
 	},
@@ -60,11 +60,20 @@ Bootstrap.Dropdown = new Class({
 
 	_handle: function(e){
 		var el = e.target;
-		var open = el.getParent('li.open');
+		var open = el.getParent('.open');
 		if (!el.match(this.options.ignore) || !open) this.hideAll();
-		if (this.element.contains(el) && (el.match('.dropdown-toggle') || el.getParent('.dropdown-toggle'))) {
-			e.preventDefault();
-			if (!open) this.show(el.getParent('li'));
+		if (this.element.contains(el)) {
+			var parent = null;
+			if (el.match('.dropdown-toggle')) {
+				parent = el.getParent();
+			} else if (parent = el.getParent('.dropdown-toggle')) {
+				parent = parent.getParent()
+			}
+
+			if (parent) {
+				e.preventDefault();
+				if (!open) this.show(parent);
+			}
 		}
 	}
 });
