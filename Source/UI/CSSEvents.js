@@ -24,7 +24,7 @@ Browser.Features.getCSSTransition = function(){
 	// set CSS transition event type
 	if ( Browser.Features.cssTransition ) {
 		Browser.Features.transitionEnd = "TransitionEnd";
-		if ( Browser.webkit || Browser.chrome ) {
+		if ( Browser.safari || Browser.chrome ) {
 			Browser.Features.transitionEnd = "webkitTransitionEnd";
 		} else if ( Browser.firefox ) {
 			Browser.Features.transitionEnd = "transitionend";
