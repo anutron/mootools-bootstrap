@@ -13,6 +13,7 @@ requires:
  - /Bootstrap
  - /CSSEvents
  - More/Element.Position
+ - More/Element.Shortcuts
  - Behavior/Behavior
 
 provides: [Bootstrap.Twipsy, Bootstrap.Tooltip]
