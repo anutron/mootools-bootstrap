@@ -33,4 +33,13 @@ provides: [Behavior.BS.Tabs]
 		smoothSize: false
 	});
 
+	Behavior.addGlobalPlugin('BS.Tabs', 'BS.Tabs.CSS', function(el, api, instance){
+		instance.addEvent('active', function(index, section, tab){
+			el.getElements('.active').removeClass('active');
+			tab.getParent('li').addClass('active');
+			var dropdown = tab.getParent('.dropdown');
+			if (dropdown) dropdown.addClass('active');
+		});
+	});
+
 })();
