@@ -44,6 +44,9 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 	initialize: function(el, options){
 		this.element = document.id(el);
 		this.setOptions(options);
+		var location = this.options.location;
+		if (location == 'above') this.options.location = 'top';    //bootstrap 2.0
+		if (location == 'below') this.options.location = 'bottom'; //bootstrap 2.0
 		this._attach();
 	},
 
