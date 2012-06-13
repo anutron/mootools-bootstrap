@@ -10,6 +10,7 @@ license: MIT-style license.
 authors: [Aaron Newton]
 
 requires:
+ - More/Fx.Reveal
  - More-Behaviors/Behavior.FormValidator
 
 provides: [Behavior.BS.FormValidator]
@@ -20,8 +21,8 @@ provides: [Behavior.BS.FormValidator]
 Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 	setup: function(element, api, instance){
 		var original = {
-			showError: instance.showError,
-			hideError: instance.hideError
+			showError: instance.options.showError,
+			hideError: instance.options.hideError
 		};
 		instance.setOptions({
 			showError: function(){},
@@ -31,36 +32,39 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 		instance.errorPrefix = '';
 		instance.addEvents({
 			showAdvice: function(field, advice, className){
-				var inputParent = field.getParent('.input'),
-				    clearfixParent = inputParent.getParent('.clearfix');
+				var cls = field.hasClass('warning') || field.hasClass('warn-' + className) ? 'warn' : 'error',
+				    inputParent = field.getParent('.controls'),
+				    clearfixParent = inputParent ? inputParent.getParent('.control-group') : null;
 				if (!inputParent || !clearfixParent){
 					original.showError(advice);
 				} else {
-					field.addClass('error');
+					field.addClass(cls);
 					var help = inputParent.getElement('div.advice');
 					if (!help){
 						inputParent.getElements('span.help-inline').setStyle('display', 'none');
 						help = new Element('span.help-inline.advice.auto-created', {
-							html: advice.get('html')
-						}).inject(inputParent);
+							html: (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')
+						}).hide().inject(field, 'after').reveal();
 					}
 					help.removeClass('hide');
 					help.set('title', advice.get('html'));
-					clearfixParent.addClass('error');
+					clearfixParent.addClass(cls);
 				}
 			},
 			hideAdvice: function(field, advice, className){
-				var inputParent = field.getParent('.input'),
-				    clearfixParent = inputParent.getParent('.clearfix');
+				var cls = field.hasClass('warnOnly') || field.hasClass('warn-' + className) ? 'warn' : 'error',
+				    inputParent = field.getParent('.controls'),
+				    clearfixParent = inputParent ? inputParent.getParent('.control-group') : null;
 				if (!inputParent || !clearfixParent){
 					original.hideError(advice);
 				} else {
-					field.removeClass('error');
+					field.removeClass(cls);
 					var help = inputParent.getElement('span.advice');
-					if (help.hasClass('auto-created')) help.destroy();
-					else help.set('html', '');
-					inputParent.getElements('span.help-inline').setStyle('display', '');
-					clearfixParent.removeClass('error');
+					inputParent.getElements('span.help-inline').dissolve().getLast().get('reveal').chain(function(){
+						if (help.hasClass('auto-created')) help.destroy();
+						else help.set('html', '');
+					});
+					clearfixParent.removeClass(cls);
 				}
 			}
 		});
