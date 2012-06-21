@@ -126,6 +126,10 @@ Bootstrap.Popup = new Class({
 	},
 
 	hide: function(event, clicked){
+		if (clicked) {
+			var immediateParentPopup = clicked.getParent('[data-behavior~=BS.Popup]');
+			if (immediateParentPopup && immediateParentPopup != this.element) return;
+		}
 		if (!this.visible || this.animating) return;
 		this.animating = true;
 		if (event && clicked && clicked.hasClass('stopEvent')){
