@@ -33,7 +33,7 @@ Behavior.addGlobalPlugin("FormRequest", "Popup.FormRequest", {
 			instance.addEvents({
 				success: function(){
 					var formRequestAPI = new BehaviorAPI(element, 'formrequest');
-					if (formRequestAPI.getAs(Boolean, 'closeOnSuccess') !== false || api.get(Boolean, 'closeOnSuccess') !== false || dismissed){
+					if ((formRequestAPI.getAs(Boolean, 'closeOnSuccess') !== false && api.getAs(Boolean, 'closeOnSuccess') !== false) || dismissed){
 						element.getParent('.modal').getBehaviorResult('BS.Popup').hide();
 					}
 				}
