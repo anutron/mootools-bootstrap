@@ -27,6 +27,7 @@ Bootstrap.Popover Method: constructor
 * closeOnEsc - (*boolean*) When `true` (the default) the popup is closed when the user hits escape.
 * mask - (*boolean*) When `true` (the default) a mask is placed below the popup element.
 * animate - (*boolean*) When `true` (the default) the mask and the window are displayed with a transition effect.
+* changeDisplayValue (*boolean*) When `true` (the default), the popup element's `display` property is toggled between `block` and `none` on the end of the transitions.
 
 ### Events
 

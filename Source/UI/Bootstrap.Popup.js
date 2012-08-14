@@ -41,7 +41,8 @@ Bootstrap.Popup = new Class({
 		closeOnClickOut: true,
 		closeOnEsc: true,
 		mask: true,
-		animate: true
+		animate: true,
+		changeDisplayValue: true
 	},
 
 	initialize: function(element, options){
@@ -85,6 +86,7 @@ Bootstrap.Popup = new Class({
 		this._makeMask();
 		this._mask.inject(document.body);
 		this.animating = true;
+		if (this.options.changeDisplayValue) this.element.show();
 		if (this._checkAnimate()){
 			this.element.offsetWidth; // force reflow
 			this.element.addClass('in');
@@ -109,6 +111,7 @@ Bootstrap.Popup = new Class({
 			this.fireEvent('show', this.element);
 		} else {
 			this.fireEvent('hide', this.element);
+			if (this.options.changeDisplayValue) this.element.hide();
 			if (!this.options.persist){
 				this.destroy();
 			} else {
