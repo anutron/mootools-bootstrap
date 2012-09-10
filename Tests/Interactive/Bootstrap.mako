@@ -572,7 +572,7 @@
                 <td>delay before hiding tooltip (ms)</td>
               </tr>
               <tr>
-                <td>placement</td>
+                <td>location</td>
                 <td>string</td>
                 <td>'above'</td>
                 <td>how to position the tooltip - above | below | left | right</td>
