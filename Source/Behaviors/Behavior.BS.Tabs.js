@@ -40,6 +40,10 @@ provides: [Behavior.BS.Tabs]
 			var dropdown = tab.getParent('.dropdown');
 			if (dropdown) dropdown.addClass('active');
 		});
+		var now = instance.now;
+		var tab = instance.tabs[now];
+		var section = tab.retrieve('section');
+		instance.fireEvent('active', [now, section, tab]);
 	});
 
 })();
