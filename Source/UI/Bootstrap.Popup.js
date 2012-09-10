@@ -162,17 +162,13 @@ Bootstrap.Popup = new Class({
 	_makeMask: function(){
 		if (this.options.mask){
 			if (!this._mask){
-				this._mask = new Element('div.modal-backdrop', {
-					events: {
-						click: this.bound.hide
-					}
-				});
-				if (this._checkAnimate()){
-					this._mask.addClass('fade');
-				}
+				this._mask = new Element('div.modal-backdrop');
+				if (this._checkAnimate()) this._mask.addClass('fade');
 			}
-		} else if (this.options.closeOnClickOut){
-			document.id(document.body).addEvent('click', this.bound.hide);
+		}
+		if (this.options.closeOnClickOut){
+			if (this._mask) this._mask.addEvent('click', this.bound.hide);
+			else document.id(document.body).addEvent('click', this.bound.hide);
 		}
 	}
 

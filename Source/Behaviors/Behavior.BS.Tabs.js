@@ -44,6 +44,22 @@ provides: [Behavior.BS.Tabs]
 		var tab = instance.tabs[now];
 		var section = tab.retrieve('section');
 		instance.fireEvent('active', [now, section, tab]);
+
+		var sections = instance.tabs.map(function(tab){
+			return tab.retrieve('section');
+		});
+
+		el.addEvent('click:relay(a[href^=#])', function(event, link){
+			if (link.get('href') == "#") return;
+			var target = el.getElement(link.get('href'));
+			if (instance.tabs.contains(target)) return;
+			if (!target) api.warn('Could not switch tab; no section found for ' + link.get('href'));
+			if (sections.contains(target)) {
+				event.preventDefault();
+				instance.show(sections.indexOf(target));
+			}
+		});
+
 	});
 
 })();
