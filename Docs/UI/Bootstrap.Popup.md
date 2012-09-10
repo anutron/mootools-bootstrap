@@ -28,6 +28,7 @@ Bootstrap.Popover Method: constructor
 * mask - (*boolean*) When `true` (the default) a mask is placed below the popup element.
 * animate - (*boolean*) When `true` (the default) the mask and the window are displayed with a transition effect.
 * changeDisplayValue (*boolean*) When `true` (the default), the popup element's `display` property is toggled between `block` and `none` on the end of the transitions.
+* focusOnShow (*string*) A selector (string) to find an element relative to the root of the popup whose `select` method will be called on show. Defaults to `input[type=text], select, textarea`.
 
 ### Events
 

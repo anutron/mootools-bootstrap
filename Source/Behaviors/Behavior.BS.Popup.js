@@ -22,6 +22,7 @@ provides: [Behavior.BS.Popup]
 Behavior.addGlobalFilters({
 	'BS.Popup': {
 		defaults: {
+			focusOnShow: "input[type=text], select, textarea",
 			hide: false,
 			animate: true,
 			closeOnEsc: true,
@@ -45,6 +46,12 @@ Behavior.addGlobalFilters({
 			popup.addEvent('destroy', function(){
 				api.cleanup(el);
 			});
+			if (api.get('focusOnShow')) {
+				popup.addEvent('show', function(){
+					var input = document.id(popup).getElement(api.get('focusOnShow'));
+					if (input) input.select();
+				});
+			}
 			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
 				popup.show();
 			}

@@ -176,6 +176,12 @@
                <td>false</td>
                <td>Closes the modal when escape key is pressed</td>
              </tr>
+             <tr>
+               <td>focusOnShow</td>
+               <td>string</td>
+               <td>input[type=text], select, textarea</td>
+               <td>A selector (string) to find an element relative to the root of the popup whose `select` method will be called on show.</td>
+             </tr>
             </tbody>
           </table>
           <p>

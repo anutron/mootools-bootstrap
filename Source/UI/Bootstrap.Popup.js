@@ -67,6 +67,10 @@ Bootstrap.Popup = new Class({
 		}
 	},
 
+	toElement: function(){
+		return this.element;
+	},
+
 	_checkAnimate: function(){
 		var check = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
 		if (!check) {
