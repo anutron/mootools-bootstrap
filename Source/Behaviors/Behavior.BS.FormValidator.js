@@ -44,8 +44,9 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 						inputParent.getElements('span.help-inline').setStyle('display', 'none');
 						help = new Element('span.help-inline.advice.auto-created', {
 							html: (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')
-						}).hide().inject(field, 'after').reveal();
+						}).hide().inject(field, 'after');
 					}
+					help.set('html', (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')).reveal();
 					help.removeClass('hide');
 					help.set('title', advice.get('html'));
 					clearfixParent.addClass(cls);
@@ -59,8 +60,8 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 					original.hideError(advice);
 				} else {
 					field.removeClass(cls);
-					var help = inputParent.getElement('span.advice');
-					inputParent.getElements('span.help-inline').dissolve().getLast().get('reveal').chain(function(){
+					var help = inputParent.getElement('.advice');
+					inputParent.getElements('.help-inline, .help-block').dissolve().getLast().get('reveal').chain(function(){
 						if (help.hasClass('auto-created')) help.destroy();
 						else help.set('html', '');
 					});
