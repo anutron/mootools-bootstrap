@@ -35,15 +35,19 @@ Bootstrap.Popover = new Class({
 
 	_makeTip: function(){
 		if (!this.tip){
+			var title = this.options.getTitle.apply(this, [this.element]) || this.options.fallback;
+			var content = this.options.getContent.apply(this, [this.element]);
+
+			var titleWrapper = new Element('h3.popover-title');
+
+			if (typeOf(title) == "element") titleWrapper.adopt(title);
+			else titleWrapper.set('html', title);
+			if (typeOf(content) != "element") content = new Element('p', { html: content});
 			this.tip = new Element('div.popover').addClass(this.options.location)
 				 .adopt(new Element('div.arrow'))
 				 .adopt(
-				   new Element('div.popover-inner').adopt(
-				     new Element('h3.popover-title', { html: this.options.getTitle.apply(this, [this.element]) || this.options.fallback })
-				   ).adopt(
-				     new Element('div.popover-content').adopt(
-				       new Element('p', { html: this.options.getContent.apply(this, [this.element])})
-				     )
+				   new Element('div.popover-inner').adopt(titleWrapper).adopt(
+				     new Element('div.popover-content').adopt(content)
 				   )
 				 );
 			if (this.options.animate) this.tip.addClass('fade');

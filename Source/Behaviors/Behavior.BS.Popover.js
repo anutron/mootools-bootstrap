@@ -21,6 +21,8 @@ provides: [Behavior.BS.Popover]
 Behavior.addGlobalFilters({
 	'BS.Popover': {
 		defaults: {
+			contentElement: null,
+			titleElement: null,
 		  onOverflow: false,
 			location: 'right', //below, left, right
 			animate: true,
@@ -44,8 +46,19 @@ Behavior.addGlobalFilters({
 					trigger: String
 				})
 			);
-			options.getContent = Function.from(api.get('content'));
-			options.getTitle = Function.from(api.get('title') || el.get('title'));
+
+			var getter = function(which){
+				if (api.get(which + 'Element')) {
+					var target = el.getElement(api.get(which + 'Element'));
+					if (!target) api.fail('could not find ' + which + ' for popup');
+					return target.setStyle('display', 'block');
+				} else {
+					return api.get(which) || el.get(which);
+				}
+			};
+
+			options.getContent = getter.pass('content');
+			options.getTitle = getter.pass('title');
 			var tip = new Bootstrap.Popover(el, options);
 			if (api.event) tip._enter();
 			api.onCleanup(tip.destroy.bind(tip));

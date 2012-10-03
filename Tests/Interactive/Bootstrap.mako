@@ -31,7 +31,6 @@
   </head>
 
   <body id="bootstrap-js">
-    <a href="http://github.com/anutron/mootools-bootstrap"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:999999;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
     <!-- Topbar
     ================================================== -->
     <div class="navbar navbar-fixed-top">
@@ -654,6 +653,18 @@
                 <td>the content of the popover</td>
               </tr>
               <tr>
+                <td>titleElement</td>
+                <td>string</td>
+                <td>--</td>
+                <td>A css selector relative to the behavior element that should be used for the title of the popup.</td>
+              </tr>
+              <tr>
+                <td>contentElement</td>
+                <td>string</td>
+                <td>--</td>
+                <td>A css selector relative to the behavior element that should be used for the content of the popup.</td>
+              </tr>
+              <tr>
                 <td>animate</td>
                 <td>boolean</td>
                 <td>true</td>
@@ -672,9 +683,9 @@
                 <td>delay before hiding tooltip (ms)</td>
               </tr>
               <tr>
-                <td>placement</td>
+                <td>location</td>
                 <td>string</td>
-                <td>'right'</td>
+                <td>'above'</td>
                 <td>how to position the tooltip - above | below | left | right</td>
               </tr>
               <tr>
@@ -697,8 +708,28 @@
               </tr>
             </tbody>
           </table>
-          <h3>Demo</h3>
+
+          <p>
+             <span class="label notice">Notice</span>
+             If you use the <code>contentTitle</code> or <code>contentElement</code> the expectation is that these elements are hidden in the DOM. The tip will pull these elements into the tip body and set their display to <code>block</code> when the tip is activated.
+          </p>
+
+
+          <h3>Demos</h3>
           <a class="btn btn-danger" data-behavior="BS.Popover" title="A Title" data-bs-popover-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+
+          <a class="btn btn-danger" data-behavior="BS.Popover" data-bs-popover-options="
+            'contentElement': '!div #popContent',
+            'titleElement': '!div #popTitle'
+          ">hover for popover with fancy html content</a>
+          <div id="popTitle" class="hide"><span class="icon-ok"></span> I've got HTML content!</div>
+          <div id="popContent" class="hide">
+            <ul>
+              <li>And I have</li>
+              <li>fancy html</li>
+              <li>too!</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
