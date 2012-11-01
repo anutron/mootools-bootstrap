@@ -38,18 +38,23 @@ Bootstrap.Popover = new Class({
 			var title = this.options.getTitle.apply(this, [this.element]) || this.options.fallback;
 			var content = this.options.getContent.apply(this, [this.element]);
 
-			var titleWrapper = new Element('h3.popover-title');
+			var inner = new Element('div.popover-inner');
 
-			if (typeOf(title) == "element") titleWrapper.adopt(title);
-			else titleWrapper.set('html', title);
+
+			if (title) {
+				var titleWrapper = new Element('h3.popover-title');
+				if (typeOf(title) == "element") titleWrapper.adopt(title);
+				else titleWrapper.set('html', title);
+				inner.adopt(titleWrapper);
+			} else {
+				inner.addClass('no-title');
+			}
+
 			if (typeOf(content) != "element") content = new Element('p', { html: content});
+			inner.adopt(new Element('div.popover-content').adopt(content));
 			this.tip = new Element('div.popover').addClass(this.options.location)
 				 .adopt(new Element('div.arrow'))
-				 .adopt(
-				   new Element('div.popover-inner').adopt(titleWrapper).adopt(
-				     new Element('div.popover-content').adopt(content)
-				   )
-				 );
+				 .adopt(inner);
 			if (this.options.animate) this.tip.addClass('fade');
 			if (Browser.Features.cssTransition && this.tip.addEventListener){
 				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
