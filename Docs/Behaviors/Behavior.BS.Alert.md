@@ -12,6 +12,6 @@ Alerts in [Boostrap](http://twitter.github.com/bootstrap/#alerts) have a simple 
 	<div class="alert-message warning fade in" data-alert="alert">
 		<a class="close" href="#" data-trigger="nix" data-nix-options="
 			'target': '!div.alert-message'
-		">×</a>
+		">x</a>
 		<p><strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.</p>
 	</div>

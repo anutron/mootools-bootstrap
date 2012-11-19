@@ -15,7 +15,7 @@ A behavior filter to instantiate [Bootstrap](http://twitter.github.com/bootstrap
 
 	<div data-behavior="BS.Popup" class="modal hide" id="demoPopup">
 		<div class="modal-header">
-			<a href="#" class="close">×</a>
+			<a href="#" class="close">x</a>
 			<h3>Modal Heading</h3>
 		</div>
 		<div class="modal-body">
