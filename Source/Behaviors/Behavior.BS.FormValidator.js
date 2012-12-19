@@ -57,9 +57,10 @@ provides: [Behavior.BS.FormValidator]
 						var help = fieldDetails.inputParent.getElement('div.advice');
 						if (!help){
 							fieldDetails.inputParent.getElements('span.help-inline').setStyle('display', 'none');
+							var closestParent = field.getParent();
 							help = new Element('span.help-inline.advice.auto-created', {
 								html: (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')
-							}).hide().inject(field, 'after');
+							}).hide().inject(closestParent.hasClass('input-append') ? closestParent  : field, 'after');
 						}
 						help.set('html', (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')).reveal();
 						help.removeClass('hide');
