@@ -42,9 +42,10 @@ Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
 					var help = inputParent.getElement('div.advice');
 					if (!help){
 						inputParent.getElements('span.help-inline').setStyle('display', 'none');
+						var eClosestParent = field.getParent();
 						help = new Element('span.help-inline.advice.auto-created', {
 							html: (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')
-						}).hide().inject(field, 'after').reveal();
+						}).hide().inject(eClosestParent.hasClass('input-append')?eClosestParent:field, 'after').reveal();
 					}
 					help.removeClass('hide');
 					help.set('title', advice.get('html'));
