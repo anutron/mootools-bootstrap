@@ -48,7 +48,7 @@
           </ul>
           <ul data-behavior="BS.Dropdown" class="nav secondary-nav">
             <li class="dropdown">
-              <a class="dropdown-toggle">Other Plugins<b class="caret"></b></a>
+              <a class="dropdown-toggle" data-toggle="dropdown">Other Plugins<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#collapse">Collapse</a></li>
                 <li><a href="#carousel">Carousel</a></li>
@@ -250,9 +250,9 @@
           <h2>Using Behavior.BS.Dropdown</h2>
           <p>To quickly add dropdown functionality to any nav element, use the <code>Dropdown</code> behavior. Any valid bootstrap dropdown inside the container will automatically be activated.</p>
 <pre class="prettyprint linenums">&lt;-- a simple example -->
-&lt;ul data-behavior="BS.Dropdown" class="navbar">
+&lt;ul data-behavior="BS.Dropdown" class="nav">
   &lt;li class="dropdown">
-    &lt;a class="dropdown-toggle">Menu2&lt;/a>
+    &lt;a class="dropdown-toggle" data-toggle="dropdown">Menu2&lt;/a>
     &lt;ul class="dropdown-menu">
       &lt;li>&lt;a>item1&lt;/a>&lt;/li>
       &lt;li>&lt;a>item2&lt;/a>&lt;/li>
@@ -271,7 +271,7 @@
       &lt;ul class="nav">
         &lt;li>&lt;a>Link&lt;/a>&lt;/li>
         &lt;li class="dropdown">
-          &lt;a class="dropdown-toggle">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;a class="dropdown-toggle" data-toggle="dropdown">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
           &lt;ul class="dropdown-menu">
             &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
             &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
@@ -284,7 +284,7 @@
 
       &lt;ul class="nav pull-right">
         &lt;li class="dropdown">
-          &lt;a class="dropdown-toggle">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;a class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
           &lt;ul class="dropdown-menu">
             &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
 
@@ -311,7 +311,7 @@
               <ul class="nav">
                 <li><a>Link</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
+                  <a class="dropdown-toggle" data-toggle="dropdown">Dropdown 1 <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a>Secondary link</a></li>
                     <li><a>Something else here</a></li>
@@ -324,13 +324,26 @@
 
               <ul class="nav pull-right">
                 <li class="dropdown">
-                  <a class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
+                  <a class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a>Secondary link</a></li>
 
                     <li><a>Something else here</a></li>
                     <li class="divider"></li>
                     <li><a>Another link</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="nav pull-right">
+                <li id="icon-dropdown"  class="dropdown">
+                  <a data-toggle="dropdown">
+                    <i class="icon-info-sign icon-white"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a>Action</a></li>
+                    <li><a>Another action</a></li>
+                    <li><a>Something else here</a></li>
                   </ul>
                 </li>
               </ul>
@@ -344,14 +357,14 @@
 
           <!-- Buttons -->
           <div class="btn-group">
-            <a class="btn dropdown-toggle">Action <span class="caret"></span></a>
+            <a class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a>Action</a></li>
               <li><a>Another action</a></li>
             </ul>
           </div><!-- /btn-group -->
           <div class="btn-group">
-            <a class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></a>
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a>Action</a></li>
               <li><a>Another action</a></li>
@@ -360,7 +373,7 @@
             </ul>
           </div><!-- /btn-group -->
           <div class="btn-group">
-            <a class="btn btn-danger dropdown-toggle">Danger <span class="caret"></span></a>
+            <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a>Action</a></li>
               <li><a>Another action</a></li>
@@ -370,7 +383,7 @@
           <!-- Split buttons -->
           <div class="btn-group">
             <a class="btn btn-success">Action</a>
-            <a class="btn btn-success dropdown-toggle"><span class="caret"></span></a>
+            <a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a>Action</a></li>
               <li><a>Another action</a></li>
@@ -378,7 +391,7 @@
           </div><!-- /btn-group -->
           <div class="btn-group">
             <a class="btn btn-info">Action</a>
-            <a class="btn btn-info dropdown-toggle"><span class="caret"></span></a>
+            <a class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a>Action</a></li>
               <li><a>Another action</a></li>
@@ -389,6 +402,44 @@
           </div><!-- /btn-group -->
 
         </div><!-- /btn-toolbar -->
+
+
+      <h3>Pills with dropdown</h3>
+
+      <!-- Pills -->
+      <ul class="nav nav-pills" data-behavior="BS.Dropdown">
+          <li class="active"><a>Regular link</a></li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li><a tabindex="-1">Action</a></li>
+                  <li><a tabindex="-1">Another action</a></li>
+                  <li><a tabindex="-1">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1">Separated link</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
+              <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1">Action</a></li>
+                  <li><a tabindex="-1">Another action</a></li>
+                  <li><a tabindex="-1">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1">Separated link</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown">Dropdown 3 <b class="caret"></b></a>
+              <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1">Action</a></li>
+                  <li><a tabindex="-1">Another action</a></li>
+                  <li><a tabindex="-1">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1">Separated link</a></li>
+              </ul>
+          </li>
+      </ul>
 
     </section>
 
@@ -417,7 +468,7 @@
   &lt;li>&lt;a>Profile&lt;/a>&lt;/li>
   &lt;li>&lt;a>Messages&lt;/a>&lt;/li>
   &lt;li class="dropdown">
-    &lt;a class="dropdown-toggle">Settings&lt;b class="caret">&lt;/b>&lt;/a>
+    &lt;a class="dropdown-toggle" data-toggle="dropdown">Settings&lt;b class="caret">&lt;/b>&lt;/a>
     &lt;ul class="dropdown-menu">
       &lt;li>&lt;a>Email address&lt;/a>&lt;/li>
       &lt;li>&lt;a>Password&lt;/a>&lt;/li>
@@ -499,7 +550,8 @@
             <li><a>Profile</a></li>
             <li><a>Messages</a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle">Settings<b class="caret"></b></a>
+
+              <a class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a>Email address</a></li>
                 <li><a>Password</a></li>

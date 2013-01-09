@@ -7711,12 +7711,13 @@ Bootstrap.Dropdown = new Class({
 		var open = el.getParent('.open');
 		if (!el.match(this.options.ignore) || !open) this.hideAll();
 		if (this.element.contains(el)) {
-			var parent = null;
-			if (el.match('.dropdown-toggle')) {
-				parent = el.getParent();
-			} else if (parent = el.getParent('.dropdown-toggle')) {
-				parent = parent.getParent()
-			}
+            var parent = null;
+	        if (el.match('[data-toggle="dropdown"]') || el.getParent('[data-toggle="dropdown"] !')) {
+	            parent = el.getParent('.dropdown !') || el.getParent('.btn-group !');
+	        }
+			// backwards compatibility
+	        if (!parent) parent = el.match('.dropdown-toggle') ? el.getParent() : el.getParent('.dropdown-toggle !');
+
 
 			if (parent) {
 				e.preventDefault();
