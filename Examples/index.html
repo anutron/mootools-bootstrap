@@ -51,7 +51,7 @@
 
           <ul data-behavior="BS.Dropdown" class="nav secondary-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle">Other Plugins<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Plugins<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#collapse">Collapse</a></li>
                 <li><a href="#carousel">Carousel</a></li>
@@ -269,7 +269,7 @@
 <pre class="prettyprint linenums">&lt;-- a simple example -->
 &lt;ul data-behavior="BS.Dropdown" class="nav">
   &lt;li class="dropdown">
-    &lt;a href="#" class="dropdown-toggle">Menu2&lt;/a>
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu2&lt;/a>
     &lt;ul class="dropdown-menu">
       &lt;li>&lt;a>item1&lt;/a>&lt;/li>
       &lt;li>&lt;a>item2&lt;/a>&lt;/li>
@@ -289,7 +289,7 @@
       &lt;ul class="nav">
         &lt;li>&lt;a href="#">Link&lt;/a>&lt;/li>
         &lt;li class="dropdown">
-          &lt;a href="#" class="dropdown-toggle">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 1 &lt;b class="caret">&lt;/b>&lt;/a>
           &lt;ul class="dropdown-menu">
             &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
             &lt;li>&lt;a>Something else here&lt;/a>&lt;/li>
@@ -302,7 +302,7 @@
 
       &lt;ul class="nav pull-right">
         &lt;li class="dropdown">
-          &lt;a href="#" class="dropdown-toggle">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 &lt;b class="caret">&lt;/b>&lt;/a>
           &lt;ul class="dropdown-menu">
             &lt;li>&lt;a>Secondary link&lt;/a>&lt;/li>
 
@@ -330,7 +330,7 @@
               <ul class="nav">
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle">Dropdown 1 <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 1 <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a>Secondary link</a></li>
                     <li><a>Something else here</a></li>
@@ -343,7 +343,7 @@
 
               <ul class="nav pull-right">
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a>Secondary link</a></li>
 
@@ -353,6 +353,19 @@
                   </ul>
                 </li>
               </ul>
+
+                <ul class="nav pull-right">
+                    <li id="icon-dropdown"  class="dropdown">
+                        <a href="#" data-toggle="dropdown">
+                            <i class="icon-info-sign icon-white"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+            </ul>
             </div>
           </div><!-- /navbar-inner -->
         </div><!-- /navbar-example -->
@@ -364,14 +377,14 @@
 
           <!-- Buttons -->
           <div class="btn-group">
-            <a class="btn dropdown-toggle" href="#">Action <span class="caret"></span></a>
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Action <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
             </ul>
           </div><!-- /btn-group -->
           <div class="btn-group">
-            <a class="btn btn-primary dropdown-toggle" href="#">Action <span class="caret"></span></a>
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">Action <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -380,7 +393,7 @@
             </ul>
           </div><!-- /btn-group -->
           <div class="btn-group">
-            <a class="btn btn-danger dropdown-toggle" href="#">Danger <span class="caret"></span></a>
+            <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">Danger <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -390,7 +403,7 @@
           <!-- Split buttons -->
           <div class="btn-group">
             <a class="btn btn-success" href="#">Action</a>
-            <a class="btn btn-success dropdown-toggle" href="#"><span class="caret"></span></a>
+            <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -398,7 +411,7 @@
           </div><!-- /btn-group -->
           <div class="btn-group">
             <a class="btn btn-info" href="#">Action</a>
-            <a class="btn btn-info dropdown-toggle" href="#"><span class="caret"></span></a>
+            <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -409,6 +422,44 @@
           </div><!-- /btn-group -->
 
         </div><!-- /btn-toolbar -->
+
+
+      <h3>Pills with dropdown</h3>
+
+      <!-- Pills -->
+      <ul class="nav nav-pills" data-behavior="BS.Dropdown">
+          <li class="active"><a href="#">Regular link</a></li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+              <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">Separated link</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 2 <b class="caret"></b></a>
+              <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">Separated link</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 3 <b class="caret"></b></a>
+              <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">Separated link</a></li>
+              </ul>
+          </li>
+      </ul>
 
     </section>
 
@@ -438,7 +489,7 @@
   &lt;li>&lt;a>Profile&lt;/a>&lt;/li>
   &lt;li>&lt;a>Messages&lt;/a>&lt;/li>
   &lt;li class="dropdown">
-    &lt;a href="#" class="dropdown-toggle">Settings&lt;b class="caret">&lt;/b>&lt;/a>
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings&lt;b class="caret">&lt;/b>&lt;/a>
     &lt;ul class="dropdown-menu">
       &lt;li>&lt;a>Email address&lt;/a>&lt;/li>
       &lt;li>&lt;a>Password&lt;/a>&lt;/li>
@@ -530,7 +581,7 @@
             <li><a>Messages</a></li>
             <li class="dropdown">
 
-              <a href="#" class="dropdown-toggle">Settings<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a>Email address</a></li>
                 <li><a>Password</a></li>
