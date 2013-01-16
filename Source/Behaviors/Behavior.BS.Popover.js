@@ -22,7 +22,9 @@ Behavior.addGlobalFilters({
 	'BS.Popover': {
 		defaults: {
 			contentElement: null,
+			cloneContent: false,
 			titleElement: null,
+			cloneTitle: false,
 		  onOverflow: false,
 			location: 'right', //below, left, right
 			animate: true,
@@ -51,6 +53,7 @@ Behavior.addGlobalFilters({
 				if (api.get(which + 'Element')) {
 					var target = el.getElement(api.get(which + 'Element'));
 					if (!target) api.fail('could not find ' + which + ' for popup');
+					if (api.get('clone' + which.capitalize())) target = target.clone(true, true);
 					return target.setStyle('display', 'block');
 				} else {
 					return api.get(which) || el.get(which);

@@ -16,7 +16,9 @@ A behavior filter to instantiate [Bootstrap](http://twitter.github.com/bootstrap
 ### Options
 
 * title - (*string*) The title of the popup. If not defined, will attempt to read it from the element's `title` property.
+* cloneTitle - (*string*) Selector, relative to the target element, for the element to be used for the `title` of the popover.
 * content - (*string*) The content of the popover.
+* cloneContent - (*string*) Selector, relative to the target element, for the element to be used for the `content` of the popover.
 * location - (*string*) The location of the tip: `above`, `below`, `left`, or `right`. Defaults to `above`.
 * animate - (*boolean*) If true the tip will fade in. Defaults to `true`.
 * delayIn - (*number*) The time in milliseconds that the tip should delay from showing. Defaults to `200`.
