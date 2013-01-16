@@ -46,7 +46,6 @@ provides: [Behavior.BS.FormValidator]
 				showError: function(){},
 				hideError: function(){}
 			});
-			instance.warningPrefix = '';
 			instance.errorPrefix = '';
 			instance.addEvents({
 				showAdvice: function(field, advice, className){
