@@ -10,8 +10,8 @@ license: MIT-style license.
 authors: [Aaron Newton]
 
 requires:
+ - More-Behaviors/Behavior.FormRequest
  - /Behavior.BS.Popup
- - More/Form.Request
 
 provides: [Behavior.BS.Popup.FormRequest]
 
