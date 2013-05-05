@@ -58,32 +58,6 @@ provides: [Behavior.BS.Tabs]
 
 	// this plugin makes links that have #href targets select their target tabs
 	Behavior.addGlobalPlugin('BS.Tabs', 'BS.Tabs.TargetLinks', function(el, api, instance){
-		// get the element to delegate clicks to - defaults to the container
-		var target = el;
-		var tabAPI = new BehaviorAPI(el, 'BS.Tabs');
-		if (tabAPI.get('delegationTarget')) target = el.getElement(tabAPI.get('delegationTarget'));
-		if (!target) api.fail('Could not find delegation target for tabs');
-
-		//find all the sections
-		var sections = instance.tabs.map(function(tab){
-			return tab.retrieve('section');
-		});
-
-		// delegate watching click events for any element with an #href
-		target.addEvent('click:relay([href^=#])', function(event, link){
-			if (link.get('href') == "#") return;
-			// attempt to find the target for the link within the page
-			var target = el.getElement(link.get('href'));
-			// if the target IS a tab, do nothing; valid targets are *sections*
-			if (instance.tabs.contains(target)) return;
-			// if no target was found at all, warn
-			if (!target) api.warn('Could not switch tab; no section found for ' + link.get('href'));
-			// if the target is a section, show it.
-			if (sections.contains(target)) {
-				event.preventDefault();
-				instance.show(sections.indexOf(target));
-			}
-		});
 		// whenever the instance activates a tab, find any related #href links and add `active-section-link` to the appropriate ones
 		instance.addEvent('active', function(index, section, tab){
 			document.body.getElements('.active-section-link').removeClass('active-section-link');

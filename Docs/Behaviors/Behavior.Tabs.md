@@ -41,3 +41,5 @@ A behavior filter to instantiate [Bootstrap](http://twitter.github.com/bootstrap
 * selectedClass - (*string*) If set, will apply the supplied classname to the selected tab. Defaults to `tabSelected`.
 * initPanel - (*integer*) If set, the initial tab displayed will be this index.
 * cookieName - (*stirng*) If set, the tab state will be stored in a cookie.
+* delegationTarget - (*string*; optional) if set, this is the element that will have a click delegator attached to it to watch for any #href clicks. These will in turn allow you to change tabs when a link anywhere within that delegation target reference a section by id.
+* hash - (*string*) Specifies the key to store store the tab state in the location string (for example: a value of `tab` will put `#tab=some-section` in the query string). This make it possible to reload the page and use the back button. If you give IDs to your tabs or sections, those will be used in the query string. Otherwise the index of the section is used.
