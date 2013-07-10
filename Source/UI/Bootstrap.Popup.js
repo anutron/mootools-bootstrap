@@ -75,10 +75,10 @@ Bootstrap.Popup = new Class({
 		var check = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
 		if (!check) {
 			this.element.removeClass('fade').addClass('hide');
-			this._mask.removeClass('fade').addClass('hide');
+			if (this._mask) this._mask.removeClass('fade').addClass('hide');
 		} else if (check) {
 			this.element.addClass('fade').removeClass('hide');
-			this._mask.addClass('fade').removeClass('hide');
+			if (this._mask) this._mask.addClass('fade').removeClass('hide');
 		}
 		return check;
 	},
@@ -88,16 +88,16 @@ Bootstrap.Popup = new Class({
 		this.element.addEvent('click:relay(.close, .dismiss)', this.bound.hide);
 		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
 		this._makeMask();
-		this._mask.inject(document.body);
+		if (this._mask) this._mask.inject(document.body);
 		this.animating = true;
 		if (this.options.changeDisplayValue) this.element.show();
 		if (this._checkAnimate()){
 			this.element.offsetWidth; // force reflow
 			this.element.addClass('in');
-			this._mask.addClass('in');
+			if (this._mask) this._mask.addClass('in');
 		} else {
 			this.element.show();
-			this._mask.show();
+			if (this._mask) this._mask.show();
 		}
 		this.visible = true;
 		this._watch();
@@ -118,14 +118,14 @@ Bootstrap.Popup = new Class({
 			if (this.options.changeDisplayValue) this.element.hide();
 			if (!this.options.persist){
 				this.destroy();
-			} else {
+			} else if (this._mask) {
 				this._mask.dispose();
 			}
 		}
 	},
 
 	destroy: function(){
-		this._mask.destroy();
+		if (this._mask) this._mask.destroy();
 		this.fireEvent('destroy', this.element);
 		this.element.destroy();
 		this._mask = null;
@@ -148,10 +148,10 @@ Bootstrap.Popup = new Class({
 
 		if (this._checkAnimate()){
 			this.element.removeClass('in');
-			this._mask.removeClass('in');
+			if (this._mask) this._mask.removeClass('in');
 		} else {
 			this.element.hide();
-			this._mask.hide();
+			if (this._mask) this._mask.hide();
 		}
 		this.visible = false;
 		this._watch();
