@@ -17,7 +17,7 @@ provides: [Behavior.BS.Dropdown.Specs]
 
 	var str = '<ul data-behavior="BS.Dropdown">\
       <li class="dropdown">\
-        <a id="menu1" href="#" class="dropdown-toggle"  data-toggle="dropdown">Menu1</a>\
+        <a id="menu1" href="#" class="dropdown-toggle">Menu1</a>\
         <ul class="dropdown-menu">\
           <li><a id="menu1-item1">item1</a></li>\
           <li><a>item2</a></li>\
@@ -37,7 +37,7 @@ provides: [Behavior.BS.Dropdown.Specs]
         </ul>\
       </li>\
       <li class="dropdown">\
-        <a id="menu2" href="#" class="dropdown-toggle" data-toggle="dropdown">Menu2</a>\
+        <a id="menu2" href="#" class="dropdown-toggle">Menu2</a>\
         <ul class="dropdown-menu">\
           <li><a id="menu2-item1">item1</a></li>\
           <li><a>item2</a></li>\
