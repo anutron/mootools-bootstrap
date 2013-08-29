@@ -23,6 +23,7 @@ demo: http://anutron.github.com/mootools-bootstrap/
 current: 1.0.6
 
 sources:
+ - Source/Behaviors/Behavior.BS.Affix.js
  - Source/Behaviors/Behavior.BS.Alert.js
  - Source/Behaviors/Behavior.BS.Dropdown.js
  - Source/Behaviors/Behavior.BS.FormValidator.js
@@ -31,10 +32,11 @@ sources:
  - Source/Behaviors/Behavior.BS.Popup.FormRequest.js
  - Source/Behaviors/Behavior.BS.Tabs.js
  - Source/Behaviors/Behavior.BS.Tooltip.js
+ - Source/Behaviors/Delegator.BS.ShowPopup.js
  - Source/UI/Bootstrap.js
+ - Source/UI/Bootstrap.Affix.js
  - Source/UI/Bootstrap.Dropdown.js
  - Source/UI/Bootstrap.Popover.js
  - Source/UI/Bootstrap.Popup.js
  - Source/UI/Bootstrap.Tooltip.js
  - Source/UI/CSSEvents.js
- - Source/UI/Delegator.BS.ShowPopup.js

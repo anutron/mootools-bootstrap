@@ -76,7 +76,9 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 				offset.y = this.options.offset;
 		}
 		if (typeOf(this.options.offset) == "object") offset = this.options.offset;
-		this.tip.inject(document.body).show().position({
+		if (this.element.getParent('.modal')) this.tip.inject(this.element, 'after');
+		else this.tip.inject(document.body);
+		this.tip.show().position({
 			relativeTo: this.element,
 			position: pos,
 			edge: edge,
@@ -102,6 +104,10 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 		if (this.tip) this.tip.destroy();
 		this.destroyed = true;
 		return this;
+	},
+
+	toggle: function(){
+		return this[this.visible ? 'hide' : 'show']();
 	},
 
 	// PRIVATE METHODS
@@ -132,7 +138,8 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 		this.bound = {
 			enter: this._enter.bind(this),
 			leave: this._leave.bind(this),
-			complete: this._complete.bind(this)
+			complete: this._complete.bind(this),
+			toggle: this.toggle.bind(this)
 		};
 
 		if (this.options.trigger == 'hover') {
@@ -144,6 +151,10 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 			this.element[method]({
 				focus: this.bound.enter,
 				blur: this.bound.leave
+			});
+		} else if (this.options.trigger == 'click'){
+			this.element[method]({
+				click: this.bound.toggle
 			});
 		}
 	},
