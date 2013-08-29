@@ -23,7 +23,7 @@ Bootstrap.Popover = new Class({
 
 	options: {
 		location: 'right',
-		offset: 10,
+		offset: Bootstrap.version == 2 ? 10 : 0,
 		getTitle: function(el){
 			return el.get(this.options.title);
 		},

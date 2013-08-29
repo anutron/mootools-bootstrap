@@ -13,4 +13,6 @@ provides: [Bootstrap]
 
 ...
 */
-var Bootstrap = {};
+var Bootstrap = {
+	version: 3
+};

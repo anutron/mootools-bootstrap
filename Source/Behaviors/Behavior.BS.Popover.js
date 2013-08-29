@@ -30,7 +30,7 @@ Behavior.addGlobalFilters({
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
-			offset: 10,
+			offset: Bootstrap.version == 2 ? 10 : null,
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
@@ -48,6 +48,9 @@ Behavior.addGlobalFilters({
 					trigger: String
 				})
 			);
+			if (options.offset === undefined && (['above', 'left', 'top'].contains(options.location) || !options.location)){
+				options.offset = -6;
+			}
 
 			var getter = function(which){
 				if (api.get(which + 'Element')) {
@@ -62,8 +65,9 @@ Behavior.addGlobalFilters({
 
 			options.getContent = getter.pass('content');
 			options.getTitle = getter.pass('title');
+
 			var tip = new Bootstrap.Popover(el, options);
-			if (api.event) tip._enter();
+			if (api.event && api.get('trigger') != 'click') tip._enter();
 			api.onCleanup(tip.destroy.bind(tip));
 			return tip;
 		}

@@ -15,6 +15,7 @@ authors: "[Aaron Newton](http://clientcide.com)"
 version: "1.0"
 
 sources:
+ - Source/Behavior.BS.Affix.js
  - Source/Behavior.BS.Dropdown.js
  - Source/Behavior.BS.Popover.js
  - Source/Behavior.BS.Popup.js

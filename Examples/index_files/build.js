@@ -1,5 +1,26 @@
-//This library: http://localhost:9876/depender/build?requireLibs=Bootstrap&require=Core/DomReady&version=MooTools%20Bootstrap
-//Contents: Core:Source/Core/Core.js, Core:Source/Types/Array.js, Core:Source/Types/Function.js, Core:Source/Types/Number.js, Core:Source/Types/String.js, Core:Source/Browser/Browser.js, Core:Source/Types/Object.js, Core:Source/Slick/Slick.Parser.js, Core:Source/Slick/Slick.Finder.js, Core:Source/Element/Element.js, Core:Source/Types/DOMEvent.js, Core:Source/Element/Element.Event.js, Core:Source/Element/Element.Delegation.js, Core:Source/Class/Class.js, Core:Source/Class/Class.Extras.js, Behavior:Source/Event.Mock.js, More:Source/Utilities/Table.js, Core:Source/Utilities/JSON.js, Behavior:Source/Element.Data.js, Behavior:Source/BehaviorAPI.js, Behavior:Source/Behavior.js, Behavior:Source/Delegator.js, Core:Source/Fx/Fx.js, Core:Source/Element/Element.Style.js, Core:Source/Fx/Fx.CSS.js, Core:Source/Fx/Fx.Morph.js, More:Source/More/More.js, More:Source/Element/Element.Shortcuts.js, Core:Source/Element/Element.Dimensions.js, More:Source/Element/Element.Measure.js, More:Source/Fx/Fx.Reveal.js, More-Behaviors:Source/Delegators/Delegator.FxReveal.js, Bootstrap:Source/Behaviors/Behavior.BS.Alert.js, Bootstrap:Source/UI/Bootstrap.js, Core:Source/Utilities/DOMReady.js, Bootstrap:Source/UI/CSSEvents.js, More:Source/Element/Element.Position.js, Bootstrap:Source/UI/Bootstrap.Twipsy.js, Bootstrap:Source/UI/Bootstrap.Dropdown.js, Bootstrap:Source/Behaviors/Behavior.BS.Dropdown.js, Bootstrap:Source/UI/Delegator.BS.ShowPopup.js, More:Source/Types/Object.Extras.js, Core:Source/Fx/Fx.Tween.js, Core:Source/Fx/Fx.Transitions.js, More:Source/Class/Class.Binds.js, More:Source/Class/Class.Occlude.js, More:Source/Utilities/IframeShim.js, More:Source/Interface/Mask.js, More:Source/Element/Elements.From.js, More:Source/Class/Events.Pseudos.js, Bootstrap:Source/UI/Bootstrap.Popup.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.js, Core:Source/Request/Request.js, Core:Source/Request/Request.HTML.js, More:Source/Class/Class.Refactor.js, More:Source/Interface/Spinner.js, More:Source/Types/String.QueryString.js, More:Source/Element/Element.Event.Pseudos.js, More:Source/Forms/Form.Request.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.FormRequest.js, Bootstrap:Source/UI/Bootstrap.Popover.js, Bootstrap:Source/Behaviors/Behavior.BS.Popover.js, More:Source/Locale/Locale.js, More:Source/Locale/Locale.en-US.Date.js, More:Source/Types/Date.js, More:Source/Types/String.Extras.js, More:Source/Element/Element.Forms.js, More:Source/Locale/Locale.en-US.Form.Validator.js, More:Source/Forms/Form.Validator.js, More:Source/Forms/Form.Validator.Inline.js, More-Behaviors:Source/Forms/Behavior.FormValidator.js, Bootstrap:Source/Behaviors/Behavior.BS.FormValidator.js, Bootstrap:Source/Behaviors/Behavior.BS.Twipsy.js, Clientcide:Source/Layout/TabSwapper.js, Clientcide:Source/Behaviors/Behavior.Tabs.js, Bootstrap:Source/Behaviors/Behavior.BS.Tabs.js
+
+//This library: http://localhost:9876/depender/build?requireLibs=Bootstrap&require=Core/DomReady&require=More-Behaviors/Delegator.ToggleClass&require=More-Behaviors/Behavior.Accordion&version=MooTools%20Bootstrap
+//Contents: Bootstrap:Source/UI/Bootstrap.js, Core:Source/Core/Core.js, Core:Source/Types/Array.js, Core:Source/Types/Function.js, Core:Source/Types/Number.js, Core:Source/Types/String.js, Core:Source/Browser/Browser.js, Core:Source/Types/Object.js, Core:Source/Slick/Slick.Parser.js, Core:Source/Slick/Slick.Finder.js, Core:Source/Element/Element.js, Core:Source/Types/DOMEvent.js, Core:Source/Element/Element.Event.js, Core:Source/Utilities/DOMReady.js, Bootstrap:Source/UI/CSSEvents.js, Core:Source/Class/Class.js, Core:Source/Class/Class.Extras.js, Core:Source/Element/Element.Style.js, Core:Source/Element/Element.Dimensions.js, More:Source/More/More.js, More:Source/Element/Element.Measure.js, More:Source/Element/Element.Position.js, More:Source/Element/Element.Shortcuts.js, More:Source/Utilities/Table.js, Core:Source/Utilities/JSON.js, Behavior:Source/Element.Data.js, Behavior:Source/BehaviorAPI.js, Behavior:Source/Behavior.js, Bootstrap:Source/UI/Bootstrap.Tooltip.js, Bootstrap:Source/UI/Bootstrap.Dropdown.js, Bootstrap:Source/Behaviors/Behavior.BS.Dropdown.js, Core:Source/Element/Element.Delegation.js, Behavior:Source/Event.Mock.js, Behavior:Source/Delegator.js, Bootstrap:Source/Behaviors/Delegator.BS.ShowPopup.js, Core:Source/Request/Request.js, Core:Source/Request/Request.HTML.js, More:Source/Class/Class.Binds.js, More:Source/Class/Class.Occlude.js, Core:Source/Fx/Fx.js, Core:Source/Fx/Fx.CSS.js, Core:Source/Fx/Fx.Tween.js, More:Source/Class/Class.Refactor.js, More:Source/Utilities/IframeShim.js, More:Source/Interface/Mask.js, More:Source/Interface/Spinner.js, More:Source/Types/String.QueryString.js, More:Source/Class/Events.Pseudos.js, More:Source/Element/Element.Event.Pseudos.js, More:Source/Forms/Form.Request.js, More-Behaviors:Source/Forms/Behavior.FormRequest.js, More:Source/Types/Object.Extras.js, Core:Source/Fx/Fx.Transitions.js, More:Source/Element/Elements.From.js, Bootstrap:Source/UI/Bootstrap.Popup.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.js, Bootstrap:Source/Behaviors/Behavior.BS.Popup.FormRequest.js, Bootstrap:Source/UI/Bootstrap.Affix.js, Bootstrap:Source/UI/Bootstrap.Popover.js, Bootstrap:Source/Behaviors/Behavior.BS.Popover.js, Bootstrap:Source/Behaviors/Behavior.BS.Affix.js, More:Source/Fx/Fx.Elements.js, More:Source/Fx/Fx.Accordion.js, More-Behaviors:Source/Fx/Behavior.FxAccordion.js, Core:Source/Fx/Fx.Morph.js, More:Source/Fx/Fx.Reveal.js, More:Source/Locale/Locale.js, More:Source/Locale/Locale.en-US.Date.js, More:Source/Types/Date.js, More:Source/Types/String.Extras.js, More:Source/Element/Element.Forms.js, More:Source/Locale/Locale.en-US.Form.Validator.js, More:Source/Forms/Form.Validator.js, More:Source/Forms/Form.Validator.Inline.js, More-Behaviors:Source/Forms/Behavior.FormValidator.js, Bootstrap:Source/Behaviors/Behavior.BS.FormValidator.js, Bootstrap:Source/Behaviors/Behavior.BS.Tooltip.js, Core:Source/Utilities/Cookie.js, Clientcide:Source/Layout/TabSwapper.js, Clientcide:Source/3rdParty/MooHashChange.js, Clientcide:Source/Layout/TabSwapper.Hash.js, Clientcide:Source/Behaviors/Behavior.Tabs.js, Bootstrap:Source/Behaviors/Behavior.BS.Tabs.js, More-Behaviors:Source/Delegators/Delegator.FxReveal.js, Bootstrap:Source/Behaviors/Behavior.BS.Alert.js, More-Behaviors:Source/Delegators/Delegator.AddRemoveClass.js
+
+// Begin: Source/UI/Bootstrap.js
+/*
+---
+
+name: Bootstrap
+
+description: The BootStrap namespace.
+
+authors: [Aaron Newton]
+
+license: MIT-style license.
+
+provides: [Bootstrap]
+
+...
+*/
+var Bootstrap = {
+	version: 3
+};
 
 // Begin: Source/Core/Core.js
 /*
@@ -11,7 +32,7 @@ description: The heart of MooTools.
 
 license: MIT-style license.
 
-copyright: Copyright (c) 2006-2010 [Valerio Proietti](http://mad4milk.net/).
+copyright: Copyright (c) 2006-2012 [Valerio Proietti](http://mad4milk.net/).
 
 authors: The MooTools production team (http://mootools.net/developers/)
 
@@ -27,15 +48,15 @@ provides: [Core, MooTools, Type, typeOf, instanceOf, Native]
 (function(){
 
 this.MooTools = {
-	version: '1.4.1',
-	build: 'd1fb25710e3c5482a219ab9dc675a4e0ad2176b6'
+	version: '1.4.5',
+	build: 'ab8ea8824dc3b24b6666867a2c4ed58ebb762cf0'
 };
 
 // typeOf, instanceOf
 
 var typeOf = this.typeOf = function(item){
 	if (item == null) return 'null';
-	if (item.$family) return item.$family();
+	if (item.$family != null) return item.$family();
 
 	if (item.nodeName){
 		if (item.nodeType == 1) return 'element';
@@ -55,6 +76,9 @@ var instanceOf = this.instanceOf = function(item, object){
 		if (constructor === object) return true;
 		constructor = constructor.parent;
 	}
+	/*<ltIE8>*/
+	if (!item.hasOwnProperty) return false;
+	/*</ltIE8>*/
 	return item instanceof object;
 };
 
@@ -87,8 +111,9 @@ Function.prototype.overloadGetter = function(usePlural){
 	var self = this;
 	return function(a){
 		var args, result;
-		if (usePlural || typeof a != 'string') args = a;
+		if (typeof a != 'string') args = a;
 		else if (arguments.length > 1) args = arguments;
+		else if (usePlural) args = [a];
 		if (args){
 			result = {};
 			for (var i = 0; i < args.length; i++) result[args[i]] = self.call(this, args[i]);
@@ -247,14 +272,18 @@ var force = function(name, object, methods){
 			proto = prototype[key];
 
 		if (generic) generic.protect();
-
-		if (isType && proto){
-			delete prototype[key];
-			prototype[key] = proto.protect();
-		}
+		if (isType && proto) object.implement(key, proto.protect());
 	}
 
-	if (isType) object.implement(prototype);
+	if (isType){
+		var methodsEnumerable = prototype.propertyIsEnumerable(methods[0]);
+		object.forEachMethod = function(fn){
+			if (!methodsEnumerable) for (var i = 0, l = methods.length; i < l; i++){
+				fn.call(prototype, prototype[methods[i]], methods[i]);
+			}
+			for (var key in prototype) fn.call(prototype, prototype[key], key)
+		};
+	}
 
 	return force;
 };
@@ -544,8 +573,9 @@ Array.implement({
 
 	filter: function(fn, bind){
 		var results = [];
-		for (var i = 0, l = this.length >>> 0; i < l; i++){
-			if ((i in this) && fn.call(bind, this[i], i, this)) results.push(this[i]);
+		for (var value, i = 0, l = this.length >>> 0; i < l; i++) if (i in this){
+			value = this[i];
+			if (fn.call(bind, value, i, this)) results.push(value);
 		}
 		return results;
 	},
@@ -988,17 +1018,6 @@ provides: [Browser, Window, Document]
 
 var document = this.document;
 var window = document.window = this;
-
-var UID = 1;
-
-this.$uid = (window.ActiveXObject) ? function(item){
-	return (item.uid || (item.uid = [UID++]))[0];
-} : function(item){
-	return item.uid || (item.uid = UID++);
-};
-
-$uid(window);
-$uid(document);
 
 var ua = navigator.userAgent.toLowerCase(),
 	platform = navigator.platform.toLowerCase(),
@@ -1887,8 +1906,14 @@ local.setDocument = function(document){
 
 	// contains
 	// FIXME: Add specs: local.contains should be different for xml and html documents?
-	features.contains = (root && this.isNativeCode(root.contains)) ? function(context, node){
+	var nativeRootContains = root && this.isNativeCode(root.contains),
+		nativeDocumentContains = document && this.isNativeCode(document.contains);
+
+	features.contains = (nativeRootContains && nativeDocumentContains) ? function(context, node){
 		return context.contains(node);
+	} : (nativeRootContains && !nativeDocumentContains) ? function(context, node){
+		// IE8 does not have .contains on document.
+		return context === node || ((context === document) ? document.documentElement : context).contains(node);
 	} : (root && root.compareDocumentPosition) ? function(context, node){
 		return context === node || !!(context.compareDocumentPosition(node) & 16);
 	} : function(context, node){
@@ -2283,7 +2308,7 @@ local.matchSelector = function(node, tag, id, classes, attributes, pseudos){
 
 	var i, part, cls;
 	if (classes) for (i = classes.length; i--;){
-		cls = node.getAttribute('class') || node.className;
+		cls = this.getAttribute(node, 'class');
 		if (!(cls && classes[i].regexp.test(cls))) return false;
 	}
 	if (attributes) for (i = attributes.length; i--;){
@@ -2469,7 +2494,7 @@ var pseudos = {
 	'nth-last-of-type': local.createNTHPseudo('lastChild', 'previousSibling', 'posNTHTypeLast', true),
 
 	'index': function(node, index){
-		return this['pseudo:nth-child'](node, '' + index + 1);
+		return this['pseudo:nth-child'](node, '' + (index + 1));
 	},
 
 	'even': function(node){
@@ -2541,10 +2566,6 @@ for (var p in pseudos) local['pseudo:' + p] = pseudos[p];
 
 var attributeGetters = local.attributeGetters = {
 
-	'class': function(){
-		return this.getAttribute('class') || this.className;
-	},
-
 	'for': function(){
 		return ('htmlFor' in this) ? this.htmlFor : this.getAttribute('for');
 	},
@@ -2579,7 +2600,7 @@ attributeGetters.MAXLENGTH = attributeGetters.maxLength = attributeGetters.maxle
 
 var Slick = local.Slick = (this.Slick || {});
 
-Slick.version = '1.1.6';
+Slick.version = '1.1.7';
 
 // Slick finder
 
@@ -2709,7 +2730,16 @@ var Element = function(tag, props){
 	return document.newElement(tag, props);
 };
 
-if (Browser.Element) Element.prototype = Browser.Element.prototype;
+
+if (Browser.Element){
+	Element.prototype = Browser.Element.prototype;
+	// IE8 and IE9 require the wrapping.
+	Element.prototype._fireEvent = (function(fireEvent){
+		return function(type, event){
+			return fireEvent.call(this, type, event);
+		};
+	})(Element.prototype.fireEvent);
+}
 
 new Type('Element', Element).mirror(function(name){
 	if (Array.prototype[name]) return;
@@ -2730,7 +2760,10 @@ new Type('Element', Element).mirror(function(name){
 if (!Browser.Element){
 	Element.parent = Object;
 
-	Element.Prototype = {'$family': Function.from('element').hide()};
+	Element.Prototype = {
+		'$constructor': Element,
+		'$family': Function.from('element').hide()
+	};
 
 	Element.mirror(function(name, method){
 		Element.Prototype[name] = method;
@@ -2853,16 +2886,17 @@ if (object[1] == 1) Elements.implement('splice', function(){
 	return result;
 }.protect());
 
-Elements.implement(Array.prototype);
+Array.forEachMethod(function(method, name){
+	Elements.implement(name, method);
+});
 
 Array.mirror(Elements);
 
 /*<ltIE8>*/
 var createElementAcceptsHTML;
 try {
-	var x = document.createElement('<input name=x>');
-	createElementAcceptsHTML = (x.name == 'x');
-} catch(e){}
+    createElementAcceptsHTML = (document.createElement('<input name=x>').name == 'x');
+} catch (e){}
 
 var escapeQuotes = function(html){
 	return ('' + html).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
@@ -2890,6 +2924,11 @@ Document.implement({
 
 })();
 
+(function(){
+
+Slick.uidOf(window);
+Slick.uidOf(document);
+
 Document.implement({
 
 	newTextNode: function(text){
@@ -2914,8 +2953,13 @@ Document.implement({
 			},
 
 			element: function(el, nocash){
-				$uid(el);
+				Slick.uidOf(el);
 				if (!nocash && !el.$family && !(/^(?:object|embed)$/i).test(el.tagName)){
+					var fireEvent = el.fireEvent;
+					// wrapping needed in IE7, or else crash
+					el._fireEvent = function(type, event){
+						return fireEvent(type, event);
+					};
 					Object.append(el, Element.Prototype);
 				}
 				return el;
@@ -2933,7 +2977,7 @@ Document.implement({
 		};
 
 		return function(el, nocash, doc){
-			if (el && el.$family && el.uid) return el;
+			if (el && el.$family && el.uniqueNumber) return el;
 			var type = typeOf(el);
 			return (types[type]) ? types[type](el, nocash, doc || document) : null;
 		};
@@ -3104,8 +3148,6 @@ if (window.$$ == null) Window.implement('$$', function(selector){
 	return new Elements(arguments);
 });
 
-(function(){
-
 // Inserters
 
 var inserters = {
@@ -3165,18 +3207,13 @@ var propertyGetters = {}, propertySetters = {};
 var properties = {};
 Array.forEach([
 	'type', 'value', 'defaultValue', 'accessKey', 'cellPadding', 'cellSpacing', 'colSpan',
-	'frameBorder', 'readOnly', 'rowSpan', 'tabIndex', 'useMap'
+	'frameBorder', 'rowSpan', 'tabIndex', 'useMap'
 ], function(property){
 	properties[property.toLowerCase()] = property;
 });
 
-Object.append(properties, {
-	'html': 'innerHTML',
-	'text': (function(){
-		var temp = document.createElement('div');
-		return (temp.textContent == null) ? 'innerText': 'textContent';
-	})()
-});
+properties.html = 'innerHTML';
+properties.text = (document.createElement('div').textContent == null) ? 'innerText': 'textContent';
 
 Object.forEach(properties, function(real, key){
 	propertySetters[key] = function(node, value){
@@ -3213,7 +3250,7 @@ Array.forEach(bools, function(bool){
 Object.append(propertySetters, {
 
 	'class': function(node, value){
-		('className' in node) ? node.className = value : node.setAttribute('class', value);
+		('className' in node) ? node.className = (value || '') : node.setAttribute('class', value);
 	},
 
 	'for': function(node, value){
@@ -3222,26 +3259,73 @@ Object.append(propertySetters, {
 
 	'style': function(node, value){
 		(node.style) ? node.style.cssText = value : node.setAttribute('style', value);
+	},
+
+	'value': function(node, value){
+		node.value = (value != null) ? value : '';
 	}
 
 });
 
+propertyGetters['class'] = function(node){
+	return ('className' in node) ? node.className || null : node.getAttribute('class');
+};
+
+/* <webkit> */
+var el = document.createElement('button');
+// IE sets type as readonly and throws
+try { el.type = 'button'; } catch(e){}
+if (el.type != 'button') propertySetters.type = function(node, value){
+	node.setAttribute('type', value);
+};
+el = null;
+/* </webkit> */
+
+/*<IE>*/
+var input = document.createElement('input');
+input.value = 't';
+input.type = 'submit';
+if (input.value != 't') propertySetters.type = function(node, type){
+	var value = node.value;
+	node.type = type;
+	node.value = value;
+};
+input = null;
+/*</IE>*/
+
 /* getProperty, setProperty */
+
+/* <ltIE9> */
+var pollutesGetAttribute = (function(div){
+	div.random = 'attribute';
+	return (div.getAttribute('random') == 'attribute');
+})(document.createElement('div'));
+
+/* <ltIE9> */
 
 Element.implement({
 
 	setProperty: function(name, value){
-		var lower = name.toLowerCase();
-		if (value == null){
-			if (!booleans[lower]){
+		var setter = propertySetters[name.toLowerCase()];
+		if (setter){
+			setter(this, value);
+		} else {
+			/* <ltIE9> */
+			if (pollutesGetAttribute) var attributeWhiteList = this.retrieve('$attributeWhiteList', {});
+			/* </ltIE9> */
+
+			if (value == null){
 				this.removeAttribute(name);
-				return this;
+				/* <ltIE9> */
+				if (pollutesGetAttribute) delete attributeWhiteList[name];
+				/* </ltIE9> */
+			} else {
+				this.setAttribute(name, '' + value);
+				/* <ltIE9> */
+				if (pollutesGetAttribute) attributeWhiteList[name] = true;
+				/* </ltIE9> */
 			}
-			value = false;
 		}
-		var setter = propertySetters[lower];
-		if (setter) setter(this, value);
-		else this.setAttribute(name, value);
 		return this;
 	},
 
@@ -3253,6 +3337,18 @@ Element.implement({
 	getProperty: function(name){
 		var getter = propertyGetters[name.toLowerCase()];
 		if (getter) return getter(this);
+		/* <ltIE9> */
+		if (pollutesGetAttribute){
+			var attr = this.getAttributeNode(name), attributeWhiteList = this.retrieve('$attributeWhiteList', {});
+			if (!attr) return null;
+			if (attr.expando && !attributeWhiteList[name]){
+				var outer = this.outerHTML;
+				// segment by the opening tag and find mention of attribute name
+				if (outer.substr(0, outer.search(/\/?['"]?>(?![^<]*<['"])/)).indexOf(name) < 0) return null;
+				attributeWhiteList[name] = true;
+			}
+		}
+		/* </ltIE9> */
 		var result = Slick.getAttribute(this, name);
 		return (!result && !Slick.hasAttribute(this, name)) ? null : result;
 	},
@@ -3379,7 +3475,7 @@ var get = function(uid){
 };
 
 var clean = function(item){
-	var uid = item.uid;
+	var uid = item.uniqueNumber;
 	if (item.removeEvents) item.removeEvents();
 	if (item.clearAttributes) item.clearAttributes();
 	if (uid != null){
@@ -3425,7 +3521,7 @@ Element.implement({
 			if (node.clearAttributes){
 				node.clearAttributes();
 				node.mergeAttributes(element);
-				node.removeAttribute('uid');
+				node.removeAttribute('uniqueNumber');
 				if (node.options){
 					var no = node.options, eo = element.options;
 					for (var j = no.length; j--;) no[j].selected = eo[j].selected;
@@ -3457,7 +3553,7 @@ Element.implement({
 				old();
 			};
 		} else {
-			collected[$uid(this)] = this;
+			collected[Slick.uidOf(this)] = this;
 		}
 		if (this.addEventListener) this.addEventListener(type, fn, !!arguments[2]);
 		else this.attachEvent('on' + type, fn);
@@ -3471,19 +3567,19 @@ Element.implement({
 	},
 
 	retrieve: function(property, dflt){
-		var storage = get($uid(this)), prop = storage[property];
+		var storage = get(Slick.uidOf(this)), prop = storage[property];
 		if (dflt != null && prop == null) prop = storage[property] = dflt;
 		return prop != null ? prop : null;
 	},
 
 	store: function(property, value){
-		var storage = get($uid(this));
+		var storage = get(Slick.uidOf(this));
 		storage[property] = value;
 		return this;
 	},
 
 	eliminate: function(property){
-		var storage = get($uid(this));
+		var storage = get(Slick.uidOf(this));
 		delete storage[property];
 		return this;
 	}
@@ -3529,60 +3625,77 @@ Element.Properties.tag = {
 
 };
 
-/*<!webkit>*/
-Element.Properties.html = (function(){
+Element.Properties.html = {
 
-	var tableTest = Function.attempt(function(){
-		var table = document.createElement('table');
-		table.innerHTML = '<tr><td></td></tr>';
-	});
+	set: function(html){
+		if (html == null) html = '';
+		else if (typeOf(html) == 'array') html = html.join('');
+		this.innerHTML = html;
+	},
 
-	var wrapper = document.createElement('div');
-
-	var translations = {
-		table: [1, '<table>', '</table>'],
-		select: [1, '<select>', '</select>'],
-		tbody: [2, '<table><tbody>', '</tbody></table>'],
-		tr: [3, '<table><tbody><tr>', '</tr></tbody></table>']
-	};
-	translations.thead = translations.tfoot = translations.tbody;
-
-	/*<ltIE9>*/
-	// technique by jdbarlett - http://jdbartlett.com/innershiv/
-	wrapper.innerHTML = '<nav></nav>';
-	var HTML5Test = wrapper.childNodes.length == 1;
-	if (!HTML5Test){
-		var tags = 'abbr article aside audio canvas datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video'.split(' '),
-			fragment = document.createDocumentFragment(), l = tags.length;
-		while (l--) fragment.createElement(tags[l]);
-		fragment.appendChild(wrapper);
+	erase: function(){
+		this.innerHTML = '';
 	}
-	/*</ltIE9>*/
 
-	var html = {
-		set: function(html){
-			if (typeOf(html) == 'array') html = html.join('');
+};
 
-			var wrap = (!tableTest && translations[this.get('tag')]);
-			/*<ltIE9>*/
-			if (!wrap && !HTML5Test) wrap = [0, '', ''];
-			/*</ltIE9>*/
-			if (wrap){
-				var first = wrapper;
-				first.innerHTML = wrap[1] + html + wrap[2];
-				for (var i = wrap[0]; i--;) first = first.firstChild;
-				this.empty().adopt(first.childNodes);
-			} else {
-				this.innerHTML = html;
-			}
-		}
-	};
+/*<ltIE9>*/
+// technique by jdbarlett - http://jdbartlett.com/innershiv/
+var div = document.createElement('div');
+div.innerHTML = '<nav></nav>';
+var supportsHTML5Elements = (div.childNodes.length == 1);
+if (!supportsHTML5Elements){
+	var tags = 'abbr article aside audio canvas datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video'.split(' '),
+		fragment = document.createDocumentFragment(), l = tags.length;
+	while (l--) fragment.createElement(tags[l]);
+}
+div = null;
+/*</ltIE9>*/
 
-	html.erase = html.set;
+/*<IE>*/
+var supportsTableInnerHTML = Function.attempt(function(){
+	var table = document.createElement('table');
+	table.innerHTML = '<tr><td></td></tr>';
+	return true;
+});
 
-	return html;
-})();
-/*</!webkit>*/
+/*<ltFF4>*/
+var tr = document.createElement('tr'), html = '<td></td>';
+tr.innerHTML = html;
+var supportsTRInnerHTML = (tr.innerHTML == html);
+tr = null;
+/*</ltFF4>*/
+
+if (!supportsTableInnerHTML || !supportsTRInnerHTML || !supportsHTML5Elements){
+
+	Element.Properties.html.set = (function(set){
+
+		var translations = {
+			table: [1, '<table>', '</table>'],
+			select: [1, '<select>', '</select>'],
+			tbody: [2, '<table><tbody>', '</tbody></table>'],
+			tr: [3, '<table><tbody><tr>', '</tr></tbody></table>']
+		};
+
+		translations.thead = translations.tfoot = translations.tbody;
+
+		return function(html){
+			var wrap = translations[this.get('tag')];
+			if (!wrap && !supportsHTML5Elements) wrap = [0, '', ''];
+			if (!wrap) return set.call(this, html);
+
+			var level = wrap[0], wrapper = document.createElement('div'), target = wrapper;
+			if (!supportsHTML5Elements) fragment.appendChild(wrapper);
+			wrapper.innerHTML = [wrap[1], html, wrap[2]].flatten().join('');
+			while (level--) target = target.firstChild;
+			this.empty().adopt(target.childNodes);
+			if (!supportsHTML5Elements) fragment.removeChild(wrapper);
+			wrapper = null;
+		};
+
+	})(Element.Properties.html.set);
+}
+/*</IE>*/
 
 /*<ltIE9>*/
 var testForm = document.createElement('form');
@@ -3614,7 +3727,22 @@ if (testForm.firstChild.value != 's') Element.Properties.value = {
 	}
 
 };
+testForm = null;
 /*</ltIE9>*/
+
+/*<IE>*/
+if (document.createElement('div').getAttributeNode('id')) Element.Properties.id = {
+	set: function(id){
+		this.id = this.getAttributeNode('id').value = id;
+	},
+	get: function(){
+		return this.id || null;
+	},
+	erase: function(){
+		this.id = this.getAttributeNode('id').value = '';
+	}
+};
+/*</IE>*/
 
 })();
 
@@ -3753,7 +3881,7 @@ Event.Keys = new Hash(Event.Keys);
 
 name: Element.Event
 
-description: Contains Element methods for dealing with events. This file also includes mouseenter and mouseleave custom Element Events.
+description: Contains Element methods for dealing with events. This file also includes mouseenter and mouseleave custom Element Events, if necessary.
 
 license: MIT-style license.
 
@@ -3891,30 +4019,30 @@ Element.NativeEvents = {
 	error: 1, abort: 1, scroll: 1 //misc
 };
 
-var check = function(event){
-	var related = event.relatedTarget;
-	if (related == null) return true;
-	if (!related) return false;
-	return (related != this && related.prefix != 'xul' && typeOf(this) != 'document' && !this.contains(related));
-};
+Element.Events = {mousewheel: {
+	base: (Browser.firefox) ? 'DOMMouseScroll' : 'mousewheel'
+}};
 
-Element.Events = {
+if ('onmouseenter' in document.documentElement){
+	Element.NativeEvents.mouseenter = Element.NativeEvents.mouseleave = 2;
+} else {
+	var check = function(event){
+		var related = event.relatedTarget;
+		if (related == null) return true;
+		if (!related) return false;
+		return (related != this && related.prefix != 'xul' && typeOf(this) != 'document' && !this.contains(related));
+	};
 
-	mouseenter: {
+	Element.Events.mouseenter = {
 		base: 'mouseover',
 		condition: check
-	},
+	};
 
-	mouseleave: {
+	Element.Events.mouseleave = {
 		base: 'mouseout',
 		condition: check
-	},
-
-	mousewheel: {
-		base: (Browser.firefox) ? 'DOMMouseScroll' : 'mousewheel'
-	}
-
-};
+	};
+}
 
 /*<ltIE9>*/
 if (!window.addEventListener){
@@ -3925,7 +4053,7 @@ if (!window.addEventListener){
 			return (this.get('tag') == 'input' && (type == 'radio' || type == 'checkbox')) ? 'propertychange' : 'change'
 		},
 		condition: function(event){
-			return !!(this.type != 'radio' || this.checked);
+			return this.type != 'radio' || (event.event.propertyName == 'checked' && this.checked);
 		}
 	}
 }
@@ -3940,207 +4068,153 @@ Element.Events = new Hash(Element.Events);
 })();
 
 
-// Begin: Source/Element/Element.Delegation.js
+// Begin: Source/Utilities/DOMReady.js
 /*
 ---
 
-name: Element.Delegation
+name: DOMReady
 
-description: Extends the Element native object to include the delegate method for more efficient event management.
+description: Contains the custom event domready.
 
 license: MIT-style license.
 
-requires: [Element.Event]
+requires: [Browser, Element, Element.Event]
 
-provides: [Element.Delegation]
+provides: [DOMReady, DomReady]
 
 ...
 */
 
-(function(){
+(function(window, document){
 
-var eventListenerSupport = !!window.addEventListener;
+var ready,
+	loaded,
+	checks = [],
+	shouldPoll,
+	timer,
+	testElement = document.createElement('div');
 
-Element.NativeEvents.focusin = Element.NativeEvents.focusout = 2;
+var domready = function(){
+	clearTimeout(timer);
+	if (ready) return;
+	Browser.loaded = ready = true;
+	document.removeListener('DOMContentLoaded', domready).removeListener('readystatechange', check);
 
-var bubbleUp = function(self, match, fn, event, target){
-	while (target && target != self){
-		if (match(target, event)) return fn.call(target, event, target);
-		target = document.id(target.parentNode);
+	document.fireEvent('domready');
+	window.fireEvent('domready');
+};
+
+var check = function(){
+	for (var i = checks.length; i--;) if (checks[i]()){
+		domready();
+		return true;
 	}
+	return false;
 };
 
-var map = {
-	mouseenter: {
-		base: 'mouseover'
-	},
-	mouseleave: {
-		base: 'mouseout'
-	},
-	focus: {
-		base: 'focus' + (eventListenerSupport ? '' : 'in'),
-		capture: true
-	},
-	blur: {
-		base: eventListenerSupport ? 'blur' : 'focusout',
-		capture: true
-	}
+var poll = function(){
+	clearTimeout(timer);
+	if (!check()) timer = setTimeout(poll, 10);
 };
 
-/*<ltIE9>*/
-var _key = '$delegation:';
-var formObserver = function(type){
+document.addListener('DOMContentLoaded', domready);
 
-	return {
-
-		base: 'focusin',
-
-		remove: function(self, uid){
-			var list = self.retrieve(_key + type + 'listeners', {})[uid];
-			if (list && list.forms) for (var i = list.forms.length; i--;){
-				list.forms[i].removeEvent(type, list.fns[i]);
-			}
-		},
-
-		listen: function(self, match, fn, event, target, uid){
-			var form = (target.get('tag') == 'form') ? target : event.target.getParent('form');
-			if (!form) return;
-
-			var listeners = self.retrieve(_key + type + 'listeners', {}),
-				listener = listeners[uid] || {forms: [], fns: []},
-				forms = listener.forms, fns = listener.fns;
-
-			if (forms.indexOf(form) != -1) return;
-			forms.push(form);
-
-			var _fn = function(event){
-				bubbleUp(self, match, fn, event, target);
-			};
-			form.addEvent(type, _fn);
-			fns.push(_fn);
-
-			listeners[uid] = listener;
-			self.store(_key + type + 'listeners', listeners);
-		}
-	};
+/*<ltIE8>*/
+// doScroll technique by Diego Perini http://javascript.nwbox.com/IEContentLoaded/
+// testElement.doScroll() throws when the DOM is not ready, only in the top window
+var doScrollWorks = function(){
+	try {
+		testElement.doScroll();
+		return true;
+	} catch (e){}
+	return false;
 };
+// If doScroll works already, it can't be used to determine domready
+//   e.g. in an iframe
+if (testElement.doScroll && !doScrollWorks()){
+	checks.push(doScrollWorks);
+	shouldPoll = true;
+}
+/*</ltIE8>*/
 
-var inputObserver = function(type){
-	return {
-		base: 'focusin',
-		listen: function(self, match, fn, event, target){
-			var events = {blur: function(){
-				this.removeEvents(events);
-			}};
-			events[type] = function(event){
-				bubbleUp(self, match, fn, event, target);
-			};
-			event.target.addEvents(events);
-		}
-	};
-};
-
-if (!eventListenerSupport) Object.append(map, {
-	submit: formObserver('submit'),
-	reset: formObserver('reset'),
-	change: inputObserver('change'),
-	select: inputObserver('select')
-});
-/*</ltIE9>*/
-
-var proto = Element.prototype,
-	addEvent = proto.addEvent,
-	removeEvent = proto.removeEvent;
-
-var relay = function(old, method){
-	return function(type, fn, useCapture){
-		if (type.indexOf(':relay') == -1) return old.call(this, type, fn, useCapture);
-		var parsed = Slick.parse(type).expressions[0][0];
-		if (parsed.pseudos[0].key != 'relay') return old.call(this, type, fn, useCapture);
-		var newType = parsed.tag;
-		parsed.pseudos.slice(1).each(function(pseudo){
-			newType += ':' + pseudo.key + (pseudo.value ? '(' + pseudo.value + ')' : '');
-		});
-		old.call(this, type, fn);
-		return method.call(this, newType, parsed.pseudos[0].value, fn);
-	};
-};
-
-var delegation = {
-
-	addEvent: function(type, match, fn){
-		var storage = this.retrieve('$delegates', {}), stored = storage[type];
-		if (stored) for (var _uid in stored){
-			if (stored[_uid].fn == fn && stored[_uid].match == match) return this;
-		}
-
-		var _type = type, _match = match, _fn = fn, _map = map[type] || {};
-		type = _map.base || _type;
-
-		match = function(target){
-			return Slick.match(target, _match);
-		};
-
-		var elementEvent = Element.Events[_type];
-		if (elementEvent && elementEvent.condition){
-			var __match = match, condition = elementEvent.condition;
-			match = function(target, event){
-				return __match(target, event) && condition.call(target, event, type);
-			};
-		}
-
-		var self = this, uid = String.uniqueID();
-		var delegator = _map.listen ? function(event, target){
-			if (!target && event && event.target) target = event.target;
-			if (target) _map.listen(self, match, fn, event, target, uid);
-		} : function(event, target){
-			if (!target && event && event.target) target = event.target;
-			if (target) bubbleUp(self, match, fn, event, target);
-		};
-
-		if (!stored) stored = {};
-		stored[uid] = {
-			match: _match,
-			fn: _fn,
-			delegator: delegator
-		};
-		storage[_type] = stored;
-		return addEvent.call(this, type, delegator, _map.capture);
-	},
-
-	removeEvent: function(type, match, fn, _uid){
-		var storage = this.retrieve('$delegates', {}), stored = storage[type];
-		if (!stored) return this;
-
-		if (_uid){
-			var _type = type, delegator = stored[_uid].delegator, _map = map[type] || {};
-			type = _map.base || _type;
-			if (_map.remove) _map.remove(this, _uid);
-			delete stored[_uid];
-			storage[_type] = stored;
-			return removeEvent.call(this, type, delegator);
-		}
-
-		var __uid, s;
-		if (fn) for (__uid in stored){
-			s = stored[__uid];
-			if (s.match == match && s.fn == fn) return delegation.removeEvent.call(this, type, match, fn, __uid);
-		} else for (__uid in stored){
-			s = stored[__uid];
-			if (s.match == match) delegation.removeEvent.call(this, type, match, s.fn, __uid);
-		}
-		return this;
-	}
-
-};
-
-[Element, Window, Document].invoke('implement', {
-	addEvent: relay(addEvent, delegation.addEvent),
-	removeEvent: relay(removeEvent, delegation.removeEvent)
+if (document.readyState) checks.push(function(){
+	var state = document.readyState;
+	return (state == 'loaded' || state == 'complete');
 });
 
-})();
+if ('onreadystatechange' in document) document.addListener('readystatechange', check);
+else shouldPoll = true;
 
+if (shouldPoll) poll();
+
+Element.Events.domready = {
+	onAdd: function(fn){
+		if (ready) fn.call(this);
+	}
+};
+
+// Make sure that domready fires before load
+Element.Events.load = {
+	base: 'load',
+	onAdd: function(fn){
+		if (loaded && this == window) fn.call(this);
+	},
+	condition: function(){
+		if (this == window){
+			domready();
+			delete Element.Events.load;
+		}
+		return true;
+	}
+};
+
+// This is based on the custom load event
+window.addEvent('load', function(){
+	loaded = true;
+});
+
+})(window, document);
+
+
+// Begin: Source/UI/CSSEvents.js
+/*
+---
+
+name: CSSEvents
+
+license: MIT-style
+
+authors: [Aaron Newton]
+
+requires: [Core/DomReady]
+
+provides: CSSEvents
+...
+*/
+
+Browser.Features.getCSSTransition = function(){
+	Browser.Features.cssTransition = (function () {
+		var thisBody = document.body || document.documentElement
+			, thisStyle = thisBody.style
+			, support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined;
+		return support;
+	})();
+
+	// set CSS transition event type
+	if ( Browser.Features.cssTransition ) {
+		Browser.Features.transitionEnd = "TransitionEnd";
+		if ( Browser.safari || Browser.chrome ) {
+			Browser.Features.transitionEnd = "webkitTransitionEnd";
+		} else if ( Browser.firefox ) {
+			Browser.Features.transitionEnd = "transitionend";
+		} else if ( Browser.opera ) {
+			Browser.Features.transitionEnd = "oTransitionEnd";
+		}
+	}
+	Browser.Features.getCSSTransition = Function.from(Browser.Features.transitionEnd);
+};
+
+window.addEvent("domready", Browser.Features.getCSSTransition);
 
 // Begin: Source/Class/Class.js
 /*
@@ -4384,1354 +4458,6 @@ this.Options = new Class({
 })();
 
 
-// Begin: Source/Event.Mock.js
-/*
----
-name: Event.Mock
-
-description: Supplies a Mock Event object for use on fireEvent
-
-license: MIT-style
-
-authors:
-- Arieh Glazer
-
-requires: Core/Event
-
-provides: [Event.Mock]
-
-...
-*/
-
-(function($,window,undef){
-
-/**
- * creates a Mock event to be used with fire event
- * @param Element target an element to set as the target of the event - not required
- *  @param string type the type of the event to be fired. Will not be used by IE - not required.
- *
- */
-Event.Mock = function(target,type){
-	type = type || 'click';
-
-	var e = {
-		type: type,
-		target: target
-	};
-
-	if (document.createEvent){
-		e = document.createEvent('HTMLEvents');
-		e.initEvent(
-			type //event type
-			, false //bubbles - set to false because the event should like normal fireEvent
-			, true //cancelable
-		);
-	}
-
-	e = new Event(e);
-
-	e.target = target;
-
-	return e;
-};
-
-})(document.id,window);
-
-// Begin: Source/Utilities/Table.js
-/*
----
-name: Table
-description: LUA-Style table implementation.
-license: MIT-style license
-authors:
-  - Valerio Proietti
-requires: [Core/Array]
-provides: [Table]
-...
-*/
-
-(function(){
-
-var Table = this.Table = function(){
-
-	this.length = 0;
-	var keys = [],
-	    values = [];
-
-	this.set = function(key, value){
-		var index = keys.indexOf(key);
-		if (index == -1){
-			var length = keys.length;
-			keys[length] = key;
-			values[length] = value;
-			this.length++;
-		} else {
-			values[index] = value;
-		}
-		return this;
-	};
-
-	this.get = function(key){
-		var index = keys.indexOf(key);
-		return (index == -1) ? null : values[index];
-	};
-
-	this.erase = function(key){
-		var index = keys.indexOf(key);
-		if (index != -1){
-			this.length--;
-			keys.splice(index, 1);
-			return values.splice(index, 1)[0];
-		}
-		return null;
-	};
-
-	this.each = this.forEach = function(fn, bind){
-		for (var i = 0, l = this.length; i < l; i++) fn.call(bind, keys[i], values[i], this);
-	};
-
-};
-
-if (this.Type) new Type('Table', Table);
-
-})();
-
-
-// Begin: Source/Utilities/JSON.js
-/*
----
-
-name: JSON
-
-description: JSON encoder and decoder.
-
-license: MIT-style license.
-
-SeeAlso: <http://www.json.org/>
-
-requires: [Array, String, Number, Function]
-
-provides: JSON
-
-...
-*/
-
-if (typeof JSON == 'undefined') this.JSON = {};
-
-//<1.2compat>
-
-JSON = new Hash({
-	stringify: JSON.stringify,
-	parse: JSON.parse
-});
-
-//</1.2compat>
-
-(function(){
-
-var special = {'\b': '\\b', '\t': '\\t', '\n': '\\n', '\f': '\\f', '\r': '\\r', '"' : '\\"', '\\': '\\\\'};
-
-var escape = function(chr){
-	return special[chr] || '\\u' + ('0000' + chr.charCodeAt(0).toString(16)).slice(-4);
-};
-
-JSON.validate = function(string){
-	string = string.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, '@').
-					replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']').
-					replace(/(?:^|:|,)(?:\s*\[)+/g, '');
-
-	return (/^[\],:{}\s]*$/).test(string);
-};
-
-JSON.encode = JSON.stringify ? function(obj){
-	return JSON.stringify(obj);
-} : function(obj){
-	if (obj && obj.toJSON) obj = obj.toJSON();
-
-	switch (typeOf(obj)){
-		case 'string':
-			return '"' + obj.replace(/[\x00-\x1f\\"]/g, escape) + '"';
-		case 'array':
-			return '[' + obj.map(JSON.encode).clean() + ']';
-		case 'object': case 'hash':
-			var string = [];
-			Object.each(obj, function(value, key){
-				var json = JSON.encode(value);
-				if (json) string.push(JSON.encode(key) + ':' + json);
-			});
-			return '{' + string + '}';
-		case 'number': case 'boolean': return '' + obj;
-		case 'null': return 'null';
-	}
-
-	return null;
-};
-
-JSON.decode = function(string, secure){
-	if (!string || typeOf(string) != 'string') return null;
-
-	if (secure || JSON.secure){
-		if (JSON.parse) return JSON.parse(string);
-		if (!JSON.validate(string)) throw new Error('JSON could not decode the input; security is enabled and the value is not secure.');
-	}
-
-	return eval('(' + string + ')');
-};
-
-})();
-
-
-// Begin: Source/Element.Data.js
-/*
----
-name: Element.Data
-description: Stores data in HTML5 data properties
-provides: [Element.Data]
-requires: [Core/Element, Core/JSON]
-script: Element.Data.js
-
-...
-*/
-(function(){
-
-	JSON.isSecure = function(string){
-		//this verifies that the string is parsable JSON and not malicious (borrowed from JSON.js in MooTools, which in turn borrowed it from Crockford)
-		//this version is a little more permissive, as it allows single quoted attributes because forcing the use of double quotes
-		//is a pain when this stuff is used as HTML properties
-		return (/^[,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]*$/).test(string.replace(/\\./g, '@').replace(/"[^"\\\n\r]*"/g, '').replace(/'[^'\\\n\r]*'/g, ''));
-	};
-
-	Element.implement({
-		/*
-			sets an HTML5 data property.
-			arguments:
-				name - (string) the data name to store; will be automatically prefixed with 'data-'.
-				value - (string, number) the value to store.
-		*/
-		setData: function(name, value){
-			return this.set('data-' + name.hyphenate(), value);
-		},
-
-		getData: function(name, defaultValue){
-			var value = this.get('data-' + name.hyphenate());
-			if (value != undefined){
-				return value;
-			} else if (defaultValue != undefined){
-				this.setData(name, defaultValue);
-				return defaultValue;
-			}
-		},
-
-		/*
-			arguments:
-				name - (string) the data name to store; will be automatically prefixed with 'data-'
-				value - (string, array, or object) if an object or array the object will be JSON encoded; otherwise stored as provided.
-		*/
-		setJSONData: function(name, value){
-			return this.setData(name, JSON.encode(value));
-		},
-
-		/*
-			retrieves a property from HTML5 data property you specify
-
-			arguments:
-				name - (retrieve) the data name to store; will be automatically prefixed with 'data-'
-				strict - (boolean) if true, will set the JSON.decode's secure flag to true; otherwise the value is still tested but allows single quoted attributes.
-				defaultValue - (string, array, or object) the value to set if no value is found (see storeData above)
-		*/
-		getJSONData: function(name, strict, defaultValue){
-			var value = this.get('data-' + name);
-			if (value != undefined){
-				if (value && JSON.isSecure(value)) {
-					return JSON.decode(value, strict);
-				} else {
-					return value;
-				}
-			} else if (defaultValue != undefined){
-				this.setJSONData(name, defaultValue);
-				return defaultValue;
-			}
-		}
-
-	});
-
-})();
-
-// Begin: Source/BehaviorAPI.js
-/*
----
-name: BehaviorAPI
-description: HTML getters for Behavior's API model.
-requires: [Core/Class, /Element.Data]
-provides: [BehaviorAPI]
-...
-*/
-
-
-(function(){
-	//see Docs/BehaviorAPI.md for documentation of public methods.
-
-	var reggy = /[^a-z0-9\-]/gi;
-
-	window.BehaviorAPI = new Class({
-		element: null,
-		prefix: '',
-		defaults: {},
-
-		initialize: function(element, prefix){
-			this.element = element;
-			this.prefix = prefix.toLowerCase().replace('.', '-', 'g').replace(reggy, '');
-		},
-
-		/******************
-		 * PUBLIC METHODS
-		 ******************/
-
-		get: function(/* name[, name, name, etc] */){
-			if (arguments.length > 1) return this._getObj(Array.from(arguments));
-			return this._getValue(arguments[0]);
-		},
-
-		getAs: function(/*returnType, name, defaultValue OR {name: returnType, name: returnType, etc}*/){
-			if (typeOf(arguments[0]) == 'object') return this._getValuesAs.apply(this, arguments);
-			return this._getValueAs.apply(this, arguments);
-		},
-
-		require: function(/* name[, name, name, etc] */){
-			for (var i = 0; i < arguments.length; i++){
-				if (this._getValue(arguments[i]) == undefined) throw new Error('Could not retrieve ' + this.prefix + '-' + arguments[i] + ' option from element.');
-			}
-			return this;
-		},
-
-		requireAs: function(returnType, name /* OR {name: returnType, name: returnType, etc}*/){
-			var val;
-			if (typeOf(arguments[0]) == 'object'){
-				for (var objName in arguments[0]){
-					val = this._getValueAs(arguments[0][objName], objName);
-					if (val === undefined || val === null) throw new Error("Could not retrieve " + this.prefix + '-' + objName + " option from element.");
-				}
-			} else {
-				val = this._getValueAs(returnType, name);
-				if (val === undefined || val === null) throw new Error("Could not retrieve " + this.prefix + '-' + name + " option from element.");
-			}
-			return this;
-		},
-
-		setDefault: function(name, value /* OR {name: value, name: value, etc }*/){
-			if (typeOf(arguments[0]) == 'object'){
-				for (var objName in arguments[0]){
-					this.setDefault(objName, arguments[0][objName]);
-				}
-				return;
-			}
-			name = name.camelCase();
-			this.defaults[name] = value;
-			if (this._getValue(name) == null){
-				var options = this._getOptions();
-				options[name] = value;
-			}
-			return this;
-		},
-
-		refreshAPI: function(){
-			delete this.options;
-			this.setDefault(this.defaults);
-			return;
-		},
-
-		/******************
-		 * PRIVATE METHODS
-		 ******************/
-
-		//given an array of names, returns an object of key/value pairs for each name
-		_getObj: function(names){
-			var obj = {};
-			names.each(function(name){
-				var value = this._getValue(name);
-				if (value !== undefined) obj[name] = value;
-			}, this);
-			return obj;
-		},
-		//gets the data-behaviorname-options object and parses it as JSON
-		_getOptions: function(){
-			try {
-				if (!this.options){
-					var options = this.element.getData(this.prefix + '-options', '{}');
-					if (options && options.substring(0,1) != '{') options = '{' + options + '}';
-					var isSecure = JSON.isSecure(options);
-					if (!isSecure) throw new Error('warning, options value for element is not parsable, check your JSON format for quotes, etc.');
-					this.options = isSecure ? JSON.decode(options) : {};
-					for (option in this.options) {
-						this.options[option.camelCase()] = this.options[option];
-					}
-				}
-			} catch (e){
-				throw new Error('Could not get options from element; check your syntax. ' + this.prefix + '-options: "' + this.element.getData(this.prefix + '-options', '{}') + '"');
-			}
-			return this.options;
-		},
-		//given a name (string) returns the value for it
-		_getValue: function(name){
-			name = name.camelCase();
-			var options = this._getOptions();
-			if (!options.hasOwnProperty(name)){
-				var inline = this.element.getData(this.prefix + '-' + name.hyphenate());
-				if (inline) options[name] = inline;
-			}
-			return options[name];
-		},
-		//given a Type and a name (string) returns the value for it coerced to that type if possible
-		//else returns the defaultValue or null
-		_getValueAs: function(returnType, name, defaultValue){
-			var value = this._getValue(name);
-			if (value == null || value == undefined) return defaultValue;
-			var coerced = this._coerceFromString(returnType, value);
-			if (coerced == null) throw new Error("Could not retrieve value '" + name + "' as the specified type. Its value is: " + value);
-			return coerced;
-		},
-		//given an object of name/Type pairs, returns those as an object of name/value (as specified Type) pairs
-		_getValuesAs: function(obj){
-			var returnObj = {};
-			for (var name in obj){
-				returnObj[name] = this._getValueAs(obj[name], name);
-			}
-			return returnObj;
-		},
-		//attempts to run a value through the JSON parser. If the result is not of that type returns null.
-		_coerceFromString: function(toType, value){
-			if (typeOf(value) == 'string' && toType != String){
-				if (JSON.isSecure(value)) value = JSON.decode(value);
-			}
-			if (instanceOf(value, toType)) return value;
-			return null;
-		}
-	});
-
-})();
-
-// Begin: Source/Behavior.js
-/*
----
-name: Behavior
-description: Auto-instantiates widgets/classes based on parsed, declarative HTML.
-requires: [Core/Class.Extras, Core/Element.Event, Core/Selectors, More/Table, /Element.Data, /BehaviorAPI]
-provides: [Behavior]
-...
-*/
-
-(function(){
-
-	var getLog = function(method){
-		return function(){
-			if (window.console && console[method]){
-				if(console[method].apply) console[method].apply(console, arguments);
-				else console[method](Array.from(arguments).join(' '));
-			}
-		};
-	};
-
-	var PassMethods = new Class({
-		//pass a method pointer through to a filter
-		//by default the methods for add/remove events are passed to the filter
-		//pointed to this instance of behavior. you could use this to pass along
-		//other methods to your filters. For example, a method to close a popup
-		//for filters presented inside popups.
-		passMethod: function(method, fn){
-			if (this.API.prototype[method]) throw new Error('Cannot overwrite API method ' + method + ' as it already exists');
-			this.API.implement(method, fn);
-			return this;
-		},
-
-		passMethods: function(methods){
-			for (method in methods) this.passMethod(method, methods[method]);
-			return this;
-		}
-
-	});
-
-	var spaceOrCommaRegex = /\s*,\s*|\s+/g;
-
-	BehaviorAPI.implement({
-		deprecate: function(deprecated, asJSON){
-			var set,
-			    values = {};
-			Object.each(deprecated, function(prop, key){
-				var value = this.element[ asJSON ? 'getJSONData' : 'getData'](prop);
-				if (value !== undefined){
-					set = true;
-					values[key] = value;
-				}
-			}, this);
-			this.setDefault(values);
-			return this;
-		}
-	});
-
-	this.Behavior = new Class({
-
-		Implements: [Options, Events, PassMethods],
-
-		options: {
-			//by default, errors thrown by filters are caught; the onError event is fired.
-			//set this to *true* to NOT catch these errors to allow them to be handled by the browser.
-			// breakOnErrors: false,
-			// container: document.body,
-
-			//default error behavior when a filter cannot be applied
-			onError: getLog('error'),
-			onWarn: getLog('warn'),
-			enableDeprecation: true,
-			selector: '[data-behavior]'
-		},
-
-		initialize: function(options){
-			this.setOptions(options);
-			this.API = new Class({ Extends: BehaviorAPI });
-			this.passMethods({
-				getDelegator: this.getDelegator.bind(this),
-				addEvent: this.addEvent.bind(this),
-				removeEvent: this.removeEvent.bind(this),
-				addEvents: this.addEvents.bind(this),
-				removeEvents: this.removeEvents.bind(this),
-				fireEvent: this.fireEvent.bind(this),
-				applyFilters: this.apply.bind(this),
-				applyFilter: this.applyFilter.bind(this),
-				getContentElement: this.getContentElement.bind(this),
-				cleanup: this.cleanup.bind(this),
-				getContainerSize: function(){
-					return this.getContentElement().measure(function(){
-						return this.getSize();
-					});
-				}.bind(this),
-				error: function(){ this.fireEvent('error', arguments); }.bind(this),
-				fail: function(){
-					var msg = Array.join(arguments, ' ');
-					throw new Error(msg);
-				},
-				warn: function(){
-					this.fireEvent('warn', arguments);
-				}.bind(this)
-			});
-		},
-
-		getDelegator: function(){
-			return this.delegator;
-		},
-
-		setDelegator: function(delegator){
-			if (!instanceOf(delegator, Delegator)) throw new Error('Behavior.setDelegator only accepts instances of Delegator.');
-			this.delegator = delegator;
-			return this;
-		},
-
-		getContentElement: function(){
-			return this.options.container || document.body;
-		},
-
-		//Applies all the behavior filters for an element.
-		//container - (element) an element to apply the filters registered with this Behavior instance to.
-		//force - (boolean; optional) passed through to applyFilter (see it for docs)
-		apply: function(container, force){
-		  this._getElements(container).each(function(element){
-				var plugins = [];
-				element.getBehaviors().each(function(name){
-					var filter = this.getFilter(name);
-					if (!filter){
-						this.fireEvent('error', ['There is no filter registered with this name: ', name, element]);
-					} else {
-						var config = filter.config;
-						if (config.delay !== undefined){
-							this.applyFilter.delay(filter.config.delay, this, [element, filter, force]);
-						} else if(config.delayUntil){
-							this._delayFilterUntil(element, filter, force);
-						} else if(config.initializer){
-							this._customInit(element, filter, force);
-						} else {
-							plugins.append(this.applyFilter(element, filter, force, true));
-						}
-					}
-				}, this);
-				plugins.each(function(plugin){ plugin(); });
-			}, this);
-			return this;
-		},
-
-		_getElements: function(container){
-			if (typeOf(this.options.selector) == 'function') return this.options.selector(container);
-			else return document.id(container).getElements(this.options.selector);
-		},
-
-		//delays a filter until the event specified in filter.config.delayUntil is fired on the element
-		_delayFilterUntil: function(element, filter, force){
-			var events = filter.config.delayUntil.split(','),
-			    attached = {},
-			    inited = false;
-			var clear = function(){
-				events.each(function(event){
-					element.removeEvent(event, attached[event]);
-				});
-				clear = function(){};
-			};
-			events.each(function(event){
-				var init = function(e){
-					clear();
-					if (inited) return;
-					inited = true;
-					var setup = filter.setup;
-					filter.setup = function(element, api, _pluginResult){
-						api.event = e;
-						return setup.apply(filter, [element, api, _pluginResult]);
-					};
-					this.applyFilter(element, filter, force);
-					filter.setup = setup;
-				}.bind(this);
-				element.addEvent(event, init);
-				attached[event] = init;
-			}, this);
-		},
-
-		//runs custom initiliazer defined in filter.config.initializer
-		_customInit: function(element, filter, force){
-			var api = new this.API(element, filter.name);
-			api.runSetup = this.applyFilter.pass([element, filter, force], this);
-			filter.config.initializer(element, api);
-		},
-
-		//Applies a specific behavior to a specific element.
-		//element - the element to which to apply the behavior
-		//filter - (object) a specific behavior filter, typically one registered with this instance or registered globally.
-		//force - (boolean; optional) apply the behavior to each element it matches, even if it was previously applied. Defaults to *false*.
-		//_returnPlugins - (boolean; optional; internal) if true, plugins are not rendered but instead returned as an array of functions
-		//_pluginTargetResult - (obj; optional internal) if this filter is a plugin for another, this is whatever that target filter returned
-		//                      (an instance of a class for example)
-		applyFilter: function(element, filter, force, _returnPlugins, _pluginTargetResult){
-			var pluginsToReturn = [];
-			if (this.options.breakOnErrors){
-				pluginsToReturn = this._applyFilter.apply(this, arguments);
-			} else {
-				try {
-					pluginsToReturn = this._applyFilter.apply(this, arguments);
-				} catch (e){
-					this.fireEvent('error', ['Could not apply the behavior ' + filter.name, e]);
-				}
-			}
-			return _returnPlugins ? pluginsToReturn : this;
-		},
-
-		//see argument list above for applyFilter
-		_applyFilter: function(element, filter, force, _returnPlugins, _pluginTargetResult){
-			var pluginsToReturn = [];
-			element = document.id(element);
-			//get the filters already applied to this element
-			var applied = getApplied(element);
-			//if this filter is not yet applied to the element, or we are forcing the filter
-			if (!applied[filter.name] || force){
-				//if it was previously applied, garbage collect it
-				if (applied[filter.name]) applied[filter.name].cleanup(element);
-				var api = new this.API(element, filter.name);
-
-				//deprecated
-				api.markForCleanup = filter.markForCleanup.bind(filter);
-				api.onCleanup = function(fn){
-					filter.markForCleanup(element, fn);
-				};
-
-				if (filter.config.deprecated && this.options.enableDeprecation) api.deprecate(filter.config.deprecated);
-				if (filter.config.deprecateAsJSON && this.options.enableDeprecation) api.deprecate(filter.config.deprecatedAsJSON, true);
-
-				//deal with requirements and defaults
-				if (filter.config.requireAs){
-					api.requireAs(filter.config.requireAs);
-				} else if (filter.config.require){
-					api.require.apply(api, Array.from(filter.config.require));
-				}
-
-				if (filter.config.defaults) api.setDefault(filter.config.defaults);
-
-				//apply the filter
-				var result = filter.setup(element, api, _pluginTargetResult);
-				if (filter.config.returns && !instanceOf(result, filter.config.returns)){
-					throw new Error("Filter " + filter.name + " did not return a valid instance.");
-				}
-				element.store('Behavior Filter result:' + filter.name, result);
-				//and mark it as having been previously applied
-				applied[filter.name] = filter;
-				//apply all the plugins for this filter
-				var plugins = this.getPlugins(filter.name);
-				if (plugins){
-					for (var name in plugins){
-						if (_returnPlugins){
-							pluginsToReturn.push(this.applyFilter.pass([element, plugins[name], force, null, result], this));
-						} else {
-							this.applyFilter(element, plugins[name], force, null, result);
-						}
-					}
-				}
-			}
-			return pluginsToReturn;
-		},
-
-		//given a name, returns a registered behavior
-		getFilter: function(name){
-			return this._registered[name] || Behavior.getFilter(name);
-		},
-
-		getPlugins: function(name){
-			return this._plugins[name] || Behavior._plugins[name];
-		},
-
-		//Garbage collects all applied filters for an element and its children.
-		//element - (*element*) container to cleanup
-		//ignoreChildren - (*boolean*; optional) if *true* only the element will be cleaned, otherwise the element and all the
-		//	  children with filters applied will be cleaned. Defaults to *false*.
-		cleanup: function(element, ignoreChildren){
-			element = document.id(element);
-			var applied = getApplied(element);
-			for (var filter in applied){
-				applied[filter].cleanup(element);
-				element.eliminate('Behavior Filter result:' + filter);
-				delete applied[filter];
-			}
-			if (!ignoreChildren) this._getElements(element).each(this.cleanup, this);
-			return this;
-		}
-
-	});
-
-	//Export these for use elsewhere (notabily: Delegator).
-	Behavior.getLog = getLog;
-	Behavior.PassMethods = PassMethods;
-
-
-	//Returns the applied behaviors for an element.
-	var getApplied = function(el){
-		return el.retrieve('_appliedBehaviors', {});
-	};
-
-	//Registers a behavior filter.
-	//name - the name of the filter
-	//fn - a function that applies the filter to the given element
-	//overwrite - (boolean) if true, will overwrite existing filter if one exists; defaults to false.
-	var addFilter = function(name, fn, overwrite){
-		if (!this._registered[name] || overwrite) this._registered[name] = new Behavior.Filter(name, fn);
-		else throw new Error('Could not add the Behavior filter "' + name  +'" as a previous trigger by that same name exists.');
-	};
-
-	var addFilters = function(obj, overwrite){
-		for (var name in obj){
-			addFilter.apply(this, [name, obj[name], overwrite]);
-		}
-	};
-
-	//Registers a behavior plugin
-	//filterName - (*string*) the filter (or plugin) this is a plugin for
-	//name - (*string*) the name of this plugin
-	//setup - a function that applies the filter to the given element
-	var addPlugin = function(filterName, name, setup, overwrite){
-		if (!this._plugins[filterName]) this._plugins[filterName] = {};
-		if (!this._plugins[filterName][name] || overwrite) this._plugins[filterName][name] = new Behavior.Filter(name, setup);
-		else throw new Error('Could not add the Behavior filter plugin "' + name  +'" as a previous trigger by that same name exists.');
-	};
-
-	var addPlugins = function(obj, overwrite){
-		for (var name in obj){
-			addPlugin.apply(this, [obj[name].fitlerName, obj[name].name, obj[name].setup], overwrite);
-		}
-	};
-
-	var setFilterDefaults = function(name, defaults){
-		var filter = this.getFilter(name);
-		if (!filter.config.defaults) filter.config.defaults = {};
-		Object.append(filter.config.defaults, defaults);
-	};
-
-	//Add methods to the Behavior namespace for global registration.
-	Object.append(Behavior, {
-		_registered: {},
-		_plugins: {},
-		addGlobalFilter: addFilter,
-		addGlobalFilters: addFilters,
-		addGlobalPlugin: addPlugin,
-		addGlobalPlugins: addPlugins,
-		setFilterDefaults: setFilterDefaults,
-		getFilter: function(name){
-			return this._registered[name];
-		}
-	});
-	//Add methods to the Behavior class for instance registration.
-	Behavior.implement({
-		_registered: {},
-		_plugins: {},
-		addFilter: addFilter,
-		addFilters: addFilters,
-		addPlugin: addPlugin,
-		addPlugins: addPlugins,
-		setFilterDefaults: setFilterDefaults
-	});
-
-	//This class is an actual filter that, given an element, alters it with specific behaviors.
-	Behavior.Filter = new Class({
-
-		config: {
-			/**
-				returns: Foo,
-				require: ['req1', 'req2'],
-				//or
-				requireAs: {
-					req1: Boolean,
-					req2: Number,
-					req3: String
-				},
-				defaults: {
-					opt1: false,
-					opt2: 2
-				},
-				//simple example:
-				setup: function(element, API){
-					var kids = element.getElements(API.get('selector'));
-					//some validation still has to occur here
-					if (!kids.length) API.fail('there were no child elements found that match ', API.get('selector'));
-					if (kids.length < 2) API.warn("there weren't more than 2 kids that match", API.get('selector'));
-					var fooInstance = new Foo(kids, API.get('opt1', 'opt2'));
-					API.onCleanup(function(){
-						fooInstance.destroy();
-					});
-					return fooInstance;
-				},
-				delayUntil: 'mouseover',
-				//OR
-				delay: 100,
-				//OR
-				initializer: function(element, API){
-					element.addEvent('mouseover', API.runSetup); //same as specifying event
-					//or
-					API.runSetup.delay(100); //same as specifying delay
-					//or something completely esoteric
-					var timer = (function(){
-						if (element.hasClass('foo')){
-							clearInterval(timer);
-							API.runSetup();
-						}
-					}).periodical(100);
-					//or
-					API.addEvent('someBehaviorEvent', API.runSetup);
-				});
-				*/
-		},
-
-		//Pass in an object with the following properties:
-		//name - the name of this filter
-		//setup - a function that applies the filter to the given element
-		initialize: function(name, setup){
-			this.name = name;
-			if (typeOf(setup) == "function"){
-				this.setup = setup;
-			} else {
-				Object.append(this.config, setup);
-				this.setup = this.config.setup;
-			}
-			this._cleanupFunctions = new Table();
-		},
-
-		//Stores a garbage collection pointer for a specific element.
-		//Example: if your filter enhances all the inputs in the container
-		//you might have a function that removes that enhancement for garbage collection.
-		//You would mark each input matched with its own cleanup function.
-		//NOTE: this MUST be the element passed to the filter - the element with this filters
-		//      name in its data-behavior property. I.E.:
-		//<form data-behavior="FormValidator">
-		//  <input type="text" name="email"/>
-		//</form>
-		//If this filter is FormValidator, you can mark the form for cleanup, but not, for example
-		//the input. Only elements that match this filter can be marked.
-		markForCleanup: function(element, fn){
-			var functions = this._cleanupFunctions.get(element);
-			if (!functions) functions = [];
-			functions.include(fn);
-			this._cleanupFunctions.set(element, functions);
-			return this;
-		},
-
-		//Garbage collect a specific element.
-		//NOTE: this should be an element that has a data-behavior property that matches this filter.
-		cleanup: function(element){
-			var marks = this._cleanupFunctions.get(element);
-			if (marks){
-				marks.each(function(fn){ fn(); });
-				this._cleanupFunctions.erase(element);
-			}
-			return this;
-		}
-
-	});
-
-	Behavior.elementDataProperty = 'behavior';
-
-	Element.implement({
-
-		addBehaviorFilter: function(name){
-			return this.setData(Behavior.elementDataProperty, this.getBehaviors().include(name).join(' '));
-		},
-
-		removeBehaviorFilter: function(name){
-			return this.setData(Behavior.elementDataProperty, this.getBehaviors().erase(name).join(' '));
-		},
-
-		getBehaviors: function(){
-			var filters = this.getData(Behavior.elementDataProperty);
-			if (!filters) return [];
-			return filters.trim().split(spaceOrCommaRegex);
-		},
-
-		hasBehavior: function(name){
-			return this.getBehaviors().contains(name);
-		},
-
-		getBehaviorResult: function(name){
-			return this.retrieve('Behavior Filter result:' + name);
-		}
-
-	});
-
-
-})();
-
-
-// Begin: Source/Delegator.js
-/*
----
-name: Delegator
-description: Allows for the registration of delegated events on a container.
-requires: [Core/Element.Delegation, Core/Options, Core/Events, /Event.Mock, /Behavior]
-provides: [Delegator]
-...
-*/
-(function(){
-
-	var spaceOrCommaRegex = /\s*,\s*|\s+/g;
-
-	window.Delegator = new Class({
-
-		Implements: [Options, Events, Behavior.PassMethods],
-
-		options: {
-			// breakOnErrors: false,
-			getBehavior: function(){},
-			onError: Behavior.getLog('error'),
-			onWarn: Behavior.getLog('warn')
-		},
-
-		initialize: function(options){
-			this.setOptions(options);
-			this._bound = {
-				eventHandler: this._eventHandler.bind(this)
-			};
-			Delegator._instances.push(this);
-			Object.each(Delegator._triggers, function(trigger){
-				this._eventTypes.combine(trigger.types);
-			}, this);
-			this.API = new Class({ Extends: BehaviorAPI });
-			this.passMethods({
-				addEvent: this.addEvent.bind(this),
-				removeEvent: this.removeEvent.bind(this),
-				addEvents: this.addEvents.bind(this),
-				removeEvents: this.removeEvents.bind(this),
-				fireEvent: this.fireEvent.bind(this),
-				attach: this.attach.bind(this),
-				trigger: this.trigger.bind(this),
-				error: function(){ this.fireEvent('error', arguments); }.bind(this),
-				fail: function(){
-					var msg = Array.join(arguments, ' ');
-					throw new Error(msg);
-				},
-				warn: function(){
-					this.fireEvent('warn', arguments);
-				}.bind(this),
-				getBehavior: function(){
-					return this.options.getBehavior();
-				}.bind(this)
-			});
-
-			this.bindToBehavior(this.options.getBehavior());
-		},
-
-		bindToBehavior: function(behavior){
-			if (!behavior) return;
-			this.unbindFromBehavior();
-			this._behavior = behavior;
-			if (!this._behaviorEvents){
-				var self = this;
-				this._behaviorEvents = {
-					destroyDom: function(elements){
-						Array.from(elements).each(function(element){
-							self._behavior.cleanup(element);
-							self._behavior.fireEvent('destroyDom', element);
-						});
-					},
-					ammendDom: function(container){
-						self._behavior.apply(container);
-						self._behavior.fireEvent('ammendDom', container);
-					}
-				};
-			}
-			this.addEvents(this._behaviorEvents);
-		},
-
-		getBehavior: function(){
-			return this._behavior;
-		},
-
-		unbindFromBehavior: function(){
-			if (this._behaviorEvents && this._behavior){
-				this._behavior.removeEvents(this._behaviorEvents);
-				delete this._behavior;
-			}
-		},
-
-		attach: function(target, _method){
-			_method = _method || 'addEvent';
-			target = document.id(target);
-			if ((_method == 'addEvent' && this._attachedTo.contains(target)) ||
-			    (_method == 'removeEvent') && !this._attachedTo.contains(target)) return this;
-			this._eventTypes.each(function(event){
-				target[_method](event + ':relay([data-trigger])', this._bound.eventHandler);
-			}, this);
-			this._attachedTo.push(target);
-			return this;
-		},
-
-		detach: function(target){
-			if (target){
-				this.attach(target, 'removeEvent');
-			} else {
-				this._attachedTo.each(this.detach, this);
-			}
-			return this;
-		},
-
-		trigger: function(name, element, event){
-			var e = event;
-			if (!e || typeOf(e) == "string") e = new Event.Mock(element, e);
-
-			var trigger = this.getTrigger(name);
-			if (trigger && (!event || (event && trigger.types.contains(e.type)))) {
-				if (this.options.breakOnErrors){
-					this._trigger(trigger, element, e);
-				} else {
-					try {
-						this._trigger(trigger, element, e);
-					} catch(error) {
-						this.fireEvent('error', ['Could not apply the trigger', name, error]);
-					}
-				}
-			}
-			return this;
-		},
-
-		getTrigger: function(name){
-			return this._triggers[name] || Delegator._triggers[name];
-		},
-
-		addEventTypes: function(triggerName, types){
-			this.getTrigger(triggerName).types.combine(Array.from(types));
-			return this;
-		},
-
-		/******************
-		 * PRIVATE METHODS
-		 ******************/
-
-		_trigger: function(trigger, element, event){
-			var api = new this.API(element, trigger.name);
-			if (trigger.requireAs){
-				api.requireAs(trigger.requireAs);
-			} else if (trigger.require){
-				api.require.apply(api, Array.from(trigger.require));
-			} if (trigger.defaults){
-				api.setDefault(trigger.defaults);
-			}
-			trigger.handler.apply(this, [event, element, api]);
-			this.fireEvent('trigger', [trigger, element, event]);
-		},
-
-		_eventHandler: function(event, target){
-			var triggers = target.getTriggers();
-			if (triggers.contains('Stop')) event.stop();
-			if (triggers.contains('PreventDefault')) event.preventDefault();
-			triggers.each(function(trigger){
-				if (trigger != "Stop" && trigger != "PreventDefault") this.trigger(trigger, target, event);
-			}, this);
-		},
-
-		_onRegister: function(eventTypes){
-			eventTypes.each(function(eventType){
-				if (!this._eventTypes.contains(eventType)){
-					this._attachedTo.each(function(element){
-						element.addEvent(eventType + ':relay([data-trigger])', this._bound.eventHandler);
-					}, this);
-				}
-				this._eventTypes.include(eventType);
-			}, this);
-		},
-
-		_attachedTo: [],
-		_eventTypes: [],
-		_triggers: {}
-
-	});
-
-	Delegator._triggers = {};
-	Delegator._instances = [];
-	Delegator._onRegister = function(eventType){
-		this._instances.each(function(instance){
-			instance._onRegister(eventType);
-		});
-	};
-
-	Delegator.register = function(eventTypes, name, handler, overwrite /** or eventType, obj, overwrite */){
-		eventTypes = Array.from(eventTypes);
-		if (typeOf(name) == "object"){
-			var obj = name;
-			for (name in obj){
-				this.register.apply(this, [eventTypes, name, obj[name], handler]);
-			}
-			return this;
-		}
-		if (!this._triggers[name] || overwrite){
-			if (typeOf(handler) == "function"){
-				handler = {
-					handler: handler
-				};
-			}
-			handler.types = eventTypes;
-			handler.name = name;
-			this._triggers[name] = handler;
-			this._onRegister(eventTypes);
-		} else {
-			throw new Error('Could add the trigger "' + name  +'" as a previous trigger by that same name exists.');
-		}
-		return this;
-	};
-
-	Delegator.getTrigger = function(name){
-		return this._triggers[name];
-	};
-
-	Delegator.addEventTypes = function(triggerName, types){
-		this.getTrigger(triggerName).types.combine(Array.from(types));
-		return this;
-	};
-
-
-	Delegator.implement('register', Delegator.register);
-
-	Element.implement({
-
-		addTrigger: function(name){
-			return this.setData('trigger', this.getTriggers().include(name).join(' '));
-		},
-
-		removeTrigger: function(name){
-			return this.setData('trigger', this.getTriggers().erase(name).join(' '));
-		},
-
-		getTriggers: function(){
-			var triggers = this.getData('trigger');
-			if (!triggers) return [];
-			return triggers.trim().split(spaceOrCommaRegex);
-		},
-
-		hasTrigger: function(name){
-			return this.getTriggers().contains(name);
-		}
-
-	});
-
-})();
-
-// Begin: Source/Fx/Fx.js
-/*
----
-
-name: Fx
-
-description: Contains the basic animation logic to be extended by all other Fx Classes.
-
-license: MIT-style license.
-
-requires: [Chain, Events, Options]
-
-provides: Fx
-
-...
-*/
-
-(function(){
-
-var Fx = this.Fx = new Class({
-
-	Implements: [Chain, Events, Options],
-
-	options: {
-		/*
-		onStart: nil,
-		onCancel: nil,
-		onComplete: nil,
-		*/
-		fps: 60,
-		unit: false,
-		duration: 500,
-		frames: null,
-		frameSkip: true,
-		link: 'ignore'
-	},
-
-	initialize: function(options){
-		this.subject = this.subject || this;
-		this.setOptions(options);
-	},
-
-	getTransition: function(){
-		return function(p){
-			return -(Math.cos(Math.PI * p) - 1) / 2;
-		};
-	},
-
-	step: function(now){
-		if (this.options.frameSkip){
-			var diff = (this.time != null) ? (now - this.time) : 0, frames = diff / this.frameInterval;
-			this.time = now;
-			this.frame += frames;
-		} else {
-			this.frame++;
-		}
-
-		if (this.frame < this.frames){
-			var delta = this.transition(this.frame / this.frames);
-			this.set(this.compute(this.from, this.to, delta));
-		} else {
-			this.frame = this.frames;
-			this.set(this.compute(this.from, this.to, 1));
-			this.stop();
-		}
-	},
-
-	set: function(now){
-		return now;
-	},
-
-	compute: function(from, to, delta){
-		return Fx.compute(from, to, delta);
-	},
-
-	check: function(){
-		if (!this.isRunning()) return true;
-		switch (this.options.link){
-			case 'cancel': this.cancel(); return true;
-			case 'chain': this.chain(this.caller.pass(arguments, this)); return false;
-		}
-		return false;
-	},
-
-	start: function(from, to){
-		if (!this.check(from, to)) return this;
-		this.from = from;
-		this.to = to;
-		this.frame = (this.options.frameSkip) ? 0 : -1;
-		this.time = null;
-		this.transition = this.getTransition();
-		var frames = this.options.frames, fps = this.options.fps, duration = this.options.duration;
-		this.duration = Fx.Durations[duration] || duration.toInt();
-		this.frameInterval = 1000 / fps;
-		this.frames = frames || Math.round(this.duration / this.frameInterval);
-		this.fireEvent('start', this.subject);
-		pushInstance.call(this, fps);
-		return this;
-	},
-
-	stop: function(){
-		if (this.isRunning()){
-			this.time = null;
-			pullInstance.call(this, this.options.fps);
-			if (this.frames == this.frame){
-				this.fireEvent('complete', this.subject);
-				if (!this.callChain()) this.fireEvent('chainComplete', this.subject);
-			} else {
-				this.fireEvent('stop', this.subject);
-			}
-		}
-		return this;
-	},
-
-	cancel: function(){
-		if (this.isRunning()){
-			this.time = null;
-			pullInstance.call(this, this.options.fps);
-			this.frame = this.frames;
-			this.fireEvent('cancel', this.subject).clearChain();
-		}
-		return this;
-	},
-
-	pause: function(){
-		if (this.isRunning()){
-			this.time = null;
-			pullInstance.call(this, this.options.fps);
-		}
-		return this;
-	},
-
-	resume: function(){
-		if ((this.frame < this.frames) && !this.isRunning()) pushInstance.call(this, this.options.fps);
-		return this;
-	},
-
-	isRunning: function(){
-		var list = instances[this.options.fps];
-		return list && list.contains(this);
-	}
-
-});
-
-Fx.compute = function(from, to, delta){
-	return (to - from) * delta + from;
-};
-
-Fx.Durations = {'short': 250, 'normal': 500, 'long': 1000};
-
-// global timers
-
-var instances = {}, timers = {};
-
-var loop = function(){
-	var now = Date.now();
-	for (var i = this.length; i--;){
-		var instance = this[i];
-		if (instance) instance.step(now);
-	}
-};
-
-var pushInstance = function(fps){
-	var list = instances[fps] || (instances[fps] = []);
-	list.push(this);
-	if (!timers[fps]) timers[fps] = loop.periodical(Math.round(1000 / fps), list);
-};
-
-var pullInstance = function(fps){
-	var list = instances[fps];
-	if (list){
-		list.erase(this);
-		if (!list.length && timers[fps]){
-			delete instances[fps];
-			timers[fps] = clearInterval(timers[fps]);
-		}
-	}
-};
-
-})();
-
-
 // Begin: Source/Element/Element.Style.js
 /*
 ---
@@ -5753,6 +4479,15 @@ provides: Element.Style
 
 var html = document.html;
 
+//<ltIE9>
+// Check for oldIE, which does not remove styles when they're set to null
+var el = document.createElement('div');
+el.style.color = 'red';
+el.style.color = null;
+var doesNotRemoveStyles = el.style.color == 'red';
+el = null;
+//</ltIE9>
+
 Element.Properties.styles = {set: function(styles){
 	this.setStyles(styles);
 }};
@@ -5763,17 +4498,19 @@ var hasOpacity = (html.style.opacity != null),
 
 var setVisibility = function(element, opacity){
 	element.store('$opacity', opacity);
-	element.style.visibility = opacity > 0 ? 'visible' : 'hidden';
+	element.style.visibility = opacity > 0 || opacity == null ? 'visible' : 'hidden';
 };
 
 var setOpacity = (hasOpacity ? function(element, opacity){
 	element.style.opacity = opacity;
 } : (hasFilter ? function(element, opacity){
-	if (!element.currentStyle || !element.currentStyle.hasLayout) element.style.zoom = 1;
-	opacity = (opacity * 100).limit(0, 100).round();
-	opacity = (opacity == 100) ? '' : 'alpha(opacity=' + opacity + ')';
-	var filter = element.style.filter || element.getComputedStyle('filter') || '';
-	element.style.filter = reAlpha.test(filter) ? filter.replace(reAlpha, opacity) : filter + opacity;
+	var style = element.style;
+	if (!element.currentStyle || !element.currentStyle.hasLayout) style.zoom = 1;
+	if (opacity == null || opacity == 1) opacity = '';
+	else opacity = 'alpha(opacity=' + (opacity * 100).limit(0, 100).round() + ')';
+	var filter = style.filter || element.getComputedStyle('filter') || '';
+	style.filter = reAlpha.test(filter) ? filter.replace(reAlpha, opacity) : filter + opacity;
+	if (!style.filter) style.removeAttribute('filter');
 } : setVisibility));
 
 var getOpacity = (hasOpacity ? function(element){
@@ -5803,7 +4540,8 @@ Element.implement({
 
 	setStyle: function(property, value){
 		if (property == 'opacity'){
-			setOpacity(this, parseFloat(value));
+			if (value != null) value = parseFloat(value);
+			setOpacity(this, value);
 			return this;
 		}
 		property = (property == 'float' ? floatName : property).camelCase();
@@ -5817,6 +4555,11 @@ Element.implement({
 			value = Math.round(value);
 		}
 		this.style[property] = value;
+		//<ltIE9>
+		if ((value == '' || value == null) && doesNotRemoveStyles && this.style.removeAttribute){
+			this.style.removeAttribute(property);
+		}
+		//</ltIE9>
 		return this;
 	},
 
@@ -5838,16 +4581,17 @@ Element.implement({
 			var color = result.match(/rgba?\([\d\s,]+\)/);
 			if (color) result = result.replace(color[0], color[0].rgbToHex());
 		}
-		if (Browser.opera || (Browser.ie && isNaN(parseFloat(result)))){
-			if ((/^(height|width)$/).test(property)){
+		if (Browser.opera || Browser.ie){
+			if ((/^(height|width)$/).test(property) && !(/px$/.test(result))){
 				var values = (property == 'width') ? ['left', 'right'] : ['top', 'bottom'], size = 0;
 				values.each(function(value){
 					size += this.getStyle('border-' + value + '-width').toInt() + this.getStyle('padding-' + value).toInt();
 				}, this);
 				return this['offset' + property.capitalize()] - size + 'px';
 			}
-			if (Browser.opera && String(result).indexOf('px') != -1) return result;
-			if ((/^border(.+)Width|margin|padding/).test(property)) return '0px';
+			if (Browser.ie && (/^border(.+)Width|margin|padding/).test(property) && isNaN(parseFloat(result))){
+				return '0px';
+			}
 		}
 		return result;
 	},
@@ -5932,353 +4676,6 @@ Element.ShortStyles = {margin: {}, padding: {}, border: {}, borderWidth: {}, bor
 });
 
 })();
-
-
-// Begin: Source/Fx/Fx.CSS.js
-/*
----
-
-name: Fx.CSS
-
-description: Contains the CSS animation logic. Used by Fx.Tween, Fx.Morph, Fx.Elements.
-
-license: MIT-style license.
-
-requires: [Fx, Element.Style]
-
-provides: Fx.CSS
-
-...
-*/
-
-Fx.CSS = new Class({
-
-	Extends: Fx,
-
-	//prepares the base from/to object
-
-	prepare: function(element, property, values){
-		values = Array.from(values);
-		if (values[1] == null){
-			values[1] = values[0];
-			values[0] = element.getStyle(property);
-		}
-		var parsed = values.map(this.parse);
-		return {from: parsed[0], to: parsed[1]};
-	},
-
-	//parses a value into an array
-
-	parse: function(value){
-		value = Function.from(value)();
-		value = (typeof value == 'string') ? value.split(' ') : Array.from(value);
-		return value.map(function(val){
-			val = String(val);
-			var found = false;
-			Object.each(Fx.CSS.Parsers, function(parser, key){
-				if (found) return;
-				var parsed = parser.parse(val);
-				if (parsed || parsed === 0) found = {value: parsed, parser: parser};
-			});
-			found = found || {value: val, parser: Fx.CSS.Parsers.String};
-			return found;
-		});
-	},
-
-	//computes by a from and to prepared objects, using their parsers.
-
-	compute: function(from, to, delta){
-		var computed = [];
-		(Math.min(from.length, to.length)).times(function(i){
-			computed.push({value: from[i].parser.compute(from[i].value, to[i].value, delta), parser: from[i].parser});
-		});
-		computed.$family = Function.from('fx:css:value');
-		return computed;
-	},
-
-	//serves the value as settable
-
-	serve: function(value, unit){
-		if (typeOf(value) != 'fx:css:value') value = this.parse(value);
-		var returned = [];
-		value.each(function(bit){
-			returned = returned.concat(bit.parser.serve(bit.value, unit));
-		});
-		return returned;
-	},
-
-	//renders the change to an element
-
-	render: function(element, property, value, unit){
-		element.setStyle(property, this.serve(value, unit));
-	},
-
-	//searches inside the page css to find the values for a selector
-
-	search: function(selector){
-		if (Fx.CSS.Cache[selector]) return Fx.CSS.Cache[selector];
-		var to = {}, selectorTest = new RegExp('^' + selector.escapeRegExp() + '$');
-		Array.each(document.styleSheets, function(sheet, j){
-			var href = sheet.href;
-			if (href && href.contains('://') && !href.contains(document.domain)) return;
-			var rules = sheet.rules || sheet.cssRules;
-			Array.each(rules, function(rule, i){
-				if (!rule.style) return;
-				var selectorText = (rule.selectorText) ? rule.selectorText.replace(/^\w+/, function(m){
-					return m.toLowerCase();
-				}) : null;
-				if (!selectorText || !selectorTest.test(selectorText)) return;
-				Object.each(Element.Styles, function(value, style){
-					if (!rule.style[style] || Element.ShortStyles[style]) return;
-					value = String(rule.style[style]);
-					to[style] = ((/^rgb/).test(value)) ? value.rgbToHex() : value;
-				});
-			});
-		});
-		return Fx.CSS.Cache[selector] = to;
-	}
-
-});
-
-Fx.CSS.Cache = {};
-
-Fx.CSS.Parsers = {
-
-	Color: {
-		parse: function(value){
-			if (value.match(/^#[0-9a-f]{3,6}$/i)) return value.hexToRgb(true);
-			return ((value = value.match(/(\d+),\s*(\d+),\s*(\d+)/))) ? [value[1], value[2], value[3]] : false;
-		},
-		compute: function(from, to, delta){
-			return from.map(function(value, i){
-				return Math.round(Fx.compute(from[i], to[i], delta));
-			});
-		},
-		serve: function(value){
-			return value.map(Number);
-		}
-	},
-
-	Number: {
-		parse: parseFloat,
-		compute: Fx.compute,
-		serve: function(value, unit){
-			return (unit) ? value + unit : value;
-		}
-	},
-
-	String: {
-		parse: Function.from(false),
-		compute: function(zero, one){
-			return one;
-		},
-		serve: function(zero){
-			return zero;
-		}
-	}
-
-};
-
-//<1.2compat>
-
-Fx.CSS.Parsers = new Hash(Fx.CSS.Parsers);
-
-//</1.2compat>
-
-
-// Begin: Source/Fx/Fx.Morph.js
-/*
----
-
-name: Fx.Morph
-
-description: Formerly Fx.Styles, effect to transition any number of CSS properties for an element using an object of rules, or CSS based selector rules.
-
-license: MIT-style license.
-
-requires: Fx.CSS
-
-provides: Fx.Morph
-
-...
-*/
-
-Fx.Morph = new Class({
-
-	Extends: Fx.CSS,
-
-	initialize: function(element, options){
-		this.element = this.subject = document.id(element);
-		this.parent(options);
-	},
-
-	set: function(now){
-		if (typeof now == 'string') now = this.search(now);
-		for (var p in now) this.render(this.element, p, now[p], this.options.unit);
-		return this;
-	},
-
-	compute: function(from, to, delta){
-		var now = {};
-		for (var p in from) now[p] = this.parent(from[p], to[p], delta);
-		return now;
-	},
-
-	start: function(properties){
-		if (!this.check(properties)) return this;
-		if (typeof properties == 'string') properties = this.search(properties);
-		var from = {}, to = {};
-		for (var p in properties){
-			var parsed = this.prepare(this.element, p, properties[p]);
-			from[p] = parsed.from;
-			to[p] = parsed.to;
-		}
-		return this.parent(from, to);
-	}
-
-});
-
-Element.Properties.morph = {
-
-	set: function(options){
-		this.get('morph').cancel().setOptions(options);
-		return this;
-	},
-
-	get: function(){
-		var morph = this.retrieve('morph');
-		if (!morph){
-			morph = new Fx.Morph(this, {link: 'cancel'});
-			this.store('morph', morph);
-		}
-		return morph;
-	}
-
-};
-
-Element.implement({
-
-	morph: function(props){
-		this.get('morph').start(props);
-		return this;
-	}
-
-});
-
-
-// Begin: Source/More/More.js
-/*
----
-
-script: More.js
-
-name: More
-
-description: MooTools More
-
-license: MIT-style license
-
-authors:
-  - Guillermo Rauch
-  - Thomas Aylott
-  - Scott Kyle
-  - Arian Stolwijk
-  - Tim Wienk
-  - Christoph Pojer
-  - Aaron Newton
-  - Jacob Thornton
-
-requires:
-  - Core/MooTools
-
-provides: [MooTools.More]
-
-...
-*/
-
-MooTools.More = {
-	'version': '1.4.0.1',
-	'build': 'a4244edf2aa97ac8a196fc96082dd35af1abab87'
-};
-
-
-// Begin: Source/Element/Element.Shortcuts.js
-/*
----
-
-script: Element.Shortcuts.js
-
-name: Element.Shortcuts
-
-description: Extends the Element native object to include some shortcut methods.
-
-license: MIT-style license
-
-authors:
-  - Aaron Newton
-
-requires:
-  - Core/Element.Style
-  - /MooTools.More
-
-provides: [Element.Shortcuts]
-
-...
-*/
-
-Element.implement({
-
-	isDisplayed: function(){
-		return this.getStyle('display') != 'none';
-	},
-
-	isVisible: function(){
-		var w = this.offsetWidth,
-			h = this.offsetHeight;
-		return (w == 0 && h == 0) ? false : (w > 0 && h > 0) ? true : this.style.display != 'none';
-	},
-
-	toggle: function(){
-		return this[this.isDisplayed() ? 'hide' : 'show']();
-	},
-
-	hide: function(){
-		var d;
-		try {
-			//IE fails here if the element is not in the dom
-			d = this.getStyle('display');
-		} catch(e){}
-		if (d == 'none') return this;
-		return this.store('element:_originalDisplay', d || '').setStyle('display', 'none');
-	},
-
-	show: function(display){
-		if (!display && this.isDisplayed()) return this;
-		display = display || this.retrieve('element:_originalDisplay') || 'block';
-		return this.setStyle('display', (display == 'none') ? 'block' : display);
-	},
-
-	swapClass: function(remove, add){
-		return this.removeClass(remove).addClass(add);
-	}
-
-});
-
-Document.implement({
-
-	clearSelection: function(){
-		if (window.getSelection){
-			var selection = window.getSelection();
-			if (selection && selection.removeAllRanges) selection.removeAllRanges();
-		} else if (document.selection && document.selection.empty){
-			try {
-				//IE fails here if selected element is not in dom
-				document.selection.empty();
-			} catch(e){}
-		}
-	}
-
-});
 
 
 // Begin: Source/Element/Element.Dimensions.js
@@ -6566,6 +4963,42 @@ Element.alias({position: 'setPosition'}); //compatability
 });
 
 
+// Begin: Source/More/More.js
+/*
+---
+
+script: More.js
+
+name: More
+
+description: MooTools More
+
+license: MIT-style license
+
+authors:
+  - Guillermo Rauch
+  - Thomas Aylott
+  - Scott Kyle
+  - Arian Stolwijk
+  - Tim Wienk
+  - Christoph Pojer
+  - Aaron Newton
+  - Jacob Thornton
+
+requires:
+  - Core/MooTools
+
+provides: [MooTools.More]
+
+...
+*/
+
+MooTools.More = {
+	version: '1.4.3.1dev',
+	build: '%build%'
+};
+
+
 // Begin: Source/Element/Element.Measure.js
 /*
 ---
@@ -6738,486 +5171,6 @@ Element.implement({
 
 })();
 
-
-// Begin: Source/Fx/Fx.Reveal.js
-/*
----
-
-script: Fx.Reveal.js
-
-name: Fx.Reveal
-
-description: Defines Fx.Reveal, a class that shows and hides elements with a transition.
-
-license: MIT-style license
-
-authors:
-  - Aaron Newton
-
-requires:
-  - Core/Fx.Morph
-  - /Element.Shortcuts
-  - /Element.Measure
-
-provides: [Fx.Reveal]
-
-...
-*/
-
-(function(){
-
-
-var hideTheseOf = function(object){
-	var hideThese = object.options.hideInputs;
-	if (window.OverText){
-		var otClasses = [null];
-		OverText.each(function(ot){
-			otClasses.include('.' + ot.options.labelClass);
-		});
-		if (otClasses) hideThese += otClasses.join(', ');
-	}
-	return (hideThese) ? object.element.getElements(hideThese) : null;
-};
-
-
-Fx.Reveal = new Class({
-
-	Extends: Fx.Morph,
-
-	options: {/*
-		onShow: function(thisElement){},
-		onHide: function(thisElement){},
-		onComplete: function(thisElement){},
-		heightOverride: null,
-		widthOverride: null,*/
-		link: 'cancel',
-		styles: ['padding', 'border', 'margin'],
-		transitionOpacity: !Browser.ie6,
-		mode: 'vertical',
-		display: function(){
-			return this.element.get('tag') != 'tr' ? 'block' : 'table-row';
-		},
-		opacity: 1,
-		hideInputs: Browser.ie ? 'select, input, textarea, object, embed' : null
-	},
-
-	dissolve: function(){
-		if (!this.hiding && !this.showing){
-			if (this.element.getStyle('display') != 'none'){
-				this.hiding = true;
-				this.showing = false;
-				this.hidden = true;
-				this.cssText = this.element.style.cssText;
-
-				var startStyles = this.element.getComputedSize({
-					styles: this.options.styles,
-					mode: this.options.mode
-				});
-				if (this.options.transitionOpacity) startStyles.opacity = this.options.opacity;
-
-				var zero = {};
-				Object.each(startStyles, function(style, name){
-					zero[name] = [style, 0];
-				});
-
-				this.element.setStyles({
-					display: Function.from(this.options.display).call(this),
-					overflow: 'hidden'
-				});
-
-				var hideThese = hideTheseOf(this);
-				if (hideThese) hideThese.setStyle('visibility', 'hidden');
-
-				this.$chain.unshift(function(){
-					if (this.hidden){
-						this.hiding = false;
-						this.element.style.cssText = this.cssText;
-						this.element.setStyle('display', 'none');
-						if (hideThese) hideThese.setStyle('visibility', 'visible');
-					}
-					this.fireEvent('hide', this.element);
-					this.callChain();
-				}.bind(this));
-
-				this.start(zero);
-			} else {
-				this.callChain.delay(10, this);
-				this.fireEvent('complete', this.element);
-				this.fireEvent('hide', this.element);
-			}
-		} else if (this.options.link == 'chain'){
-			this.chain(this.dissolve.bind(this));
-		} else if (this.options.link == 'cancel' && !this.hiding){
-			this.cancel();
-			this.dissolve();
-		}
-		return this;
-	},
-
-	reveal: function(){
-		if (!this.showing && !this.hiding){
-			if (this.element.getStyle('display') == 'none'){
-				this.hiding = false;
-				this.showing = true;
-				this.hidden = false;
-				this.cssText = this.element.style.cssText;
-
-				var startStyles;
-				this.element.measure(function(){
-					startStyles = this.element.getComputedSize({
-						styles: this.options.styles,
-						mode: this.options.mode
-					});
-				}.bind(this));
-				if (this.options.heightOverride != null) startStyles.height = this.options.heightOverride.toInt();
-				if (this.options.widthOverride != null) startStyles.width = this.options.widthOverride.toInt();
-				if (this.options.transitionOpacity){
-					this.element.setStyle('opacity', 0);
-					startStyles.opacity = this.options.opacity;
-				}
-
-				var zero = {
-					height: 0,
-					display: Function.from(this.options.display).call(this)
-				};
-				Object.each(startStyles, function(style, name){
-					zero[name] = 0;
-				});
-				zero.overflow = 'hidden';
-
-				this.element.setStyles(zero);
-
-				var hideThese = hideTheseOf(this);
-				if (hideThese) hideThese.setStyle('visibility', 'hidden');
-
-				this.$chain.unshift(function(){
-					this.element.style.cssText = this.cssText;
-					this.element.setStyle('display', Function.from(this.options.display).call(this));
-					if (!this.hidden) this.showing = false;
-					if (hideThese) hideThese.setStyle('visibility', 'visible');
-					this.callChain();
-					this.fireEvent('show', this.element);
-				}.bind(this));
-
-				this.start(startStyles);
-			} else {
-				this.callChain();
-				this.fireEvent('complete', this.element);
-				this.fireEvent('show', this.element);
-			}
-		} else if (this.options.link == 'chain'){
-			this.chain(this.reveal.bind(this));
-		} else if (this.options.link == 'cancel' && !this.showing){
-			this.cancel();
-			this.reveal();
-		}
-		return this;
-	},
-
-	toggle: function(){
-		if (this.element.getStyle('display') == 'none'){
-			this.reveal();
-		} else {
-			this.dissolve();
-		}
-		return this;
-	},
-
-	cancel: function(){
-		this.parent.apply(this, arguments);
-		if (this.cssText != null) this.element.style.cssText = this.cssText;
-		this.hiding = false;
-		this.showing = false;
-		return this;
-	}
-
-});
-
-Element.Properties.reveal = {
-
-	set: function(options){
-		this.get('reveal').cancel().setOptions(options);
-		return this;
-	},
-
-	get: function(){
-		var reveal = this.retrieve('reveal');
-		if (!reveal){
-			reveal = new Fx.Reveal(this);
-			this.store('reveal', reveal);
-		}
-		return reveal;
-	}
-
-};
-
-Element.Properties.dissolve = Element.Properties.reveal;
-
-Element.implement({
-
-	reveal: function(options){
-		this.get('reveal').setOptions(options).reveal();
-		return this;
-	},
-
-	dissolve: function(options){
-		this.get('reveal').setOptions(options).dissolve();
-		return this;
-	},
-
-	nix: function(options){
-		var params = Array.link(arguments, {destroy: Type.isBoolean, options: Type.isObject});
-		this.get('reveal').setOptions(options).dissolve().chain(function(){
-			this[params.destroy ? 'destroy' : 'dispose']();
-		}.bind(this));
-		return this;
-	},
-
-	wink: function(){
-		var params = Array.link(arguments, {duration: Type.isNumber, options: Type.isObject});
-		var reveal = this.get('reveal').setOptions(params.options);
-		reveal.reveal().chain(function(){
-			(function(){
-				reveal.dissolve();
-			}).delay(params.duration || 2000);
-		});
-	}
-
-});
-
-})();
-
-
-// Begin: Source/Delegators/Delegator.FxReveal.js
-/*
----
-description: Provides methods to reveal, dissolve, nix, and toggle using Fx.Reveal.
-provides: [Delegator.FxReveal, Delegator.Reveal, Delegator.ToggleReveal, Delegator.Dissolve, Delegator.Nix]
-requires: [Behavior/Delegator, More/Fx.Reveal]
-script: Delegator.FxReveal.js
-name: Delegator.FxReveal
-
-...
-*/
-(function(){
-
-	var triggers = {};
-
-	['reveal', 'toggleReveal', 'dissolve', 'nix'].each(function(action){
-
-		triggers[action] = {
-			handler: function(event, link, api){
-				var targets;
-				if (api.get('target')){
-					targets = new Elements([link.getElement(api.get('target'))]);
-					if (!targets) api.fail('could not locate target element to ' + action, link);
-				} else if (api.get('targets')){
-					targets = link.getElements(api.get('targets'));
-					if (!targets.length) api.fail('could not locate target elements to ' + action, link);
-				} else {
-					targets = new Elements([link]);
-				}
-
-				var fxOptions = api.get('fxOptions');
-				if (fxOptions) targets.set('reveal', fxOptions);
-				targets.get('reveal');
-				if (action == 'toggleReveal') targets.get('reveal').invoke('toggle');
-				else targets[action]();
-				if (!api.getAs(Boolean, 'allowEvent')) event.preventDefault();
-			}
-		};
-
-	});
-
-	Delegator.register('click', triggers);
-
-})();
-
-// Begin: Source/Behaviors/Behavior.BS.Alert.js
-/*
----
-
-name: Behavior.BS.Alert
-
-description: This file just depends on the Fx.Reveal delegator in More-Behaviors to ensure you get it if you load the entire Bootstrap JS package.
-
-license: MIT-style license.
-
-authors: [Aaron Newton]
-
-requires:
- - More-Behaviors/Delegator.Nix
-
-provides: [Behavior.BS.Alert]
-
-...
-*/
-
-// Begin: Source/UI/Bootstrap.js
-/*
----
-
-name: Bootstrap
-
-description: The BootStrap namespace.
-
-authors: [Aaron Newton]
-
-license: MIT-style license.
-
-provides: [Bootstrap]
-
-...
-*/
-var Bootstrap = {};
-
-// Begin: Source/Utilities/DOMReady.js
-/*
----
-
-name: DOMReady
-
-description: Contains the custom event domready.
-
-license: MIT-style license.
-
-requires: [Browser, Element, Element.Event]
-
-provides: [DOMReady, DomReady]
-
-...
-*/
-
-(function(window, document){
-
-var ready,
-	loaded,
-	checks = [],
-	shouldPoll,
-	timer,
-	testElement = document.createElement('div');
-
-var domready = function(){
-	clearTimeout(timer);
-	if (ready) return;
-	Browser.loaded = ready = true;
-	document.removeListener('DOMContentLoaded', domready).removeListener('readystatechange', check);
-
-	document.fireEvent('domready');
-	window.fireEvent('domready');
-};
-
-var check = function(){
-	for (var i = checks.length; i--;) if (checks[i]()){
-		domready();
-		return true;
-	}
-	return false;
-};
-
-var poll = function(){
-	clearTimeout(timer);
-	if (!check()) timer = setTimeout(poll, 10);
-};
-
-document.addListener('DOMContentLoaded', domready);
-
-/*<ltIE8>*/
-// doScroll technique by Diego Perini http://javascript.nwbox.com/IEContentLoaded/
-// testElement.doScroll() throws when the DOM is not ready, only in the top window
-var doScrollWorks = function(){
-	try {
-		testElement.doScroll();
-		return true;
-	} catch (e){}
-	return false;
-};
-// If doScroll works already, it can't be used to determine domready
-//   e.g. in an iframe
-if (testElement.doScroll && !doScrollWorks()){
-	checks.push(doScrollWorks);
-	shouldPoll = true;
-}
-/*</ltIE8>*/
-
-if (document.readyState) checks.push(function(){
-	var state = document.readyState;
-	return (state == 'loaded' || state == 'complete');
-});
-
-if ('onreadystatechange' in document) document.addListener('readystatechange', check);
-else shouldPoll = true;
-
-if (shouldPoll) poll();
-
-Element.Events.domready = {
-	onAdd: function(fn){
-		if (ready) fn.call(this);
-	}
-};
-
-// Make sure that domready fires before load
-Element.Events.load = {
-	base: 'load',
-	onAdd: function(fn){
-		if (loaded && this == window) fn.call(this);
-	},
-	condition: function(){
-		if (this == window){
-			domready();
-			delete Element.Events.load;
-		}
-		return true;
-	}
-};
-
-// This is based on the custom load event
-window.addEvent('load', function(){
-	loaded = true;
-});
-
-})(window, document);
-
-
-// Begin: Source/UI/CSSEvents.js
-/*
----
-
-name: CSSEvents
-
-license: MIT-style
-
-authors: [Aaron Newton]
-
-requires: [Core/DomReady]
-
-provides: CSSEvents
-...
-*/
-
-Browser.Features.getCSSTransition = function(){
-	Browser.Features.cssTransition = (function () {
-		var thisBody = document.body || document.documentElement
-			, thisStyle = thisBody.style
-			, support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined;
-		return support;
-	})();
-
-	// set CSS transition event type
-	if ( Browser.Features.cssTransition ) {
-		Browser.Features.transitionEnd = "TransitionEnd";
-		if ( Browser.webkit || Browser.chrome ) {
-			Browser.Features.transitionEnd = "webkitTransitionEnd";
-		} else if ( Browser.firefox ) {
-			Browser.Features.transitionEnd = "transitionend";
-		} else if ( Browser.opera ) {
-			Browser.Features.transitionEnd = "oTransitionEnd";
-		}
-	}
-	Browser.Features.getCSSTransition = Function.from(Browser.Features.transitionEnd);
-};
-
-window.addEvent("domready", Browser.Features.getCSSTransition);
 
 // Begin: Source/Element/Element.Position.js
 /*
@@ -7457,7 +5410,993 @@ Element.implement({
 })(Element.prototype.position);
 
 
-// Begin: Source/UI/Bootstrap.Twipsy.js
+// Begin: Source/Element/Element.Shortcuts.js
+/*
+---
+
+script: Element.Shortcuts.js
+
+name: Element.Shortcuts
+
+description: Extends the Element native object to include some shortcut methods.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Element.Style
+  - /MooTools.More
+
+provides: [Element.Shortcuts]
+
+...
+*/
+
+Element.implement({
+
+	isDisplayed: function(){
+		return this.getStyle('display') != 'none';
+	},
+
+	isVisible: function(){
+		var w = this.offsetWidth,
+			h = this.offsetHeight;
+		return (w == 0 && h == 0) ? false : (w > 0 && h > 0) ? true : this.style.display != 'none';
+	},
+
+	toggle: function(){
+		return this[this.isDisplayed() ? 'hide' : 'show']();
+	},
+
+	hide: function(){
+		var d;
+		try {
+			//IE fails here if the element is not in the dom
+			d = this.getStyle('display');
+		} catch(e){}
+		if (d == 'none') return this;
+		return this.store('element:_originalDisplay', d || '').setStyle('display', 'none');
+	},
+
+	show: function(display){
+		if (!display && this.isDisplayed()) return this;
+		display = display || this.retrieve('element:_originalDisplay') || 'block';
+		return this.setStyle('display', (display == 'none') ? 'block' : display);
+	},
+
+	swapClass: function(remove, add){
+		return this.removeClass(remove).addClass(add);
+	}
+
+});
+
+Document.implement({
+
+	clearSelection: function(){
+		if (window.getSelection){
+			var selection = window.getSelection();
+			if (selection && selection.removeAllRanges) selection.removeAllRanges();
+		} else if (document.selection && document.selection.empty){
+			try {
+				//IE fails here if selected element is not in dom
+				document.selection.empty();
+			} catch(e){}
+		}
+	}
+
+});
+
+
+// Begin: Source/Utilities/Table.js
+/*
+---
+name: Table
+description: LUA-Style table implementation.
+license: MIT-style license
+authors:
+  - Valerio Proietti
+requires: [Core/Array]
+provides: [Table]
+...
+*/
+
+(function(){
+
+var Table = this.Table = function(){
+
+	this.length = 0;
+	var keys = [],
+	    values = [];
+
+	this.set = function(key, value){
+		var index = keys.indexOf(key);
+		if (index == -1){
+			var length = keys.length;
+			keys[length] = key;
+			values[length] = value;
+			this.length++;
+		} else {
+			values[index] = value;
+		}
+		return this;
+	};
+
+	this.get = function(key){
+		var index = keys.indexOf(key);
+		return (index == -1) ? null : values[index];
+	};
+
+	this.erase = function(key){
+		var index = keys.indexOf(key);
+		if (index != -1){
+			this.length--;
+			keys.splice(index, 1);
+			return values.splice(index, 1)[0];
+		}
+		return null;
+	};
+
+	this.each = this.forEach = function(fn, bind){
+		for (var i = 0, l = this.length; i < l; i++) fn.call(bind, keys[i], values[i], this);
+	};
+
+};
+
+if (this.Type) new Type('Table', Table);
+
+})();
+
+
+// Begin: Source/Utilities/JSON.js
+/*
+---
+
+name: JSON
+
+description: JSON encoder and decoder.
+
+license: MIT-style license.
+
+SeeAlso: <http://www.json.org/>
+
+requires: [Array, String, Number, Function]
+
+provides: JSON
+
+...
+*/
+
+if (typeof JSON == 'undefined') this.JSON = {};
+
+//<1.2compat>
+
+JSON = new Hash({
+	stringify: JSON.stringify,
+	parse: JSON.parse
+});
+
+//</1.2compat>
+
+(function(){
+
+var special = {'\b': '\\b', '\t': '\\t', '\n': '\\n', '\f': '\\f', '\r': '\\r', '"' : '\\"', '\\': '\\\\'};
+
+var escape = function(chr){
+	return special[chr] || '\\u' + ('0000' + chr.charCodeAt(0).toString(16)).slice(-4);
+};
+
+JSON.validate = function(string){
+	string = string.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, '@').
+					replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']').
+					replace(/(?:^|:|,)(?:\s*\[)+/g, '');
+
+	return (/^[\],:{}\s]*$/).test(string);
+};
+
+JSON.encode = JSON.stringify ? function(obj){
+	return JSON.stringify(obj);
+} : function(obj){
+	if (obj && obj.toJSON) obj = obj.toJSON();
+
+	switch (typeOf(obj)){
+		case 'string':
+			return '"' + obj.replace(/[\x00-\x1f\\"]/g, escape) + '"';
+		case 'array':
+			return '[' + obj.map(JSON.encode).clean() + ']';
+		case 'object': case 'hash':
+			var string = [];
+			Object.each(obj, function(value, key){
+				var json = JSON.encode(value);
+				if (json) string.push(JSON.encode(key) + ':' + json);
+			});
+			return '{' + string + '}';
+		case 'number': case 'boolean': return '' + obj;
+		case 'null': return 'null';
+	}
+
+	return null;
+};
+
+JSON.decode = function(string, secure){
+	if (!string || typeOf(string) != 'string') return null;
+
+	if (secure || JSON.secure){
+		if (JSON.parse) return JSON.parse(string);
+		if (!JSON.validate(string)) throw new Error('JSON could not decode the input; security is enabled and the value is not secure.');
+	}
+
+	return eval('(' + string + ')');
+};
+
+})();
+
+
+// Begin: Source/Element.Data.js
+/*
+---
+name: Element.Data
+description: Stores data in HTML5 data properties
+provides: [Element.Data]
+requires: [Core/Element, Core/JSON]
+script: Element.Data.js
+
+...
+*/
+(function(){
+
+	JSON.isSecure = function(string){
+		//this verifies that the string is parsable JSON and not malicious (borrowed from JSON.js in MooTools, which in turn borrowed it from Crockford)
+		//this version is a little more permissive, as it allows single quoted attributes because forcing the use of double quotes
+		//is a pain when this stuff is used as HTML properties
+		return (/^[,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]*$/).test(string.replace(/\\./g, '@').replace(/"[^"\\\n\r]*"/g, '').replace(/'[^'\\\n\r]*'/g, ''));
+	};
+
+	Element.implement({
+		/*
+			sets an HTML5 data property.
+			arguments:
+				name - (string) the data name to store; will be automatically prefixed with 'data-'.
+				value - (string, number) the value to store.
+		*/
+		setData: function(name, value){
+			return this.set('data-' + name.hyphenate(), value);
+		},
+
+		getData: function(name, defaultValue){
+			var value = this.get('data-' + name.hyphenate());
+			if (value != undefined){
+				return value;
+			} else if (defaultValue != undefined){
+				this.setData(name, defaultValue);
+				return defaultValue;
+			}
+		},
+
+		/*
+			arguments:
+				name - (string) the data name to store; will be automatically prefixed with 'data-'
+				value - (string, array, or object) if an object or array the object will be JSON encoded; otherwise stored as provided.
+		*/
+		setJSONData: function(name, value){
+			return this.setData(name, JSON.encode(value));
+		},
+
+		/*
+			retrieves a property from HTML5 data property you specify
+
+			arguments:
+				name - (retrieve) the data name to store; will be automatically prefixed with 'data-'
+				strict - (boolean) if true, will set the JSON.decode's secure flag to true; otherwise the value is still tested but allows single quoted attributes.
+				defaultValue - (string, array, or object) the value to set if no value is found (see storeData above)
+		*/
+		getJSONData: function(name, strict, defaultValue){
+			var value = this.get('data-' + name);
+			if (value != undefined){
+				if (value && JSON.isSecure(value)) {
+					return JSON.decode(value, strict);
+				} else {
+					return value;
+				}
+			} else if (defaultValue != undefined){
+				this.setJSONData(name, defaultValue);
+				return defaultValue;
+			}
+		}
+
+	});
+
+})();
+
+// Begin: Source/BehaviorAPI.js
+/*
+---
+name: BehaviorAPI
+description: HTML getters for Behavior's API model.
+requires: [Core/Class, /Element.Data]
+provides: [BehaviorAPI]
+...
+*/
+
+
+(function(){
+	//see Docs/BehaviorAPI.md for documentation of public methods.
+
+	var reggy = /[^a-z0-9\-]/gi,
+	    dots = /\./g;
+
+	window.BehaviorAPI = new Class({
+		element: null,
+		prefix: '',
+		defaults: {},
+
+		initialize: function(element, prefix){
+			this.element = element;
+			this.prefix = prefix.toLowerCase().replace(dots, '-').replace(reggy, '');
+		},
+
+		/******************
+		 * PUBLIC METHODS
+		 ******************/
+
+		get: function(/* name[, name, name, etc] */){
+			if (arguments.length > 1) return this._getObj(Array.from(arguments));
+			return this._getValue(arguments[0]);
+		},
+
+		getAs: function(/*returnType, name, defaultValue OR {name: returnType, name: returnType, etc}*/){
+			if (typeOf(arguments[0]) == 'object') return this._getValuesAs.apply(this, arguments);
+			return this._getValueAs.apply(this, arguments);
+		},
+
+		require: function(/* name[, name, name, etc] */){
+			for (var i = 0; i < arguments.length; i++){
+				if (this._getValue(arguments[i]) == undefined) throw new Error('Could not retrieve ' + this.prefix + '-' + arguments[i] + ' option from element.');
+			}
+			return this;
+		},
+
+		requireAs: function(returnType, name /* OR {name: returnType, name: returnType, etc}*/){
+			var val;
+			if (typeOf(arguments[0]) == 'object'){
+				for (var objName in arguments[0]){
+					val = this._getValueAs(arguments[0][objName], objName);
+					if (val === undefined || val === null) throw new Error("Could not retrieve " + this.prefix + '-' + objName + " option from element.");
+				}
+			} else {
+				val = this._getValueAs(returnType, name);
+				if (val === undefined || val === null) throw new Error("Could not retrieve " + this.prefix + '-' + name + " option from element.");
+			}
+			return this;
+		},
+
+		setDefault: function(name, value /* OR {name: value, name: value, etc }*/){
+			if (typeOf(arguments[0]) == 'object'){
+				for (var objName in arguments[0]){
+					this.setDefault(objName, arguments[0][objName]);
+				}
+				return;
+			}
+			name = name.camelCase();
+			this.defaults[name] = value;
+			if (this._getValue(name) == null){
+				var options = this._getOptions();
+				options[name] = value;
+			}
+			return this;
+		},
+
+		refreshAPI: function(){
+			delete this.options;
+			this.setDefault(this.defaults);
+			return;
+		},
+
+		/******************
+		 * PRIVATE METHODS
+		 ******************/
+
+		//given an array of names, returns an object of key/value pairs for each name
+		_getObj: function(names){
+			var obj = {};
+			names.each(function(name){
+				var value = this._getValue(name);
+				if (value !== undefined) obj[name] = value;
+			}, this);
+			return obj;
+		},
+		//gets the data-behaviorname-options object and parses it as JSON
+		_getOptions: function(){
+			try {
+				if (!this.options){
+					var options = this.element.getData(this.prefix + '-options', '{}');
+					if (options === "") return this.options = {};
+					if (options && options.substring(0,1) != '{') options = '{' + options + '}';
+					var isSecure = JSON.isSecure(options);
+					if (!isSecure) throw new Error('warning, options value for element is not parsable, check your JSON format for quotes, etc.');
+					this.options = isSecure ? JSON.decode(options) : {};
+					for (option in this.options) {
+						this.options[option.camelCase()] = this.options[option];
+					}
+				}
+			} catch (e){
+				throw new Error('Could not get options from element; check your syntax. ' + this.prefix + '-options: "' + this.element.getData(this.prefix + '-options', '{}') + '"');
+			}
+			return this.options;
+		},
+		//given a name (string) returns the value for it
+		_getValue: function(name){
+			name = name.camelCase();
+			var options = this._getOptions();
+			if (!options.hasOwnProperty(name)){
+				var inline = this.element.getData(this.prefix + '-' + name.hyphenate());
+				if (inline) options[name] = inline;
+			}
+			return options[name];
+		},
+		//given a Type and a name (string) returns the value for it coerced to that type if possible
+		//else returns the defaultValue or null
+		_getValueAs: function(returnType, name, defaultValue){
+			var value = this._getValue(name);
+			if (value == null || value == undefined) return defaultValue;
+			var coerced = this._coerceFromString(returnType, value);
+			if (coerced == null) throw new Error("Could not retrieve value '" + name + "' as the specified type. Its value is: " + value);
+			return coerced;
+		},
+		//given an object of name/Type pairs, returns those as an object of name/value (as specified Type) pairs
+		_getValuesAs: function(obj){
+			var returnObj = {};
+			for (var name in obj){
+				returnObj[name] = this._getValueAs(obj[name], name);
+			}
+			return returnObj;
+		},
+		//attempts to run a value through the JSON parser. If the result is not of that type returns null.
+		_coerceFromString: function(toType, value){
+			if (typeOf(value) == 'string' && toType != String){
+				if (JSON.isSecure(value)) value = JSON.decode(value);
+			}
+			if (instanceOf(value, toType)) return value;
+			return null;
+		}
+	});
+
+})();
+
+// Begin: Source/Behavior.js
+/*
+---
+name: Behavior
+description: Auto-instantiates widgets/classes based on parsed, declarative HTML.
+requires: [Core/Class.Extras, Core/Element.Event, Core/Selectors, More/Table, /Element.Data, /BehaviorAPI]
+provides: [Behavior]
+...
+*/
+
+(function(){
+
+	var getLog = function(method){
+		return function(){
+			if (window.console && console[method]){
+				if(console[method].apply) console[method].apply(console, arguments);
+				else console[method](Array.from(arguments).join(' '));
+			}
+		};
+	};
+
+	var PassMethods = new Class({
+		//pass a method pointer through to a filter
+		//by default the methods for add/remove events are passed to the filter
+		//pointed to this instance of behavior. you could use this to pass along
+		//other methods to your filters. For example, a method to close a popup
+		//for filters presented inside popups.
+		passMethod: function(method, fn){
+			if (this.API.prototype[method]) throw new Error('Cannot overwrite API method ' + method + ' as it already exists');
+			this.API.implement(method, fn);
+			return this;
+		},
+
+		passMethods: function(methods){
+			for (method in methods) this.passMethod(method, methods[method]);
+			return this;
+		}
+
+	});
+
+	var GetAPI = new Class({
+		_getAPI: function(element, filter){
+			var api = new this.API(element, filter.name);
+			api.getElement = function(apiKey, breakIfNotFound){
+				var elements = api.getElements(apiKey, breakIfNotFound);
+				return elements ? elements[0] : null;
+			};
+			api.getElements = function(apiKey, warnOrFail){
+				var method = warnOrFail || "fail";
+				var selector = api.get(apiKey);
+				if (!selector){
+					api[method]("Could not find selector for " + apiKey);
+					return;
+				}
+
+				if (selector == 'window') return window;
+				else if (selector == 'self') return element;
+
+				var targets = element.getElements(selector);
+				if (!targets.length) api[method]("Could not find any elements for target '" + apiKey + "' using selector '" + selector + "'");
+				return targets;
+			};
+			return api;
+		}
+	});
+
+	var spaceOrCommaRegex = /\s*,\s*|\s+/g;
+
+	BehaviorAPI.implement({
+		deprecate: function(deprecated, asJSON){
+			var set,
+			    values = {};
+			Object.each(deprecated, function(prop, key){
+				var value = this.element[ asJSON ? 'getJSONData' : 'getData'](prop);
+				if (value !== undefined){
+					set = true;
+					values[key] = value;
+				}
+			}, this);
+			this.setDefault(values);
+			return this;
+		}
+	});
+
+	this.Behavior = new Class({
+
+		Implements: [Options, Events, PassMethods, GetAPI],
+
+		options: {
+			//by default, errors thrown by filters are caught; the onError event is fired.
+			//set this to *true* to NOT catch these errors to allow them to be handled by the browser.
+			// breakOnErrors: false,
+			// container: document.body,
+
+			//default error behavior when a filter cannot be applied
+			onLog: getLog('info'),
+			onError: getLog('error'),
+			onWarn: getLog('warn'),
+			enableDeprecation: true,
+			selector: '[data-behavior]'
+		},
+
+		initialize: function(options){
+			this.setOptions(options);
+			this.API = new Class({ Extends: BehaviorAPI });
+			var self = this;
+			this.passMethods({
+				getDelegator: this.getDelegator.bind(this),
+				addEvent: this.addEvent.bind(this),
+				removeEvent: this.removeEvent.bind(this),
+				addEvents: this.addEvents.bind(this),
+				removeEvents: this.removeEvents.bind(this),
+				fireEvent: this.fireEvent.bind(this),
+				applyFilters: this.apply.bind(this),
+				applyFilter: this.applyFilter.bind(this),
+				getContentElement: this.getContentElement.bind(this),
+				cleanup: this.cleanup.bind(this),
+				getContainerSize: function(){
+					return this.getContentElement().measure(function(){
+						return this.getSize();
+					});
+				}.bind(this),
+				error: function(){ this.fireEvent('error', arguments); }.bind(this),
+				fail: function(){
+					var msg = Array.join(arguments, ' ');
+					throw new Error(msg);
+				},
+				warn: function(){
+					this.fireEvent('warn', arguments);
+				}.bind(this)
+			});
+		},
+
+		getDelegator: function(){
+			return this.delegator;
+		},
+
+		setDelegator: function(delegator){
+			if (!instanceOf(delegator, Delegator)) throw new Error('Behavior.setDelegator only accepts instances of Delegator.');
+			this.delegator = delegator;
+			return this;
+		},
+
+		getContentElement: function(){
+			return this.options.container || document.body;
+		},
+
+		//Applies all the behavior filters for an element.
+		//container - (element) an element to apply the filters registered with this Behavior instance to.
+		//force - (boolean; optional) passed through to applyFilter (see it for docs)
+		apply: function(container, force){
+		  this._getElements(container).each(function(element){
+				var plugins = [];
+				element.getBehaviors().each(function(name){
+					var filter = this.getFilter(name);
+					if (!filter){
+						this.fireEvent('error', ['There is no filter registered with this name: ', name, element]);
+					} else {
+						var config = filter.config;
+						if (config.delay !== undefined){
+							this.applyFilter.delay(filter.config.delay, this, [element, filter, force]);
+						} else if(config.delayUntil){
+							this._delayFilterUntil(element, filter, force);
+						} else if(config.initializer){
+							this._customInit(element, filter, force);
+						} else {
+							plugins.append(this.applyFilter(element, filter, force, true));
+						}
+					}
+				}, this);
+				plugins.each(function(plugin){
+					if (this.options.verbose) this.fireEvent('log', ['Firing plugin...']);
+					plugin();
+				}, this);
+			}, this);
+			return this;
+		},
+
+		_getElements: function(container){
+			if (typeOf(this.options.selector) == 'function') return this.options.selector(container);
+			else return document.id(container).getElements(this.options.selector);
+		},
+
+		//delays a filter until the event specified in filter.config.delayUntil is fired on the element
+		_delayFilterUntil: function(element, filter, force){
+			var events = filter.config.delayUntil.split(','),
+			    attached = {},
+			    inited = false;
+			var clear = function(){
+				events.each(function(event){
+					element.removeEvent(event, attached[event]);
+				});
+				clear = function(){};
+			};
+			events.each(function(event){
+				var init = function(e){
+					clear();
+					if (inited) return;
+					inited = true;
+					var setup = filter.setup;
+					filter.setup = function(element, api, _pluginResult){
+						api.event = e;
+						return setup.apply(filter, [element, api, _pluginResult]);
+					};
+					this.applyFilter(element, filter, force);
+					filter.setup = setup;
+				}.bind(this);
+				element.addEvent(event, init);
+				attached[event] = init;
+			}, this);
+		},
+
+		//runs custom initiliazer defined in filter.config.initializer
+		_customInit: function(element, filter, force){
+			var api = this._getAPI(element, filter);
+			api.runSetup = this.applyFilter.pass([element, filter, force], this);
+			filter.config.initializer(element, api);
+		},
+
+		//Applies a specific behavior to a specific element.
+		//element - the element to which to apply the behavior
+		//filter - (object) a specific behavior filter, typically one registered with this instance or registered globally.
+		//force - (boolean; optional) apply the behavior to each element it matches, even if it was previously applied. Defaults to *false*.
+		//_returnPlugins - (boolean; optional; internal) if true, plugins are not rendered but instead returned as an array of functions
+		//_pluginTargetResult - (obj; optional internal) if this filter is a plugin for another, this is whatever that target filter returned
+		//                      (an instance of a class for example)
+		applyFilter: function(element, filter, force, _returnPlugins, _pluginTargetResult){
+			var pluginsToReturn = [];
+			if (this.options.breakOnErrors){
+				pluginsToReturn = this._applyFilter.apply(this, arguments);
+			} else {
+				try {
+					pluginsToReturn = this._applyFilter.apply(this, arguments);
+				} catch (e){
+					this.fireEvent('error', ['Could not apply the behavior ' + filter.name, e.message]);
+				}
+			}
+			return _returnPlugins ? pluginsToReturn : this;
+		},
+
+		//see argument list above for applyFilter
+		_applyFilter: function(element, filter, force, _returnPlugins, _pluginTargetResult){
+			var pluginsToReturn = [];
+			element = document.id(element);
+			//get the filters already applied to this element
+			var applied = getApplied(element);
+			//if this filter is not yet applied to the element, or we are forcing the filter
+			if (!applied[filter.name] || force){
+				if (this.options.verbose) this.fireEvent('log', ['Applying behavior: ', filter.name, element]);
+				//if it was previously applied, garbage collect it
+				if (applied[filter.name]) applied[filter.name].cleanup(element);
+				var api = this._getAPI(element, filter);
+
+				//deprecated
+				api.markForCleanup = filter.markForCleanup.bind(filter);
+				api.onCleanup = function(fn){
+					filter.markForCleanup(element, fn);
+				};
+
+				if (filter.config.deprecated && this.options.enableDeprecation) api.deprecate(filter.config.deprecated);
+				if (filter.config.deprecateAsJSON && this.options.enableDeprecation) api.deprecate(filter.config.deprecatedAsJSON, true);
+
+				//deal with requirements and defaults
+				if (filter.config.requireAs){
+					api.requireAs(filter.config.requireAs);
+				} else if (filter.config.require){
+					api.require.apply(api, Array.from(filter.config.require));
+				}
+
+				if (filter.config.defaults) api.setDefault(filter.config.defaults);
+
+				//apply the filter
+				if (Behavior.debugging && Behavior.debugging.contains(filter.name)) debugger;
+				var result = filter.setup(element, api, _pluginTargetResult);
+				if (filter.config.returns && !instanceOf(result, filter.config.returns)){
+					throw new Error("Filter " + filter.name + " did not return a valid instance.");
+				}
+				element.store('Behavior Filter result:' + filter.name, result);
+				if (this.options.verbose){
+					if (result && !_pluginTargetResult) this.fireEvent('log', ['Successfully applied behavior: ', filter.name, element, result]);
+					else this.fireEvent('warn', ['Behavior applied, but did not return result: ', filter.name, element, result]);
+				}
+
+				//and mark it as having been previously applied
+				applied[filter.name] = filter;
+				//apply all the plugins for this filter
+				var plugins = this.getPlugins(filter.name);
+				if (plugins){
+					for (var name in plugins){
+						if (_returnPlugins){
+							pluginsToReturn.push(this.applyFilter.pass([element, plugins[name], force, null, result], this));
+						} else {
+							this.applyFilter(element, plugins[name], force, null, result);
+						}
+					}
+				}
+			}
+			return pluginsToReturn;
+		},
+
+		//given a name, returns a registered behavior
+		getFilter: function(name){
+			return this._registered[name] || Behavior.getFilter(name);
+		},
+
+		getPlugins: function(name){
+			return this._plugins[name] || Behavior._plugins[name];
+		},
+
+		//Garbage collects all applied filters for an element and its children.
+		//element - (*element*) container to cleanup
+		//ignoreChildren - (*boolean*; optional) if *true* only the element will be cleaned, otherwise the element and all the
+		//	  children with filters applied will be cleaned. Defaults to *false*.
+		cleanup: function(element, ignoreChildren){
+			element = document.id(element);
+			var applied = getApplied(element);
+			for (var filter in applied){
+				applied[filter].cleanup(element);
+				element.eliminate('Behavior Filter result:' + filter);
+				delete applied[filter];
+			}
+			if (!ignoreChildren) this._getElements(element).each(this.cleanup, this);
+			return this;
+		}
+
+	});
+
+	//Export these for use elsewhere (notabily: Delegator).
+	Behavior.getLog = getLog;
+	Behavior.PassMethods = PassMethods;
+	Behavior.GetAPI = GetAPI;
+
+
+	//Returns the applied behaviors for an element.
+	var getApplied = function(el){
+		return el.retrieve('_appliedBehaviors', {});
+	};
+
+	//Registers a behavior filter.
+	//name - the name of the filter
+	//fn - a function that applies the filter to the given element
+	//overwrite - (boolean) if true, will overwrite existing filter if one exists; defaults to false.
+	var addFilter = function(name, fn, overwrite){
+		if (!this._registered[name] || overwrite) this._registered[name] = new Behavior.Filter(name, fn);
+		else throw new Error('Could not add the Behavior filter "' + name  +'" as a previous trigger by that same name exists.');
+	};
+
+	var addFilters = function(obj, overwrite){
+		for (var name in obj){
+			addFilter.apply(this, [name, obj[name], overwrite]);
+		}
+	};
+
+	//Registers a behavior plugin
+	//filterName - (*string*) the filter (or plugin) this is a plugin for
+	//name - (*string*) the name of this plugin
+	//setup - a function that applies the filter to the given element
+	var addPlugin = function(filterName, name, setup, overwrite){
+		if (!this._plugins[filterName]) this._plugins[filterName] = {};
+		if (!this._plugins[filterName][name] || overwrite) this._plugins[filterName][name] = new Behavior.Filter(name, setup);
+		else throw new Error('Could not add the Behavior filter plugin "' + name  +'" as a previous trigger by that same name exists.');
+	};
+
+	var addPlugins = function(obj, overwrite){
+		for (var name in obj){
+			addPlugin.apply(this, [obj[name].fitlerName, obj[name].name, obj[name].setup], overwrite);
+		}
+	};
+
+	var setFilterDefaults = function(name, defaults){
+		var filter = this.getFilter(name);
+		if (!filter.config.defaults) filter.config.defaults = {};
+		Object.append(filter.config.defaults, defaults);
+	};
+
+	//Add methods to the Behavior namespace for global registration.
+	Object.append(Behavior, {
+		_registered: {},
+		_plugins: {},
+		addGlobalFilter: addFilter,
+		addGlobalFilters: addFilters,
+		addGlobalPlugin: addPlugin,
+		addGlobalPlugins: addPlugins,
+		setFilterDefaults: setFilterDefaults,
+		getFilter: function(name){
+			return this._registered[name];
+		}
+	});
+	//Add methods to the Behavior class for instance registration.
+	Behavior.implement({
+		_registered: {},
+		_plugins: {},
+		addFilter: addFilter,
+		addFilters: addFilters,
+		addPlugin: addPlugin,
+		addPlugins: addPlugins,
+		setFilterDefaults: setFilterDefaults
+	});
+
+	//This class is an actual filter that, given an element, alters it with specific behaviors.
+	Behavior.Filter = new Class({
+
+		config: {
+			/**
+				returns: Foo,
+				require: ['req1', 'req2'],
+				//or
+				requireAs: {
+					req1: Boolean,
+					req2: Number,
+					req3: String
+				},
+				defaults: {
+					opt1: false,
+					opt2: 2
+				},
+				//simple example:
+				setup: function(element, API){
+					var kids = element.getElements(API.get('selector'));
+					//some validation still has to occur here
+					if (!kids.length) API.fail('there were no child elements found that match ', API.get('selector'));
+					if (kids.length < 2) API.warn("there weren't more than 2 kids that match", API.get('selector'));
+					var fooInstance = new Foo(kids, API.get('opt1', 'opt2'));
+					API.onCleanup(function(){
+						fooInstance.destroy();
+					});
+					return fooInstance;
+				},
+				delayUntil: 'mouseover',
+				//OR
+				delay: 100,
+				//OR
+				initializer: function(element, API){
+					element.addEvent('mouseover', API.runSetup); //same as specifying event
+					//or
+					API.runSetup.delay(100); //same as specifying delay
+					//or something completely esoteric
+					var timer = (function(){
+						if (element.hasClass('foo')){
+							clearInterval(timer);
+							API.runSetup();
+						}
+					}).periodical(100);
+					//or
+					API.addEvent('someBehaviorEvent', API.runSetup);
+				});
+				*/
+		},
+
+		//Pass in an object with the following properties:
+		//name - the name of this filter
+		//setup - a function that applies the filter to the given element
+		initialize: function(name, setup){
+			this.name = name;
+			if (typeOf(setup) == "function"){
+				this.setup = setup;
+			} else {
+				Object.append(this.config, setup);
+				this.setup = this.config.setup;
+			}
+			this._cleanupFunctions = new Table();
+		},
+
+		//Stores a garbage collection pointer for a specific element.
+		//Example: if your filter enhances all the inputs in the container
+		//you might have a function that removes that enhancement for garbage collection.
+		//You would mark each input matched with its own cleanup function.
+		//NOTE: this MUST be the element passed to the filter - the element with this filters
+		//      name in its data-behavior property. I.E.:
+		//<form data-behavior="FormValidator">
+		//  <input type="text" name="email"/>
+		//</form>
+		//If this filter is FormValidator, you can mark the form for cleanup, but not, for example
+		//the input. Only elements that match this filter can be marked.
+		markForCleanup: function(element, fn){
+			var functions = this._cleanupFunctions.get(element);
+			if (!functions) functions = [];
+			functions.include(fn);
+			this._cleanupFunctions.set(element, functions);
+			return this;
+		},
+
+		//Garbage collect a specific element.
+		//NOTE: this should be an element that has a data-behavior property that matches this filter.
+		cleanup: function(element){
+			var marks = this._cleanupFunctions.get(element);
+			if (marks){
+				marks.each(function(fn){ fn(); });
+				this._cleanupFunctions.erase(element);
+			}
+			return this;
+		}
+
+	});
+
+	Behavior.debug = function(name){
+		if (!Behavior.debugging) Behavior.debugging = [];
+		Behavior.debugging.push(name);
+	};
+
+	Behavior.elementDataProperty = 'behavior';
+
+	Element.implement({
+
+		addBehaviorFilter: function(name){
+			return this.setData(Behavior.elementDataProperty, this.getBehaviors().include(name).join(' '));
+		},
+
+		removeBehaviorFilter: function(name){
+			return this.setData(Behavior.elementDataProperty, this.getBehaviors().erase(name).join(' '));
+		},
+
+		getBehaviors: function(){
+			var filters = this.getData(Behavior.elementDataProperty);
+			if (!filters) return [];
+			return filters.trim().split(spaceOrCommaRegex);
+		},
+
+		hasBehavior: function(name){
+			return this.getBehaviors().contains(name);
+		},
+
+		getBehaviorResult: function(name){
+			return this.retrieve('Behavior Filter result:' + name);
+		}
+
+	});
+
+
+})();
+
+
+// Begin: Source/UI/Bootstrap.Tooltip.js
 /*
 ---
 
@@ -7473,6 +6412,7 @@ requires:
  - /Bootstrap
  - /CSSEvents
  - More/Element.Position
+ - More/Element.Shortcuts
  - Behavior/Behavior
 
 provides: [Bootstrap.Twipsy, Bootstrap.Tooltip]
@@ -7503,6 +6443,9 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 	initialize: function(el, options){
 		this.element = document.id(el);
 		this.setOptions(options);
+		var location = this.options.location;
+		if (location == 'above') this.options.location = 'top';    //bootstrap 2.0
+		if (location == 'below') this.options.location = 'bottom'; //bootstrap 2.0
 		this._attach();
 	},
 
@@ -7532,7 +6475,9 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 				offset.y = this.options.offset;
 		}
 		if (typeOf(this.options.offset) == "object") offset = this.options.offset;
-		this.tip.inject(document.body).show().position({
+		if (this.element.getParent('.modal')) this.tip.inject(this.element, 'after');
+		else this.tip.inject(document.body);
+		this.tip.show().position({
 			relativeTo: this.element,
 			position: pos,
 			edge: edge,
@@ -7558,6 +6503,10 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 		if (this.tip) this.tip.destroy();
 		this.destroyed = true;
 		return this;
+	},
+
+	toggle: function(){
+		return this[this.visible ? 'hide' : 'show']();
 	},
 
 	// PRIVATE METHODS
@@ -7588,7 +6537,8 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 		this.bound = {
 			enter: this._enter.bind(this),
 			leave: this._leave.bind(this),
-			complete: this._complete.bind(this)
+			complete: this._complete.bind(this),
+			toggle: this.toggle.bind(this)
 		};
 
 		if (this.options.trigger == 'hover') {
@@ -7600,6 +6550,10 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 			this.element[method]({
 				focus: this.bound.enter,
 				blur: this.bound.leave
+			});
+		} else if (this.options.trigger == 'click'){
+			this.element[method]({
+				click: this.bound.toggle
 			});
 		}
 	},
@@ -7686,7 +6640,7 @@ Bootstrap.Dropdown = new Class({
 	},
 
 	hideAll: function(){
-		var els = this.element.getElements('.open').removeClass('open');
+		var els = this.element.removeClass('open').getElements('.open').removeClass('open');
 		this.fireEvent('hide', els);
 		return this;
 	},
@@ -7711,15 +6665,13 @@ Bootstrap.Dropdown = new Class({
 		var open = el.getParent('.open');
 		if (!el.match(this.options.ignore) || !open) this.hideAll();
 		if (this.element.contains(el)) {
-            var parent = null;
-	        if (el.match('[data-toggle="dropdown"]') || el.getParent('[data-toggle="dropdown"] !')) {
-	            parent = el.getParent('.dropdown !') || el.getParent('.btn-group !');
-	        }
-			// backwards compatibility
-	        if (!parent) parent = el.match('.dropdown-toggle') ? el.getParent() : el.getParent('.dropdown-toggle !');
-
-
-			if (parent) {
+			var parent;
+			if (el.match('[data-toggle="dropdown"]') || el.getParent('[data-toggle="dropdown"] !')){
+				parent = el.getParent('.dropdown, .btn-group');
+			}
+ 			// backwards compatibility
+			if (!parent) parent = el.match('.dropdown-toggle') ? el.getParent() : el.getParent('.dropdown-toggle !');
+			if (parent){
 				e.preventDefault();
 				if (!open) this.show(parent);
 			}
@@ -7756,7 +6708,542 @@ Behavior.addGlobalFilters({
 	}
 });
 
-// Begin: Source/UI/Delegator.BS.ShowPopup.js
+// Begin: Source/Element/Element.Delegation.js
+/*
+---
+
+name: Element.Delegation
+
+description: Extends the Element native object to include the delegate method for more efficient event management.
+
+license: MIT-style license.
+
+requires: [Element.Event]
+
+provides: [Element.Delegation]
+
+...
+*/
+
+(function(){
+
+var eventListenerSupport = !!window.addEventListener;
+
+Element.NativeEvents.focusin = Element.NativeEvents.focusout = 2;
+
+var bubbleUp = function(self, match, fn, event, target){
+	while (target && target != self){
+		if (match(target, event)) return fn.call(target, event, target);
+		target = document.id(target.parentNode);
+	}
+};
+
+var map = {
+	mouseenter: {
+		base: 'mouseover'
+	},
+	mouseleave: {
+		base: 'mouseout'
+	},
+	focus: {
+		base: 'focus' + (eventListenerSupport ? '' : 'in'),
+		capture: true
+	},
+	blur: {
+		base: eventListenerSupport ? 'blur' : 'focusout',
+		capture: true
+	}
+};
+
+/*<ltIE9>*/
+var _key = '$delegation:';
+var formObserver = function(type){
+
+	return {
+
+		base: 'focusin',
+
+		remove: function(self, uid){
+			var list = self.retrieve(_key + type + 'listeners', {})[uid];
+			if (list && list.forms) for (var i = list.forms.length; i--;){
+				list.forms[i].removeEvent(type, list.fns[i]);
+			}
+		},
+
+		listen: function(self, match, fn, event, target, uid){
+			var form = (target.get('tag') == 'form') ? target : event.target.getParent('form');
+			if (!form) return;
+
+			var listeners = self.retrieve(_key + type + 'listeners', {}),
+				listener = listeners[uid] || {forms: [], fns: []},
+				forms = listener.forms, fns = listener.fns;
+
+			if (forms.indexOf(form) != -1) return;
+			forms.push(form);
+
+			var _fn = function(event){
+				bubbleUp(self, match, fn, event, target);
+			};
+			form.addEvent(type, _fn);
+			fns.push(_fn);
+
+			listeners[uid] = listener;
+			self.store(_key + type + 'listeners', listeners);
+		}
+	};
+};
+
+var inputObserver = function(type){
+	return {
+		base: 'focusin',
+		listen: function(self, match, fn, event, target){
+			var events = {blur: function(){
+				this.removeEvents(events);
+			}};
+			events[type] = function(event){
+				bubbleUp(self, match, fn, event, target);
+			};
+			event.target.addEvents(events);
+		}
+	};
+};
+
+if (!eventListenerSupport) Object.append(map, {
+	submit: formObserver('submit'),
+	reset: formObserver('reset'),
+	change: inputObserver('change'),
+	select: inputObserver('select')
+});
+/*</ltIE9>*/
+
+var proto = Element.prototype,
+	addEvent = proto.addEvent,
+	removeEvent = proto.removeEvent;
+
+var relay = function(old, method){
+	return function(type, fn, useCapture){
+		if (type.indexOf(':relay') == -1) return old.call(this, type, fn, useCapture);
+		var parsed = Slick.parse(type).expressions[0][0];
+		if (parsed.pseudos[0].key != 'relay') return old.call(this, type, fn, useCapture);
+		var newType = parsed.tag;
+		parsed.pseudos.slice(1).each(function(pseudo){
+			newType += ':' + pseudo.key + (pseudo.value ? '(' + pseudo.value + ')' : '');
+		});
+		old.call(this, type, fn);
+		return method.call(this, newType, parsed.pseudos[0].value, fn);
+	};
+};
+
+var delegation = {
+
+	addEvent: function(type, match, fn){
+		var storage = this.retrieve('$delegates', {}), stored = storage[type];
+		if (stored) for (var _uid in stored){
+			if (stored[_uid].fn == fn && stored[_uid].match == match) return this;
+		}
+
+		var _type = type, _match = match, _fn = fn, _map = map[type] || {};
+		type = _map.base || _type;
+
+		match = function(target){
+			return Slick.match(target, _match);
+		};
+
+		var elementEvent = Element.Events[_type];
+		if (elementEvent && elementEvent.condition){
+			var __match = match, condition = elementEvent.condition;
+			match = function(target, event){
+				return __match(target, event) && condition.call(target, event, type);
+			};
+		}
+
+		var self = this, uid = String.uniqueID();
+		var delegator = _map.listen ? function(event, target){
+			if (!target && event && event.target) target = event.target;
+			if (target) _map.listen(self, match, fn, event, target, uid);
+		} : function(event, target){
+			if (!target && event && event.target) target = event.target;
+			if (target) bubbleUp(self, match, fn, event, target);
+		};
+
+		if (!stored) stored = {};
+		stored[uid] = {
+			match: _match,
+			fn: _fn,
+			delegator: delegator
+		};
+		storage[_type] = stored;
+		return addEvent.call(this, type, delegator, _map.capture);
+	},
+
+	removeEvent: function(type, match, fn, _uid){
+		var storage = this.retrieve('$delegates', {}), stored = storage[type];
+		if (!stored) return this;
+
+		if (_uid){
+			var _type = type, delegator = stored[_uid].delegator, _map = map[type] || {};
+			type = _map.base || _type;
+			if (_map.remove) _map.remove(this, _uid);
+			delete stored[_uid];
+			storage[_type] = stored;
+			return removeEvent.call(this, type, delegator);
+		}
+
+		var __uid, s;
+		if (fn) for (__uid in stored){
+			s = stored[__uid];
+			if (s.match == match && s.fn == fn) return delegation.removeEvent.call(this, type, match, fn, __uid);
+		} else for (__uid in stored){
+			s = stored[__uid];
+			if (s.match == match) delegation.removeEvent.call(this, type, match, s.fn, __uid);
+		}
+		return this;
+	}
+
+};
+
+[Element, Window, Document].invoke('implement', {
+	addEvent: relay(addEvent, delegation.addEvent),
+	removeEvent: relay(removeEvent, delegation.removeEvent)
+});
+
+})();
+
+
+// Begin: Source/Event.Mock.js
+/*
+---
+name: Event.Mock
+
+description: Supplies a Mock Event object for use on fireEvent
+
+license: MIT-style
+
+authors:
+- Arieh Glazer
+
+requires: Core/Event
+
+provides: [Event.Mock]
+
+...
+*/
+
+(function($,window,undef){
+
+/**
+ * creates a Mock event to be used with fire event
+ * @param Element target an element to set as the target of the event - not required
+ *  @param string type the type of the event to be fired. Will not be used by IE - not required.
+ *
+ */
+Event.Mock = function(target,type){
+	type = type || 'click';
+
+	var e = {
+		type: type,
+		target: target
+	};
+
+	if (document.createEvent){
+		e = document.createEvent('HTMLEvents');
+		e.initEvent(
+			type //event type
+			, false //bubbles - set to false because the event should like normal fireEvent
+			, true //cancelable
+		);
+	}
+
+	e = new Event(e);
+
+	e.target = target;
+
+	return e;
+};
+
+})(document.id,window);
+
+// Begin: Source/Delegator.js
+/*
+---
+name: Delegator
+description: Allows for the registration of delegated events on a container.
+requires: [Core/Element.Delegation, Core/Options, Core/Events, /Event.Mock, /Behavior]
+provides: [Delegator]
+...
+*/
+(function(){
+
+	var spaceOrCommaRegex = /\s*,\s*|\s+/g;
+
+	var checkEvent = function(trigger, element, event){
+		if (!event) return true;
+		return trigger.types.some(function(type){
+			var elementEvent = Element.Events[type];
+			if (elementEvent && elementEvent.condition){
+				return elementEvent.condition.call(element, event, type);
+			} else {
+				var eventType = elementEvent && elementEvent.base ? elementEvent.base : event.type;
+				return eventType == type;
+			}
+		});
+	};
+
+	window.Delegator = new Class({
+
+		Implements: [Options, Events, Behavior.PassMethods, Behavior.GetAPI],
+
+		options: {
+			// breakOnErrors: false,
+			// onTrigger: function(trigger, element, event, result){},
+			getBehavior: function(){},
+			onLog: Behavior.getLog('info'),
+			onError: Behavior.getLog('error'),
+			onWarn: Behavior.getLog('warn')
+		},
+
+		initialize: function(options){
+			this.setOptions(options);
+			this._bound = {
+				eventHandler: this._eventHandler.bind(this)
+			};
+			Delegator._instances.push(this);
+			Object.each(Delegator._triggers, function(trigger){
+				this._eventTypes.combine(trigger.types);
+			}, this);
+			this.API = new Class({ Extends: BehaviorAPI });
+			this.passMethods({
+				addEvent: this.addEvent.bind(this),
+				removeEvent: this.removeEvent.bind(this),
+				addEvents: this.addEvents.bind(this),
+				removeEvents: this.removeEvents.bind(this),
+				fireEvent: this.fireEvent.bind(this),
+				attach: this.attach.bind(this),
+				trigger: this.trigger.bind(this),
+				error: function(){ this.fireEvent('error', arguments); }.bind(this),
+				fail: function(){
+					var msg = Array.join(arguments, ' ');
+					throw new Error(msg);
+				},
+				warn: function(){
+					this.fireEvent('warn', arguments);
+				}.bind(this),
+				getBehavior: function(){
+					return this.options.getBehavior();
+				}.bind(this)
+			});
+
+			this.bindToBehavior(this.options.getBehavior());
+		},
+
+		bindToBehavior: function(behavior){
+			if (!behavior) return;
+			this.unbindFromBehavior();
+			this._behavior = behavior;
+			if (this._behavior.options.verbose) this.options.verbose = true;
+			if (!this._behaviorEvents){
+				var self = this;
+				this._behaviorEvents = {
+					destroyDom: function(elements){
+						Array.from(elements).each(function(element){
+							self._behavior.cleanup(element);
+							self._behavior.fireEvent('destroyDom', element);
+						});
+					},
+					ammendDom: function(container){
+						self._behavior.apply(container);
+						self._behavior.fireEvent('ammendDom', container);
+					}
+				};
+			}
+			this.addEvents(this._behaviorEvents);
+		},
+
+		getBehavior: function(){
+			return this._behavior;
+		},
+
+		unbindFromBehavior: function(){
+			if (this._behaviorEvents && this._behavior){
+				this._behavior.removeEvents(this._behaviorEvents);
+				delete this._behavior;
+			}
+		},
+
+		attach: function(target, _method){
+			_method = _method || 'addEvent';
+			target = document.id(target);
+			if ((_method == 'addEvent' && this._attachedTo.contains(target)) ||
+			    (_method == 'removeEvent') && !this._attachedTo.contains(target)) return this;
+			this._eventTypes.each(function(event){
+				target[_method](event + ':relay([data-trigger])', this._bound.eventHandler);
+			}, this);
+			this._attachedTo.push(target);
+			return this;
+		},
+
+		detach: function(target){
+			if (target){
+				this.attach(target, 'removeEvent');
+			} else {
+				this._attachedTo.each(this.detach, this);
+			}
+			return this;
+		},
+
+		trigger: function(name, element, event){
+			var e = event;
+			if (!e || typeOf(e) == "string") e = new Event.Mock(element, e);
+			if (this.options.verbose) this.fireEvent('log', ['Applying trigger: ', name, element, event]);
+			var result,
+					trigger = this.getTrigger(name);
+			if (!trigger){
+				this.fireEvent('warn', 'Could not find a trigger by the name of ' + name);
+			} else if (checkEvent(trigger, element, e)) {
+				if (this.options.breakOnErrors){
+					result = this._trigger(trigger, element, e);
+				} else {
+					try {
+						result = this._trigger(trigger, element, e);
+					} catch(error) {
+						this.fireEvent('error', ['Could not apply the trigger', name, error.message]);
+					}
+				}
+			}
+			if (this.options.verbose && result) this.fireEvent('log', ['Successfully applied trigger: ', name, element, event]);
+			else if (this.options.verbose) this.fireEvent('log', ['Trigger applied, but did not return a result: ', name, element, event]);
+			return result;
+		},
+
+		getTrigger: function(name){
+			return this._triggers[name] || Delegator._triggers[name];
+		},
+
+		addEventTypes: function(triggerName, types){
+			this.getTrigger(triggerName).types.combine(Array.from(types));
+			return this;
+		},
+
+		/******************
+		 * PRIVATE METHODS
+		 ******************/
+
+		_trigger: function(trigger, element, event){
+			var api = this._getAPI(element, trigger);
+			if (trigger.requireAs){
+				api.requireAs(trigger.requireAs);
+			} else if (trigger.require){
+				api.require.apply(api, Array.from(trigger.require));
+			} if (trigger.defaults){
+				api.setDefault(trigger.defaults);
+			}
+			if (Delegator.debugging && Delegator.debugging.contains(name)) debugger;
+			var result = trigger.handler.apply(this, [event, element, api]);
+			this.fireEvent('trigger', [trigger, element, event, result]);
+			return result;
+		},
+
+		_eventHandler: function(event, target){
+			var triggers = target.getTriggers();
+			if (triggers.contains('Stop')) event.stop();
+			if (triggers.contains('PreventDefault')) event.preventDefault();
+			triggers.each(function(trigger){
+				if (trigger != "Stop" && trigger != "PreventDefault") this.trigger(trigger, target, event);
+			}, this);
+		},
+
+		_onRegister: function(eventTypes){
+			eventTypes.each(function(eventType){
+				if (!this._eventTypes.contains(eventType)){
+					this._attachedTo.each(function(element){
+						element.addEvent(eventType + ':relay([data-trigger])', this._bound.eventHandler);
+					}, this);
+				}
+				this._eventTypes.include(eventType);
+			}, this);
+		},
+
+		_attachedTo: [],
+		_eventTypes: [],
+		_triggers: {}
+
+	});
+
+	Delegator._triggers = {};
+	Delegator._instances = [];
+	Delegator._onRegister = function(eventType){
+		this._instances.each(function(instance){
+			instance._onRegister(eventType);
+		});
+	};
+
+	Delegator.register = function(eventTypes, name, handler, overwrite /** or eventType, obj, overwrite */){
+		eventTypes = Array.from(eventTypes);
+		if (typeOf(name) == "object"){
+			var obj = name;
+			for (name in obj){
+				this.register.apply(this, [eventTypes, name, obj[name], handler]);
+			}
+			return this;
+		}
+		if (!this._triggers[name] || overwrite){
+			if (typeOf(handler) == "function"){
+				handler = {
+					handler: handler
+				};
+			}
+			handler.types = eventTypes;
+			handler.name = name;
+			this._triggers[name] = handler;
+			this._onRegister(eventTypes);
+		} else {
+			throw new Error('Could add the trigger "' + name +'" as a previous trigger by that same name exists.');
+		}
+		return this;
+	};
+
+	Delegator.getTrigger = function(name){
+		return this._triggers[name];
+	};
+
+	Delegator.addEventTypes = function(triggerName, types){
+		this.getTrigger(triggerName).types.combine(Array.from(types));
+		return this;
+	};
+
+	Delegator.debug = function(name){
+		if (!Delegator.debugging) Delegator.debugging = [];
+		Delegator.debugging.push(name);
+	};
+
+
+	Delegator.implement('register', Delegator.register);
+
+	Element.implement({
+
+		addTrigger: function(name){
+			return this.setData('trigger', this.getTriggers().include(name).join(' '));
+		},
+
+		removeTrigger: function(name){
+			return this.setData('trigger', this.getTriggers().erase(name).join(' '));
+		},
+
+		getTriggers: function(){
+			var triggers = this.getData('trigger');
+			if (!triggers) return [];
+			return triggers.trim().split(spaceOrCommaRegex);
+		},
+
+		hasTrigger: function(name){
+			return this.getTriggers().contains(name);
+		}
+
+	});
+
+})();
+
+// Begin: Source/Behaviors/Delegator.BS.ShowPopup.js
 /*
 ---
 
@@ -7783,11 +7270,10 @@ provides: [Delegator.BS.ShowPopup]
 
 	Delegator.register('click', 'BS.showPopup', {
 
-		require: ['target'],
 		handler: function(event, link, api){
-			var target = link.getElement(api.get('target'));
+			var target = api.get('target') ? link.getElement(api.get('target')) : document.id(link.get('href').split("#")[1]);
 			event.preventDefault();
-			if (!target) api.fail('Could not find target element to activate: ', api.get('target'));
+			if (!target) api.fail('Could not find target element to activate: ' + (api.get('target') || link.get('href')));
 			api.getBehavior().apply(target);
 			target.getBehaviorResult('BS.Popup').show();
 		}
@@ -7796,68 +7282,280 @@ provides: [Delegator.BS.ShowPopup]
 
 })();
 
-// Begin: Source/Types/Object.Extras.js
+// Begin: Source/Request/Request.js
 /*
 ---
 
-script: Object.Extras.js
+name: Request
 
-name: Object.Extras
+description: Powerful all purpose Request Class. Uses XMLHTTPRequest.
 
-description: Extra Object generics, like getFromPath which allows a path notation to child elements.
+license: MIT-style license.
 
-license: MIT-style license
+requires: [Object, Element, Chain, Events, Options, Browser]
 
-authors:
-  - Aaron Newton
-
-requires:
-  - Core/Object
-  - /MooTools.More
-
-provides: [Object.Extras]
+provides: Request
 
 ...
 */
 
 (function(){
 
-var defined = function(value){
-	return value != null;
+var empty = function(){},
+	progressSupport = ('onprogress' in new Browser.Request);
+
+var Request = this.Request = new Class({
+
+	Implements: [Chain, Events, Options],
+
+	options: {/*
+		onRequest: function(){},
+		onLoadstart: function(event, xhr){},
+		onProgress: function(event, xhr){},
+		onComplete: function(){},
+		onCancel: function(){},
+		onSuccess: function(responseText, responseXML){},
+		onFailure: function(xhr){},
+		onException: function(headerName, value){},
+		onTimeout: function(){},
+		user: '',
+		password: '',*/
+		url: '',
+		data: '',
+		headers: {
+			'X-Requested-With': 'XMLHttpRequest',
+			'Accept': 'text/javascript, text/html, application/xml, text/xml, */*'
+		},
+		async: true,
+		format: false,
+		method: 'post',
+		link: 'ignore',
+		isSuccess: null,
+		emulation: true,
+		urlEncoded: true,
+		encoding: 'utf-8',
+		evalScripts: false,
+		evalResponse: false,
+		timeout: 0,
+		noCache: false
+	},
+
+	initialize: function(options){
+		this.xhr = new Browser.Request();
+		this.setOptions(options);
+		this.headers = this.options.headers;
+	},
+
+	onStateChange: function(){
+		var xhr = this.xhr;
+		if (xhr.readyState != 4 || !this.running) return;
+		this.running = false;
+		this.status = 0;
+		Function.attempt(function(){
+			var status = xhr.status;
+			this.status = (status == 1223) ? 204 : status;
+		}.bind(this));
+		xhr.onreadystatechange = empty;
+		if (progressSupport) xhr.onprogress = xhr.onloadstart = empty;
+		clearTimeout(this.timer);
+
+		this.response = {text: this.xhr.responseText || '', xml: this.xhr.responseXML};
+		if (this.options.isSuccess.call(this, this.status))
+			this.success(this.response.text, this.response.xml);
+		else
+			this.failure();
+	},
+
+	isSuccess: function(){
+		var status = this.status;
+		return (status >= 200 && status < 300);
+	},
+
+	isRunning: function(){
+		return !!this.running;
+	},
+
+	processScripts: function(text){
+		if (this.options.evalResponse || (/(ecma|java)script/).test(this.getHeader('Content-type'))) return Browser.exec(text);
+		return text.stripScripts(this.options.evalScripts);
+	},
+
+	success: function(text, xml){
+		this.onSuccess(this.processScripts(text), xml);
+	},
+
+	onSuccess: function(){
+		this.fireEvent('complete', arguments).fireEvent('success', arguments).callChain();
+	},
+
+	failure: function(){
+		this.onFailure();
+	},
+
+	onFailure: function(){
+		this.fireEvent('complete').fireEvent('failure', this.xhr);
+	},
+
+	loadstart: function(event){
+		this.fireEvent('loadstart', [event, this.xhr]);
+	},
+
+	progress: function(event){
+		this.fireEvent('progress', [event, this.xhr]);
+	},
+
+	timeout: function(){
+		this.fireEvent('timeout', this.xhr);
+	},
+
+	setHeader: function(name, value){
+		this.headers[name] = value;
+		return this;
+	},
+
+	getHeader: function(name){
+		return Function.attempt(function(){
+			return this.xhr.getResponseHeader(name);
+		}.bind(this));
+	},
+
+	check: function(){
+		if (!this.running) return true;
+		switch (this.options.link){
+			case 'cancel': this.cancel(); return true;
+			case 'chain': this.chain(this.caller.pass(arguments, this)); return false;
+		}
+		return false;
+	},
+
+	send: function(options){
+		if (!this.check(options)) return this;
+
+		this.options.isSuccess = this.options.isSuccess || this.isSuccess;
+		this.running = true;
+
+		var type = typeOf(options);
+		if (type == 'string' || type == 'element') options = {data: options};
+
+		var old = this.options;
+		options = Object.append({data: old.data, url: old.url, method: old.method}, options);
+		var data = options.data, url = String(options.url), method = options.method.toLowerCase();
+
+		switch (typeOf(data)){
+			case 'element': data = document.id(data).toQueryString(); break;
+			case 'object': case 'hash': data = Object.toQueryString(data);
+		}
+
+		if (this.options.format){
+			var format = 'format=' + this.options.format;
+			data = (data) ? format + '&' + data : format;
+		}
+
+		if (this.options.emulation && !['get', 'post'].contains(method)){
+			var _method = '_method=' + method;
+			data = (data) ? _method + '&' + data : _method;
+			method = 'post';
+		}
+
+		if (this.options.urlEncoded && ['post', 'put'].contains(method)){
+			var encoding = (this.options.encoding) ? '; charset=' + this.options.encoding : '';
+			this.headers['Content-type'] = 'application/x-www-form-urlencoded' + encoding;
+		}
+
+		if (!url) url = document.location.pathname;
+
+		var trimPosition = url.lastIndexOf('/');
+		if (trimPosition > -1 && (trimPosition = url.indexOf('#')) > -1) url = url.substr(0, trimPosition);
+
+		if (this.options.noCache)
+			url += (url.contains('?') ? '&' : '?') + String.uniqueID();
+
+		if (data && method == 'get'){
+			url += (url.contains('?') ? '&' : '?') + data;
+			data = null;
+		}
+
+		var xhr = this.xhr;
+		if (progressSupport){
+			xhr.onloadstart = this.loadstart.bind(this);
+			xhr.onprogress = this.progress.bind(this);
+		}
+
+		xhr.open(method.toUpperCase(), url, this.options.async, this.options.user, this.options.password);
+		if (this.options.user && 'withCredentials' in xhr) xhr.withCredentials = true;
+
+		xhr.onreadystatechange = this.onStateChange.bind(this);
+
+		Object.each(this.headers, function(value, key){
+			try {
+				xhr.setRequestHeader(key, value);
+			} catch (e){
+				this.fireEvent('exception', [key, value]);
+			}
+		}, this);
+
+		this.fireEvent('request');
+		xhr.send(data);
+		if (!this.options.async) this.onStateChange();
+		else if (this.options.timeout) this.timer = this.timeout.delay(this.options.timeout, this);
+		return this;
+	},
+
+	cancel: function(){
+		if (!this.running) return this;
+		this.running = false;
+		var xhr = this.xhr;
+		xhr.abort();
+		clearTimeout(this.timer);
+		xhr.onreadystatechange = empty;
+		if (progressSupport) xhr.onprogress = xhr.onloadstart = empty;
+		this.xhr = new Browser.Request();
+		this.fireEvent('cancel');
+		return this;
+	}
+
+});
+
+var methods = {};
+['get', 'post', 'put', 'delete', 'GET', 'POST', 'PUT', 'DELETE'].each(function(method){
+	methods[method] = function(data){
+		var object = {
+			method: method
+		};
+		if (data != null) object.data = data;
+		return this.send(object);
+	};
+});
+
+Request.implement(methods);
+
+Element.Properties.send = {
+
+	set: function(options){
+		var send = this.get('send').cancel();
+		send.setOptions(options);
+		return this;
+	},
+
+	get: function(){
+		var send = this.retrieve('send');
+		if (!send){
+			send = new Request({
+				data: this, link: 'cancel', method: this.get('method') || 'post', url: this.get('action')
+			});
+			this.store('send', send);
+		}
+		return send;
+	}
+
 };
 
-var hasOwnProperty = Object.prototype.hasOwnProperty;
+Element.implement({
 
-Object.extend({
-
-	getFromPath: function(source, parts){
-		if (typeof parts == 'string') parts = parts.split('.');
-		for (var i = 0, l = parts.length; i < l; i++){
-			if (hasOwnProperty.call(source, parts[i])) source = source[parts[i]];
-			else return null;
-		}
-		return source;
-	},
-
-	cleanValues: function(object, method){
-		method = method || defined;
-		for (var key in object) if (!method(object[key])){
-			delete object[key];
-		}
-		return object;
-	},
-
-	erase: function(object, key){
-		if (hasOwnProperty.call(object, key)) delete object[key];
-		return object;
-	},
-
-	run: function(object){
-		var args = Array.slice(arguments, 1);
-		for (var key in object) if (object[key].apply){
-			object[key].apply(object, args);
-		}
-		return object;
+	send: function(url){
+		var sender = this.get('send');
+		sender.send({data: this, url: url || sender.options.url});
+		return this;
 	}
 
 });
@@ -7865,231 +7563,94 @@ Object.extend({
 })();
 
 
-// Begin: Source/Fx/Fx.Tween.js
+// Begin: Source/Request/Request.HTML.js
 /*
 ---
 
-name: Fx.Tween
+name: Request.HTML
 
-description: Formerly Fx.Style, effect to transition any CSS property for an element.
+description: Extends the basic Request Class with additional methods for interacting with HTML responses.
 
 license: MIT-style license.
 
-requires: Fx.CSS
+requires: [Element, Request]
 
-provides: [Fx.Tween, Element.fade, Element.highlight]
+provides: Request.HTML
 
 ...
 */
 
-Fx.Tween = new Class({
+Request.HTML = new Class({
 
-	Extends: Fx.CSS,
+	Extends: Request,
 
-	initialize: function(element, options){
-		this.element = this.subject = document.id(element);
-		this.parent(options);
-	},
-
-	set: function(property, now){
-		if (arguments.length == 1){
-			now = property;
-			property = this.property || this.options.property;
+	options: {
+		update: false,
+		append: false,
+		evalScripts: true,
+		filter: false,
+		headers: {
+			Accept: 'text/html, application/xml, text/xml, */*'
 		}
-		this.render(this.element, property, now, this.options.unit);
-		return this;
 	},
 
-	start: function(property, from, to){
-		if (!this.check(property, from, to)) return this;
-		var args = Array.flatten(arguments);
-		this.property = this.options.property || args.shift();
-		var parsed = this.prepare(this.element, this.property, args);
-		return this.parent(parsed.from, parsed.to);
+	success: function(text){
+		var options = this.options, response = this.response;
+
+		response.html = text.stripScripts(function(script){
+			response.javascript = script;
+		});
+
+		var match = response.html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+		if (match) response.html = match[1];
+		var temp = new Element('div').set('html', response.html);
+
+		response.tree = temp.childNodes;
+		response.elements = temp.getElements(options.filter || '*');
+
+		if (options.filter) response.tree = response.elements;
+		if (options.update){
+			var update = document.id(options.update).empty();
+			if (options.filter) update.adopt(response.elements);
+			else update.set('html', response.html);
+		} else if (options.append){
+			var append = document.id(options.append);
+			if (options.filter) response.elements.reverse().inject(append);
+			else append.adopt(temp.getChildren());
+		}
+		if (options.evalScripts) Browser.exec(response.javascript);
+
+		this.onSuccess(response.tree, response.elements, response.html, response.javascript);
 	}
 
 });
 
-Element.Properties.tween = {
+Element.Properties.load = {
 
 	set: function(options){
-		this.get('tween').cancel().setOptions(options);
+		var load = this.get('load').cancel();
+		load.setOptions(options);
 		return this;
 	},
 
 	get: function(){
-		var tween = this.retrieve('tween');
-		if (!tween){
-			tween = new Fx.Tween(this, {link: 'cancel'});
-			this.store('tween', tween);
+		var load = this.retrieve('load');
+		if (!load){
+			load = new Request.HTML({data: this, link: 'cancel', update: this, method: 'get'});
+			this.store('load', load);
 		}
-		return tween;
+		return load;
 	}
 
 };
 
 Element.implement({
 
-	tween: function(property, from, to){
-		this.get('tween').start(property, from, to);
-		return this;
-	},
-
-	fade: function(how){
-		var fade = this.get('tween'), method, to, toggle;
-		if (how == null) how = 'toggle';
-		switch (how){
-			case 'in': method = 'start'; to = 1; break;
-			case 'out': method = 'start'; to = 0; break;
-			case 'show': method = 'set'; to = 1; break;
-			case 'hide': method = 'set'; to = 0; break;
-			case 'toggle':
-				var flag = this.retrieve('fade:flag', this.getStyle('opacity') == 1);
-				method = 'start';
-				to = flag ? 0 : 1;
-				this.store('fade:flag', !flag);
-				toggle = true;
-			break;
-			default: method = 'start'; to = how;
-		}
-		if (!toggle) this.eliminate('fade:flag');
-		fade[method]('opacity', to);
-		if (method == 'set' || to != 0) this.setStyle('visibility', to == 0 ? 'hidden' : 'visible');
-		else fade.chain(function(){
-			this.element.setStyle('visibility', 'hidden');
-		});
-		return this;
-	},
-
-	highlight: function(start, end){
-		if (!end){
-			end = this.retrieve('highlight:original', this.getStyle('background-color'));
-			end = (end == 'transparent') ? '#fff' : end;
-		}
-		var tween = this.get('tween');
-		tween.start('background-color', start || '#ffff88', end).chain(function(){
-			this.setStyle('background-color', this.retrieve('highlight:original'));
-			tween.callChain();
-		}.bind(this));
+	load: function(){
+		this.get('load').send(Array.link(arguments, {data: Type.isObject, url: Type.isString}));
 		return this;
 	}
 
-});
-
-
-// Begin: Source/Fx/Fx.Transitions.js
-/*
----
-
-name: Fx.Transitions
-
-description: Contains a set of advanced transitions to be used with any of the Fx Classes.
-
-license: MIT-style license.
-
-credits:
-  - Easing Equations by Robert Penner, <http://www.robertpenner.com/easing/>, modified and optimized to be used with MooTools.
-
-requires: Fx
-
-provides: Fx.Transitions
-
-...
-*/
-
-Fx.implement({
-
-	getTransition: function(){
-		var trans = this.options.transition || Fx.Transitions.Sine.easeInOut;
-		if (typeof trans == 'string'){
-			var data = trans.split(':');
-			trans = Fx.Transitions;
-			trans = trans[data[0]] || trans[data[0].capitalize()];
-			if (data[1]) trans = trans['ease' + data[1].capitalize() + (data[2] ? data[2].capitalize() : '')];
-		}
-		return trans;
-	}
-
-});
-
-Fx.Transition = function(transition, params){
-	params = Array.from(params);
-	var easeIn = function(pos){
-		return transition(pos, params);
-	};
-	return Object.append(easeIn, {
-		easeIn: easeIn,
-		easeOut: function(pos){
-			return 1 - transition(1 - pos, params);
-		},
-		easeInOut: function(pos){
-			return (pos <= 0.5 ? transition(2 * pos, params) : (2 - transition(2 * (1 - pos), params))) / 2;
-		}
-	});
-};
-
-Fx.Transitions = {
-
-	linear: function(zero){
-		return zero;
-	}
-
-};
-
-//<1.2compat>
-
-Fx.Transitions = new Hash(Fx.Transitions);
-
-//</1.2compat>
-
-Fx.Transitions.extend = function(transitions){
-	for (var transition in transitions) Fx.Transitions[transition] = new Fx.Transition(transitions[transition]);
-};
-
-Fx.Transitions.extend({
-
-	Pow: function(p, x){
-		return Math.pow(p, x && x[0] || 6);
-	},
-
-	Expo: function(p){
-		return Math.pow(2, 8 * (p - 1));
-	},
-
-	Circ: function(p){
-		return 1 - Math.sin(Math.acos(p));
-	},
-
-	Sine: function(p){
-		return 1 - Math.cos(p * Math.PI / 2);
-	},
-
-	Back: function(p, x){
-		x = x && x[0] || 1.618;
-		return Math.pow(p, 2) * ((x + 1) * p - x);
-	},
-
-	Bounce: function(p){
-		var value;
-		for (var a = 0, b = 1; 1; a += b, b /= 2){
-			if (p >= (7 - 4 * a) / 11){
-				value = b * b - Math.pow((11 - 6 * a - 11 * p) / 4, 2);
-				break;
-			}
-		}
-		return value;
-	},
-
-	Elastic: function(p, x){
-		return Math.pow(2, 10 * --p) * Math.cos(20 * p * Math.PI * (x && x[0] || 1) / 3);
-	}
-
-});
-
-['Quad', 'Cubic', 'Quart', 'Quint'].each(function(transition, i){
-	Fx.Transitions[transition] = new Fx.Transition(function(p){
-		return Math.pow(p, i + 2);
-	});
 });
 
 
@@ -8172,6 +7733,517 @@ Class.Occlude = new Class({
 	}
 
 });
+
+
+// Begin: Source/Fx/Fx.js
+/*
+---
+
+name: Fx
+
+description: Contains the basic animation logic to be extended by all other Fx Classes.
+
+license: MIT-style license.
+
+requires: [Chain, Events, Options]
+
+provides: Fx
+
+...
+*/
+
+(function(){
+
+var Fx = this.Fx = new Class({
+
+	Implements: [Chain, Events, Options],
+
+	options: {
+		/*
+		onStart: nil,
+		onCancel: nil,
+		onComplete: nil,
+		*/
+		fps: 60,
+		unit: false,
+		duration: 500,
+		frames: null,
+		frameSkip: true,
+		link: 'ignore'
+	},
+
+	initialize: function(options){
+		this.subject = this.subject || this;
+		this.setOptions(options);
+	},
+
+	getTransition: function(){
+		return function(p){
+			return -(Math.cos(Math.PI * p) - 1) / 2;
+		};
+	},
+
+	step: function(now){
+		if (this.options.frameSkip){
+			var diff = (this.time != null) ? (now - this.time) : 0, frames = diff / this.frameInterval;
+			this.time = now;
+			this.frame += frames;
+		} else {
+			this.frame++;
+		}
+
+		if (this.frame < this.frames){
+			var delta = this.transition(this.frame / this.frames);
+			this.set(this.compute(this.from, this.to, delta));
+		} else {
+			this.frame = this.frames;
+			this.set(this.compute(this.from, this.to, 1));
+			this.stop();
+		}
+	},
+
+	set: function(now){
+		return now;
+	},
+
+	compute: function(from, to, delta){
+		return Fx.compute(from, to, delta);
+	},
+
+	check: function(){
+		if (!this.isRunning()) return true;
+		switch (this.options.link){
+			case 'cancel': this.cancel(); return true;
+			case 'chain': this.chain(this.caller.pass(arguments, this)); return false;
+		}
+		return false;
+	},
+
+	start: function(from, to){
+		if (!this.check(from, to)) return this;
+		this.from = from;
+		this.to = to;
+		this.frame = (this.options.frameSkip) ? 0 : -1;
+		this.time = null;
+		this.transition = this.getTransition();
+		var frames = this.options.frames, fps = this.options.fps, duration = this.options.duration;
+		this.duration = Fx.Durations[duration] || duration.toInt();
+		this.frameInterval = 1000 / fps;
+		this.frames = frames || Math.round(this.duration / this.frameInterval);
+		this.fireEvent('start', this.subject);
+		pushInstance.call(this, fps);
+		return this;
+	},
+
+	stop: function(){
+		if (this.isRunning()){
+			this.time = null;
+			pullInstance.call(this, this.options.fps);
+			if (this.frames == this.frame){
+				this.fireEvent('complete', this.subject);
+				if (!this.callChain()) this.fireEvent('chainComplete', this.subject);
+			} else {
+				this.fireEvent('stop', this.subject);
+			}
+		}
+		return this;
+	},
+
+	cancel: function(){
+		if (this.isRunning()){
+			this.time = null;
+			pullInstance.call(this, this.options.fps);
+			this.frame = this.frames;
+			this.fireEvent('cancel', this.subject).clearChain();
+		}
+		return this;
+	},
+
+	pause: function(){
+		if (this.isRunning()){
+			this.time = null;
+			pullInstance.call(this, this.options.fps);
+		}
+		return this;
+	},
+
+	resume: function(){
+		if ((this.frame < this.frames) && !this.isRunning()) pushInstance.call(this, this.options.fps);
+		return this;
+	},
+
+	isRunning: function(){
+		var list = instances[this.options.fps];
+		return list && list.contains(this);
+	}
+
+});
+
+Fx.compute = function(from, to, delta){
+	return (to - from) * delta + from;
+};
+
+Fx.Durations = {'short': 250, 'normal': 500, 'long': 1000};
+
+// global timers
+
+var instances = {}, timers = {};
+
+var loop = function(){
+	var now = Date.now();
+	for (var i = this.length; i--;){
+		var instance = this[i];
+		if (instance) instance.step(now);
+	}
+};
+
+var pushInstance = function(fps){
+	var list = instances[fps] || (instances[fps] = []);
+	list.push(this);
+	if (!timers[fps]) timers[fps] = loop.periodical(Math.round(1000 / fps), list);
+};
+
+var pullInstance = function(fps){
+	var list = instances[fps];
+	if (list){
+		list.erase(this);
+		if (!list.length && timers[fps]){
+			delete instances[fps];
+			timers[fps] = clearInterval(timers[fps]);
+		}
+	}
+};
+
+})();
+
+
+// Begin: Source/Fx/Fx.CSS.js
+/*
+---
+
+name: Fx.CSS
+
+description: Contains the CSS animation logic. Used by Fx.Tween, Fx.Morph, Fx.Elements.
+
+license: MIT-style license.
+
+requires: [Fx, Element.Style]
+
+provides: Fx.CSS
+
+...
+*/
+
+Fx.CSS = new Class({
+
+	Extends: Fx,
+
+	//prepares the base from/to object
+
+	prepare: function(element, property, values){
+		values = Array.from(values);
+		var from = values[0], to = values[1];
+		if (to == null){
+			to = from;
+			from = element.getStyle(property);
+			var unit = this.options.unit;
+			// adapted from: https://github.com/ryanmorr/fx/blob/master/fx.js#L299
+			if (unit && from.slice(-unit.length) != unit && parseFloat(from) != 0){
+				element.setStyle(property, to + unit);
+				var value = element.getComputedStyle(property);
+				// IE and Opera support pixelLeft or pixelWidth
+				if (!(/px$/.test(value))){
+					value = element.style[('pixel-' + property).camelCase()];
+					if (value == null){
+						// adapted from Dean Edwards' http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291
+						var left = element.style.left;
+						element.style.left = to + unit;
+						value = element.style.pixelLeft;
+						element.style.left = left;
+					}
+				}
+				from = (to || 1) / (parseFloat(value) || 1) * (parseFloat(from) || 0);
+				element.setStyle(property, from + unit);
+			}
+		}
+		return {from: this.parse(from), to: this.parse(to)};
+	},
+
+	//parses a value into an array
+
+	parse: function(value){
+		value = Function.from(value)();
+		value = (typeof value == 'string') ? value.split(' ') : Array.from(value);
+		return value.map(function(val){
+			val = String(val);
+			var found = false;
+			Object.each(Fx.CSS.Parsers, function(parser, key){
+				if (found) return;
+				var parsed = parser.parse(val);
+				if (parsed || parsed === 0) found = {value: parsed, parser: parser};
+			});
+			found = found || {value: val, parser: Fx.CSS.Parsers.String};
+			return found;
+		});
+	},
+
+	//computes by a from and to prepared objects, using their parsers.
+
+	compute: function(from, to, delta){
+		var computed = [];
+		(Math.min(from.length, to.length)).times(function(i){
+			computed.push({value: from[i].parser.compute(from[i].value, to[i].value, delta), parser: from[i].parser});
+		});
+		computed.$family = Function.from('fx:css:value');
+		return computed;
+	},
+
+	//serves the value as settable
+
+	serve: function(value, unit){
+		if (typeOf(value) != 'fx:css:value') value = this.parse(value);
+		var returned = [];
+		value.each(function(bit){
+			returned = returned.concat(bit.parser.serve(bit.value, unit));
+		});
+		return returned;
+	},
+
+	//renders the change to an element
+
+	render: function(element, property, value, unit){
+		element.setStyle(property, this.serve(value, unit));
+	},
+
+	//searches inside the page css to find the values for a selector
+
+	search: function(selector){
+		if (Fx.CSS.Cache[selector]) return Fx.CSS.Cache[selector];
+		var to = {}, selectorTest = new RegExp('^' + selector.escapeRegExp() + '$');
+		Array.each(document.styleSheets, function(sheet, j){
+			var href = sheet.href;
+			if (href && href.contains('://') && !href.contains(document.domain)) return;
+			var rules = sheet.rules || sheet.cssRules;
+			Array.each(rules, function(rule, i){
+				if (!rule.style) return;
+				var selectorText = (rule.selectorText) ? rule.selectorText.replace(/^\w+/, function(m){
+					return m.toLowerCase();
+				}) : null;
+				if (!selectorText || !selectorTest.test(selectorText)) return;
+				Object.each(Element.Styles, function(value, style){
+					if (!rule.style[style] || Element.ShortStyles[style]) return;
+					value = String(rule.style[style]);
+					to[style] = ((/^rgb/).test(value)) ? value.rgbToHex() : value;
+				});
+			});
+		});
+		return Fx.CSS.Cache[selector] = to;
+	}
+
+});
+
+Fx.CSS.Cache = {};
+
+Fx.CSS.Parsers = {
+
+	Color: {
+		parse: function(value){
+			if (value.match(/^#[0-9a-f]{3,6}$/i)) return value.hexToRgb(true);
+			return ((value = value.match(/(\d+),\s*(\d+),\s*(\d+)/))) ? [value[1], value[2], value[3]] : false;
+		},
+		compute: function(from, to, delta){
+			return from.map(function(value, i){
+				return Math.round(Fx.compute(from[i], to[i], delta));
+			});
+		},
+		serve: function(value){
+			return value.map(Number);
+		}
+	},
+
+	Number: {
+		parse: parseFloat,
+		compute: Fx.compute,
+		serve: function(value, unit){
+			return (unit) ? value + unit : value;
+		}
+	},
+
+	String: {
+		parse: Function.from(false),
+		compute: function(zero, one){
+			return one;
+		},
+		serve: function(zero){
+			return zero;
+		}
+	}
+
+};
+
+//<1.2compat>
+
+Fx.CSS.Parsers = new Hash(Fx.CSS.Parsers);
+
+//</1.2compat>
+
+
+// Begin: Source/Fx/Fx.Tween.js
+/*
+---
+
+name: Fx.Tween
+
+description: Formerly Fx.Style, effect to transition any CSS property for an element.
+
+license: MIT-style license.
+
+requires: Fx.CSS
+
+provides: [Fx.Tween, Element.fade, Element.highlight]
+
+...
+*/
+
+Fx.Tween = new Class({
+
+	Extends: Fx.CSS,
+
+	initialize: function(element, options){
+		this.element = this.subject = document.id(element);
+		this.parent(options);
+	},
+
+	set: function(property, now){
+		if (arguments.length == 1){
+			now = property;
+			property = this.property || this.options.property;
+		}
+		this.render(this.element, property, now, this.options.unit);
+		return this;
+	},
+
+	start: function(property, from, to){
+		if (!this.check(property, from, to)) return this;
+		var args = Array.flatten(arguments);
+		this.property = this.options.property || args.shift();
+		var parsed = this.prepare(this.element, this.property, args);
+		return this.parent(parsed.from, parsed.to);
+	}
+
+});
+
+Element.Properties.tween = {
+
+	set: function(options){
+		this.get('tween').cancel().setOptions(options);
+		return this;
+	},
+
+	get: function(){
+		var tween = this.retrieve('tween');
+		if (!tween){
+			tween = new Fx.Tween(this, {link: 'cancel'});
+			this.store('tween', tween);
+		}
+		return tween;
+	}
+
+};
+
+Element.implement({
+
+	tween: function(property, from, to){
+		this.get('tween').start(property, from, to);
+		return this;
+	},
+
+	fade: function(how){
+		var fade = this.get('tween'), method, args = ['opacity'].append(arguments), toggle;
+		if (args[1] == null) args[1] = 'toggle';
+		switch (args[1]){
+			case 'in': method = 'start'; args[1] = 1; break;
+			case 'out': method = 'start'; args[1] = 0; break;
+			case 'show': method = 'set'; args[1] = 1; break;
+			case 'hide': method = 'set'; args[1] = 0; break;
+			case 'toggle':
+				var flag = this.retrieve('fade:flag', this.getStyle('opacity') == 1);
+				method = 'start';
+				args[1] = flag ? 0 : 1;
+				this.store('fade:flag', !flag);
+				toggle = true;
+			break;
+			default: method = 'start';
+		}
+		if (!toggle) this.eliminate('fade:flag');
+		fade[method].apply(fade, args);
+		var to = args[args.length - 1];
+		if (method == 'set' || to != 0) this.setStyle('visibility', to == 0 ? 'hidden' : 'visible');
+		else fade.chain(function(){
+			this.element.setStyle('visibility', 'hidden');
+			this.callChain();
+		});
+		return this;
+	},
+
+	highlight: function(start, end){
+		if (!end){
+			end = this.retrieve('highlight:original', this.getStyle('background-color'));
+			end = (end == 'transparent') ? '#fff' : end;
+		}
+		var tween = this.get('tween');
+		tween.start('background-color', start || '#ffff88', end).chain(function(){
+			this.setStyle('background-color', this.retrieve('highlight:original'));
+			tween.callChain();
+		}.bind(this));
+		return this;
+	}
+
+});
+
+
+// Begin: Source/Class/Class.Refactor.js
+/*
+---
+
+script: Class.Refactor.js
+
+name: Class.Refactor
+
+description: Extends a class onto itself with new property, preserving any items attached to the class's namespace.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Class
+  - /MooTools.More
+
+# Some modules declare themselves dependent on Class.Refactor
+provides: [Class.refactor, Class.Refactor]
+
+...
+*/
+
+Class.refactor = function(original, refactors){
+
+	Object.each(refactors, function(item, name){
+		var origin = original.prototype[name];
+		origin = (origin && origin.$origin) || origin || function(){};
+		original.implement(name, (typeof item == 'function') ? function(){
+			var old = this.previous;
+			this.previous = origin;
+			var value = item.apply(this, arguments);
+			this.previous = old;
+			return value;
+		} : item);
+	});
+
+	return original;
+
+};
 
 
 // Begin: Source/Utilities/IframeShim.js
@@ -8391,7 +8463,7 @@ var Mask = new Class({
 	},
 
 	inject: function(target, where){
-		where = where || (this.options.inject ? this.options.inject.where : '') || this.target == document.body ? 'inside' : 'after';
+		where = where || (this.options.inject ? this.options.inject.where : '') || (this.target == document.body ? 'inside' : 'after');
 		target = target || (this.options.inject && this.options.inject.target) || this.target;
 
 		this.element.inject(target, where);
@@ -8519,850 +8591,6 @@ Element.implement({
 	}
 
 });
-
-
-// Begin: Source/Element/Elements.From.js
-/*
----
-
-script: Elements.From.js
-
-name: Elements.From
-
-description: Returns a collection of elements from a string of html.
-
-license: MIT-style license
-
-authors:
-  - Aaron Newton
-
-requires:
-  - Core/String
-  - Core/Element
-  - /MooTools.More
-
-provides: [Elements.from, Elements.From]
-
-...
-*/
-
-Elements.from = function(text, excludeScripts){
-	if (excludeScripts || excludeScripts == null) text = text.stripScripts();
-
-	var container, match = text.match(/^\s*<(t[dhr]|tbody|tfoot|thead)/i);
-
-	if (match){
-		container = new Element('table');
-		var tag = match[1].toLowerCase();
-		if (['td', 'th', 'tr'].contains(tag)){
-			container = new Element('tbody').inject(container);
-			if (tag != 'tr') container = new Element('tr').inject(container);
-		}
-	}
-
-	return (container || new Element('div')).set('html', text).getChildren();
-};
-
-
-// Begin: Source/Class/Events.Pseudos.js
-/*
----
-
-name: Events.Pseudos
-
-description: Adds the functionality to add pseudo events
-
-license: MIT-style license
-
-authors:
-  - Arian Stolwijk
-
-requires: [Core/Class.Extras, Core/Slick.Parser, More/MooTools.More]
-
-provides: [Events.Pseudos]
-
-...
-*/
-
-(function(){
-
-Events.Pseudos = function(pseudos, addEvent, removeEvent){
-
-	var storeKey = '_monitorEvents:';
-
-	var storageOf = function(object){
-		return {
-			store: object.store ? function(key, value){
-				object.store(storeKey + key, value);
-			} : function(key, value){
-				(object._monitorEvents || (object._monitorEvents = {}))[key] = value;
-			},
-			retrieve: object.retrieve ? function(key, dflt){
-				return object.retrieve(storeKey + key, dflt);
-			} : function(key, dflt){
-				if (!object._monitorEvents) return dflt;
-				return object._monitorEvents[key] || dflt;
-			}
-		};
-	};
-
-	var splitType = function(type){
-		if (type.indexOf(':') == -1 || !pseudos) return null;
-
-		var parsed = Slick.parse(type).expressions[0][0],
-			parsedPseudos = parsed.pseudos,
-			l = parsedPseudos.length,
-			splits = [];
-
-		while (l--){
-			var pseudo = parsedPseudos[l].key,
-				listener = pseudos[pseudo];
-			if (listener != null) splits.push({
-				event: parsed.tag,
-				value: parsedPseudos[l].value,
-				pseudo: pseudo,
-				original: type,
-				listener: listener
-			});
-		}
-		return splits.length ? splits : null;
-	};
-
-	return {
-
-		addEvent: function(type, fn, internal){
-			var split = splitType(type);
-			if (!split) return addEvent.call(this, type, fn, internal);
-
-			var storage = storageOf(this),
-				events = storage.retrieve(type, []),
-				eventType = split[0].event,
-				args = Array.slice(arguments, 2),
-				stack = fn,
-				self = this;
-
-			split.each(function(item){
-				var listener = item.listener,
-					stackFn = stack;
-				if (listener == false) eventType += ':' + item.pseudo + '(' + item.value + ')';
-				else stack = function(){
-					listener.call(self, item, stackFn, arguments, stack);
-				};
-			});
-
-			events.include({type: eventType, event: fn, monitor: stack});
-			storage.store(type, events);
-
-			if (type != eventType) addEvent.apply(this, [type, fn].concat(args));
-			return addEvent.apply(this, [eventType, stack].concat(args));
-		},
-
-		removeEvent: function(type, fn){
-			var split = splitType(type);
-			if (!split) return removeEvent.call(this, type, fn);
-
-			var storage = storageOf(this),
-				events = storage.retrieve(type);
-			if (!events) return this;
-
-			var args = Array.slice(arguments, 2);
-
-			removeEvent.apply(this, [type, fn].concat(args));
-			events.each(function(monitor, i){
-				if (!fn || monitor.event == fn) removeEvent.apply(this, [monitor.type, monitor.monitor].concat(args));
-				delete events[i];
-			}, this);
-
-			storage.store(type, events);
-			return this;
-		}
-
-	};
-
-};
-
-var pseudos = {
-
-	once: function(split, fn, args, monitor){
-		fn.apply(this, args);
-		this.removeEvent(split.event, monitor)
-			.removeEvent(split.original, fn);
-	},
-
-	throttle: function(split, fn, args){
-		if (!fn._throttled){
-			fn.apply(this, args);
-			fn._throttled = setTimeout(function(){
-				fn._throttled = false;
-			}, split.value || 250);
-		}
-	},
-
-	pause: function(split, fn, args){
-		clearTimeout(fn._pause);
-		fn._pause = fn.delay(split.value || 250, this, args);
-	}
-
-};
-
-Events.definePseudo = function(key, listener){
-	pseudos[key] = listener;
-	return this;
-};
-
-Events.lookupPseudo = function(key){
-	return pseudos[key];
-};
-
-var proto = Events.prototype;
-Events.implement(Events.Pseudos(pseudos, proto.addEvent, proto.removeEvent));
-
-['Request', 'Fx'].each(function(klass){
-	if (this[klass]) this[klass].implement(Events.prototype);
-});
-
-})();
-
-
-// Begin: Source/UI/Bootstrap.Popup.js
-/*
----
-
-name: Popup
-
-description: A simple Popup class for the Twitter Bootstrap CSS framework.
-
-authors: [Aaron Newton]
-
-license: MIT-style license.
-
-requires:
- - Core/Element.Delegation
- - Core/Fx.Tween
- - Core/Fx.Transitions
- - More/Mask
- - More/Elements.From
- - More/Element.Position
- - More/Element.Shortcuts
- - More/Events.Pseudos
- - /CSSEvents
- - /Bootstrap
-
-provides: [Bootstrap.Popup]
-
-...
-*/
-
-Bootstrap.Popup = new Class({
-
-	Implements: [Options, Events],
-
-	options: {
-		/*
-			onShow: function(){},
-			onHide: function(){},
-			animate: function(){},
-			destroy: function(){},
-		*/
-		persist: true,
-		closeOnClickOut: true,
-		closeOnEsc: true,
-		mask: true,
-		animate: true
-	},
-
-	initialize: function(element, options){
-		this.element = document.id(element).store('Bootstrap.Popup', this);
-		this.setOptions(options);
-		this.bound = {
-			hide: this.hide.bind(this),
-			bodyClick: function(e){
-				if (!this.element.contains(e.target)){
-					this.hide();
-				}
-			}.bind(this),
-			keyMonitor: function(e){
-				if (e.key == 'esc') this.hide();
-			}.bind(this),
-			animationEnd: this._animationEnd.bind(this)
-		};
-		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
-		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
-			if (this.element.hasClass('fade')) this.element.removeClass('in');
-			this.show();
-		}
-	},
-
-	_checkAnimate: function(){
-		var check = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
-		if (!check) {
-			this.element.removeClass('fade').addClass('hide');
-			this._mask.removeClass('fade').addClass('hide');
-		} else if (check) {
-			this.element.addClass('fade').removeClass('hide');
-			this._mask.addClass('fade').removeClass('hide');
-		}
-		return check;
-	},
-
-	show: function(){
-		if (this.visible || this.animating) return;
-		this.element.addEvent('click:relay(.close, .dismiss)', this.bound.hide);
-		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
-		this._makeMask();
-		this._mask.inject(document.body);
-		this.animating = true;
-		if (this._checkAnimate()){
-			this.element.offsetWidth; // force reflow
-			this.element.addClass('in');
-			this._mask.addClass('in');
-		} else {
-			this.element.show();
-			this._mask.show();
-		}
-		this.visible = true;
-		this._watch();
-	},
-
-	_watch: function(){
-		if (this._checkAnimate()) this.element.addEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
-		else this._animationEnd();
-	},
-
-	_animationEnd: function(){
-		if (Browser.Features.getCSSTransition()) this.element.removeEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
-		this.animating = false;
-		if (this.visible){
-			this.fireEvent('show', this.element);
-		} else {
-			this.fireEvent('hide', this.element);
-			if (!this.options.persist){
-				this.destroy();
-			} else {
-				this._mask.dispose();
-			}
-		}
-	},
-
-	destroy: function(){
-		this._mask.destroy();
-		this.fireEvent('destroy', this.element);
-		this.element.destroy();
-		this._mask = null;
-		this.destroyed = true;
-	},
-
-	hide: function(event, clicked){
-		if (!this.visible || this.animating) return;
-		this.animating = true;
-		if (event && clicked && clicked.hasClass('stopEvent')){
-			event.preventDefault();
-		}
-		document.id(document.body).removeEvent('click', this.bound.hide);
-		document.removeEvent('keyup', this.bound.keyMonitor);
-		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
-
-		if (this._checkAnimate()){
-			this.element.removeClass('in');
-			this._mask.removeClass('in');
-		} else {
-			this.element.hide();
-			this._mask.hide();
-		}
-		this.visible = false;
-		this._watch();
-	},
-
-	// PRIVATE
-
-	_makeMask: function(){
-		if (this.options.mask){
-			if (!this._mask){
-				this._mask = new Element('div.modal-backdrop', {
-					events: {
-						click: this.bound.hide
-					}
-				});
-				if (this._checkAnimate()){
-					this._mask.addClass('fade');
-				}
-			}
-		} else if (this.options.closeOnClickOut){
-			document.id(document.body).addEvent('click', this.bound.hide);
-		}
-	}
-
-});
-
-// Begin: Source/Behaviors/Behavior.BS.Popup.js
-/*
----
-
-name: Behavior.Popup
-
-description: Creates a bootstrap popup based on HTML markup.
-
-license: MIT-style license.
-
-authors: [Aaron Newton]
-
-requires:
- - Behavior/Behavior
- - More/Object.Extras
- - Bootstrap.Popup
-
-provides: [Behavior.BS.Popup]
-
-...
-*/
-
-Behavior.addGlobalFilters({
-	'BS.Popup': {
-		defaults: {
-			hide: false,
-			animate: true,
-			closeOnEsc: true,
-			closeOnClickOut: true,
-			mask: true,
-			persist: true
-		},
-		returns: Bootstrap.Popup,
-		setup: function(el, api){
-			var popup = new Bootstrap.Popup(el,
-				Object.cleanValues(
-					api.getAs({
-						persist: Boolean,
-						animate: Boolean,
-						closeOnEsc: Boolean,
-						closeOnClickOut: Boolean,
-						mask: Boolean
-					})
-				)
-			);
-			popup.addEvent('destroy', function(){
-				api.cleanup(el);
-			});
-			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
-				popup.show();
-			}
-			return popup;
-		}
-	}
-});
-
-// Begin: Source/Request/Request.js
-/*
----
-
-name: Request
-
-description: Powerful all purpose Request Class. Uses XMLHTTPRequest.
-
-license: MIT-style license.
-
-requires: [Object, Element, Chain, Events, Options, Browser]
-
-provides: Request
-
-...
-*/
-
-(function(){
-
-var empty = function(){},
-	progressSupport = ('onprogress' in new Browser.Request);
-
-var Request = this.Request = new Class({
-
-	Implements: [Chain, Events, Options],
-
-	options: {/*
-		onRequest: function(){},
-		onLoadstart: function(event, xhr){},
-		onProgress: function(event, xhr){},
-		onComplete: function(){},
-		onCancel: function(){},
-		onSuccess: function(responseText, responseXML){},
-		onFailure: function(xhr){},
-		onException: function(headerName, value){},
-		onTimeout: function(){},
-		user: '',
-		password: '',*/
-		url: '',
-		data: '',
-		headers: {
-			'X-Requested-With': 'XMLHttpRequest',
-			'Accept': 'text/javascript, text/html, application/xml, text/xml, */*'
-		},
-		async: true,
-		format: false,
-		method: 'post',
-		link: 'ignore',
-		isSuccess: null,
-		emulation: true,
-		urlEncoded: true,
-		encoding: 'utf-8',
-		evalScripts: false,
-		evalResponse: false,
-		timeout: 0,
-		noCache: false
-	},
-
-	initialize: function(options){
-		this.xhr = new Browser.Request();
-		this.setOptions(options);
-		this.headers = this.options.headers;
-	},
-
-	onStateChange: function(){
-		var xhr = this.xhr;
-		if (xhr.readyState != 4 || !this.running) return;
-		this.running = false;
-		this.status = 0;
-		Function.attempt(function(){
-			var status = xhr.status;
-			this.status = (status == 1223) ? 204 : status;
-		}.bind(this));
-		xhr.onreadystatechange = empty;
-		if (progressSupport) xhr.onprogress = xhr.onloadstart = empty;
-		clearTimeout(this.timer);
-
-		this.response = {text: this.xhr.responseText || '', xml: this.xhr.responseXML};
-		if (this.options.isSuccess.call(this, this.status))
-			this.success(this.response.text, this.response.xml);
-		else
-			this.failure();
-	},
-
-	isSuccess: function(){
-		var status = this.status;
-		return (status >= 200 && status < 300);
-	},
-
-	isRunning: function(){
-		return !!this.running;
-	},
-
-	processScripts: function(text){
-		if (this.options.evalResponse || (/(ecma|java)script/).test(this.getHeader('Content-type'))) return Browser.exec(text);
-		return text.stripScripts(this.options.evalScripts);
-	},
-
-	success: function(text, xml){
-		this.onSuccess(this.processScripts(text), xml);
-	},
-
-	onSuccess: function(){
-		this.fireEvent('complete', arguments).fireEvent('success', arguments).callChain();
-	},
-
-	failure: function(){
-		this.onFailure();
-	},
-
-	onFailure: function(){
-		this.fireEvent('complete').fireEvent('failure', this.xhr);
-	},
-
-	loadstart: function(event){
-		this.fireEvent('loadstart', [event, this.xhr]);
-	},
-
-	progress: function(event){
-		this.fireEvent('progress', [event, this.xhr]);
-	},
-
-	timeout: function(){
-		this.fireEvent('timeout', this.xhr);
-	},
-
-	setHeader: function(name, value){
-		this.headers[name] = value;
-		return this;
-	},
-
-	getHeader: function(name){
-		return Function.attempt(function(){
-			return this.xhr.getResponseHeader(name);
-		}.bind(this));
-	},
-
-	check: function(){
-		if (!this.running) return true;
-		switch (this.options.link){
-			case 'cancel': this.cancel(); return true;
-			case 'chain': this.chain(this.caller.pass(arguments, this)); return false;
-		}
-		return false;
-	},
-
-	send: function(options){
-		if (!this.check(options)) return this;
-
-		this.options.isSuccess = this.options.isSuccess || this.isSuccess;
-		this.running = true;
-
-		var type = typeOf(options);
-		if (type == 'string' || type == 'element') options = {data: options};
-
-		var old = this.options;
-		options = Object.append({data: old.data, url: old.url, method: old.method}, options);
-		var data = options.data, url = String(options.url), method = options.method.toLowerCase();
-
-		switch (typeOf(data)){
-			case 'element': data = document.id(data).toQueryString(); break;
-			case 'object': case 'hash': data = Object.toQueryString(data);
-		}
-
-		if (this.options.format){
-			var format = 'format=' + this.options.format;
-			data = (data) ? format + '&' + data : format;
-		}
-
-		if (this.options.emulation && !['get', 'post'].contains(method)){
-			var _method = '_method=' + method;
-			data = (data) ? _method + '&' + data : _method;
-			method = 'post';
-		}
-
-		if (this.options.urlEncoded && ['post', 'put'].contains(method)){
-			var encoding = (this.options.encoding) ? '; charset=' + this.options.encoding : '';
-			this.headers['Content-type'] = 'application/x-www-form-urlencoded' + encoding;
-		}
-
-		if (!url) url = document.location.pathname;
-
-		var trimPosition = url.lastIndexOf('/');
-		if (trimPosition > -1 && (trimPosition = url.indexOf('#')) > -1) url = url.substr(0, trimPosition);
-
-		if (this.options.noCache)
-			url += (url.contains('?') ? '&' : '?') + String.uniqueID();
-
-		if (data && method == 'get'){
-			url += (url.contains('?') ? '&' : '?') + data;
-			data = null;
-		}
-
-		var xhr = this.xhr;
-		if (progressSupport){
-			xhr.onloadstart = this.loadstart.bind(this);
-			xhr.onprogress = this.progress.bind(this);
-		}
-
-		xhr.open(method.toUpperCase(), url, this.options.async, this.options.user, this.options.password);
-		if (this.options.user && 'withCredentials' in xhr) xhr.withCredentials = true;
-
-		xhr.onreadystatechange = this.onStateChange.bind(this);
-
-		Object.each(this.headers, function(value, key){
-			try {
-				xhr.setRequestHeader(key, value);
-			} catch (e){
-				this.fireEvent('exception', [key, value]);
-			}
-		}, this);
-
-		this.fireEvent('request');
-		xhr.send(data);
-		if (!this.options.async) this.onStateChange();
-		if (this.options.timeout) this.timer = this.timeout.delay(this.options.timeout, this);
-		return this;
-	},
-
-	cancel: function(){
-		if (!this.running) return this;
-		this.running = false;
-		var xhr = this.xhr;
-		xhr.abort();
-		clearTimeout(this.timer);
-		xhr.onreadystatechange = empty;
-		if (progressSupport) xhr.onprogress = xhr.onloadstart = empty;
-		this.xhr = new Browser.Request();
-		this.fireEvent('cancel');
-		return this;
-	}
-
-});
-
-var methods = {};
-['get', 'post', 'put', 'delete', 'GET', 'POST', 'PUT', 'DELETE'].each(function(method){
-	methods[method] = function(data){
-		var object = {
-			method: method
-		};
-		if (data != null) object.data = data;
-		return this.send(object);
-	};
-});
-
-Request.implement(methods);
-
-Element.Properties.send = {
-
-	set: function(options){
-		var send = this.get('send').cancel();
-		send.setOptions(options);
-		return this;
-	},
-
-	get: function(){
-		var send = this.retrieve('send');
-		if (!send){
-			send = new Request({
-				data: this, link: 'cancel', method: this.get('method') || 'post', url: this.get('action')
-			});
-			this.store('send', send);
-		}
-		return send;
-	}
-
-};
-
-Element.implement({
-
-	send: function(url){
-		var sender = this.get('send');
-		sender.send({data: this, url: url || sender.options.url});
-		return this;
-	}
-
-});
-
-})();
-
-// Begin: Source/Request/Request.HTML.js
-/*
----
-
-name: Request.HTML
-
-description: Extends the basic Request Class with additional methods for interacting with HTML responses.
-
-license: MIT-style license.
-
-requires: [Element, Request]
-
-provides: Request.HTML
-
-...
-*/
-
-Request.HTML = new Class({
-
-	Extends: Request,
-
-	options: {
-		update: false,
-		append: false,
-		evalScripts: true,
-		filter: false,
-		headers: {
-			Accept: 'text/html, application/xml, text/xml, */*'
-		}
-	},
-
-	success: function(text){
-		var options = this.options, response = this.response;
-
-		response.html = text.stripScripts(function(script){
-			response.javascript = script;
-		});
-
-		var match = response.html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-		if (match) response.html = match[1];
-		var temp = new Element('div').set('html', response.html);
-
-		response.tree = temp.childNodes;
-		response.elements = temp.getElements(options.filter || '*');
-
-		if (options.filter) response.tree = response.elements;
-		if (options.update){
-			var update = document.id(options.update).empty();
-			if (options.filter) update.adopt(response.elements);
-			else update.set('html', response.html);
-		} else if (options.append){
-			var append = document.id(options.append);
-			if (options.filter) response.elements.reverse().inject(append);
-			else append.adopt(temp.getChildren());
-		}
-		if (options.evalScripts) Browser.exec(response.javascript);
-
-		this.onSuccess(response.tree, response.elements, response.html, response.javascript);
-	}
-
-});
-
-Element.Properties.load = {
-
-	set: function(options){
-		var load = this.get('load').cancel();
-		load.setOptions(options);
-		return this;
-	},
-
-	get: function(){
-		var load = this.retrieve('load');
-		if (!load){
-			load = new Request.HTML({data: this, link: 'cancel', update: this, method: 'get'});
-			this.store('load', load);
-		}
-		return load;
-	}
-
-};
-
-Element.implement({
-
-	load: function(){
-		this.get('load').send(Array.link(arguments, {data: Type.isObject, url: Type.isString}));
-		return this;
-	}
-
-});
-
-
-// Begin: Source/Class/Class.Refactor.js
-/*
----
-
-script: Class.Refactor.js
-
-name: Class.Refactor
-
-description: Extends a class onto itself with new property, preserving any items attached to the class's namespace.
-
-license: MIT-style license
-
-authors:
-  - Aaron Newton
-
-requires:
-  - Core/Class
-  - /MooTools.More
-
-# Some modules declare themselves dependent on Class.Refactor
-provides: [Class.refactor, Class.Refactor]
-
-...
-*/
-
-Class.refactor = function(original, refactors){
-
-	Object.each(refactors, function(item, name){
-		var origin = original.prototype[name];
-		origin = (origin && origin.$origin) || origin || function(){};
-		original.implement(name, (typeof item == 'function') ? function(){
-			var old = this.previous;
-			this.previous = origin;
-			var value = item.apply(this, arguments);
-			this.previous = old;
-			return value;
-		} : item);
-	});
-
-	return original;
-
-};
 
 
 // Begin: Source/Interface/Spinner.js
@@ -9655,6 +8883,166 @@ String.implement({
 });
 
 
+// Begin: Source/Class/Events.Pseudos.js
+/*
+---
+
+name: Events.Pseudos
+
+description: Adds the functionality to add pseudo events
+
+license: MIT-style license
+
+authors:
+  - Arian Stolwijk
+
+requires: [Core/Class.Extras, Core/Slick.Parser, More/MooTools.More]
+
+provides: [Events.Pseudos]
+
+...
+*/
+
+(function(){
+
+Events.Pseudos = function(pseudos, addEvent, removeEvent){
+
+	var storeKey = '_monitorEvents:';
+
+	var storageOf = function(object){
+		return {
+			store: object.store ? function(key, value){
+				object.store(storeKey + key, value);
+			} : function(key, value){
+				(object._monitorEvents || (object._monitorEvents = {}))[key] = value;
+			},
+			retrieve: object.retrieve ? function(key, dflt){
+				return object.retrieve(storeKey + key, dflt);
+			} : function(key, dflt){
+				if (!object._monitorEvents) return dflt;
+				return object._monitorEvents[key] || dflt;
+			}
+		};
+	};
+
+	var splitType = function(type){
+		if (type.indexOf(':') == -1 || !pseudos) return null;
+
+		var parsed = Slick.parse(type).expressions[0][0],
+			parsedPseudos = parsed.pseudos,
+			l = parsedPseudos.length,
+			splits = [];
+
+		while (l--){
+			var pseudo = parsedPseudos[l].key,
+				listener = pseudos[pseudo];
+			if (listener != null) splits.push({
+				event: parsed.tag,
+				value: parsedPseudos[l].value,
+				pseudo: pseudo,
+				original: type,
+				listener: listener
+			});
+		}
+		return splits.length ? splits : null;
+	};
+
+	return {
+
+		addEvent: function(type, fn, internal){
+			var split = splitType(type);
+			if (!split) return addEvent.call(this, type, fn, internal);
+
+			var storage = storageOf(this),
+				events = storage.retrieve(type, []),
+				eventType = split[0].event,
+				args = Array.slice(arguments, 2),
+				stack = fn,
+				self = this;
+
+			split.each(function(item){
+				var listener = item.listener,
+					stackFn = stack;
+				if (listener == false) eventType += ':' + item.pseudo + '(' + item.value + ')';
+				else stack = function(){
+					listener.call(self, item, stackFn, arguments, stack);
+				};
+			});
+
+			events.include({type: eventType, event: fn, monitor: stack});
+			storage.store(type, events);
+
+			if (type != eventType) addEvent.apply(this, [type, fn].concat(args));
+			return addEvent.apply(this, [eventType, stack].concat(args));
+		},
+
+		removeEvent: function(type, fn){
+			var split = splitType(type);
+			if (!split) return removeEvent.call(this, type, fn);
+
+			var storage = storageOf(this),
+				events = storage.retrieve(type);
+			if (!events) return this;
+
+			var args = Array.slice(arguments, 2);
+
+			removeEvent.apply(this, [type, fn].concat(args));
+			events.each(function(monitor, i){
+				if (!fn || monitor.event == fn) removeEvent.apply(this, [monitor.type, monitor.monitor].concat(args));
+				delete events[i];
+			}, this);
+
+			storage.store(type, events);
+			return this;
+		}
+
+	};
+
+};
+
+var pseudos = {
+
+	once: function(split, fn, args, monitor){
+		fn.apply(this, args);
+		this.removeEvent(split.event, monitor)
+			.removeEvent(split.original, fn);
+	},
+
+	throttle: function(split, fn, args){
+		if (!fn._throttled){
+			fn.apply(this, args);
+			fn._throttled = setTimeout(function(){
+				fn._throttled = false;
+			}, split.value || 250);
+		}
+	},
+
+	pause: function(split, fn, args){
+		clearTimeout(fn._pause);
+		fn._pause = fn.delay(split.value || 250, this, args);
+	}
+
+};
+
+Events.definePseudo = function(key, listener){
+	pseudos[key] = listener;
+	return this;
+};
+
+Events.lookupPseudo = function(key){
+	return pseudos[key];
+};
+
+var proto = Events.prototype;
+Events.implement(Events.Pseudos(pseudos, proto.addEvent, proto.removeEvent));
+
+['Request', 'Fx'].each(function(klass){
+	if (this[klass]) this[klass].implement(Events.prototype);
+});
+
+})();
+
+
 // Begin: Source/Element/Element.Event.Pseudos.js
 /*
 ---
@@ -9900,6 +9288,550 @@ if (!window.Form) window.Form = {};
 })();
 
 
+// Begin: Source/Forms/Behavior.FormRequest.js
+/*
+---
+description: Makes form elements with a FormRequest data filter automatically update via Ajax.
+provides: [Behavior.FormRequest]
+requires: [Behavior/Behavior, More/Form.Request, Behavior/Element.Data]
+script: Behavior.FormRequest.js
+name: Behavior.FormRequest
+...
+*/
+
+Behavior.addGlobalFilter('FormRequest', {
+	defaults: {
+		resetForm: true
+	},
+	setup: function(element, api){
+		var updateElement,
+		    update = api.get('update'),
+		    spinner = api.get('spinner');
+		if (update =="self") updateElement = element;
+		else updateElement = element.getElement(update);
+
+		if (spinner == "self") spinner = element;
+		else if (spinner) spinner = element.getElement(spinner);
+		else spinner = updateElement;
+
+		if (!updateElement) api.fail('Could not find target element for form update');
+		var sentAt;
+		var req = new Form.Request(element, updateElement, {
+			requestOptions: {
+				filter: api.get('filter'),
+				spinnerTarget: spinner
+			},
+			resetForm: api.get('resetForm')
+		}).addEvent('complete', function(){
+			api.applyFilters(updateElement);
+		}).addEvent('send', function(){
+			sentAt = new Date().getTime();
+		});
+		// this bit below is to throttle form submission in case more than one thing
+		// is trying to send it
+
+		// remove form.request submit watcher
+		element.removeEvent('submit', req.onSubmit);
+		// our new submit handler checks that requests to submit are at least 200ms apart
+		var submit = function(e){
+			if (!sentAt || sentAt + 200 < new Date().getTime()) {
+				req.onSubmit(e);
+			} else {
+				// if they aren't, just stop the submit event if it's present
+				if (e) e.stop();
+			}
+		};
+		// now monitor submit with our new method
+		element.addEvent('submit', submit);
+		// and overwrite the submit method on the element
+		element.submit = submit;
+		api.onCleanup(function(){
+			req.detach();
+			delete element.submit;
+		});
+		return req;
+	}
+
+});
+
+
+// Begin: Source/Types/Object.Extras.js
+/*
+---
+
+script: Object.Extras.js
+
+name: Object.Extras
+
+description: Extra Object generics, like getFromPath which allows a path notation to child elements.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Object
+  - /MooTools.More
+
+provides: [Object.Extras]
+
+...
+*/
+
+(function(){
+
+var defined = function(value){
+	return value != null;
+};
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+Object.extend({
+
+	getFromPath: function(source, parts){
+		if (typeof parts == 'string') parts = parts.split('.');
+		for (var i = 0, l = parts.length; i < l; i++){
+			if (hasOwnProperty.call(source, parts[i])) source = source[parts[i]];
+			else return null;
+		}
+		return source;
+	},
+
+	cleanValues: function(object, method){
+		method = method || defined;
+		for (var key in object) if (!method(object[key])){
+			delete object[key];
+		}
+		return object;
+	},
+
+	erase: function(object, key){
+		if (hasOwnProperty.call(object, key)) delete object[key];
+		return object;
+	},
+
+	run: function(object){
+		var args = Array.slice(arguments, 1);
+		for (var key in object) if (object[key].apply){
+			object[key].apply(object, args);
+		}
+		return object;
+	}
+
+});
+
+})();
+
+
+// Begin: Source/Fx/Fx.Transitions.js
+/*
+---
+
+name: Fx.Transitions
+
+description: Contains a set of advanced transitions to be used with any of the Fx Classes.
+
+license: MIT-style license.
+
+credits:
+  - Easing Equations by Robert Penner, <http://www.robertpenner.com/easing/>, modified and optimized to be used with MooTools.
+
+requires: Fx
+
+provides: Fx.Transitions
+
+...
+*/
+
+Fx.implement({
+
+	getTransition: function(){
+		var trans = this.options.transition || Fx.Transitions.Sine.easeInOut;
+		if (typeof trans == 'string'){
+			var data = trans.split(':');
+			trans = Fx.Transitions;
+			trans = trans[data[0]] || trans[data[0].capitalize()];
+			if (data[1]) trans = trans['ease' + data[1].capitalize() + (data[2] ? data[2].capitalize() : '')];
+		}
+		return trans;
+	}
+
+});
+
+Fx.Transition = function(transition, params){
+	params = Array.from(params);
+	var easeIn = function(pos){
+		return transition(pos, params);
+	};
+	return Object.append(easeIn, {
+		easeIn: easeIn,
+		easeOut: function(pos){
+			return 1 - transition(1 - pos, params);
+		},
+		easeInOut: function(pos){
+			return (pos <= 0.5 ? transition(2 * pos, params) : (2 - transition(2 * (1 - pos), params))) / 2;
+		}
+	});
+};
+
+Fx.Transitions = {
+
+	linear: function(zero){
+		return zero;
+	}
+
+};
+
+//<1.2compat>
+
+Fx.Transitions = new Hash(Fx.Transitions);
+
+//</1.2compat>
+
+Fx.Transitions.extend = function(transitions){
+	for (var transition in transitions) Fx.Transitions[transition] = new Fx.Transition(transitions[transition]);
+};
+
+Fx.Transitions.extend({
+
+	Pow: function(p, x){
+		return Math.pow(p, x && x[0] || 6);
+	},
+
+	Expo: function(p){
+		return Math.pow(2, 8 * (p - 1));
+	},
+
+	Circ: function(p){
+		return 1 - Math.sin(Math.acos(p));
+	},
+
+	Sine: function(p){
+		return 1 - Math.cos(p * Math.PI / 2);
+	},
+
+	Back: function(p, x){
+		x = x && x[0] || 1.618;
+		return Math.pow(p, 2) * ((x + 1) * p - x);
+	},
+
+	Bounce: function(p){
+		var value;
+		for (var a = 0, b = 1; 1; a += b, b /= 2){
+			if (p >= (7 - 4 * a) / 11){
+				value = b * b - Math.pow((11 - 6 * a - 11 * p) / 4, 2);
+				break;
+			}
+		}
+		return value;
+	},
+
+	Elastic: function(p, x){
+		return Math.pow(2, 10 * --p) * Math.cos(20 * p * Math.PI * (x && x[0] || 1) / 3);
+	}
+
+});
+
+['Quad', 'Cubic', 'Quart', 'Quint'].each(function(transition, i){
+	Fx.Transitions[transition] = new Fx.Transition(function(p){
+		return Math.pow(p, i + 2);
+	});
+});
+
+
+// Begin: Source/Element/Elements.From.js
+/*
+---
+
+script: Elements.From.js
+
+name: Elements.From
+
+description: Returns a collection of elements from a string of html.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/String
+  - Core/Element
+  - /MooTools.More
+
+provides: [Elements.from, Elements.From]
+
+...
+*/
+
+Elements.from = function(text, excludeScripts){
+	if (excludeScripts || excludeScripts == null) text = text.stripScripts();
+
+	var container, match = text.match(/^\s*(?:<!--.*?-->\s*)*<(t[dhr]|tbody|tfoot|thead)/i);
+
+	if (match){
+		container = new Element('table');
+		var tag = match[1].toLowerCase();
+		if (['td', 'th', 'tr'].contains(tag)){
+			container = new Element('tbody').inject(container);
+			if (tag != 'tr') container = new Element('tr').inject(container);
+		}
+	}
+
+	return (container || new Element('div')).set('html', text).getChildren();
+};
+
+
+// Begin: Source/UI/Bootstrap.Popup.js
+/*
+---
+
+name: Popup
+
+description: A simple Popup class for the Twitter Bootstrap CSS framework.
+
+authors: [Aaron Newton]
+
+license: MIT-style license.
+
+requires:
+ - Core/Element.Delegation
+ - Core/Fx.Tween
+ - Core/Fx.Transitions
+ - More/Mask
+ - More/Elements.From
+ - More/Element.Position
+ - More/Element.Shortcuts
+ - More/Events.Pseudos
+ - /CSSEvents
+ - /Bootstrap
+
+provides: [Bootstrap.Popup]
+
+...
+*/
+
+Bootstrap.Popup = new Class({
+
+	Implements: [Options, Events],
+
+	options: {
+		/*
+			onShow: function(){},
+			onHide: function(){},
+			animate: function(){},
+			destroy: function(){},
+		*/
+		persist: true,
+		closeOnClickOut: true,
+		closeOnEsc: true,
+		mask: true,
+		animate: true,
+		changeDisplayValue: true
+	},
+
+	initialize: function(element, options){
+		this.element = document.id(element).store('Bootstrap.Popup', this);
+		this.setOptions(options);
+		this.bound = {
+			hide: this.hide.bind(this),
+			bodyClick: function(e){
+				if (Bootstrap.version == 2){
+					if (!this.element.contains(e.target)) this.hide();
+				} else {
+					if (this.element == e.target) this.hide();
+				}
+			}.bind(this),
+			keyMonitor: function(e){
+				if (e.key == 'esc') this.hide();
+			}.bind(this),
+			animationEnd: this._animationEnd.bind(this)
+		};
+		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
+		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
+			if (this.element.hasClass('fade')) this.element.removeClass('in');
+			this.show();
+		}
+
+		if (Bootstrap.version > 2){
+			if (this.options.closeOnClickOut){
+				this.element.addEvent('click', this.bound.bodyClick);
+			}
+		}
+	},
+
+	toElement: function(){
+		return this.element;
+	},
+
+	_checkAnimate: function(){
+		var check = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
+		if (!check) {
+			this.element.removeClass('fade').addClass('hide');
+			if (this._mask) this._mask.removeClass('fade').addClass('hide');
+		} else if (check) {
+			this.element.addClass('fade').removeClass('hide');
+			if (this._mask) this._mask.addClass('fade').removeClass('hide');
+		}
+		return check;
+	},
+
+	show: function(){
+		if (this.visible || this.animating) return;
+		this.element.addEvent('click:relay(.close, .dismiss, [data-dismiss=modal])', this.bound.hide);
+		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
+		this._makeMask();
+		if (this._mask) this._mask.inject(document.body);
+		this.animating = true;
+		if (this.options.changeDisplayValue) this.element.show();
+		if (this._checkAnimate()){
+			this.element.offsetWidth; // force reflow
+			this.element.addClass('in');
+			if (this._mask) this._mask.addClass('in');
+		} else {
+			this.element.show();
+			if (this._mask) this._mask.show();
+		}
+		this.visible = true;
+		this._watch();
+	},
+
+	_watch: function(){
+		if (this._checkAnimate()) this.element.addEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
+		else this._animationEnd();
+	},
+
+	_animationEnd: function(){
+		if (Browser.Features.getCSSTransition()) this.element.removeEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
+		this.animating = false;
+		if (this.visible){
+			this.fireEvent('show', this.element);
+		} else {
+			this.fireEvent('hide', this.element);
+			if (this.options.changeDisplayValue) this.element.hide();
+			if (!this.options.persist){
+				this.destroy();
+			} else if (this._mask) {
+				this._mask.dispose();
+			}
+		}
+	},
+
+	destroy: function(){
+		if (this._mask) this._mask.destroy();
+		this.fireEvent('destroy', this.element);
+		this.element.destroy();
+		this._mask = null;
+		this.destroyed = true;
+	},
+
+	hide: function(event, clicked){
+		if (clicked) {
+			var immediateParentPopup = clicked.getParent('[data-behavior~=BS.Popup]');
+			if (immediateParentPopup && immediateParentPopup != this.element) return;
+		}
+		if (!this.visible || this.animating) return;
+		this.animating = true;
+		if (event && clicked && clicked.hasClass('stopEvent')){
+			event.preventDefault();
+		}
+
+		if (Bootstrap.version == 2) document.id(document.body).removeEvent('click', this.bound.hide);
+		document.removeEvent('keyup', this.bound.keyMonitor);
+		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
+
+		if (this._checkAnimate()){
+			this.element.removeClass('in');
+			if (this._mask) this._mask.removeClass('in');
+		} else {
+			this.element.hide();
+			if (this._mask) this._mask.hide();
+		}
+		this.visible = false;
+		this._watch();
+	},
+
+	// PRIVATE
+
+	_makeMask: function(){
+		if (this.options.mask){
+			if (!this._mask){
+				this._mask = new Element('div.modal-backdrop.in');
+				if (this._checkAnimate()) this._mask.addClass('fade');
+			}
+		}
+		if (this.options.closeOnClickOut && Bootstrap.version == 2){
+			if (this._mask) this._mask.addEvent('click', this.bound.hide);
+			else document.id(document.body).addEvent('click', this.bound.hide);
+		}
+	}
+
+});
+
+// Begin: Source/Behaviors/Behavior.BS.Popup.js
+/*
+---
+
+name: Behavior.Popup
+
+description: Creates a bootstrap popup based on HTML markup.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - Behavior/Behavior
+ - More/Object.Extras
+ - Bootstrap.Popup
+
+provides: [Behavior.BS.Popup]
+
+...
+*/
+
+Behavior.addGlobalFilters({
+	'BS.Popup': {
+		defaults: {
+			focusOnShow: "input[type=text], select, textarea",
+			hide: false,
+			animate: true,
+			closeOnEsc: true,
+			closeOnClickOut: true,
+			mask: true,
+			persist: true
+		},
+		returns: Bootstrap.Popup,
+		setup: function(el, api){
+			var popup = new Bootstrap.Popup(el,
+				Object.cleanValues(
+					api.getAs({
+						persist: Boolean,
+						animate: Boolean,
+						closeOnEsc: Boolean,
+						closeOnClickOut: Boolean,
+						mask: Boolean
+					})
+				)
+			);
+			popup.addEvent('destroy', function(){
+				api.cleanup(el);
+			});
+			if (api.get('focusOnShow')) {
+				popup.addEvent('show', function(){
+					var input = document.id(popup).getElement(api.get('focusOnShow'));
+					if (input) input.select();
+				});
+			}
+			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
+				popup.show();
+			}
+			return popup;
+		}
+	}
+});
+
 // Begin: Source/Behaviors/Behavior.BS.Popup.FormRequest.js
 /*
 ---
@@ -9913,8 +9845,8 @@ license: MIT-style license.
 authors: [Aaron Newton]
 
 requires:
+ - More-Behaviors/Behavior.FormRequest
  - /Behavior.BS.Popup
- - More/Form.Request
 
 provides: [Behavior.BS.Popup.FormRequest]
 
@@ -9936,7 +9868,7 @@ Behavior.addGlobalPlugin("FormRequest", "Popup.FormRequest", {
 			instance.addEvents({
 				success: function(){
 					var formRequestAPI = new BehaviorAPI(element, 'formrequest');
-					if (formRequestAPI.getAs(Boolean, 'closeOnSuccess') !== false || api.get(Boolean, 'closeOnSuccess') !== false || dismissed){
+					if ((formRequestAPI.getAs(Boolean, 'closeOnSuccess') !== false && api.getAs(Boolean, 'closeOnSuccess') !== false) || dismissed){
 						element.getParent('.modal').getBehaviorResult('BS.Popup').hide();
 					}
 				}
@@ -9944,6 +9876,133 @@ Behavior.addGlobalPlugin("FormRequest", "Popup.FormRequest", {
 		}
 	}
 });
+
+// Begin: Source/UI/Bootstrap.Affix.js
+/*
+---
+
+name: Bootstrap.Affix
+
+description: A MooTools implementation of Affix from Bootstrap; allows you to peg an element to a fixed position after scrolling.
+
+authors: [Aaron Newton]
+
+license: MIT-style license.
+
+requires:
+ - Core/Element.Dimensions
+ - More/Object.Extras
+ - /Bootstrap
+
+provides: [Bootstrap.Affix]
+
+...
+*/
+
+Bootstrap.Affix = new Class({
+
+	Implements: [Options, Events],
+
+	options: {
+		// onPin: function(){},
+		// onUnPin: function(isBottom){},
+		top: 0,
+		bottom: null,
+		classNames: {
+			top: "affix-top",
+			bottom: "affix-bottom",
+			affixed: "affix"
+		}
+	},
+
+	initialize: function(element, options){
+		this.element = document.id(element);
+		this.setOptions(options);
+		this._reset();
+		this.element.addClass(this.options.classNames.top);
+		this.attach();
+	},
+
+	attach: function(){
+		Bootstrap.Affix.register(this);
+		return this;
+	},
+
+	detach: function(){
+		Bootstrap.Affix.drop(this);
+		return this;
+	},
+
+	pinned: false,
+
+	pin: function(){
+		this.pinned = true;
+		this._reset();
+		this.element.addClass(this.options.classNames.affixed);
+		this.fireEvent('pin');
+		return this;
+	},
+
+	unpin: function(isBottom){
+		this._reset();
+		this.element.addClass(this.options.classNames[isBottom ? 'bottom' : 'top']);
+		this.pinned = false;
+		this.fireEvent('unPin', [isBottom]);
+		return this;
+	},
+
+	_reset: function(){
+		this.element.removeClass(this.options.classNames.affixed)
+								.removeClass(this.options.classNames.top)
+								.removeClass(this.options.classNames.bottom);
+		return this;
+	}
+
+});
+
+Bootstrap.Affix.registered = [];
+
+Bootstrap.Affix.register = function(instance){
+	if (!Bootstrap.Affix.attached) Bootstrap.Affix.attach();
+	Bootstrap.Affix.registered.push(instance);
+	Bootstrap.Affix.onScroll();
+};
+
+Bootstrap.Affix.drop = function(instance){
+	Bootstrap.Affix.registered.erase(instance);
+	if (Bootstrap.Affix.registered.length == 0) Bootstrap.Affix.detach();
+};
+
+Bootstrap.Affix.attach = function(){
+	window.addEvent('scroll', Bootstrap.Affix.onScroll);
+	Bootstrap.Affix.attached = true;
+};
+
+Bootstrap.Affix.detach = function(){
+	window.removeEvent('scroll', Bootstrap.Affix.onScroll);
+	Bootstrap.Affix.attached = false;
+};
+
+Bootstrap.Affix.onScroll = function(_y){
+	var y = _y || window.getScroll().y,
+	inSize;
+	for (var i = 0; i < Bootstrap.Affix.registered.length; i++){
+		var instance = Bootstrap.Affix.registered[i];
+		var bottom = instance.options.bottom,
+		top = instance.options.top;
+		if (bottom && bottom < 0){
+			if (winSize == null) winSize = window.getSize().y;
+			bottom = winSize + bottom;
+		}
+
+		// if we've scrolled above the top line, unpin
+		if (y < top && instance.pinned) instance.unpin();
+		// if we've scrolled past the bottom line, unpin
+		else if (bottom && bottom < y && y > top && instance.pinned) instance.unpin(true);
+		else if (y > top && (!bottom || (bottom && y < bottom)) && !instance.pinned) instance.pin();
+
+	}
+};
 
 // Begin: Source/UI/Bootstrap.Popover.js
 /*
@@ -9971,7 +10030,7 @@ Bootstrap.Popover = new Class({
 
 	options: {
 		location: 'right',
-		offset: 10,
+		offset: Bootstrap.version == 2 ? 10 : 0,
 		getTitle: function(el){
 			return el.get(this.options.title);
 		},
@@ -9983,17 +10042,26 @@ Bootstrap.Popover = new Class({
 
 	_makeTip: function(){
 		if (!this.tip){
+			var title = this.options.getTitle.apply(this, [this.element]) || this.options.fallback;
+			var content = this.options.getContent.apply(this, [this.element]);
+
+			var inner = new Element('div.popover-inner');
+
+
+			if (title) {
+				var titleWrapper = new Element('h3.popover-title');
+				if (typeOf(title) == "element") titleWrapper.adopt(title);
+				else titleWrapper.set('html', title);
+				inner.adopt(titleWrapper);
+			} else {
+				inner.addClass('no-title');
+			}
+
+			if (typeOf(content) != "element") content = new Element('p', { html: content});
+			inner.adopt(new Element('div.popover-content').adopt(content));
 			this.tip = new Element('div.popover').addClass(this.options.location)
 				 .adopt(new Element('div.arrow'))
-				 .adopt(
-				   new Element('div.popover-inner').adopt(
-				     new Element('h3.popover-title', { html: this.options.getTitle.apply(this, [this.element]) || this.options.fallback })
-				   ).adopt(
-				     new Element('div.popover-content').adopt(
-				       new Element('p', { html: this.options.getContent.apply(this, [this.element])})
-				     )
-				   )
-				 );
+				 .adopt(inner);
 			if (this.options.animate) this.tip.addClass('fade');
 			if (Browser.Features.cssTransition && this.tip.addEventListener){
 				this.tip.addEventListener(Browser.Features.transitionEnd, this.bound.complete);
@@ -10029,12 +10097,16 @@ provides: [Behavior.BS.Popover]
 Behavior.addGlobalFilters({
 	'BS.Popover': {
 		defaults: {
+			contentElement: null,
+			cloneContent: false,
+			titleElement: null,
+			cloneTitle: false,
 		  onOverflow: false,
 			location: 'right', //below, left, right
 			animate: true,
 			delayIn: 200,
 			delayOut: 0,
-			offset: 10,
+			offset: Bootstrap.version == 2 ? 10 : 0,
 			trigger: 'hover' //focus, manual
 		},
 		delayUntil: 'mouseover,focus',
@@ -10052,15 +10124,772 @@ Behavior.addGlobalFilters({
 					trigger: String
 				})
 			);
-			options.getContent = Function.from(api.get('content'));
-			options.getTitle = Function.from(api.get('title') || el.get('title'));
+
+			var getter = function(which){
+				if (api.get(which + 'Element')) {
+					var target = el.getElement(api.get(which + 'Element'));
+					if (!target) api.fail('could not find ' + which + ' for popup');
+					if (api.get('clone' + which.capitalize())) target = target.clone(true, true);
+					return target.setStyle('display', 'block');
+				} else {
+					return api.get(which) || el.get(which);
+				}
+			};
+
+			options.getContent = getter.pass('content');
+			options.getTitle = getter.pass('title');
+
 			var tip = new Bootstrap.Popover(el, options);
-			if (api.event) tip._enter();
+			if (api.event && api.get('trigger') != 'click') tip._enter();
 			api.onCleanup(tip.destroy.bind(tip));
 			return tip;
 		}
 	}
 });
+
+// Begin: Source/Behaviors/Behavior.BS.Affix.js
+/*
+---
+
+name: Behavior.BS.Affix
+
+description: Markup invocation for Bootstrap.Affix class.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - Behavior/Behavior
+ - /Bootstrap.Affix
+
+provides: [Behavior.BS.Affix]
+
+...
+*/
+
+Behavior.addGlobalFilters({
+	'BS.Affix': {
+
+		requires: ['top'],
+
+		setup: function(el, api){
+			var affix = new Bootstrap.Affix(el,
+				Object.cleanValues(
+					api.getAs({
+						top: Number,
+						bottom: Number,
+						classNames: Object
+					})
+				)
+			);
+
+			api.onCleanup(affix.detach.bind(affix));
+
+			return affix;
+		}
+	}
+});
+
+// Begin: Source/Fx/Fx.Elements.js
+/*
+---
+
+script: Fx.Elements.js
+
+name: Fx.Elements
+
+description: Effect to change any number of CSS properties of any number of Elements.
+
+license: MIT-style license
+
+authors:
+  - Valerio Proietti
+
+requires:
+  - Core/Fx.CSS
+  - /MooTools.More
+
+provides: [Fx.Elements]
+
+...
+*/
+
+Fx.Elements = new Class({
+
+	Extends: Fx.CSS,
+
+	initialize: function(elements, options){
+		this.elements = this.subject = $$(elements);
+		this.parent(options);
+	},
+
+	compute: function(from, to, delta){
+		var now = {};
+
+		for (var i in from){
+			var iFrom = from[i], iTo = to[i], iNow = now[i] = {};
+			for (var p in iFrom) iNow[p] = this.parent(iFrom[p], iTo[p], delta);
+		}
+
+		return now;
+	},
+
+	set: function(now){
+		for (var i in now){
+			if (!this.elements[i]) continue;
+
+			var iNow = now[i];
+			for (var p in iNow) this.render(this.elements[i], p, iNow[p], this.options.unit);
+		}
+
+		return this;
+	},
+
+	start: function(obj){
+		if (!this.check(obj)) return this;
+		var from = {}, to = {};
+
+		for (var i in obj){
+			if (!this.elements[i]) continue;
+
+			var iProps = obj[i], iFrom = from[i] = {}, iTo = to[i] = {};
+
+			for (var p in iProps){
+				var parsed = this.prepare(this.elements[i], p, iProps[p]);
+				iFrom[p] = parsed.from;
+				iTo[p] = parsed.to;
+			}
+		}
+
+		return this.parent(from, to);
+	}
+
+});
+
+
+// Begin: Source/Fx/Fx.Accordion.js
+/*
+---
+
+script: Fx.Accordion.js
+
+name: Fx.Accordion
+
+description: An Fx.Elements extension which allows you to easily create accordion type controls.
+
+license: MIT-style license
+
+authors:
+  - Valerio Proietti
+
+requires:
+  - Core/Element.Event
+  - /Fx.Elements
+
+provides: [Fx.Accordion]
+
+...
+*/
+
+Fx.Accordion = new Class({
+
+	Extends: Fx.Elements,
+
+	options: {/*
+		onActive: function(toggler, section){},
+		onBackground: function(toggler, section){},*/
+		fixedHeight: false,
+		fixedWidth: false,
+		display: 0,
+		show: false,
+		height: true,
+		width: false,
+		opacity: true,
+		alwaysHide: false,
+		trigger: 'click',
+		initialDisplayFx: true,
+		resetHeight: true
+	},
+
+	initialize: function(){
+		var defined = function(obj){
+			return obj != null;
+		};
+
+		var params = Array.link(arguments, {
+			'container': Type.isElement, //deprecated
+			'options': Type.isObject,
+			'togglers': defined,
+			'elements': defined
+		});
+		this.parent(params.elements, params.options);
+
+		var options = this.options,
+			togglers = this.togglers = $$(params.togglers);
+
+		this.previous = -1;
+		this.internalChain = new Chain();
+
+		if (options.alwaysHide) this.options.link = 'chain';
+
+		if (options.show || this.options.show === 0){
+			options.display = false;
+			this.previous = options.show;
+		}
+
+		if (options.start){
+			options.display = false;
+			options.show = false;
+		}
+
+		var effects = this.effects = {};
+
+		if (options.opacity) effects.opacity = 'fullOpacity';
+		if (options.width) effects.width = options.fixedWidth ? 'fullWidth' : 'offsetWidth';
+		if (options.height) effects.height = options.fixedHeight ? 'fullHeight' : 'scrollHeight';
+
+		for (var i = 0, l = togglers.length; i < l; i++) this.addSection(togglers[i], this.elements[i]);
+
+		this.elements.each(function(el, i){
+			if (options.show === i){
+				this.fireEvent('active', [togglers[i], el]);
+			} else {
+				for (var fx in effects) el.setStyle(fx, 0);
+			}
+		}, this);
+
+		if (options.display || options.display === 0 || options.initialDisplayFx === false){
+			this.display(options.display, options.initialDisplayFx);
+		}
+
+		if (options.fixedHeight !== false) options.resetHeight = false;
+		this.addEvent('complete', this.internalChain.callChain.bind(this.internalChain));
+	},
+
+	addSection: function(toggler, element){
+		toggler = document.id(toggler);
+		element = document.id(element);
+		this.togglers.include(toggler);
+		this.elements.include(element);
+
+		var togglers = this.togglers,
+			options = this.options,
+			test = togglers.contains(toggler),
+			idx = togglers.indexOf(toggler),
+			displayer = this.display.pass(idx, this);
+
+		toggler.store('accordion:display', displayer)
+			.addEvent(options.trigger, displayer);
+
+		if (options.height) element.setStyles({'padding-top': 0, 'border-top': 'none', 'padding-bottom': 0, 'border-bottom': 'none'});
+		if (options.width) element.setStyles({'padding-left': 0, 'border-left': 'none', 'padding-right': 0, 'border-right': 'none'});
+
+		element.fullOpacity = 1;
+		if (options.fixedWidth) element.fullWidth = options.fixedWidth;
+		if (options.fixedHeight) element.fullHeight = options.fixedHeight;
+		element.setStyle('overflow', 'hidden');
+
+		if (!test) for (var fx in this.effects){
+			element.setStyle(fx, 0);
+		}
+		return this;
+	},
+
+	removeSection: function(toggler, displayIndex){
+		var togglers = this.togglers,
+			idx = togglers.indexOf(toggler),
+			element = this.elements[idx];
+
+		var remover = function(){
+			togglers.erase(toggler);
+			this.elements.erase(element);
+			this.detach(toggler);
+		}.bind(this);
+
+		if (this.now == idx || displayIndex != null){
+			this.display(displayIndex != null ? displayIndex : (idx - 1 >= 0 ? idx - 1 : 0)).chain(remover);
+		} else {
+			remover();
+		}
+		return this;
+	},
+
+	detach: function(toggler){
+		var remove = function(toggler){
+			toggler.removeEvent(this.options.trigger, toggler.retrieve('accordion:display'));
+		}.bind(this);
+
+		if (!toggler) this.togglers.each(remove);
+		else remove(toggler);
+		return this;
+	},
+
+	display: function(index, useFx){
+		if (!this.check(index, useFx)) return this;
+
+		var obj = {},
+			elements = this.elements,
+			options = this.options,
+			effects = this.effects;
+
+		if (useFx == null) useFx = true;
+		if (typeOf(index) == 'element') index = elements.indexOf(index);
+		if (index == this.previous && !options.alwaysHide) return this;
+
+		if (options.resetHeight){
+			var prev = elements[this.previous];
+			if (prev && !this.selfHidden){
+				for (var fx in effects) prev.setStyle(fx, prev[effects[fx]]);
+			}
+		}
+
+		if ((this.timer && options.link == 'chain') || (index === this.previous && !options.alwaysHide)) return this;
+
+		this.previous = index;
+		this.selfHidden = false;
+
+		elements.each(function(el, i){
+			obj[i] = {};
+			var hide;
+			if (i != index){
+				hide = true;
+			} else if (options.alwaysHide && ((el.offsetHeight > 0 && options.height) || el.offsetWidth > 0 && options.width)){
+				hide = true;
+				this.selfHidden = true;
+			}
+			this.fireEvent(hide ? 'background' : 'active', [this.togglers[i], el]);
+			for (var fx in effects) obj[i][fx] = hide ? 0 : el[effects[fx]];
+			if (!useFx && !hide && options.resetHeight) obj[i].height = 'auto';
+		}, this);
+
+		this.internalChain.clearChain();
+		this.internalChain.chain(function(){
+			if (options.resetHeight && !this.selfHidden){
+				var el = elements[index];
+				if (el) el.setStyle('height', 'auto');
+			}
+		}.bind(this));
+
+		return useFx ? this.start(obj) : this.set(obj).internalChain.callChain();
+	}
+
+});
+
+/*<1.2compat>*/
+/*
+	Compatibility with 1.2.0
+*/
+var Accordion = new Class({
+
+	Extends: Fx.Accordion,
+
+	initialize: function(){
+		this.parent.apply(this, arguments);
+		var params = Array.link(arguments, {'container': Type.isElement});
+		this.container = params.container;
+	},
+
+	addSection: function(toggler, element, pos){
+		toggler = document.id(toggler);
+		element = document.id(element);
+
+		var test = this.togglers.contains(toggler);
+		var len = this.togglers.length;
+		if (len && (!test || pos)){
+			pos = pos != null ? pos : len - 1;
+			toggler.inject(this.togglers[pos], 'before');
+			element.inject(toggler, 'after');
+		} else if (this.container && !test){
+			toggler.inject(this.container);
+			element.inject(this.container);
+		}
+		return this.parent.apply(this, arguments);
+	}
+
+});
+/*</1.2compat>*/
+
+
+// Begin: Source/Fx/Behavior.FxAccordion.js
+/*
+---
+description: Creates an Fx.Accordion from any element with Accordion in its data-behavior property.  Uses the .toggle elements within the element as the toggles and the .target elements as the targets.
+provides: [Behavior.Accordion, Behavior.FxAccordion]
+requires: [Behavior/Behavior, More/Fx.Accordion, Behavior/Element.Data, More/Object.Extras]
+script: Behavior.Accordion.js
+name: Behavior.Accordion
+...
+*/
+
+Behavior.addGlobalFilter('Accordion', {
+	deprecated: {
+		headers:'toggler-elements',
+		sections:'section-elements'
+	},
+	defaults: {
+		// defaults from Fx.Accordion:
+		display: 0,
+		height: true,
+		width: false,
+		opacity: true,
+		alwaysHide: false,
+		trigger: 'click',
+		initialDisplayFx: true,
+		resetHeight: true,
+		headers: '.header',
+		sections: '.section'
+	},
+	setup: function(element, api){
+		var options = Object.cleanValues(
+			api.getAs({
+				fixedHeight: Number,
+				fixedWidth: Number,
+				display: Number,
+				show: Number,
+				height: Boolean,
+				width: Boolean,
+				opacity: Boolean,
+				alwaysHide: Boolean,
+				trigger: String,
+				initialDisplayFx: Boolean,
+				resetHeight: Boolean
+			})
+		);
+		var accordion = new Fx.Accordion(element.getElements(api.get('headers')), element.getElements(api.get('sections')), options);
+		api.onCleanup(accordion.detach.bind(accordion));
+		return accordion;
+	}
+});
+
+// Begin: Source/Fx/Fx.Morph.js
+/*
+---
+
+name: Fx.Morph
+
+description: Formerly Fx.Styles, effect to transition any number of CSS properties for an element using an object of rules, or CSS based selector rules.
+
+license: MIT-style license.
+
+requires: Fx.CSS
+
+provides: Fx.Morph
+
+...
+*/
+
+Fx.Morph = new Class({
+
+	Extends: Fx.CSS,
+
+	initialize: function(element, options){
+		this.element = this.subject = document.id(element);
+		this.parent(options);
+	},
+
+	set: function(now){
+		if (typeof now == 'string') now = this.search(now);
+		for (var p in now) this.render(this.element, p, now[p], this.options.unit);
+		return this;
+	},
+
+	compute: function(from, to, delta){
+		var now = {};
+		for (var p in from) now[p] = this.parent(from[p], to[p], delta);
+		return now;
+	},
+
+	start: function(properties){
+		if (!this.check(properties)) return this;
+		if (typeof properties == 'string') properties = this.search(properties);
+		var from = {}, to = {};
+		for (var p in properties){
+			var parsed = this.prepare(this.element, p, properties[p]);
+			from[p] = parsed.from;
+			to[p] = parsed.to;
+		}
+		return this.parent(from, to);
+	}
+
+});
+
+Element.Properties.morph = {
+
+	set: function(options){
+		this.get('morph').cancel().setOptions(options);
+		return this;
+	},
+
+	get: function(){
+		var morph = this.retrieve('morph');
+		if (!morph){
+			morph = new Fx.Morph(this, {link: 'cancel'});
+			this.store('morph', morph);
+		}
+		return morph;
+	}
+
+};
+
+Element.implement({
+
+	morph: function(props){
+		this.get('morph').start(props);
+		return this;
+	}
+
+});
+
+
+// Begin: Source/Fx/Fx.Reveal.js
+/*
+---
+
+script: Fx.Reveal.js
+
+name: Fx.Reveal
+
+description: Defines Fx.Reveal, a class that shows and hides elements with a transition.
+
+license: MIT-style license
+
+authors:
+  - Aaron Newton
+
+requires:
+  - Core/Fx.Morph
+  - /Element.Shortcuts
+  - /Element.Measure
+
+provides: [Fx.Reveal]
+
+...
+*/
+
+(function(){
+
+
+var hideTheseOf = function(object){
+	var hideThese = object.options.hideInputs;
+	if (window.OverText){
+		var otClasses = [null];
+		OverText.each(function(ot){
+			otClasses.include('.' + ot.options.labelClass);
+		});
+		if (otClasses) hideThese += otClasses.join(', ');
+	}
+	return (hideThese) ? object.element.getElements(hideThese) : null;
+};
+
+
+Fx.Reveal = new Class({
+
+	Extends: Fx.Morph,
+
+	options: {/*
+		onShow: function(thisElement){},
+		onHide: function(thisElement){},
+		onComplete: function(thisElement){},
+		heightOverride: null,
+		widthOverride: null,*/
+		link: 'cancel',
+		styles: ['padding', 'border', 'margin'],
+		transitionOpacity: !Browser.ie6,
+		mode: 'vertical',
+		display: function(){
+			return this.element.get('tag') != 'tr' ? 'block' : 'table-row';
+		},
+		opacity: 1,
+		hideInputs: Browser.ie ? 'select, input, textarea, object, embed' : null
+	},
+
+	dissolve: function(){
+		if (!this.hiding && !this.showing){
+			if (this.element.getStyle('display') != 'none'){
+				this.hiding = true;
+				this.showing = false;
+				this.hidden = true;
+				this.cssText = this.element.style.cssText;
+
+				var startStyles = this.element.getComputedSize({
+					styles: this.options.styles,
+					mode: this.options.mode
+				});
+				if (this.options.transitionOpacity) startStyles.opacity = this.options.opacity;
+
+				var zero = {};
+				Object.each(startStyles, function(style, name){
+					zero[name] = [style, 0];
+				});
+
+				this.element.setStyles({
+					display: Function.from(this.options.display).call(this),
+					overflow: 'hidden'
+				});
+
+				var hideThese = hideTheseOf(this);
+				if (hideThese) hideThese.setStyle('visibility', 'hidden');
+
+				this.$chain.unshift(function(){
+					if (this.hidden){
+						this.hiding = false;
+						this.element.style.cssText = this.cssText;
+						this.element.setStyle('display', 'none');
+						if (hideThese) hideThese.setStyle('visibility', 'visible');
+					}
+					this.fireEvent('hide', this.element);
+					this.callChain();
+				}.bind(this));
+
+				this.start(zero);
+			} else {
+				this.callChain.delay(10, this);
+				this.fireEvent('complete', this.element);
+				this.fireEvent('hide', this.element);
+			}
+		} else if (this.options.link == 'chain'){
+			this.chain(this.dissolve.bind(this));
+		} else if (this.options.link == 'cancel' && !this.hiding){
+			this.cancel();
+			this.dissolve();
+		}
+		return this;
+	},
+
+	reveal: function(){
+		if (!this.showing && !this.hiding){
+			if (this.element.getStyle('display') == 'none'){
+				this.hiding = false;
+				this.showing = true;
+				this.hidden = false;
+				this.cssText = this.element.style.cssText;
+
+				var startStyles;
+				this.element.measure(function(){
+					startStyles = this.element.getComputedSize({
+						styles: this.options.styles,
+						mode: this.options.mode
+					});
+				}.bind(this));
+				if (this.options.heightOverride != null) startStyles.height = this.options.heightOverride.toInt();
+				if (this.options.widthOverride != null) startStyles.width = this.options.widthOverride.toInt();
+				if (this.options.transitionOpacity){
+					this.element.setStyle('opacity', 0);
+					startStyles.opacity = this.options.opacity;
+				}
+
+				var zero = {
+					height: 0,
+					display: Function.from(this.options.display).call(this)
+				};
+				Object.each(startStyles, function(style, name){
+					zero[name] = 0;
+				});
+				zero.overflow = 'hidden';
+
+				this.element.setStyles(zero);
+
+				var hideThese = hideTheseOf(this);
+				if (hideThese) hideThese.setStyle('visibility', 'hidden');
+
+				this.$chain.unshift(function(){
+					this.element.style.cssText = this.cssText;
+					this.element.setStyle('display', Function.from(this.options.display).call(this));
+					if (!this.hidden) this.showing = false;
+					if (hideThese) hideThese.setStyle('visibility', 'visible');
+					this.callChain();
+					this.fireEvent('show', this.element);
+				}.bind(this));
+
+				this.start(startStyles);
+			} else {
+				this.callChain();
+				this.fireEvent('complete', this.element);
+				this.fireEvent('show', this.element);
+			}
+		} else if (this.options.link == 'chain'){
+			this.chain(this.reveal.bind(this));
+		} else if (this.options.link == 'cancel' && !this.showing){
+			this.cancel();
+			this.reveal();
+		}
+		return this;
+	},
+
+	toggle: function(){
+		if (this.element.getStyle('display') == 'none'){
+			this.reveal();
+		} else {
+			this.dissolve();
+		}
+		return this;
+	},
+
+	cancel: function(){
+		this.parent.apply(this, arguments);
+		if (this.cssText != null) this.element.style.cssText = this.cssText;
+		this.hiding = false;
+		this.showing = false;
+		return this;
+	}
+
+});
+
+Element.Properties.reveal = {
+
+	set: function(options){
+		this.get('reveal').cancel().setOptions(options);
+		return this;
+	},
+
+	get: function(){
+		var reveal = this.retrieve('reveal');
+		if (!reveal){
+			reveal = new Fx.Reveal(this);
+			this.store('reveal', reveal);
+		}
+		return reveal;
+	}
+
+};
+
+Element.Properties.dissolve = Element.Properties.reveal;
+
+Element.implement({
+
+	reveal: function(options){
+		this.get('reveal').setOptions(options).reveal();
+		return this;
+	},
+
+	dissolve: function(options){
+		this.get('reveal').setOptions(options).dissolve();
+		return this;
+	},
+
+	nix: function(options){
+		var params = Array.link(arguments, {destroy: Type.isBoolean, options: Type.isObject});
+		this.get('reveal').setOptions(options).dissolve().chain(function(){
+			this[params.destroy ? 'destroy' : 'dispose']();
+		}.bind(this));
+		return this;
+	},
+
+	wink: function(){
+		var params = Array.link(arguments, {duration: Type.isNumber, options: Type.isObject});
+		var reveal = this.get('reveal').setOptions(params.options);
+		reveal.reveal().chain(function(){
+			(function(){
+				reveal.dissolve();
+			}).delay(params.duration || 2000);
+		});
+	}
+
+});
+
+})();
+
 
 // Begin: Source/Locale/Locale.js
 /*
@@ -10971,7 +11800,16 @@ tidy = {
 	'-': /[\u2013]/g,
 //	'--': /[\u2014]/g,
 	'&raquo;': /[\uFFFD]/g
-};
+},
+
+conversions = {
+	ms: 1,
+	s: 1000,
+	m: 6e4,
+	h: 36e5
+},
+
+findUnits = /(\d*.?\d+)([msh]+)/;
 
 var walk = function(string, replacements){
 	var result = string, key;
@@ -11033,6 +11871,13 @@ String.implement({
 			if (trail) string += trail;
 		}
 		return string;
+	},
+
+	ms: function(){
+	  // "Borrowed" from https://gist.github.com/1503944
+		var units = findUnits.exec(this);
+		if (units == null) return Number(this);
+		return Number(units[1]) * conversions[units[2]];
 	}
 
 });
@@ -11260,6 +12105,7 @@ authors:
 requires:
   - Core/Options
   - Core/Events
+  - Core/Element.Delegation
   - Core/Slick.Finder
   - Core/Element.Event
   - Core/Element.Style
@@ -11361,8 +12207,6 @@ Form.Validator = new Class({
 
 	Implements: [Options, Events],
 
-	Binds: ['onSubmit'],
-
 	options: {/*
 		onFormValidate: function(isValid, form, event){},
 		onElementValidate: function(isValid, field, className, warn){},
@@ -11388,11 +12232,15 @@ Form.Validator = new Class({
 	initialize: function(form, options){
 		this.setOptions(options);
 		this.element = document.id(form);
-		this.element.store('validator', this);
 		this.warningPrefix = Function.from(this.options.warningPrefix)();
 		this.errorPrefix = Function.from(this.options.errorPrefix)();
-		if (this.options.evaluateOnSubmit) this.element.addEvent('submit', this.onSubmit);
-		if (this.options.evaluateFieldsOnBlur || this.options.evaluateFieldsOnChange) this.watchFields(this.getFields());
+		this._bound = {
+			onSubmit: this.onSubmit.bind(this),
+			blurOrChange: function(event, field){
+				this.validationMonitor(field, true);
+			}.bind(this)
+		};
+		this.enable();
 	},
 
 	toElement: function(){
@@ -11403,13 +12251,24 @@ Form.Validator = new Class({
 		return (this.fields = this.element.getElements(this.options.fieldSelectors));
 	},
 
-	watchFields: function(fields){
-		fields.each(function(el){
-			if (this.options.evaluateFieldsOnBlur)
-				el.addEvent('blur', this.validationMonitor.pass([el, false], this));
-			if (this.options.evaluateFieldsOnChange)
-				el.addEvent('change', this.validationMonitor.pass([el, true], this));
-		}, this);
+	enable: function(){
+		this.element.store('validator', this);
+		if (this.options.evaluateOnSubmit) this.element.addEvent('submit', this._bound.onSubmit);
+		if (this.options.evaluateFieldsOnBlur){
+			this.element.addEvent('blur:relay(input,select,textarea)', this._bound.blurOrChange);
+		}
+		if (this.options.evaluateFieldsOnChange){
+			this.element.addEvent('change:relay(input,select,textarea)', this._bound.blurOrChange);
+		}
+	},
+
+	disable: function(){
+		this.element.eliminate('validator');
+		this.element.removeEvents({
+			submit: this._bound.onSubmit,
+			'blur:relay(input,select,textarea)': this._bound.blurOrChange,
+			'change:relay(input,select,textarea)': this._bound.blurOrChange
+		});
 	},
 
 	validationMonitor: function(){
@@ -11489,7 +12348,7 @@ Form.Validator = new Class({
 		if (warn != null) warn = false;
 		if (this.hasValidator(field, 'warnOnly')) warn = true;
 		var isValid = this.hasValidator(field, 'ignoreValidation') || (validator ? validator.test(field) : true);
-		if (validator && field.isVisible()) this.fireEvent('elementValidate', [isValid, field, className, warn]);
+		if (validator) this.fireEvent('elementValidate', [isValid, field, className, warn]);
 		if (warn) return true;
 		return isValid;
 	},
@@ -11681,8 +12540,8 @@ Form.Validator.addAllThese([
 		},
 		test: function(element, props){
 			if (Form.Validator.getValidator('IsEmpty').test(element)) return true;
-			var dateLocale = Locale.getCurrent().sets.Date,
-				dateNouns = new RegExp([dateLocale.days, dateLocale.days_abbr, dateLocale.months, dateLocale.months_abbr].flatten().join('|'), 'i'),
+			var dateLocale = Locale.get('Date'),
+				dateNouns = new RegExp([dateLocale.days, dateLocale.days_abbr, dateLocale.months, dateLocale.months_abbr, dateLocale.AM, dateLocale.PM].flatten().join('|'), 'i'),
 				value = element.get('value'),
 				wordsInValue = value.match(/[a-z]+/gi);
 
@@ -11691,7 +12550,6 @@ Form.Validator.addAllThese([
 				var date = Date.parse(value),
 					format = props.dateFormat || '%x',
 					formatted = date.format(format);
-
 				if (formatted != 'invalid date') element.set('value', formatted);
 				return date.isValid();
 		}
@@ -11871,7 +12729,7 @@ Form.Validator.Inline = new Class({
 			!field.retrieve('$moo:' + this.getPropName(className)) &&
 			(
 				advice.getStyle('display') == 'none' ||
-				advice.getStyle('visiblity') == 'hidden' ||
+				advice.getStyle('visibility') == 'hidden' ||
 				advice.getStyle('opacity') == 0
 			)
 		){
@@ -12033,7 +12891,7 @@ Behavior.addGlobalFilter('FormValidator', {
 			});
 		}
 		api.onCleanup(function(){
-			validator.disable();
+			validator.stop();
 		});
 		return validator;
 	}
@@ -12053,6 +12911,7 @@ license: MIT-style license.
 authors: [Aaron Newton]
 
 requires:
+ - More/Fx.Reveal
  - More-Behaviors/Behavior.FormValidator
 
 provides: [Behavior.BS.FormValidator]
@@ -12060,57 +12919,78 @@ provides: [Behavior.BS.FormValidator]
 ...
 */
 
-Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
-	setup: function(element, api, instance){
-		var original = {
-			showError: instance.showError,
-			hideError: instance.hideError
-		};
-		instance.setOptions({
-			showError: function(){},
-			hideError: function(){}
-		});
-		instance.warningPrefix = '';
-		instance.errorPrefix = '';
-		instance.addEvents({
-			showAdvice: function(field, advice, className){
-				var inputParent = field.getParent('.input'),
-				    clearfixParent = inputParent.getParent('.clearfix');
-				if (!inputParent || !clearfixParent){
-					original.showError(advice);
-				} else {
-					field.addClass('error');
-					var help = inputParent.getElement('div.advice');
-					if (!help){
-						inputParent.getElements('span.help-inline').setStyle('display', 'none');
-						help = new Element('span.help-inline.advice.auto-created', {
-							html: advice.get('html')
-						}).inject(inputParent);
-					}
-					help.removeClass('hide');
-					help.set('title', advice.get('html'));
-					clearfixParent.addClass('error');
-				}
-			},
-			hideAdvice: function(field, advice, className){
-				var inputParent = field.getParent('.input'),
-				    clearfixParent = inputParent.getParent('.clearfix');
-				if (!inputParent || !clearfixParent){
-					original.hideError(advice);
-				} else {
-					field.removeClass('error');
-					var help = inputParent.getElement('span.advice');
-					if (help.hasClass('auto-created')) help.destroy();
-					else help.set('html', '');
-					inputParent.getElements('span.help-inline').setStyle('display', '');
-					clearfixParent.removeClass('error');
-				}
-			}
-		});
-	}
-});
+(function(){
 
-// Begin: Source/Behaviors/Behavior.BS.Twipsy.js
+	var getFieldDetails = function(field, advice, className){
+		var cls = field.hasClass('warning') || field.hasClass('warn-' + className) ? 'warn' : 'error',
+		    inputParent = field.getParent('.controls, .control-group');
+		var clearfixParent;
+		if (inputParent){
+			if (inputParent.hasClass('control-group')) clearfixParent = inputParent;
+			else clearfixParent = inputParent.getParent('.control-group');
+		}
+
+		return {
+			cls: cls,
+			inputParent: inputParent,
+			clearfixParent: clearfixParent
+		}
+	};
+
+	Behavior.addGlobalPlugin("FormValidator", "BS.FormValidator", {
+		setup: function(element, api, instance){
+			var original = {
+				showError: instance.options.showError,
+				hideError: instance.options.hideError
+			};
+			instance.setOptions({
+				showError: function(){},
+				hideError: function(){}
+			});
+			instance.errorPrefix = '';
+			instance.addEvents({
+				showAdvice: function(field, advice, className){
+					var fieldDetails = getFieldDetails(field, advice, className);
+					if (!fieldDetails.inputParent || !fieldDetails.clearfixParent){
+						original.showError(advice);
+					} else {
+						field.addClass(fieldDetails.cls);
+						var help = fieldDetails.inputParent.getElement('div.advice');
+						if (!help){
+							fieldDetails.inputParent.getElements('span.help-inline').setStyle('display', 'none');
+							var closestParent = field.getParent();
+							help = new Element('span.help-inline.advice.auto-created', {
+								html: (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')
+							}).hide().inject(closestParent.hasClass('input-append') ? closestParent  : field, 'after');
+						}
+						help.set('html', (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')).reveal();
+						help.removeClass('hide');
+						help.set('title', advice.get('html'));
+						fieldDetails.clearfixParent.addClass(fieldDetails.cls);
+					}
+				},
+				hideAdvice: function(field, advice, className){
+					var fieldDetails = getFieldDetails(field, advice, className);
+					if (!fieldDetails.inputParent || !fieldDetails.clearfixParent){
+						original.hideError(advice);
+					} else {
+						field.removeClass(fieldDetails.cls);
+						var help = fieldDetails.inputParent.getElement('.advice');
+						fieldDetails.inputParent.getElements('.help-inline, .help-block').dissolve().getLast().get('reveal').chain(function(){
+							if (help.hasClass('auto-created')) help.destroy();
+							else help.set('html', '');
+						});
+						fieldDetails.clearfixParent.removeClass(fieldDetails.cls);
+					}
+				}
+			});
+		}
+	});
+
+})();
+
+
+// Begin: Source/Behaviors/Behavior.BS.Tooltip.js
 /*
 ---
 
@@ -12172,6 +13052,83 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 	});
 })();
 
+// Begin: Source/Utilities/Cookie.js
+/*
+---
+
+name: Cookie
+
+description: Class for creating, reading, and deleting browser Cookies.
+
+license: MIT-style license.
+
+credits:
+  - Based on the functions by Peter-Paul Koch (http://quirksmode.org).
+
+requires: [Options, Browser]
+
+provides: Cookie
+
+...
+*/
+
+var Cookie = new Class({
+
+	Implements: Options,
+
+	options: {
+		path: '/',
+		domain: false,
+		duration: false,
+		secure: false,
+		document: document,
+		encode: true
+	},
+
+	initialize: function(key, options){
+		this.key = key;
+		this.setOptions(options);
+	},
+
+	write: function(value){
+		if (this.options.encode) value = encodeURIComponent(value);
+		if (this.options.domain) value += '; domain=' + this.options.domain;
+		if (this.options.path) value += '; path=' + this.options.path;
+		if (this.options.duration){
+			var date = new Date();
+			date.setTime(date.getTime() + this.options.duration * 24 * 60 * 60 * 1000);
+			value += '; expires=' + date.toGMTString();
+		}
+		if (this.options.secure) value += '; secure';
+		this.options.document.cookie = this.key + '=' + value;
+		return this;
+	},
+
+	read: function(){
+		var value = this.options.document.cookie.match('(?:^|;)\\s*' + this.key.escapeRegExp() + '=([^;]*)');
+		return (value) ? decodeURIComponent(value[1]) : null;
+	},
+
+	dispose: function(){
+		new Cookie(this.key, Object.merge({}, this.options, {duration: -1})).write('');
+		return this;
+	}
+
+});
+
+Cookie.write = function(key, value, options){
+	return new Cookie(key, options).write(value);
+};
+
+Cookie.read = function(key){
+	return new Cookie(key).read();
+};
+
+Cookie.dispose = function(key, options){
+	return new Cookie(key, options).dispose();
+};
+
+
 // Begin: Source/Layout/TabSwapper.js
 /*
 ---
@@ -12182,7 +13139,7 @@ description: Handles the scripting for a common UI layout; the tabbed box.
 
 license: MIT-Style License
 
-requires: [Core/Element.Event, Core/Fx.Tween, Core/Fx.Morph, Core/Element.Dimensions, More/Element.Shortcuts, More/Element.Measure]
+requires: [Core/Element.Event, Core/Fx.Tween, Core/Fx.Morph, Core/Element.Dimensions, Core/Cookie, More/Element.Shortcuts, More/Element.Measure]
 
 provides: TabSwapper
 
@@ -12382,13 +13339,155 @@ var TabSwapper = new Class({
 });
 
 
+// Begin: Source/3rdParty/MooHashChange.js
+/*
+---
+name: MooHashChange
+
+description: Added the onhashchange event
+
+license: MIT-style
+
+authors:
+- sdf1981cgn
+- Greggory Hernandez
+
+requires:
+- Core/Element.Event
+
+provides: [Element.Events.hashchange]
+
+...
+*/
+Element.Events.hashchange = {
+  onAdd: function () {
+    var hash = location.hash;
+
+    var hashchange = function () {
+      if (hash == location.hash) return;
+      else hash = location.hash;
+
+      var value = (hash.indexOf('#') == 0 ? hash.substr(1) : hash);
+      window.fireEvent('hashchange', value);
+      document.fireEvent('hashchange', value);
+    };
+
+    if (("onhashchange" in window) && ((document.documentMode != 5) && (document.documentMode != 7))) {
+      window.onhashchange = hashchange;
+    }
+    else {
+      hashchange.periodical(50);
+    }
+  }
+};
+
+// Begin: Source/Layout/TabSwapper.Hash.js
+/*
+---
+
+name: TabSwapper.Hash
+
+description: Stores tab selection in the window.hash
+
+license: MIT-Style License
+
+requires: [/TabSwapper, More/String.QueryString, More/Object.Extras, /Element.Events.hashchange]
+
+provides: TabSwapper.Hash
+
+...
+*/
+
+var getHash = function(){
+  return window.location.hash.substring(1, window.location.hash.length).parseQueryString();
+};
+
+TabSwapper.Hash = new Class({
+  Extends: TabSwapper,
+  options: {
+    hash: null // the hash value to store the state in
+  },
+  initialize: function(options){
+    this.setOptions(options);
+    // delete the hash option on startup so that the call to show(0) doesn't change the location hash
+    hash = this.options.hash;
+    if (hash){
+      delete options.hash;
+      delete this.options.hash;
+      options.preventDefault = true;
+    }
+    this.parent(options);
+    if (hash){
+      // put the hash back
+      this.options.hash = hash;
+      this.bound = {
+        showByHash: this.showByHash.bind(this)
+      };
+      // watch hashchange for changes
+      window.addEvent('hashchange', this.bound.showByHash);
+      this.showByHash();
+    }
+  },
+  // shows a section based on the window location hash value
+  showByHash: function(){
+    var i = this.getIndexByHash();
+    if (i || i===0) this.show(i);
+    return this;
+  },
+  // gets the index to show based on an elementID
+  // returns NULL if nothing is found
+  getIndexById: function(id){
+    var target = document.id(id);
+    if (target && this.tabs.contains(target)) return this.tabs.indexOf(target);
+    else if (target && this.sections.contains(target)) return this.sections.indexOf(target);
+    return null;
+  },
+  // gets the hash value and returns the index to be shown
+  // returns UNDEFINED if there was no hash value
+  // returns NULL if no element was found and the value wasn't an int already
+  // NOTE: hash value may be an int or a string; int if the tab/section had no id
+  getIndexByHash: function(){
+    var hash = getHash();
+    if (!hash) return this;
+    var value = hash[this.options.hash];
+    if (value && isNaN(value.toInt())){
+      var i = this.getIndexById(value);
+      if (i !== null) value = i;
+      else return null;
+    }
+    return value;
+  },
+  // for optimization purposes, we store the sections, the base class doesn't do this
+  addTab: function(tab, section, clicker, index){
+    this.parent.apply(this, arguments);
+    this.sections[this.tabs.indexOf(tab)] = section;
+  },
+  // on show, update the hash
+  show: function(i){
+    this.parent.apply(this, arguments);
+    if (this.options.hash) {
+      var hash = getHash() || {};
+      hash[this.options.hash] = this.tabs[i].get('id') || this.sections[i].get('id') || i;
+      window.location.hash = Object.cleanValues(Object.toQueryString(hash));
+    }
+  },
+  destroy: function(){
+    if (this.bound) window.removeEvent('hashchange', this.bound.showByHash);
+    this.tabs.each(function(el){
+      el.removeEvents();
+    });
+    this.tabs = null;
+    this.sections = null;
+  }
+});
+
 // Begin: Source/Behaviors/Behavior.Tabs.js
 /*
 ---
 name: Behavior.Tabs
 description: Adds a tab interface (TabSwapper instance) for elements with .css-tab_ui. Matched with tab elements that are .tabs and sections that are .tab_sections.
 provides: [Behavior.Tabs]
-requires: [Behavior/Behavior, /TabSwapper, More/String.QueryString, More/Object.Extras]
+requires: [Behavior/Behavior, /TabSwapper.Hash]
 script: Behavior.Tabs.js
 
 ...
@@ -12411,19 +13510,18 @@ Behavior.addGlobalFilters({
 			if (tabs.length != sections.length || tabs.length == 0) {
 				api.fail('warning; sections and sections are not of equal number. tabs: ' + tabs.length + ', sections: ' + sections.length);
 			}
-			var getHash = function(){
-				return window.location.hash.substring(1, window.location.hash.length).parseQueryString();
-			};
 
-			var ts = new TabSwapper(
+			var ts = new TabSwapper.Hash(
 				Object.merge(
 					{
 						tabs: tabs,
-						sections: sections,
-						initPanel: api.get('hash') ? getHash()[api.get('hash')] : null
+						sections: sections
 					},
 					Object.cleanValues(
 						api.getAs({
+							initPanel: Number,
+							hash: String,
+							cookieName: String,
 							smooth: Boolean,
 							smoothSize: Boolean,
 							rearrangeDOM: Boolean,
@@ -12435,19 +13533,41 @@ Behavior.addGlobalFilters({
 				)
 			);
 			ts.addEvent('active', function(index){
-				if (api.get('hash')) {
-					var hash = getHash();
-					hash[api.get('hash')] = index;
-					window.location.hash = Object.cleanValues(Object.toQueryString(hash));
-				}
 				api.fireEvent('layout:display', sections[0].getParent());
 			});
+
+			// get the element to delegate clicks to - defaults to the container
+			var target = element;
+			if (api.get('delegationTarget')) target = element.getElement(api.get('delegationTarget'));
+			if (!target) api.fail('Could not find delegation target for tabs');
+
+			// delegate watching click events for any element with an #href
+			target.addEvent('click:relay([href^=#])', function(event, link){
+				if (link.get('href') == "#") return;
+				// attempt to find the target for the link within the page
+				var target = element.getElement(link.get('href'));
+				// if the target IS a tab, do nothing; valid targets are *sections*
+				if (ts.tabs.contains(target)) return;
+				// if no target was found at all, warn
+				if (!target) api.warn('Could not switch tab; no section found for ' + link.get('href'));
+				// if the target is a section, show it.
+				if (ts.sections.contains(target)) {
+					event.preventDefault();
+					var delegator = api.getDelegator();
+					if (delegator) delegator._eventHandler(event, ts.tabs[ts.sections.indexOf(target)]);
+					ts.show(ts.sections.indexOf(target));
+				}
+			});
+
 			element.store('TabSwapper', ts);
+			api.onCleanup(function(){
+				ts.destroy();
+				element.eliminate('TabSwapper');
+			});
 			return ts;
 		}
 	}
 });
-
 
 // Begin: Source/Behaviors/Behavior.BS.Tabs.js
 /*
@@ -12471,12 +13591,15 @@ provides: [Behavior.BS.Tabs]
 */
 (function(){
 
+	// start with the base options from the tabs behavior
 	var tabs = Object.clone(Behavior.getFilter('Tabs'));
 
+	// customizing it here for Bootstrap, we start by duplicationg the other behavior
 	Behavior.addGlobalFilters({
 		'BS.Tabs': tabs.config
 	});
 
+	// set custom defaults specific to bootstrap
 	Behavior.setFilterDefaults('BS.Tabs', {
 		'tabs-selector': 'a:not(.dropdown-toggle)',
 		'sections-selector': '+.tab-content >',
@@ -12485,6 +13608,147 @@ provides: [Behavior.BS.Tabs]
 		smoothSize: false
 	});
 
+	// this plugin configures tabswapper to use bootstrap specific DOM structures
+	Behavior.addGlobalPlugin('BS.Tabs', 'BS.Tabs.CSS', function(el, api, instance){
+		// whenever the tabswapper activates a tab
+		instance.addEvent('active', function(index, section, tab){
+			// get the things in the tabs element that are active and remove that class
+			el.getElements('.active').removeClass('active');
+			// get the parent LI for the tab and add active to it
+			tab.getParent('li').addClass('active');
+			// handle the possibility of a dropdown in the tab.
+			var dropdown = tab.getParent('.dropdown');
+			if (dropdown) dropdown.addClass('active');
+		});
+		// invoke the event for startup
+		var now = instance.now;
+		var tab = instance.tabs[now];
+		var section = tab.retrieve('section');
+		instance.fireEvent('active', [now, section, tab]);
+
+	});
+
+	// this plugin makes links that have #href targets select their target tabs
+	Behavior.addGlobalPlugin('BS.Tabs', 'BS.Tabs.TargetLinks', function(el, api, instance){
+		// whenever the instance activates a tab, find any related #href links and add `active-section-link` to the appropriate ones
+		instance.addEvent('active', function(index, section, tab){
+			document.body.getElements('.active-section-link').removeClass('active-section-link');
+			// if there's a "group controller" go select it.
+			if (tab.get('data-tab-group')) {
+				document.id(tab.get('data-tab-group')).addClass('active-section-link');
+			}
+		});
+
+				// invoke the event for startup
+		var now = instance.now;
+		var tab = instance.tabs[now];
+		var section = tab.retrieve('section');
+		instance.fireEvent('active', [now, section, tab]);
+
+	});
+
 })();
 
+// Begin: Source/Delegators/Delegator.FxReveal.js
+/*
+---
+description: Provides methods to reveal, dissolve, nix, and toggle using Fx.Reveal.
+provides: [Delegator.FxReveal, Delegator.Reveal, Delegator.ToggleReveal, Delegator.Dissolve, Delegator.Nix]
+requires: [Behavior/Delegator, More/Fx.Reveal]
+script: Delegator.FxReveal.js
+name: Delegator.FxReveal
+
+...
+*/
+(function(){
+
+	var triggers = {};
+
+	['reveal', 'toggleReveal', 'dissolve', 'nix'].each(function(action){
+
+		triggers[action] = {
+			handler: function(event, link, api){
+				var targets;
+				if (api.get('target')){
+					targets = new Elements([link.getElement(api.get('target'))]);
+					if (!targets) api.fail('could not locate target element to ' + action, link);
+				} else if (api.get('targets')){
+					targets = link.getElements(api.get('targets'));
+					if (!targets.length) api.fail('could not locate target elements to ' + action, link);
+				} else {
+					targets = new Elements([link]);
+				}
+
+				var fxOptions = api.getAs(Object, 'fxOptions');
+				if (fxOptions){
+					targets.each(function(target){
+						target.get('reveal').setOptions(fxOptions);
+					});
+				}
+				if (action == 'toggleReveal') targets.get('reveal').invoke('toggle');
+				else targets[action]();
+				if (!api.getAs(Boolean, 'allowEvent')) event.preventDefault();
+			}
+		};
+
+	});
+
+	Delegator.register('click', triggers);
+
+})();
+
+// Begin: Source/Behaviors/Behavior.BS.Alert.js
+/*
+---
+
+name: Behavior.BS.Alert
+
+description: This file just depends on the Fx.Reveal delegator in More-Behaviors to ensure you get it if you load the entire Bootstrap JS package.
+
+license: MIT-style license.
+
+authors: [Aaron Newton]
+
+requires:
+ - More-Behaviors/Delegator.Nix
+
+provides: [Behavior.BS.Alert]
+
+...
+*/
+
+// Begin: Source/Delegators/Delegator.AddRemoveClass.js
+/*
+---
+description: Provides methods to add/remove/toggle a class on a given target.
+provides: [Delegator.ToggleClass, Delegator.AddClass, Delegator.RemoveClass, Delegator.AddRemoveClass]
+requires: [Behavior/Delegator, Core/Element]
+script: Delegator.AddRemoveClass.js
+name: Delegator.AddRemoveClass
+
+...
+*/
+(function(){
+
+	var triggers = {};
+
+	['add', 'remove', 'toggle'].each(function(action){
+
+		triggers[action + 'Class'] = {
+			require: ['class'],
+			handler: function(event, link, api){
+				var target = link;
+
+				if (api.get('target')) target = api.getElements('target')
+				else if (api.get('targets')) target = api.getElements('targets');
+
+				target[action + 'Class'](api.get('class'));
+			}
+		};
+
+	});
+
+	Delegator.register('click', triggers);
+
+})();
 

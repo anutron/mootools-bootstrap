@@ -38,7 +38,7 @@ Bootstrap.Dropdown = new Class({
 	},
 
 	hideAll: function(){
-		var els = this.element.getElements('.open').removeClass('open');
+		var els = this.element.removeClass('open').getElements('.open').removeClass('open');
 		this.fireEvent('hide', els);
 		return this;
 	},
@@ -67,7 +67,7 @@ Bootstrap.Dropdown = new Class({
 			if (el.match('[data-toggle="dropdown"]') || el.getParent('[data-toggle="dropdown"] !')){
 				parent = el.getParent('.dropdown, .btn-group');
 			}
- 			// backwards compatibility
+			// backwards compatibility
 			if (!parent) parent = el.match('.dropdown-toggle') ? el.getParent() : el.getParent('.dropdown-toggle !');
 			if (parent){
 				e.preventDefault();

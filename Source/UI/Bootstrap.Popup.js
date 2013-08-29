@@ -51,8 +51,10 @@ Bootstrap.Popup = new Class({
 		this.bound = {
 			hide: this.hide.bind(this),
 			bodyClick: function(e){
-				if (!this.element.contains(e.target)){
-					this.hide();
+				if (Bootstrap.version == 2){
+					if (!this.element.contains(e.target)) this.hide();
+				} else {
+					if (this.element == e.target) this.hide();
 				}
 			}.bind(this),
 			keyMonitor: function(e){
@@ -64,6 +66,12 @@ Bootstrap.Popup = new Class({
 		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
 			if (this.element.hasClass('fade')) this.element.removeClass('in');
 			this.show();
+		}
+
+		if (Bootstrap.version > 2){
+			if (this.options.closeOnClickOut){
+				this.element.addEvent('click', this.bound.bodyClick);
+			}
 		}
 	},
 
@@ -85,7 +93,7 @@ Bootstrap.Popup = new Class({
 
 	show: function(){
 		if (this.visible || this.animating) return;
-		this.element.addEvent('click:relay(.close, .dismiss)', this.bound.hide);
+		this.element.addEvent('click:relay(.close, .dismiss, [data-dismiss=modal])', this.bound.hide);
 		if (this.options.closeOnEsc) document.addEvent('keyup', this.bound.keyMonitor);
 		this._makeMask();
 		if (this._mask) this._mask.inject(document.body);
@@ -142,7 +150,8 @@ Bootstrap.Popup = new Class({
 		if (event && clicked && clicked.hasClass('stopEvent')){
 			event.preventDefault();
 		}
-		document.id(document.body).removeEvent('click', this.bound.hide);
+
+		if (Bootstrap.version == 2) document.id(document.body).removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
 		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
 
@@ -162,11 +171,11 @@ Bootstrap.Popup = new Class({
 	_makeMask: function(){
 		if (this.options.mask){
 			if (!this._mask){
-				this._mask = new Element('div.modal-backdrop');
+				this._mask = new Element('div.modal-backdrop.in');
 				if (this._checkAnimate()) this._mask.addClass('fade');
 			}
 		}
-		if (this.options.closeOnClickOut){
+		if (this.options.closeOnClickOut && Bootstrap.version == 2){
 			if (this._mask) this._mask.addEvent('click', this.bound.hide);
 			else document.id(document.body).addEvent('click', this.bound.hide);
 		}

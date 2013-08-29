@@ -34,7 +34,7 @@ Bootstrap.Tooltip Method: constructor
 * override - (*string*) The tip value used instead of the `title` value of the target element.
 * offset - (*number* or *object*) The offset of the tip. If a number, will be used for the y offset for `top` and `bottom` located tips, x for `left` and `right` located tips. If an object, should contain `.y` and/or `.x` numerical values. Defaults to `0`.
 * title - (*string*) The element property to use for the tip value. Defaults to `title`.
-* trigger - (*string*) The event type to attach to the target element to show the tip. Choose from `hover`, `focus`, or `manual`.
+* trigger - (*string*) The event type to attach to the target element to show the tip. Choose from `hover`, `focus`, `click`, or 'manual'.
 * onOverflow - (*boolean*) Only show the tip if the element's content is overflown (i.e. it's scroll-height or scroll-width is greater than the height or width of the element). Defaults to `false`.
 * getContent - (*function*) A function that returns the tip value. By default, it retrieves the value of the `title` option from the target element.
 
