@@ -32,6 +32,7 @@ Behavior.addGlobalFilters({
 		},
 		returns: Bootstrap.Popup,
 		setup: function(el, api){
+			if (api.get('moveElementTo')) el.inject(api.getElement('moveElementTo'));
 			var popup = new Bootstrap.Popup(el,
 				Object.cleanValues(
 					api.getAs({
