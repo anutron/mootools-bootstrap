@@ -21,12 +21,12 @@ provides: [Behavior.BS.FormValidator]
 (function(){
 
 	var getFieldDetails = function(field, advice, className){
-		var cls = field.hasClass('warning') || field.hasClass('warn-' + className) ? 'warn' : 'error',
-		    inputParent = field.getParent('.controls, .control-group');
+		var cls = field.hasClass('warning') || field.hasClass('warn-' + className) ? 'has-warning' : 'has-error',
+		    inputParent = field.getParent('.form-group');
 		var clearfixParent;
 		if (inputParent){
-			if (inputParent.hasClass('control-group')) clearfixParent = inputParent;
-			else clearfixParent = inputParent.getParent('.control-group');
+			if (inputParent.hasClass('form-group')) clearfixParent = inputParent;
+			else clearfixParent = inputParent.getParent('.form-group');
 		}
 
 		return {
@@ -56,9 +56,9 @@ provides: [Behavior.BS.FormValidator]
 						field.addClass(fieldDetails.cls);
 						var help = fieldDetails.inputParent.getElement('div.advice');
 						if (!help){
-							fieldDetails.inputParent.getElements('span.help-inline').setStyle('display', 'none');
+							fieldDetails.inputParent.getElements('span.help-block').setStyle('display', 'none');
 							var closestParent = field.getParent();
-							help = new Element('span.help-inline.advice.auto-created', {
+							help = new Element('span.help-block.advice.auto-created', {
 								html: (field.hasClass('warning') ? 'Suggestion: ' : '') + advice.get('html')
 							}).hide().inject(closestParent.hasClass('input-append') ? closestParent  : field, 'after');
 						}
@@ -75,7 +75,7 @@ provides: [Behavior.BS.FormValidator]
 					} else {
 						field.removeClass(fieldDetails.cls);
 						var help = fieldDetails.inputParent.getElement('.advice');
-						fieldDetails.inputParent.getElements('.help-inline, .help-block').dissolve().getLast().get('reveal').chain(function(){
+						fieldDetails.inputParent.getElements('.help-block').dissolve().getLast().get('reveal').chain(function(){
 							if (help.hasClass('auto-created')) help.destroy();
 							else help.set('html', '');
 						});
