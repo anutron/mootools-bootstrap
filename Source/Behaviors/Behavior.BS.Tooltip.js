@@ -42,10 +42,19 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 					fallback: String,
 					override: String,
 					html: Boolean,
-					offset: Number,
 					trigger: String
 				})
 			);
+			if (api.get('offset')){
+				var offset;
+				try {
+					offset = api.getAs(Number, 'offset');
+				} catch (e){
+					offset = api.getAs(Object, 'offset');
+				}
+				if (offset === undefined) api.fail('Could not read offset value as number or string. The value was: ' + api.get('offset'));
+				options.offset = offset;
+			}
 			options.getTitle = Function.from(api.get('content') || el.get('title'));
 			var tip = new Bootstrap.Tooltip(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
