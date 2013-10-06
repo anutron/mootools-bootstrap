@@ -135,7 +135,7 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 
 	_attach: function(method){
 		method = method || 'addEvents';
-		this.bound = {
+		if ( ! this.bound) this.bound = {
 			enter: this._enter.bind(this),
 			leave: this._leave.bind(this),
 			complete: this._complete.bind(this),
