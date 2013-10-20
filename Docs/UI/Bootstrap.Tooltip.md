@@ -37,6 +37,7 @@ Bootstrap.Tooltip Method: constructor
 * trigger - (*string*) The event type to attach to the target element to show the tip. Choose from `hover`, `focus`, `click`, or 'manual'.
 * onOverflow - (*boolean*) Only show the tip if the element's content is overflown (i.e. it's scroll-height or scroll-width is greater than the height or width of the element). Defaults to `false`.
 * getContent - (*function*) A function that returns the tip value. By default, it retrieves the value of the `title` option from the target element.
+* inject - (*object*) Where to inject the tip. Defaults to `{target: document.body, where: 'bottom'}`.
 
 ### Events
 

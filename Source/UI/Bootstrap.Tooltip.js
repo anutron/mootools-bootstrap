@@ -38,6 +38,10 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 		trigger: 'hover', //focus, manual
 		getContent: function(el){
 			return el.get(this.options.title);
+		},
+		inject: {
+			target: null, //defaults to document.body,
+			where: 'bottom'
 		}
 	},
 
@@ -77,7 +81,7 @@ Bootstrap.Tooltip = Bootstrap.Twipsy = new Class({
 		}
 		if (typeOf(this.options.offset) == "object") offset = this.options.offset;
 		if (this.element.getParent('.modal')) this.tip.inject(this.element, 'after');
-		else this.tip.inject(document.body);
+		else this.tip.inject(this.options.inject.target || document.body, this.options.inject.where);
 		this.tip.show().position({
 			relativeTo: this.element,
 			position: pos,
