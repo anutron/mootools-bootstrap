@@ -55,7 +55,7 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 				if (offset === undefined) api.fail('Could not read offset value as number or string. The value was: ' + api.get('offset'));
 				options.offset = offset;
 			}
-			options.getTitle = Function.from(api.get('content') || el.get('title'));
+			options.getContent = Function.from(api.get('content') || el.get('title'));
 			var tip = new Bootstrap.Tooltip(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
 			if (api.event) tip.show();
