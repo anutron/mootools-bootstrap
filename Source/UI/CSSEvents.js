@@ -14,24 +14,24 @@ provides: CSSEvents
 */
 
 Browser.Features.getCSSTransition = function(){
-	Browser.Features.cssTransition = (function () {
-		var thisBody = document.body || document.documentElement
-			, thisStyle = thisBody.style
-			, support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined;
-		return support;
-	})();
+	Browser.Features.transitionEnd = (function(){
+    var el = document.createElement('tmp');
 
-	// set CSS transition event type
-	if ( Browser.Features.cssTransition ) {
-		Browser.Features.transitionEnd = "TransitionEnd";
-		if ( Browser.safari || Browser.chrome ) {
-			Browser.Features.transitionEnd = "webkitTransitionEnd";
-		} else if ( Browser.firefox ) {
-			Browser.Features.transitionEnd = "transitionend";
-		} else if ( Browser.opera ) {
-			Browser.Features.transitionEnd = "oTransitionEnd";
-		}
-	}
+    var transEndEventNames = {
+      'WebkitTransition' : 'webkitTransitionEnd'
+    , 'MozTransition'    : 'transitionend'
+    , 'OTransition'      : 'oTransitionEnd otransitionend'
+    , 'transition'       : 'transitionend'
+    };
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return transEndEventNames[name];
+      }
+    }
+  })();
+  Browser.Features.cssTransition = !!Browser.Features.transitionEnd;
+
 	Browser.Features.getCSSTransition = Function.from(Browser.Features.transitionEnd);
 };
 
