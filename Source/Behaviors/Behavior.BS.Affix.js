@@ -24,15 +24,17 @@ Behavior.addGlobalFilters({
 		requires: ['top'],
 
 		setup: function(el, api){
-			var affix = new Bootstrap.Affix(el,
-				Object.cleanValues(
-					api.getAs({
-						top: Number,
-						bottom: Number,
-						classNames: Object
-					})
-				)
+			var options = Object.cleanValues(
+				api.getAs({
+					top: Number,
+					bottom: Number,
+					classNames: Object
+				})
 			);
+
+			options.monitor = api.get('monitor') ? api.getElement('monitor') : window;
+
+			var affix = new Bootstrap.Affix(el, options);
 
 			api.onCleanup(affix.detach.bind(affix));
 

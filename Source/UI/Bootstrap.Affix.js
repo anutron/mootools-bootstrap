@@ -26,6 +26,7 @@ Bootstrap.Affix = new Class({
 	options: {
 		// onPin: function(){},
 		// onUnPin: function(isBottom){},
+		// monitor: window,
 		top: 0,
 		bottom: null,
 		classNames: {
@@ -43,7 +44,8 @@ Bootstrap.Affix = new Class({
 	},
 
 	attach: function(){
-		Bootstrap.Affix.register(this);
+		console.log(this.options.monitor);
+		Bootstrap.Affix.register(this, this.options.monitor);
 		return this;
 	},
 
@@ -79,39 +81,44 @@ Bootstrap.Affix = new Class({
 
 });
 
-Bootstrap.Affix.registered = [];
-
-Bootstrap.Affix.register = function(instance){
-	if (!Bootstrap.Affix.attached) Bootstrap.Affix.attach();
-	Bootstrap.Affix.registered.push(instance);
-	Bootstrap.Affix.onScroll();
+Bootstrap.Affix.register = function(instance, monitor){
+	monitor = monitor || window;
+	if (!monitor.retrieve('Bootstrap.Affix.attached')) Bootstrap.Affix.attach(monitor);
+	monitor.retrieve('Bootstrap.Affix.registered', []).push(instance);
+	Bootstrap.Affix.onScroll.apply(monitor);
 };
 
 Bootstrap.Affix.drop = function(instance){
-	Bootstrap.Affix.registered.erase(instance);
-	if (Bootstrap.Affix.registered.length == 0) Bootstrap.Affix.detach();
+	monitor.retrieve('Bootstrap.Affix.registered', []).erase(instance);
+	if (monitor.retrieve('Bootstrap.Affix.registered').length == 0) Bootstrap.Affix.detach(monitor);
 };
 
-Bootstrap.Affix.attach = function(){
-	window.addEvent('scroll', Bootstrap.Affix.onScroll);
-	Bootstrap.Affix.attached = true;
+Bootstrap.Affix.attach = function(monitor){
+	monitor.addEvent('scroll', Bootstrap.Affix.onScroll);
+	monitor.store('Bootstrap.Affix.attached', true);
 };
 
-Bootstrap.Affix.detach = function(){
-	window.removeEvent('scroll', Bootstrap.Affix.onScroll);
-	Bootstrap.Affix.attached = false;
+Bootstrap.Affix.detach = function(monitor){
+	monitor = monitor || window;
+	monitor.removeEvent('scroll', Bootstrap.Affix.onScroll);
+	monitor.store('Bootstrap.Affix.attached', false);
 };
 
 Bootstrap.Affix.onScroll = function(_y){
-	var y = _y || window.getScroll().y,
-	inSize;
-	for (var i = 0; i < Bootstrap.Affix.registered.length; i++){
-		var instance = Bootstrap.Affix.registered[i];
+	var monitor = this,
+			y = _y || monitor.getScroll().y,
+			size;
+
+	console.log(monitor, y);
+
+	var registered = monitor.retrieve('Bootstrap.Affix.registered');
+	for (var i = 0; i < registered.length; i++){
+		var instance = registered[i];
 		var bottom = instance.options.bottom,
 		top = instance.options.top;
 		if (bottom && bottom < 0){
-			if (winSize == null) winSize = window.getSize().y;
-			bottom = winSize + bottom;
+			if (size == null) size = monitor.getSize().y;
+			bottom = size + bottom;
 		}
 
 		// if we've scrolled above the top line, unpin
