@@ -44,7 +44,6 @@ Bootstrap.Affix = new Class({
 	},
 
 	attach: function(){
-		console.log(this.options.monitor);
 		Bootstrap.Affix.register(this, this.options.monitor);
 		return this;
 	},
@@ -108,9 +107,6 @@ Bootstrap.Affix.onScroll = function(_y){
 	var monitor = this,
 			y = _y || monitor.getScroll().y,
 			size;
-
-	console.log(monitor, y);
-
 	var registered = monitor.retrieve('Bootstrap.Affix.registered');
 	for (var i = 0; i < registered.length; i++){
 		var instance = registered[i];
