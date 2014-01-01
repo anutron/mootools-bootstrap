@@ -11,7 +11,7 @@ A behavior filter to instantiate [Bootstrap](http://twitter.github.com/bootstrap
 ### Example
 
 	<a data-behavior="BS.Affix"
-		data-affix-options="
+		data-bs-affix-options="
 			'top': 10
 		">I stick around!</a>
 
