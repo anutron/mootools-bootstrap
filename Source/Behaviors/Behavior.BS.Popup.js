@@ -50,7 +50,7 @@ Behavior.addGlobalFilters({
 			if (api.get('focusOnShow')) {
 				popup.addEvent('show', function(){
 					var input = document.id(popup).getElement(api.get('focusOnShow'));
-					if (input) input.select();
+					if (input) input[input.get('tag') == 'select' ? 'focus' : 'select']();
 				});
 			}
 			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
