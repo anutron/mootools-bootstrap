@@ -29,3 +29,10 @@ Previously this filter was called "BS.Twipsy"; that name still works for backwar
 * offset - (*number* or *object*) The offset of the tip. If a number, will be used for the y offset for `top` and `bottom` located tips, x for `left` and `right` located tips. If an object, should contain `.y` and/or `.x` numerical values. Defaults to `10`.
 * trigger - (*string*) The event type to attach to the target element to show the tip. Choose from `hover`, `focus`, or `manual`.
 * onOverflow - (*boolean*) Only show the tip if the element's content is overflown (i.e. it's scroll-height or scroll-width is greater than the height or width of the element). Defaults to `false`.
+* inject - (*object*) A set of options for where to inject the DOM element created (`{target: 'div.foo', where: 'bottom'}`). Defaults to injection into the root of the DOM (inconvenient if your element scrolls or gets hitten by tabs or something.)
+
+
+Behavior.Filter: Behavior.BS.Tooltip.Static
+===========================================
+
+This variation just shows the tooltip immediately. it's `trigger` option is set to `manual` so it doesn't hide on mouseout.

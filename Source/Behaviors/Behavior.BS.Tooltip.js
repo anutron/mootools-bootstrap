@@ -42,7 +42,8 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 					fallback: String,
 					override: String,
 					html: Boolean,
-					trigger: String
+					trigger: String,
+					inject: Object
 				})
 			);
 			if (api.get('offset')){
@@ -55,15 +56,39 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 				if (offset === undefined) api.fail('Could not read offset value as number or string. The value was: ' + api.get('offset'));
 				options.offset = offset;
 			}
+			if (options.inject && options.inject.target){
+				options.inject.target = el.getElement(options.inject.target);
+			}
+
 			options.getContent = Function.from(api.get('content') || el.get('title'));
 			var tip = new Bootstrap.Tooltip(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
-			if (api.event) tip.show();
+			if (api.event || api.get('showNow')){
+				var showTimer,
+				    show = function(){
+					var size = el.getSize();
+					if (size.y > 0 || size.x > 0){
+						tip.show();
+						clearInterval(showTimer);
+					}
+				};
+				showTimer = show.periodical(1000);
+				show();
+			}
 			return tip;
 		}
 	};
 	Behavior.addGlobalFilters({
 		'BS.Tooltip': filter,
 		'BS.Twipsy': filter
+	});
+	Behavior.addGlobalFilters({
+		'BS.Tooltip.Static': Object.merge(filter, {
+			delayUntil: null,
+			defaults: {
+				showNow: true,
+				trigger: 'manual'
+			}
+		})
 	});
 })();
