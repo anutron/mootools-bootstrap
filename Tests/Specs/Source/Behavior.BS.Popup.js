@@ -34,10 +34,8 @@ provides: [Behavior.Popup.Specs]
 		returns: Bootstrap.Popup,
 		expect: function(element, instance){
 			expect($$('.modal')[0].isDisplayed()).toBe(true);
-			expect($$('.modal-backdrop')[0].isDisplayed()).toBe(true);
 			instance.hide();
 			expect($$('.modal')[0].isDisplayed()).toBe(false);
-			expect($$('.modal-backdrop').length).toBe(0);
 		}
 	});
 	Behavior.addFilterTest({
