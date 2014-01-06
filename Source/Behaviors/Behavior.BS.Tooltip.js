@@ -63,7 +63,9 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 			options.getContent = Function.from(api.get('content') || el.get('title'));
 			var tip = new Bootstrap.Tooltip(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
-			if (api.event || api.get('showNow')){
+			if (api.event){
+				tip.show();
+			} else if (api.get('showNow')){
 				var showTimer,
 				    show = function(){
 					var size = el.getSize();
@@ -83,7 +85,7 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 		'BS.Twipsy': filter
 	});
 	Behavior.addGlobalFilters({
-		'BS.Tooltip.Static': Object.merge(filter, {
+		'BS.Tooltip.Static': Object.merge({}, filter, {
 			delayUntil: null,
 			defaults: {
 				showNow: true,
