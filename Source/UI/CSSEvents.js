@@ -33,6 +33,7 @@ Browser.Features.getCSSTransition = function(){
   Browser.Features.cssTransition = !!Browser.Features.transitionEnd;
 
 	Browser.Features.getCSSTransition = Function.from(Browser.Features.transitionEnd);
+  return Browser.Features.transitionEnd;
 };
 
 window.addEvent("domready", Browser.Features.getCSSTransition);
