@@ -171,7 +171,7 @@ Bootstrap.Popup = new Class({
 	// PRIVATE
 
 	_makeMask: function(){
-		if (this.options.mask && Bootstrap.version < 3){
+		if (this.options.mask){
 			if (!this._mask){
 				this._mask = new Element('div.modal-backdrop.in');
 				if (this._canAnimate) this._mask.addClass('fade');
