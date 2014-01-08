@@ -62,6 +62,9 @@ Bootstrap.Popup = new Class({
 			}.bind(this),
 			animationEnd: this._animationEnd.bind(this)
 		};
+
+		this._checkAnimate();
+
 		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
 		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
 			if (this.element.hasClass('fade')) this.element.removeClass('in');
@@ -80,15 +83,14 @@ Bootstrap.Popup = new Class({
 	},
 
 	_checkAnimate: function(){
-		var check = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
-		if (!check) {
+		this._canAnimate = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
+		if (!this._canAnimate) {
 			this.element.removeClass('fade').addClass('hide');
 			if (this._mask) this._mask.removeClass('fade').addClass('hide');
-		} else if (check) {
+		} else if (this._canAnimate) {
 			this.element.addClass('fade').removeClass('hide');
 			if (this._mask) this._mask.addClass('fade').removeClass('hide');
 		}
-		return check;
 	},
 
 	show: function(){
@@ -99,12 +101,12 @@ Bootstrap.Popup = new Class({
 		if (this._mask) this._mask.inject(document.body);
 		this.animating = true;
 		if (this.options.changeDisplayValue) this.element.show();
-		if (this._checkAnimate()){
+		if (this._canAnimate){
 			this.element.offsetWidth; // force reflow
 			this.element.addClass('in');
 			if (this._mask) this._mask.addClass('in');
 		} else {
-			this.element.show();
+			this.element.removeClass('hide').show();
 			if (this._mask) this._mask.show();
 		}
 		this.visible = true;
@@ -112,7 +114,7 @@ Bootstrap.Popup = new Class({
 	},
 
 	_watch: function(){
-		if (this._checkAnimate()) this.element.addEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
+		if (this._canAnimate) this.element.addEventListener(Browser.Features.getCSSTransition(), this.bound.animationEnd);
 		else this._animationEnd();
 	},
 
@@ -155,11 +157,11 @@ Bootstrap.Popup = new Class({
 		document.removeEvent('keyup', this.bound.keyMonitor);
 		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
 
-		if (this._checkAnimate()){
+		if (this._canAnimate){
 			this.element.removeClass('in');
 			if (this._mask) this._mask.removeClass('in');
 		} else {
-			this.element.hide();
+			this.element.addClass('hide').hide();
 			if (this._mask) this._mask.hide();
 		}
 		this.visible = false;
@@ -172,7 +174,7 @@ Bootstrap.Popup = new Class({
 		if (this.options.mask && Bootstrap.version < 3){
 			if (!this._mask){
 				this._mask = new Element('div.modal-backdrop.in');
-				if (this._checkAnimate()) this._mask.addClass('fade');
+				if (this._canAnimate) this._mask.addClass('fade');
 			}
 		}
 		if (this.options.closeOnClickOut && Bootstrap.version == 2){
