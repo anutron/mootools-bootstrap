@@ -63,13 +63,16 @@ Bootstrap.Popup = new Class({
 			animationEnd: this._animationEnd.bind(this)
 		};
 
-		this._checkAnimate();
-
+		var showNow = false
 		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
 		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
 			if (this.element.hasClass('fade')) this.element.removeClass('in');
-			this.show();
+			showNow = true;
 		}
+
+		this._checkAnimate();
+
+		if (showNow) this.show();
 
 		if (Bootstrap.version > 2){
 			if (this.options.closeOnClickOut){

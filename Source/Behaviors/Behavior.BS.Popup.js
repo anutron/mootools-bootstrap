@@ -33,6 +33,7 @@ Behavior.addGlobalFilters({
 		returns: Bootstrap.Popup,
 		setup: function(el, api){
 			if (api.get('moveElementTo')) el.inject(api.getElement('moveElementTo'));
+			var showNow = (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade')))
 			var popup = new Bootstrap.Popup(el,
 				Object.cleanValues(
 					api.getAs({
@@ -53,9 +54,9 @@ Behavior.addGlobalFilters({
 					if (input) input[input.get('tag') == 'select' ? 'focus' : 'select']();
 				});
 			}
-			if (!el.hasClass('hide') && !api.getAs(Boolean, 'hide') && (!el.hasClass('in') && !el.hasClass('fade'))) {
-				popup.show();
-			}
+
+			if (showNow) popup.show();
+
 			return popup;
 		}
 	}
