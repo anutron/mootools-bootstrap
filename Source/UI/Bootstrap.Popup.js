@@ -91,8 +91,12 @@ Bootstrap.Popup = new Class({
 			this.element.removeClass('fade').addClass('hide');
 			if (this._mask) this._mask.removeClass('fade').addClass('hide');
 		} else if (this._canAnimate) {
-			this.element.addClass('fade').removeClass('hide');
-			if (this._mask) this._mask.addClass('fade').removeClass('hide');
+			this.element.addClass('fade');
+			if (Bootstrap.version >= 3) this.element.removeClass('hide');
+			if (this._mask){
+				this._mask.addClass('fade');
+				if (Bootstrap.version >= 3) this._mask.removeClass('hide')
+			}
 		}
 	},
 
