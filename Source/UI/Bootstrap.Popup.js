@@ -65,7 +65,7 @@ Bootstrap.Popup = new Class({
 
 		var showNow = false
 		if ((this.element.hasClass('fade') && this.element.hasClass('in')) ||
-		    (!this.element.hasClass('hide') && !this.element.hasClass('fade'))){
+		    (!this.element.hasClass('hide') && !this.element.hasClass('hidden') && !this.element.hasClass('fade'))){
 			if (this.element.hasClass('fade')) this.element.removeClass('in');
 			showNow = true;
 		}
@@ -88,14 +88,14 @@ Bootstrap.Popup = new Class({
 	_checkAnimate: function(){
 		this._canAnimate = this.options.animate !== false && Browser.Features.getCSSTransition() && (this.options.animate || this.element.hasClass('fade'));
 		if (!this._canAnimate) {
-			this.element.removeClass('fade').addClass('hide');
-			if (this._mask) this._mask.removeClass('fade').addClass('hide');
+			this.element.removeClass('fade').addClass('hidden');
+			if (this._mask) this._mask.removeClass('fade').addClass('hidden');
 		} else if (this._canAnimate) {
 			this.element.addClass('fade');
-			if (Bootstrap.version >= 3) this.element.removeClass('hide');
+			if (Bootstrap.version >= 3) this.element.removeClass('hide').removeClass('hidden');
 			if (this._mask){
 				this._mask.addClass('fade');
-				if (Bootstrap.version >= 3) this._mask.removeClass('hide')
+				if (Bootstrap.version >= 3) this._mask.removeClass('hide').removeClass('hidden');
 			}
 		}
 	},
@@ -113,7 +113,7 @@ Bootstrap.Popup = new Class({
 			this.element.addClass('in');
 			if (this._mask) this._mask.addClass('in');
 		} else {
-			this.element.removeClass('hide').show();
+			this.element.removeClass('hide').removeClass('hidden').show();
 			if (this._mask) this._mask.show();
 		}
 		this.visible = true;
@@ -168,7 +168,7 @@ Bootstrap.Popup = new Class({
 			this.element.removeClass('in');
 			if (this._mask) this._mask.removeClass('in');
 		} else {
-			this.element.addClass('hide').hide();
+			this.element.addClass('hidden').hide();
 			if (this._mask) this._mask.hide();
 		}
 		this.visible = false;
