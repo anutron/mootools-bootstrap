@@ -49,7 +49,7 @@ Bootstrap.Affix = new Class({
 	},
 
 	detach: function(){
-		Bootstrap.Affix.drop(this);
+		Bootstrap.Affix.drop(this, this.options.monitor);
 		return this;
 	},
 
@@ -87,7 +87,7 @@ Bootstrap.Affix.register = function(instance, monitor){
 	Bootstrap.Affix.onScroll.apply(monitor);
 };
 
-Bootstrap.Affix.drop = function(instance){
+Bootstrap.Affix.drop = function(instance, monitor){
 	monitor.retrieve('Bootstrap.Affix.registered', []).erase(instance);
 	if (monitor.retrieve('Bootstrap.Affix.registered').length == 0) Bootstrap.Affix.detach(monitor);
 };

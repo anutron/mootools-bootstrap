@@ -22,11 +22,11 @@ provides: [Behavior.BS.Affix.Specs]
 		content: str,
 		returns: Bootstrap.Affix,
 		expect: function(element, instance){
-			Bootstrap.Affix.onScroll(0);
+			Bootstrap.Affix.onScroll.apply(window, [0]);
 			expect(instance.pinned).toBe(false);
-			Bootstrap.Affix.onScroll(15);
+			Bootstrap.Affix.onScroll.apply(window, [15]);
 			expect(instance.pinned).toBe(true);
-			Bootstrap.Affix.onScroll(25);
+			Bootstrap.Affix.onScroll.apply(window, [25]);
 			expect(instance.pinned).toBe(false);
 		}
 	});
