@@ -162,7 +162,7 @@ Bootstrap.Popup = new Class({
 
 		if (Bootstrap.version == 2) document.id(document.body).removeEvent('click', this.bound.hide);
 		document.removeEvent('keyup', this.bound.keyMonitor);
-		this.element.removeEvent('click:relay(.close, .dismiss)', this.bound.hide);
+		this.element.removeEvent('click:relay(.close, .dismiss, [data-dismiss=modal])', this.bound.hide);
 
 		if (this._canAnimate){
 			this.element.removeClass('in');
