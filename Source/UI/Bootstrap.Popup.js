@@ -54,7 +54,7 @@ Bootstrap.Popup = new Class({
 				if (Bootstrap.version == 2){
 					if (!this.element.contains(e.target)) this.hide();
 				} else {
-					if (this.element == e.target) this.hide();
+					if (!e.target.getParent('.modal-content')) this.hide();
 				}
 			}.bind(this),
 			keyMonitor: function(e){
