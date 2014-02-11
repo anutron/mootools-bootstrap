@@ -28,15 +28,40 @@ Behavior.addGlobalFilters({
 				api.getAs({
 					top: Number,
 					bottom: Number,
-					classNames: Object
+					classNames: Object,
+					affixAtElement: Object,
+					persist: Boolean
 				})
 			);
 
 			options.monitor = api.get('monitor') ? api.getElement('monitor') : window;
 
+			if (options.affixAtElement){
+				if (options.affixAtElement.top && options.affixAtElement.top.element){
+					options.affixAtElement.top.element = el.getElement(options.affixAtElement.top.element);
+					if (!options.affixAtElement.top.element) api.warn('could not find affixAtElement.top element!');
+				}
+				if (options.affixAtElement.bottom && options.affixAtElement.bottom.element){
+					options.affixAtElement.bottom.element = el.getElement(options.affixAtElement.bottom.element);
+					if (!options.affixAtElement.bottom.element) api.warn('could not find affixAtElement.bottom element!');
+				}
+			}
+
 			var affix = new Bootstrap.Affix(el, options);
 
-			api.onCleanup(affix.detach.bind(affix));
+			var refresh = affix.refresh.bind(affix),
+					events = {
+						'layout:display': refresh,
+						'ammendDom': refresh,
+						'destroyDom': refresh
+					};
+
+			api.addEvents(events);
+
+			api.onCleanup(function(){
+				affix.detach();
+				api.removeEvents(events);
+			});
 
 			return affix;
 		}

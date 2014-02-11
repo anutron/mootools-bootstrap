@@ -12,6 +12,7 @@ license: MIT-style license.
 requires:
  - Core/Element.Dimensions
  - More/Object.Extras
+ - More/Element.Event.Pseudos
  - /Bootstrap
 
 provides: [Bootstrap.Affix]
@@ -33,17 +34,65 @@ Bootstrap.Affix = new Class({
 			top: "affix-top",
 			bottom: "affix-bottom",
 			affixed: "affix"
-		}
+		},
+		affixAtElement: {
+			top: {
+				element: null,
+				edge: 'top',
+				offset: 0
+			},
+			bottom: {
+				element: null,
+				edge: 'bottom',
+				offset: 0
+			}
+		},
+		persist: null
 	},
 
 	initialize: function(element, options){
 		this.element = document.id(element);
 		this.setOptions(options);
 		this.element.addClass(this.options.classNames.top);
+		this.top = this.options.top;
+		this.bottom = this.options.bottom;
+		if (this.options.affixAtElement.top.element && !this.options.affixAtElement.bottom.element){
+			this.options.affixAtElement.bottom.element = this.options.affixAtElement.top.element;
+		}
 		this.attach();
 	},
 
+	refresh: function(){
+		['top', 'bottom'].each(function(edge){
+			var offset = this._getEdgeOffset(edge);
+			if (offset !== null) this[edge] = offset;
+		}, this);
+		return this;
+	},
+
+	_getEdgeOffset: function(edge){
+		var options = this.options.affixAtElement[edge];
+		if (options && options.element){
+			var el = document.id(options.element);
+			if (!el) return null;
+			var top = el.getPosition(this.options.monitor == window ? document.body : this.options.monitor).y + options.offset;
+			if (edge == 'top') top -= this.options.monitor.getSize().y;
+			var height = el.getSize().y;
+			switch(options.edge){
+				case 'bottom':
+					top += height;
+					break;
+				case 'middle':
+					top += height/2;
+					break;
+			}
+			return top;
+		}
+		return null;
+	},
+
 	attach: function(){
+		this.refresh();
 		Bootstrap.Affix.register(this, this.options.monitor);
 		return this;
 	},
@@ -60,10 +109,12 @@ Bootstrap.Affix = new Class({
 		this._reset();
 		this.element.addClass(this.options.classNames.affixed);
 		this.fireEvent('pin');
+		if (this.options.persist) this.detach();
 		return this;
 	},
 
 	unpin: function(isBottom){
+		if (this.options.persist) return;
 		this._reset();
 		this.element.addClass(this.options.classNames[isBottom ? 'bottom' : 'top']);
 		this.pinned = false;
@@ -80,10 +131,12 @@ Bootstrap.Affix = new Class({
 
 });
 
+Bootstrap.Affix.instances = [];
+
 Bootstrap.Affix.register = function(instance, monitor){
 	monitor = monitor || window;
-	if (!monitor.retrieve('Bootstrap.Affix.attached')) Bootstrap.Affix.attach(monitor);
 	monitor.retrieve('Bootstrap.Affix.registered', []).push(instance);
+	if (!monitor.retrieve('Bootstrap.Affix.attached')) Bootstrap.Affix.attach(monitor);
 	Bootstrap.Affix.onScroll.apply(monitor);
 };
 
@@ -93,14 +146,30 @@ Bootstrap.Affix.drop = function(instance, monitor){
 };
 
 Bootstrap.Affix.attach = function(monitor){
+	if (!Bootstrap.Affix.attachedToWindowResize){
+		Bootstrap.Affix.attachedToWindowResize = true;
+		window.addEvent('resize:throttle(250)', Bootstrap.Affix.refresh);
+	}
 	monitor.addEvent('scroll', Bootstrap.Affix.onScroll);
 	monitor.store('Bootstrap.Affix.attached', true);
+	monitor.retrieve('Bootstrap.Affix.registered').each(function(instance){
+		Bootstrap.Affix.instances.include(instance);
+	});
 };
 
 Bootstrap.Affix.detach = function(monitor){
 	monitor = monitor || window;
 	monitor.removeEvent('scroll', Bootstrap.Affix.onScroll);
 	monitor.store('Bootstrap.Affix.attached', false);
+	monitor.retrieve('Bootstrap.Affix.registered').each(function(instance){
+		Bootstrap.Affix.instances.erase(instance);
+	});
+};
+
+Bootstrap.Affix.refresh = function(){
+	Bootstrap.Affix.instances.each(function(instance){
+		instance.refresh();
+	});
 };
 
 Bootstrap.Affix.onScroll = function(_y){
@@ -109,9 +178,9 @@ Bootstrap.Affix.onScroll = function(_y){
 			size;
 	var registered = monitor.retrieve('Bootstrap.Affix.registered');
 	for (var i = 0; i < registered.length; i++){
-		var instance = registered[i];
-		var bottom = instance.options.bottom,
-		top = instance.options.top;
+		var instance = registered[i],
+				bottom = instance.bottom,
+		    top = instance.top;
 		if (bottom && bottom < 0){
 			if (size == null) size = monitor.getSize().y;
 			bottom = size + bottom;
