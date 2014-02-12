@@ -38,12 +38,14 @@ Behavior.addGlobalFilters({
 
 			if (options.affixAtElement){
 				if (options.affixAtElement.top && options.affixAtElement.top.element){
-					options.affixAtElement.top.element = el.getElement(options.affixAtElement.top.element);
-					if (!options.affixAtElement.top.element) api.warn('could not find affixAtElement.top element!');
+					var topEl = options.affixAtElement.top.element;
+					options.affixAtElement.top.element = topEl == 'self' ? el : el.getElement(topEl);
+					if (!options.affixAtElement.top.element) api.warn('could not find affixAtElement.top element!', topEl, el);
 				}
 				if (options.affixAtElement.bottom && options.affixAtElement.bottom.element){
-					options.affixAtElement.bottom.element = el.getElement(options.affixAtElement.bottom.element);
-					if (!options.affixAtElement.bottom.element) api.warn('could not find affixAtElement.bottom element!');
+					bottomEl = options.affixAtElement.bottom.element;
+					options.affixAtElement.bottom.element = bottomEl == 'self' ? el : el.getElement(bottomEl);
+					if (!options.affixAtElement.bottom.element) api.warn('could not find affixAtElement.bottom element!', bottomEl, el);
 				}
 			}
 
@@ -57,6 +59,8 @@ Behavior.addGlobalFilters({
 					};
 
 			api.addEvents(events);
+			window.addEvent('load', refresh);
+			api.addEvent('apply:once', refresh);
 
 			api.onCleanup(function(){
 				affix.detach();

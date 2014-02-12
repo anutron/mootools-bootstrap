@@ -137,12 +137,14 @@ Bootstrap.Affix.register = function(instance, monitor){
 	monitor = monitor || window;
 	monitor.retrieve('Bootstrap.Affix.registered', []).push(instance);
 	if (!monitor.retrieve('Bootstrap.Affix.attached')) Bootstrap.Affix.attach(monitor);
+	Bootstrap.Affix.instances.include(instance);
 	Bootstrap.Affix.onScroll.apply(monitor);
 };
 
 Bootstrap.Affix.drop = function(instance, monitor){
 	monitor.retrieve('Bootstrap.Affix.registered', []).erase(instance);
 	if (monitor.retrieve('Bootstrap.Affix.registered').length == 0) Bootstrap.Affix.detach(monitor);
+	Bootstrap.Affix.instances.erase(instance);
 };
 
 Bootstrap.Affix.attach = function(monitor){
@@ -152,18 +154,12 @@ Bootstrap.Affix.attach = function(monitor){
 	}
 	monitor.addEvent('scroll', Bootstrap.Affix.onScroll);
 	monitor.store('Bootstrap.Affix.attached', true);
-	monitor.retrieve('Bootstrap.Affix.registered').each(function(instance){
-		Bootstrap.Affix.instances.include(instance);
-	});
 };
 
 Bootstrap.Affix.detach = function(monitor){
 	monitor = monitor || window;
 	monitor.removeEvent('scroll', Bootstrap.Affix.onScroll);
 	monitor.store('Bootstrap.Affix.attached', false);
-	monitor.retrieve('Bootstrap.Affix.registered').each(function(instance){
-		Bootstrap.Affix.instances.erase(instance);
-	});
 };
 
 Bootstrap.Affix.refresh = function(){
@@ -175,22 +171,22 @@ Bootstrap.Affix.refresh = function(){
 Bootstrap.Affix.onScroll = function(_y){
 	var monitor = this,
 			y = _y || monitor.getScroll().y,
-			size;
+			size = monitor.getSize().y;
 	var registered = monitor.retrieve('Bootstrap.Affix.registered');
 	for (var i = 0; i < registered.length; i++){
-		var instance = registered[i],
-				bottom = instance.bottom,
-		    top = instance.top;
-		if (bottom && bottom < 0){
-			if (size == null) size = monitor.getSize().y;
-			bottom = size + bottom;
-		}
-
-		// if we've scrolled above the top line, unpin
-		if (y < top && instance.pinned) instance.unpin();
-		// if we've scrolled past the bottom line, unpin
-		else if (bottom && bottom < y && y > top && instance.pinned) instance.unpin(true);
-		else if (y > top && (!bottom || (bottom && y < bottom)) && !instance.pinned) instance.pin();
-
+		Bootstrap.Affix.update(registered[i], y, size);
 	}
+};
+
+Bootstrap.Affix.update = function(instance, y, monitorSize){
+	var bottom = instance.bottom,
+	    top = instance.top;
+	if (top < 0) return; // element is most likely hidden; run instance.refresh() when shown.
+	if (bottom && bottom < 0) bottom = monitorSize + bottom;
+
+	// if we've scrolled above the top line, unpin
+	if (y < top && instance.pinned) instance.unpin();
+	// if we've scrolled past the bottom line, unpin
+	else if (bottom && bottom < y && y > top && instance.pinned) instance.unpin(true);
+	else if (y > top && (!bottom || (bottom && y < bottom)) && !instance.pinned) instance.pin();
 };
