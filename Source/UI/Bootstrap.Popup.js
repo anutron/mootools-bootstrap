@@ -14,10 +14,7 @@ requires:
  - Core/Fx.Tween
  - Core/Fx.Transitions
  - More/Mask
- - More/Elements.From
- - More/Element.Position
  - More/Element.Shortcuts
- - More/Events.Pseudos
  - /CSSEvents
  - /Bootstrap
 
