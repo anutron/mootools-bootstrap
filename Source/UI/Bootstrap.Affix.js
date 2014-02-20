@@ -181,7 +181,6 @@ Bootstrap.Affix.onScroll = function(_y){
 Bootstrap.Affix.update = function(instance, y, monitorSize){
 	var bottom = instance.bottom,
 	    top = instance.top;
-	if (top < 0) return; // element is most likely hidden; run instance.refresh() when shown.
 	if (bottom && bottom < 0) bottom = monitorSize + bottom;
 
 	// if we've scrolled above the top line, unpin
