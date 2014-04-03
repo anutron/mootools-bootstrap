@@ -173,7 +173,7 @@ Bootstrap.Affix.onScroll = function(_y){
 			y = _y || monitor.getScroll().y,
 			size = monitor.getSize().y;
 	var registered = monitor.retrieve('Bootstrap.Affix.registered');
-	for (var i = 0; i < registered.length; i++){
+	for (var i = registered.length - 1; i >= 0; i--){
 		Bootstrap.Affix.update(registered[i], y, size);
 	}
 };
