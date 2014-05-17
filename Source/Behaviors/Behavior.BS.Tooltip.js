@@ -63,7 +63,7 @@ provides: [Behavior.BS.Twipsy, Behavior.BS.Tooltip]
 			options.getContent = Function.from(api.get('content') || el.get('title'));
 			var tip = new Bootstrap.Tooltip(el, options);
 			api.onCleanup(tip.destroy.bind(tip));
-			if (api.event){
+			if (api.event && (api.event.type == 'mouseover' && api.get('trigger') == 'hover') || (api.event.type == api.get('trigger'))){
 				tip.show();
 			} else if (api.get('showNow')){
 				var showTimer,
