@@ -45,7 +45,10 @@ Behavior.addGlobalFilters({
 					delayOut: Number,
 					html: Boolean,
 					offset: Number,
-					trigger: String
+					trigger: String,
+					cssClass: String,
+					arrowClass: String,
+					closeOnClickOut: Boolean
 				})
 			);
 			if (options.offset === undefined && (['above', 'left', 'top'].contains(options.location) || !options.location)){

@@ -27,6 +27,9 @@ Bootstrap.Popover Method: constructor
 * getContent - (*function*) A function that returns the tip *content*. By default, it retrieves the value of the `content` option from the target element.
 * getTitle - (*function*) A function that returns the tip *title*. By default, it retrieves the value of the `title` option from the target element.
 * content - (*string*) The element property to use for the tip value. Defaults to `data-content`.
+* cssClass - (*string*) Optional css class to add to the popup.
+* arrowClass - (*string*) Optional css class to add to the popup arrow element.
+* closeOnClickOut - (*boolean*) if `true`, hides the tip when the user clicks anywhere that isn't the tip (only useful if you aren't using `hover` for the trigger)
 
 ### Events
 
