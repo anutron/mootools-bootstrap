@@ -11,8 +11,10 @@ license: MIT-style license.
 
 provides: [Bootstrap]
 
+requires:
+ - Behavior-UI/Bootstrap
+
 ...
 */
-var Bootstrap = {
-	version: 3
-};
+
+try { console.log('Bootstrap/Bootstrap is deprecated; see https://github.com/Behavior-UI/behavior-ui'); } catch (e){}

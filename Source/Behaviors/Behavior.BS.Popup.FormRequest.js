@@ -10,34 +10,11 @@ license: MIT-style license.
 authors: [Aaron Newton]
 
 requires:
- - More-Behaviors/Behavior.FormRequest
- - /Behavior.BS.Popup
+ - Behavior-UI/Behavior.BS.Popup.FormRequest
 
 provides: [Behavior.BS.Popup.FormRequest]
 
 ...
 */
 
-Behavior.addGlobalPlugin("FormRequest", "Popup.FormRequest", {
-	defaults: {
-		closeOnSuccess: true
-	},
-	setup: function(element, api, instance){
-		if (element.getParent('.modal')){
-			var dismissed;
-			var dismissals = element.getElements('input.dismiss, input.close').map(function(el){
-				return el.addEvent('click', function(){
-					dismissed = true;
-				}).removeClass('dismiss').removeClass('close');
-			});
-			instance.addEvents({
-				success: function(){
-					var formRequestAPI = new BehaviorAPI(element, 'formrequest');
-					if ((formRequestAPI.getAs(Boolean, 'closeOnSuccess') !== false && api.getAs(Boolean, 'closeOnSuccess') !== false) || dismissed){
-						element.getParent('.modal').getBehaviorResult('BS.Popup').hide();
-					}
-				}
-			});
-		}
-	}
-});
+try { console.log('Bootstrap/Behavior.BS.Popover.FormRequest is deprecated; see https://github.com/Behavior-UI/behavior-ui'); } catch (e){}

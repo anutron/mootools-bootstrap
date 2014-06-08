@@ -10,18 +10,11 @@ license: MIT-style license.
 authors: [Aaron Newton]
 
 requires:
- - Behavior/Behavior
- - Bootstrap.Dropdown
+ - Behavior-UI/Behavior.BS.Dropdown
 
 provides: [Behavior.BS.Dropdown]
 
 ...
 */
-Behavior.addGlobalFilters({
-	'BS.Dropdown': {
-		returns: Bootstrap.Dropdown,
-		setup: function(el, api){
-			return new Bootstrap.Dropdown(el);
-		}
-	}
-});
+
+try { console.log('Bootstrap/Behavior.BS.Dropdown is deprecated; see https://github.com/Behavior-UI/behavior-ui'); } catch (e){}
